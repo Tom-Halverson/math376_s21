@@ -1,0 +1,15 @@
+
+# Important Definitions
+
+
+## Groups
+
+### Group
+
+A **group** is a set $\G$ with a binary operation $\ast$ that satisfies the following:
+
+a. (Identity) There exists $e \in \G$ such that $e \ast g= g \ast e = g$ for all $g \in \G$.
+
+b. (Inverse) For all $g \in \G$, there exists $g^{-1} \in \G$ such that $g \ast g^{-1} = g^{-1} \ast g = e$.
+
+c. (Associativity) $(ab)c = a (bc)$ for all $a,b,c \in \G$ 

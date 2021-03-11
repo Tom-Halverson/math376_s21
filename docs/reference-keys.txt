@@ -1,6 +1,10 @@
 problem-set-1
+modular-multiplication
 outer-cancellation
 two-by-two-mod-2
 distributing-powers
 cyclic-groups
 overview
+important-definitions
+groups
+group

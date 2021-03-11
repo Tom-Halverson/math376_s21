@@ -3,9 +3,17 @@
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\G}{\mathsf{G}}
 
-# Problem Set 1
+# Problem Set 1 
 
-* Due: Tuesday March 30 by 11:59PM CST. 
+* Due: ???? 
+
+## Modular Multiplication
+
+Make the *multiplication* tables of the following sets and determine which of them are groups under multiplication:
+
+a. $\{1,2,3\}$ using multiplication mod 4
+b. $\{1,2,3,4\}$ using multiplication mod 5
+c. $\{1,5,7,11\}$ using multiplication mod 12
 
 ## Outer Cancellation
 
@@ -13,7 +21,7 @@ A group $\G$ has the special property that for all $x,y,z \in G$, if $xy = zx$ t
 
 ## Two-by-two mod 2
 
-Let $\G$ be the group of all invertible $2\times 2$ matrices with entries from $\ZZ_2 = \{0,1\}$ and all arithmetic done mod 2.
+Let $\G$ be the group of all invertible $2\times 2$ matrices with entries from $\ZZ_2 = \{0,1\}$ and all arithmetic done mod 2. That is,
 $$
 \G=
 \left\{
