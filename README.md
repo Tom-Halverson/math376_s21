@@ -1,14 +1,13 @@
-# math236_s21
-Math 236 Linear Algebra Course Handbook
+# math376_s21
+Math 376 Algebraic Structures Course Handbook
 
-This online handbook accompanies MATH 236 Linear Algebra. The progression of topics comes from David Lay's book, *Linear Algebra and its Applications*. We also reommend the online book by Dan Margalit and Joseph Rabinoff at Georgia Tech: https://textbooks.math.gatech.edu/ila/index.html
+This online handbook accompanies MATH 376 Algebraic Structures at Macalester College.
 
 This handbook contains 
   - problem sets
   - R explorations
-  - weekly learning goals
   - important definitions
-  - review problems and solutions
+  - group examples
 
 Enter this command in the R console to build the handbook:
 bookdown::render_book("index.Rmd", "bookdown::gitbook")
