@@ -1,0 +1,10 @@
+book_filename: "math376_handbook"
+output_dir: docs/
+rmd_files: ["index.Rmd", 
+"PS1-problem-set-1.Rmd", 
+"E1-Cyclic-Groups.Rmd"
+]
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Section "

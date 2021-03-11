@@ -1,0 +1,12 @@
+bookdown::gitbook:
+  highlight: haddock
+  css: m376.css
+  split_by: chapter
+  config:
+    toc:
+      collapse: section
+      before: |
+        <li><a href = "./">MATH 376: Algebraic Structures</a></li>
+      after: |
+        <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+    # download: [pdf]

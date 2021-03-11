@@ -1,0 +1,32 @@
+--- 
+title: "MATH 376: Algebraic Structures"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook:
+    config:
+      sharing:
+        facebook: false
+        twitter: false
+documentclass: book
+link-citations: yes
+github-repo: Tom-Halverson/math236_s21
+description: "This is the class activity manual for MATH 376 at Macalester College."
+---
+
+
+**Macalester College**    
+**Spring 2021**
+
+# Preface {-}
+
+
+
+This is the class handbook for Math 376 Algebraic Structures at Macalester College. The content here was made by [Tom Halverson](https://www.macalester.edu/~halverson/) in the [Department  of Mathematics, Statistics and Computer Science](https://www.macalester.edu/mscs/) at [Macalester College](https://www.macalester.edu/).
+
+<br>
+<br>
+<br>
+
+![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
