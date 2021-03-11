@@ -1,4 +1,6 @@
 problem-set-1
-subgroup
+outer-cancellation
+two-by-two-mod-2
+distributing-powers
 cyclic-groups
 overview
