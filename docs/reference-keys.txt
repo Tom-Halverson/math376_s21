@@ -4,6 +4,7 @@ group-of-units-u_n-mod-n
 two-by-two-mod-2
 outer-cancellation
 distributing-powers
+cyclic-subgroups
 cyclic-groups
 overview
 important-definitions-and-theorems

@@ -135,6 +135,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="1.3" data-path="problem-set-1.html"><a href="problem-set-1.html#two-by-two-mod-2"><i class="fa fa-check"></i><b>1.3</b> Two-by-two mod 2</a></li>
 <li class="chapter" data-level="1.4" data-path="problem-set-1.html"><a href="problem-set-1.html#outer-cancellation"><i class="fa fa-check"></i><b>1.4</b> Outer Cancellation</a></li>
 <li class="chapter" data-level="1.5" data-path="problem-set-1.html"><a href="problem-set-1.html#distributing-powers"><i class="fa fa-check"></i><b>1.5</b> Distributing Powers</a></li>
+<li class="chapter" data-level="1.6" data-path="problem-set-1.html"><a href="problem-set-1.html#cyclic-subgroups"><i class="fa fa-check"></i><b>1.6</b> Cyclic Subgroups</a></li>
 </ul></li>
 <li class="part"><span><b>II Group Examples</b></span></li>
 <li class="chapter" data-level="2" data-path="cyclic-groups.html"><a href="cyclic-groups.html"><i class="fa fa-check"></i><b>2</b> Cyclic Groups</a><ul>
@@ -179,8 +180,15 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
             <section class="normal" id="section-">
 <div id="problem-set-1" class="section level1">
 <h1><span class="header-section-number">Section 1</span> Problem Set 1</h1>
+<p><strong>Due</strong>: Friday March 26, 5:00PM CST.</p>
 <ul>
-<li>Due: ????</li>
+<li>You should upload your assignment under the PS1 link on Moodle.</li>
+<li>You can hand write your solutions and scan them, or typeset them in R or LaTex. But you should upload the assignment in a single PDF or a single HTML file.</li>
+<li>Ideally, submit the problems in order, but if that is not possible, the problems should be clearly labeled.</li>
+<li>You should <strong>justify</strong> all answers, unless the assignment is to <em>compute</em> something. Then you should clearly display your computed work.</li>
+<li>All assignments will be out of <strong>30 points</strong>. For example, this assignment has six 5-point problems.</li>
+<li><strong>Late work</strong>: assignments will be lowered by 10% each day they are late. The solution will be posted on Tuesday. From that point on, I will still accept assignment write-ups, but you can earn a maximum of half of the points.</li>
+<li><strong>Collaboration</strong> is encouraged. In fact, it has been shown that people who form study groups, and talk about assignments, learn more and perform better. However, you should write up your own work in your own words (blatent copying is not acceptable), and if you receive substantial help from a classmate, you should give that person credit in your write-up (no pentalty for this!).</li>
 </ul>
 <div id="modular-multiplication" class="section level2">
 <h2><span class="header-section-number">1.1</span> Modular Multiplication</h2>
@@ -242,6 +250,24 @@ Show that every element in this group is of the form <span class="math inline">\
 \quad \hbox{ if and only if } \quad 
 ab=ba.
 \]</span></p>
+</div>
+<div id="cyclic-subgroups" class="section level2">
+<h2><span class="header-section-number">1.6</span> Cyclic Subgroups</h2>
+<p>If <span class="math inline">\(g \in \mathsf{G}\)</span>, then <span class="math inline">\(\langle g \rangle \le \mathsf{G}\)</span> is the smallest subgroup of <span class="math inline">\(\mathsf{G}\)</span> that contains <span class="math inline">\(g\)</span>. We will show in class that
+<span class="math display">\[
+\begin{array}{rcll}
+\langle g \rangle &amp;=&amp; \{ g^k \mid k \in \mathbb{Z}\}, &amp; \hbox{if $|g| = \infty$}.\\
+\langle g \rangle &amp;=&amp; \{1, g, g^2, \ldots, g^{n-1}\}, \quad  &amp;  \hbox{if $|g| = n$}.\\
+\end{array}
+\]</span>
+Compute the elements of the following cyclic subgroups.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\langle 5 \rangle \le \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(\langle 5 \rangle \le \mathbb{Z}_{30}\)</span></li>
+<li><span class="math inline">\(\langle 5 \rangle \le \mathbb{R}^\ast\)</span></li>
+<li><span class="math inline">\(\langle 5 \rangle \le U_{28}\)</span></li>
+<li><span class="math inline">\(\langle (\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}i) \rangle \le \mathbb{C}^\ast\)</span></li>
+</ol>
 
 </div>
 </div>

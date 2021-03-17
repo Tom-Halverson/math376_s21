@@ -9,7 +9,15 @@
 
 # Problem Set 1 
 
-* Due: ???? 
+**Due**: Friday March 26, 5:00PM CST. 
+
+* You should upload your assignment under the PS1 link on Moodle. 
+* You can hand write your solutions and scan them, or typeset them in R or LaTex. But you should upload the assignment in a single PDF or a single HTML file. 
+* Ideally, submit the problems in order, but if that is not possible, the problems should be clearly labeled.
+* You should **justify** all answers, unless the assignment is to *compute* something. Then you should clearly display your computed work. 
+* All assignments will be out of **30 points**. For example, this assignment has six 5-point problems. 
+* **Late work**: assignments will be lowered by 10% each day they are late. The solution will be posted on Tuesday. From that point on, I will still accept assignment write-ups, but you can earn a maximum of half of the points.
+* **Collaboration** is encouraged. In fact, it has been shown that people who form study groups, and talk about assignments, learn more and perform better. However, you should write up your own work in your own words (blatent copying is not acceptable), and if you receive substantial help from a classmate, you should give that person credit in your write-up (no pentalty for this!).
 
 ## Modular Multiplication
 
@@ -76,3 +84,22 @@ $$
 \quad \hbox{ if and only if } \quad 
 ab=ba.
 $$
+
+## Cyclic Subgroups
+
+If $g \in \G$, then $\langle g \rangle \le \G$ is the smallest subgroup of $\G$ that contains $g$. We will show in class that 
+$$
+\begin{array}{rcll}
+\langle g \rangle &=& \{ g^k \mid k \in \ZZ\}, & \hbox{if $|g| = \infty$}.\\
+\langle g \rangle &=& \{1, g, g^2, \ldots, g^{n-1}\}, \quad  &  \hbox{if $|g| = n$}.\\
+\end{array}
+$$
+Compute the elements of the following cyclic subgroups.
+
+a. $\langle 5 \rangle  \le \ZZ$
+a. $\langle 5 \rangle \le \ZZ_{30}$
+a. $\langle 5 \rangle \le \RR^\ast$
+a. $\langle 5 \rangle \le U_{28}$
+a. $\langle (\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}i) \rangle  \le \CC^\ast$
+
+
