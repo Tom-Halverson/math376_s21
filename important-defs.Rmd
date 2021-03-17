@@ -23,9 +23,11 @@ d. (Commutative) If $a,b \in \G$, then $ab = ba$.
 
 **Def**: A *subset* $\H \subseteq \G$ of a group $\G$ is a **subgroup** if $\H$ is a group under the same binary operation that it inherits from $\G$. We write $\H \le \G$ do denote that $\H$ is a subgroup of $\G$ and write $\H < \G$ if $\H \le \G$ and $\H \not= \G$.
 
-**Theorem**: (2 step subgroup test) A *nonempty* subset $\H \subseteq \G$ is a subgroup if
+**Theorem**: (Subgroup Test) A *nonempty* subset $\H \subseteq \G$ is a subgroup if
 
-a. (closure) If $h_1, h_2 \in \H$, then $h_1 h_2 \in \H$.
-b. (contains inverses) If $h \in \H$, then $h^{-1} \in \H$.
+a. (identity) $e \in \H$, where $e$ is the identity in $\G$.
+b. (closure) If $h_1, h_2 \in \H$, then $h_1 h_2 \in \H$.
+c. (contains inverses) If $h \in \H$, then $h^{-1} \in \H$.
 
+Note: (a) follows from (b) and (c).
 

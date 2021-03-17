@@ -198,11 +198,13 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="subgroup" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> Subgroup</h3>
 <p><strong>Def</strong>: A <em>subset</em> <span class="math inline">\(\mathsf{H}\subseteq \mathsf{G}\)</span> of a group <span class="math inline">\(\mathsf{G}\)</span> is a <strong>subgroup</strong> if <span class="math inline">\(\mathsf{H}\)</span> is a group under the same binary operation that it inherits from <span class="math inline">\(\mathsf{G}\)</span>. We write <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> do denote that <span class="math inline">\(\mathsf{H}\)</span> is a subgroup of <span class="math inline">\(\mathsf{G}\)</span> and write <span class="math inline">\(\mathsf{H}&lt; \mathsf{G}\)</span> if <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> and <span class="math inline">\(\mathsf{H}\not= \mathsf{G}\)</span>.</p>
-<p><strong>Theorem</strong>: (2 step subgroup test) A <em>nonempty</em> subset <span class="math inline">\(\mathsf{H}\subseteq \mathsf{G}\)</span> is a subgroup if</p>
+<p><strong>Theorem</strong>: (Subgroup Test) A <em>nonempty</em> subset <span class="math inline">\(\mathsf{H}\subseteq \mathsf{G}\)</span> is a subgroup if</p>
 <ol style="list-style-type: lower-alpha">
+<li>(identity) <span class="math inline">\(e \in \mathsf{H}\)</span>, where <span class="math inline">\(e\)</span> is the identity in <span class="math inline">\(\mathsf{G}\)</span>.</li>
 <li>(closure) If <span class="math inline">\(h_1, h_2 \in \mathsf{H}\)</span>, then <span class="math inline">\(h_1 h_2 \in \mathsf{H}\)</span>.</li>
 <li>(contains inverses) If <span class="math inline">\(h \in \mathsf{H}\)</span>, then <span class="math inline">\(h^{-1} \in \mathsf{H}\)</span>.</li>
 </ol>
+<p>Note: (a) follows from (b) and (c).</p>
 
 </div>
 </div>
