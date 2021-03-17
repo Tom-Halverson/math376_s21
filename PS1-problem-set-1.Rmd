@@ -21,7 +21,8 @@
 
 ## Modular Multiplication
 
-Make the *multiplication* tables of the following sets and determine which of them are groups under multiplication:
+Make the *multiplication* tables of the following sets and determine which of them are groups under multiplication. You can do this by hand (encouraged to get the feel for it)  or using the R commands in [Modular Arithemtic].
+
 
 a. $\{1,2,3\}$ using multiplication mod 4
 b. $\{1,2,3,4\}$ using multiplication mod 5
