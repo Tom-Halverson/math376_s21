@@ -3,7 +3,10 @@ output_dir: docs/
 rmd_files: ["index.Rmd", 
 "PS1-problem-set-1.Rmd", 
 "E1-Cyclic-Groups.Rmd",
- "important-defs.Rmd"
+"important-defs.Rmd",
+"R1-modular-arithmetic.Rmd",
+"R2-matrix-multiplication.Rmd",
+"R3-complex-roots-unity.Rmd"
 ]
 delete_merged_file: true
 language:

@@ -1,0 +1,120 @@
+# (PART) Algebraic Structures in R {-}
+
+# Modular Arithmetic
+
+We will require the package `pracma`, which you may recall from linear algebra, contains "practical math applications." It has implementations of modular arithmetic and the GCD algorithms. 
+```{r,echo=TRUE,warning=FALSE}
+require(pracma)
+```
+
+## Integer division and GCD
+
+The `mod` function computes the remainder after division by $n$ `idivide` gives the quotient. Thus, for example,
+```{r,echo=TRUE}
+mod(68,15)
+idivide(68,15)
+```
+Since $68 = 15 \cdot 4 + 8$.
+
+The **greatest commond diviso GCD** of two integers is computed with the `gcd(m,n)` command. For example,
+```{r,echo=TRUE}
+gcd(70,42)
+gcd(68,15)
+```
+telling us that $gcd(70,42) = 14$ and $gcd(68,15) = 1$, meaning that 68 and 15 are *relatively prime*. 
+
+The **Extended GCD** gives a little more information that can be quite useful in this course. If $d = gcd(a,b)$ then there exist integers $s,t \in \ZZ$ such that
+$$
+d = s a+ t b.
+$$
+You can find a proof of this fact in Chapter 0. We can use it here:
+```{r,echo=TRUE}
+gcd(70,42,extended=TRUE)
+gcd(68,15,extended=TRUE)
+```
+Telling us that 
+$$
+\begin{align*}
+14 & = (-1) 70 + (2) 42 \\
+1 & = (2)68 + (-9) 15
+\end{align*}
+$$
+As we can confirm with
+```{r,echo=TRUE}
+2*68 - 9*15
+```
+
+## Addition Mod n: $\ZZ_n$
+
+We can generate the finite **cyclic** group $\ZZ_n = \{0, 1, 2, \ldots, n-1\}$ easily as follows:
+
+```{r,echo=TRUE}
+n = 12
+G = 0:(n-1)  # generates an integer sequence from 0 to n-1.
+G
+```
+
+And then we can add all of these elements mod n and make the **Cayley table** as follows: 
+```{r,echo=TRUE}
+n=6
+G = 0:(n-1)
+T = mod(outer(G,G,"+"),n)  # the outer sum computes a table of sums i + j
+rownames(T) = G
+colnames(T) = G
+T
+```
+
+We can write a little function to do this.
+
+```{r,echo=TRUE}
+CyclicCayley <- function(n,op="+") {
+  G = 0:(n-1)
+  T = mod(outer(G,G,op),n)
+  rownames(T) = G
+  colnames(T) = G
+  return(T) }
+```
+
+Then 
+
+```{r,echo=TRUE}
+CyclicCayley(5)
+```
+and 
+
+```{r,echo=TRUE}
+CyclicCayley(15)
+```
+
+## Multiplication Mod n: $U_n$
+
+The functions below will give us $\ZZ_n$ and $U_n$.
+
+```{r,echo=TRUE}
+Cyclic <- function(n) { 0:(n-1) }
+Units <- function(n) { (1:(n-1))[gcd(1:(n-1),n)==1] }
+```
+
+For example,
+```{r,echo=TRUE}
+Cyclic(10)
+Units(10)
+```
+
+We can multiply these by writing a MultTable function that uses the outer product
+
+```{r,echo=TRUE}
+MultTable <- function(G,n,op="*") {
+  T = mod(outer(G,G,op),n)
+  rownames(T) = G
+  colnames(T) = G
+  return(T)}
+```
+
+And we try it out:
+```{r,echo=TRUE}
+MultTable(Cyclic(10),10)
+```
+```{r,echo=TRUE}
+MultTable(Units(10),10)
+```

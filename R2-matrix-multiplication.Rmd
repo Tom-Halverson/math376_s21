@@ -1,0 +1,42 @@
+# Matrix Groups
+
+```{r,echo=TRUE,warning=FALSE}
+require(pracma)
+```
+
+## The General Linear Group $GL_n(\RR)$
+
+The **general linear group** $GL_n(\RR)$ is the group of all *invertible* $n \times n$ matrices with entries from the real numbers $\RR$. This is the world we lived in when we worked with square invertible matrices (and the invertible matrix theorem) in Math 236 Linear Algebra. 
+
+Remember that R has a funny matrix multiplication symbol: `%*%`. For example,
+```{r}
+A = cbind(c(1,2,3),c(1,1,1),c(0,1,1))
+B = cbind(c(-5,1,1),c(1,1,3),c(1,2,1))
+A %*% B
+B %*% A
+```
+illustrating that matrix multiplication is not-commutative and $GL_n(\RR)$ is a **nonabelian** group.
+
+The **identity matrix** is the identity element of the group, and it can be defined with `diag(n)`. If you have `pracma` loaded then you can invert the matrix A with `inv(A)` otherwise, in base R, you can use `solve(A)`.
+
+```{r}
+inv(A)
+zapsmall(A %*% inv(A))
+diag(3) %*% A
+```
+
+## Matrix Multiplication Mod m:  $GL_n(\ZZ_m)$
+
+You can use the `mod` command from `pracma` to do matrix multiplication mod m. 
+
+For example, notice how the product looks very different for different $\ZZ_m$.
+
+```{r}
+A = rbind(c(1,3),c(2,7))
+B = rbind(c(5,4),c(-3,-2))
+A %*% B
+mod(A %*% B,2)
+mod(A %*% B,3)
+mod(A %*% B,4)
+```
+

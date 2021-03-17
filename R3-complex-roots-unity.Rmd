@@ -1,0 +1,14 @@
+# Complex n-th roots of unity
+
+More information forthcoming. Here are the complex 14-th roots of unity. These are the 14 solutions to the equation $x^{14} - 1 = 0$. There are only 2 real solutions $1$ and $-1$.
+
+```{r,fig.width=4.5,fig.height=4.5}
+n = 14
+ii = 0+1i
+w = exp(2*pi*ii/n)
+G = w^(0:(n-1))
+G
+plot(Re(G),Im(G),col='red',pch=19)
+grid()
+```
+

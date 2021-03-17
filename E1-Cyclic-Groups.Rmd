@@ -2,44 +2,24 @@
 
 # Cyclic Groups
 
-```{r}
+```{r,echo=FALSE,warning=FALSE}
 require(pracma)
+CyclicCayley <- function(n,op="+") {
+  G = 0:(n-1)
+  T = mod(outer(G,G,op),n)
+  rownames(T) = G
+  colnames(T) = G
+  return(T) }
 ```
 
 ## Overview
 
-The finite **cyclic** group $\ZZ_6$ is
+The finite **cyclic** group $\ZZ_{n} = \{ 0, 1, 2, \ldots, n-1\}$ is the group under addition mod $n$. For example, here is the Cayley table of $\ZZ_{10}$. See [Modular Arithmetic] for the R function that produces these tables for any value of $n$.
 
-```{r,echo=FALSE}
-n = 6
-C = 0:(n-1)
-A = mod(rbind(
-  C,C+1,C+2,C+3,C+4,C+5
-),6)
-rownames(A) <- C
-colnames(A) <- C
-A
+
+```{r,echo=TRUE}
+CyclicCayley(10)
 ```
 
-And its Cayley graph is 
 
-```{r,echo=FALSE,message=FALSE}
-require(igraph)
-```
-
-```{r,echo=FALSE}
-A = rbind(
-  c(0,0,0,0,0,1),
-  c(1,0,0,0,0,0),
-  c(0,1,0,0,0,0),
-  c(0,0,1,0,0,0),
-  c(0,0,0,1,0,0),
-  c(0,0,0,0,1,0)
-)
-A = A + t(A)
-g=graph_from_adjacency_matrix(A,mode='directed')
-g <- graph(edges=c(1,2,2,3,3,4,4,5,5,6,6,1),n=6,directed=F)
-V(g)$label = 0:5
-plot(g, vertex.color='tan1', vertex.frame.color="dodgerblue")
-```
 

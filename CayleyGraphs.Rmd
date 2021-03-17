@@ -1,0 +1,37 @@
+---
+title: "Cayley Graphs.Rmd"
+author: "T. Halverson"
+date: "3/16/2021"
+output: html_document
+---
+
+
+
+```{r,echo=FALSE,message=FALSE}
+require(pracma)
+require(igraph)
+```
+
+```{r,echo=FALSE}
+A = rbind(
+  c(0,0,0,0,0,1),
+  c(1,0,0,0,0,0),
+  c(0,1,0,0,0,0),
+  c(0,0,1,0,0,0),
+  c(0,0,0,1,0,0),
+  c(0,0,0,0,1,0))
+A = A + t(A)
+g=graph_from_adjacency_matrix(A,mode='directed')
+g <- graph(edges=c(1,2,2,3,3,4,4,5,5,6,6,1),n=6,directed=F)
+V(g)$label = 0:5
+plot(g, vertex.color='tan1', vertex.frame.color="dodgerblue")
+```
+
+```{r,echo=FALSE}
+n = 6
+G = c(1:(n-1))
+CayleyTable = mod(G%*%t(G),6)
+rownames(CayleyTable) <- G
+colnames(CayleyTable) <- G
+CayleyTable
+```

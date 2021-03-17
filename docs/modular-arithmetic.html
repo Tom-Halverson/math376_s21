@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Section 4 Modular Arithmetic | MATH 376: Algebraic Structures</title>
+  <meta name="description" content="This is the class activity manual for MATH 376 at Macalester College." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Section 4 Modular Arithmetic | MATH 376: Algebraic Structures" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the class activity manual for MATH 376 at Macalester College." />
+  <meta name="github-repo" content="Tom-Halverson/math236_s21" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Section 4 Modular Arithmetic | MATH 376: Algebraic Structures" />
+  
+  <meta name="twitter:description" content="This is the class activity manual for MATH 376 at Macalester College." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="important-definitions-and-theorems.html"/>
+<link rel="next" href="matrix-groups.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; } /* Alert */
+code span.an { color: #008000; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #0000ff; } /* ControlFlow */
+code span.ch { color: #008080; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #008000; } /* Comment */
+code span.cv { color: #008000; } /* CommentVar */
+code span.do { color: #008000; } /* Documentation */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.im { } /* Import */
+code span.in { color: #008000; } /* Information */
+code span.kw { color: #0000ff; } /* Keyword */
+code span.op { } /* Operator */
+code span.ot { color: #ff4000; } /* Other */
+code span.pp { color: #ff4000; } /* Preprocessor */
+code span.sc { color: #008080; } /* SpecialChar */
+code span.ss { color: #008080; } /* SpecialString */
+code span.st { color: #008080; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #008080; } /* VerbatimString */
+code span.wa { color: #008000; font-weight: bold; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="m376.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href = "./">MATH 376: Algebraic Structures</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="part"><span><b>I Problem Sets</b></span></li>
+<li class="chapter" data-level="1" data-path="problem-set-1.html"><a href="problem-set-1.html"><i class="fa fa-check"></i><b>1</b> Problem Set 1</a><ul>
+<li class="chapter" data-level="1.1" data-path="problem-set-1.html"><a href="problem-set-1.html#modular-multiplication"><i class="fa fa-check"></i><b>1.1</b> Modular Multiplication</a></li>
+<li class="chapter" data-level="1.2" data-path="problem-set-1.html"><a href="problem-set-1.html#group-of-units-u_n-mod-n"><i class="fa fa-check"></i><b>1.2</b> Group of Units <span class="math inline">\(U_n\)</span> mod n</a></li>
+<li class="chapter" data-level="1.3" data-path="problem-set-1.html"><a href="problem-set-1.html#two-by-two-mod-2"><i class="fa fa-check"></i><b>1.3</b> Two-by-two mod 2</a></li>
+<li class="chapter" data-level="1.4" data-path="problem-set-1.html"><a href="problem-set-1.html#outer-cancellation"><i class="fa fa-check"></i><b>1.4</b> Outer Cancellation</a></li>
+<li class="chapter" data-level="1.5" data-path="problem-set-1.html"><a href="problem-set-1.html#distributing-powers"><i class="fa fa-check"></i><b>1.5</b> Distributing Powers</a></li>
+</ul></li>
+<li class="part"><span><b>II Group Examples</b></span></li>
+<li class="chapter" data-level="2" data-path="cyclic-groups.html"><a href="cyclic-groups.html"><i class="fa fa-check"></i><b>2</b> Cyclic Groups</a><ul>
+<li class="chapter" data-level="2.1" data-path="cyclic-groups.html"><a href="cyclic-groups.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="important-definitions-and-theorems.html"><a href="important-definitions-and-theorems.html"><i class="fa fa-check"></i><b>3</b> Important Definitions and Theorems</a><ul>
+<li class="chapter" data-level="3.1" data-path="important-definitions-and-theorems.html"><a href="important-definitions-and-theorems.html#groups"><i class="fa fa-check"></i><b>3.1</b> Groups</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="important-definitions-and-theorems.html"><a href="important-definitions-and-theorems.html#group"><i class="fa fa-check"></i><b>3.1.1</b> Group</a></li>
+<li class="chapter" data-level="3.1.2" data-path="important-definitions-and-theorems.html"><a href="important-definitions-and-theorems.html#subgroup"><i class="fa fa-check"></i><b>3.1.2</b> Subgroup</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III Algebraic Structures in R</b></span></li>
+<li class="chapter" data-level="4" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html"><i class="fa fa-check"></i><b>4</b> Modular Arithmetic</a><ul>
+<li class="chapter" data-level="4.1" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#integer-division-and-gcd"><i class="fa fa-check"></i><b>4.1</b> Integer division and GCD</a></li>
+<li class="chapter" data-level="4.2" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#addition-mod-n-mathbbz_n"><i class="fa fa-check"></i><b>4.2</b> Addition Mod n: <span class="math inline">\(\mathbb{Z}_n\)</span></a></li>
+<li class="chapter" data-level="4.3" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#multiplication-mod-n-u_n"><i class="fa fa-check"></i><b>4.3</b> Multiplication Mod n: <span class="math inline">\(U_n\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="matrix-groups.html"><a href="matrix-groups.html"><i class="fa fa-check"></i><b>5</b> Matrix Groups</a><ul>
+<li class="chapter" data-level="5.1" data-path="matrix-groups.html"><a href="matrix-groups.html#the-general-linear-group-gl_nmathbbr"><i class="fa fa-check"></i><b>5.1</b> The General Linear Group <span class="math inline">\(GL_n(\mathbb{R})\)</span></a></li>
+<li class="chapter" data-level="5.2" data-path="matrix-groups.html"><a href="matrix-groups.html#matrix-multiplication-mod-m-gl_nmathbbz_m"><i class="fa fa-check"></i><b>5.2</b> Matrix Multiplication Mod m: <span class="math inline">\(GL_n(\mathbb{Z}_m)\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html"><i class="fa fa-check"></i><b>6</b> Complex n-th roots of unity</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MATH 376: Algebraic Structures</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="modular-arithmetic" class="section level1">
+<h1><span class="header-section-number">Section 4</span> Modular Arithmetic</h1>
+<p>We will require the package <code>pracma</code>, which you may recall from linear algebra, contains “practical math applications.” It has implementations of modular arithmetic and the GCD algorithms.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="modular-arithmetic.html#cb3-1"></a><span class="kw">require</span>(pracma)</span></code></pre></div>
+<div id="integer-division-and-gcd" class="section level2">
+<h2><span class="header-section-number">4.1</span> Integer division and GCD</h2>
+<p>The <code>mod</code> function computes the remainder after division by <span class="math inline">\(n\)</span> <code>idivide</code> gives the quotient. Thus, for example,</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="modular-arithmetic.html#cb4-1"></a><span class="kw">mod</span>(<span class="dv">68</span>,<span class="dv">15</span>)</span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="modular-arithmetic.html#cb6-1"></a><span class="kw">idivide</span>(<span class="dv">68</span>,<span class="dv">15</span>)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<p>Since <span class="math inline">\(68 = 15 \cdot 4 + 8\)</span>.</p>
+<p>The <strong>greatest commond diviso GCD</strong> of two integers is computed with the <code>gcd(m,n)</code> command. For example,</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="modular-arithmetic.html#cb8-1"></a><span class="kw">gcd</span>(<span class="dv">70</span>,<span class="dv">42</span>)</span></code></pre></div>
+<pre><code>## [1] 14</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="modular-arithmetic.html#cb10-1"></a><span class="kw">gcd</span>(<span class="dv">68</span>,<span class="dv">15</span>)</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<p>telling us that <span class="math inline">\(gcd(70,42) = 14\)</span> and <span class="math inline">\(gcd(68,15) = 1\)</span>, meaning that 68 and 15 are <em>relatively prime</em>.</p>
+<p>The <strong>Extended GCD</strong> gives a little more information that can be quite useful in this course. If <span class="math inline">\(d = gcd(a,b)\)</span> then there exist integers <span class="math inline">\(s,t \in \mathbb{Z}\)</span> such that
+<span class="math display">\[
+d = s a+ t b.
+\]</span>
+You can find a proof of this fact in Chapter 0. We can use it here:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="modular-arithmetic.html#cb12-1"></a><span class="kw">gcd</span>(<span class="dv">70</span>,<span class="dv">42</span>,<span class="dt">extended=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## $g
+## [1] 14
+## 
+## $c
+## [1] -1
+## 
+## $d
+## [1] 2</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="modular-arithmetic.html#cb14-1"></a><span class="kw">gcd</span>(<span class="dv">68</span>,<span class="dv">15</span>,<span class="dt">extended=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## $g
+## [1] 1
+## 
+## $c
+## [1] 2
+## 
+## $d
+## [1] -9</code></pre>
+<p>Telling us that
+<span class="math display">\[
+\begin{align*}
+14 &amp; = (-1) 70 + (2) 42 \\
+1 &amp; = (2)68 + (-9) 15
+\end{align*}
+\]</span>
+As we can confirm with</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="modular-arithmetic.html#cb16-1"></a><span class="dv">2</span><span class="op">*</span><span class="dv">68</span> <span class="op">-</span><span class="st"> </span><span class="dv">9</span><span class="op">*</span><span class="dv">15</span></span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+</div>
+<div id="addition-mod-n-mathbbz_n" class="section level2">
+<h2><span class="header-section-number">4.2</span> Addition Mod n: <span class="math inline">\(\mathbb{Z}_n\)</span></h2>
+<p>We can generate the finite <strong>cyclic</strong> group <span class="math inline">\(\mathbb{Z}_n = \{0, 1, 2, \ldots, n-1\}\)</span> easily as follows:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="modular-arithmetic.html#cb18-1"></a>n =<span class="st"> </span><span class="dv">12</span></span>
+<span id="cb18-2"><a href="modular-arithmetic.html#cb18-2"></a>G =<span class="st"> </span><span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>)  <span class="co"># generates an integer sequence from 0 to n-1.</span></span>
+<span id="cb18-3"><a href="modular-arithmetic.html#cb18-3"></a>G</span></code></pre></div>
+<pre><code>##  [1]  0  1  2  3  4  5  6  7  8  9 10 11</code></pre>
+<p>And then we can add all of these elements mod n and make the <strong>Cayley table</strong> as follows:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="modular-arithmetic.html#cb20-1"></a>n=<span class="dv">6</span></span>
+<span id="cb20-2"><a href="modular-arithmetic.html#cb20-2"></a>G =<span class="st"> </span><span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>)</span>
+<span id="cb20-3"><a href="modular-arithmetic.html#cb20-3"></a>T =<span class="st"> </span><span class="kw">mod</span>(<span class="kw">outer</span>(G,G,<span class="st">&quot;+&quot;</span>),n)  <span class="co"># the outer sum computes a table of sums i + j</span></span>
+<span id="cb20-4"><a href="modular-arithmetic.html#cb20-4"></a><span class="kw">rownames</span>(T) =<span class="st"> </span>G</span>
+<span id="cb20-5"><a href="modular-arithmetic.html#cb20-5"></a><span class="kw">colnames</span>(T) =<span class="st"> </span>G</span>
+<span id="cb20-6"><a href="modular-arithmetic.html#cb20-6"></a>T</span></code></pre></div>
+<pre><code>##   0 1 2 3 4 5
+## 0 0 1 2 3 4 5
+## 1 1 2 3 4 5 0
+## 2 2 3 4 5 0 1
+## 3 3 4 5 0 1 2
+## 4 4 5 0 1 2 3
+## 5 5 0 1 2 3 4</code></pre>
+<p>We can write a little function to do this.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="modular-arithmetic.html#cb22-1"></a>CyclicCayley &lt;-<span class="st"> </span><span class="cf">function</span>(n,<span class="dt">op=</span><span class="st">&quot;+&quot;</span>) {</span>
+<span id="cb22-2"><a href="modular-arithmetic.html#cb22-2"></a>  G =<span class="st"> </span><span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>)</span>
+<span id="cb22-3"><a href="modular-arithmetic.html#cb22-3"></a>  T =<span class="st"> </span><span class="kw">mod</span>(<span class="kw">outer</span>(G,G,op),n)</span>
+<span id="cb22-4"><a href="modular-arithmetic.html#cb22-4"></a>  <span class="kw">rownames</span>(T) =<span class="st"> </span>G</span>
+<span id="cb22-5"><a href="modular-arithmetic.html#cb22-5"></a>  <span class="kw">colnames</span>(T) =<span class="st"> </span>G</span>
+<span id="cb22-6"><a href="modular-arithmetic.html#cb22-6"></a>  <span class="kw">return</span>(T) }</span></code></pre></div>
+<p>Then</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="modular-arithmetic.html#cb23-1"></a><span class="kw">CyclicCayley</span>(<span class="dv">5</span>)</span></code></pre></div>
+<pre><code>##   0 1 2 3 4
+## 0 0 1 2 3 4
+## 1 1 2 3 4 0
+## 2 2 3 4 0 1
+## 3 3 4 0 1 2
+## 4 4 0 1 2 3</code></pre>
+<p>and</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="modular-arithmetic.html#cb25-1"></a><span class="kw">CyclicCayley</span>(<span class="dv">15</span>)</span></code></pre></div>
+<pre><code>##     0  1  2  3  4  5  6  7  8  9 10 11 12 13 14
+## 0   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14
+## 1   1  2  3  4  5  6  7  8  9 10 11 12 13 14  0
+## 2   2  3  4  5  6  7  8  9 10 11 12 13 14  0  1
+## 3   3  4  5  6  7  8  9 10 11 12 13 14  0  1  2
+## 4   4  5  6  7  8  9 10 11 12 13 14  0  1  2  3
+## 5   5  6  7  8  9 10 11 12 13 14  0  1  2  3  4
+## 6   6  7  8  9 10 11 12 13 14  0  1  2  3  4  5
+## 7   7  8  9 10 11 12 13 14  0  1  2  3  4  5  6
+## 8   8  9 10 11 12 13 14  0  1  2  3  4  5  6  7
+## 9   9 10 11 12 13 14  0  1  2  3  4  5  6  7  8
+## 10 10 11 12 13 14  0  1  2  3  4  5  6  7  8  9
+## 11 11 12 13 14  0  1  2  3  4  5  6  7  8  9 10
+## 12 12 13 14  0  1  2  3  4  5  6  7  8  9 10 11
+## 13 13 14  0  1  2  3  4  5  6  7  8  9 10 11 12
+## 14 14  0  1  2  3  4  5  6  7  8  9 10 11 12 13</code></pre>
+</div>
+<div id="multiplication-mod-n-u_n" class="section level2">
+<h2><span class="header-section-number">4.3</span> Multiplication Mod n: <span class="math inline">\(U_n\)</span></h2>
+<p>The functions below will give us <span class="math inline">\(\mathbb{Z}_n\)</span> and <span class="math inline">\(U_n\)</span>.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="modular-arithmetic.html#cb27-1"></a>Cyclic &lt;-<span class="st"> </span><span class="cf">function</span>(n) { <span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>) }</span>
+<span id="cb27-2"><a href="modular-arithmetic.html#cb27-2"></a>Units &lt;-<span class="st"> </span><span class="cf">function</span>(n) { (<span class="dv">1</span><span class="op">:</span>(n<span class="dv">-1</span>))[<span class="kw">gcd</span>(<span class="dv">1</span><span class="op">:</span>(n<span class="dv">-1</span>),n)<span class="op">==</span><span class="dv">1</span>] }</span></code></pre></div>
+<p>For example,</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="modular-arithmetic.html#cb28-1"></a><span class="kw">Cyclic</span>(<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>##  [1] 0 1 2 3 4 5 6 7 8 9</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="modular-arithmetic.html#cb30-1"></a><span class="kw">Units</span>(<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## [1] 1 3 7 9</code></pre>
+<p>We can multiply these by writing a MultTable function that uses the outer product</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="modular-arithmetic.html#cb32-1"></a>MultTable &lt;-<span class="st"> </span><span class="cf">function</span>(G,n,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>) {</span>
+<span id="cb32-2"><a href="modular-arithmetic.html#cb32-2"></a>  T =<span class="st"> </span><span class="kw">mod</span>(<span class="kw">outer</span>(G,G,op),n)</span>
+<span id="cb32-3"><a href="modular-arithmetic.html#cb32-3"></a>  <span class="kw">rownames</span>(T) =<span class="st"> </span>G</span>
+<span id="cb32-4"><a href="modular-arithmetic.html#cb32-4"></a>  <span class="kw">colnames</span>(T) =<span class="st"> </span>G</span>
+<span id="cb32-5"><a href="modular-arithmetic.html#cb32-5"></a>  <span class="kw">return</span>(T)}</span></code></pre></div>
+<p>And we try it out:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="modular-arithmetic.html#cb33-1"></a><span class="kw">MultTable</span>(<span class="kw">Cyclic</span>(<span class="dv">10</span>),<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>##   0 1 2 3 4 5 6 7 8 9
+## 0 0 0 0 0 0 0 0 0 0 0
+## 1 0 1 2 3 4 5 6 7 8 9
+## 2 0 2 4 6 8 0 2 4 6 8
+## 3 0 3 6 9 2 5 8 1 4 7
+## 4 0 4 8 2 6 0 4 8 2 6
+## 5 0 5 0 5 0 5 0 5 0 5
+## 6 0 6 2 8 4 0 6 2 8 4
+## 7 0 7 4 1 8 5 2 9 6 3
+## 8 0 8 6 4 2 0 8 6 4 2
+## 9 0 9 8 7 6 5 4 3 2 1</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="modular-arithmetic.html#cb35-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">10</span>),<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>##   1 3 7 9
+## 1 1 3 7 9
+## 3 3 9 1 7
+## 7 7 1 9 3
+## 9 9 7 3 1</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="important-definitions-and-theorems.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="matrix-groups.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

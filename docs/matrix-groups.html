@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 2 Cyclic Groups | MATH 376: Algebraic Structures</title>
+  <title>Section 5 Matrix Groups | MATH 376: Algebraic Structures</title>
   <meta name="description" content="This is the class activity manual for MATH 376 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 2 Cyclic Groups | MATH 376: Algebraic Structures" />
+  <meta property="og:title" content="Section 5 Matrix Groups | MATH 376: Algebraic Structures" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Tom-Halverson/math236_s21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 2 Cyclic Groups | MATH 376: Algebraic Structures" />
+  <meta name="twitter:title" content="Section 5 Matrix Groups | MATH 376: Algebraic Structures" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 376 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="problem-set-1.html"/>
-<link rel="next" href="important-definitions-and-theorems.html"/>
+<link rel="prev" href="modular-arithmetic.html"/>
+<link rel="next" href="complex-n-th-roots-of-unity.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -177,23 +177,65 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="cyclic-groups" class="section level1">
-<h1><span class="header-section-number">Section 2</span> Cyclic Groups</h1>
-<div id="overview" class="section level2">
-<h2><span class="header-section-number">2.1</span> Overview</h2>
-<p>The finite <strong>cyclic</strong> group <span class="math inline">\(\mathbb{Z}_{n} = \{ 0, 1, 2, \ldots, n-1\}\)</span> is the group under addition mod <span class="math inline">\(n\)</span>. For example, here is the Cayley table of <span class="math inline">\(\mathbb{Z}_{10}\)</span>. See <a href="modular-arithmetic.html#modular-arithmetic">Modular Arithmetic</a> for the R function that produces these tables for any value of <span class="math inline">\(n\)</span>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="cyclic-groups.html#cb1-1"></a><span class="kw">CyclicCayley</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##   0 1 2 3 4 5 6 7 8 9
-## 0 0 1 2 3 4 5 6 7 8 9
-## 1 1 2 3 4 5 6 7 8 9 0
-## 2 2 3 4 5 6 7 8 9 0 1
-## 3 3 4 5 6 7 8 9 0 1 2
-## 4 4 5 6 7 8 9 0 1 2 3
-## 5 5 6 7 8 9 0 1 2 3 4
-## 6 6 7 8 9 0 1 2 3 4 5
-## 7 7 8 9 0 1 2 3 4 5 6
-## 8 8 9 0 1 2 3 4 5 6 7
-## 9 9 0 1 2 3 4 5 6 7 8</code></pre>
+<div id="matrix-groups" class="section level1">
+<h1><span class="header-section-number">Section 5</span> Matrix Groups</h1>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="matrix-groups.html#cb37-1"></a><span class="kw">require</span>(pracma)</span></code></pre></div>
+<div id="the-general-linear-group-gl_nmathbbr" class="section level2">
+<h2><span class="header-section-number">5.1</span> The General Linear Group <span class="math inline">\(GL_n(\mathbb{R})\)</span></h2>
+<p>The <strong>general linear group</strong> <span class="math inline">\(GL_n(\mathbb{R})\)</span> is the group of all <em>invertible</em> <span class="math inline">\(n \times n\)</span> matrices with entries from the real numbers <span class="math inline">\(\mathbb{R}\)</span>. This is the world we lived in when we worked with square invertible matrices (and the invertible matrix theorem) in Math 236 Linear Algebra.</p>
+<p>Remember that R has a funny matrix multiplication symbol: <code>%*%</code>. For example,</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="matrix-groups.html#cb38-1"></a>A =<span class="st"> </span><span class="kw">cbind</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>),<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>))</span>
+<span id="cb38-2"><a href="matrix-groups.html#cb38-2"></a>B =<span class="st"> </span><span class="kw">cbind</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">1</span>),<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">3</span>),<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>))</span>
+<span id="cb38-3"><a href="matrix-groups.html#cb38-3"></a>A <span class="op">%*%</span><span class="st"> </span>B</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]   -4    2    3
+## [2,]   -8    6    5
+## [3,]  -13    7    6</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="matrix-groups.html#cb40-1"></a>B <span class="op">%*%</span><span class="st"> </span>A</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    0   -3    2
+## [2,]    9    4    3
+## [3,]   10    5    4</code></pre>
+<p>illustrating that matrix multiplication is not-commutative and <span class="math inline">\(GL_n(\mathbb{R})\)</span> is a <strong>nonabelian</strong> group.</p>
+<p>The <strong>identity matrix</strong> is the identity element of the group, and it can be defined with <code>diag(n)</code>. If you have <code>pracma</code> loaded then you can invert the matrix A with <code>inv(A)</code> otherwise, in base R, you can use <code>solve(A)</code>.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="matrix-groups.html#cb42-1"></a><span class="kw">inv</span>(A)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    0   -1    1
+## [2,]    1    1   -1
+## [3,]   -1    2   -1</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="matrix-groups.html#cb44-1"></a><span class="kw">zapsmall</span>(A <span class="op">%*%</span><span class="st"> </span><span class="kw">inv</span>(A))</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    0    0
+## [2,]    0    1    0
+## [3,]    0    0    1</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="matrix-groups.html#cb46-1"></a><span class="kw">diag</span>(<span class="dv">3</span>) <span class="op">%*%</span><span class="st"> </span>A</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    1    0
+## [2,]    2    1    1
+## [3,]    3    1    1</code></pre>
+</div>
+<div id="matrix-multiplication-mod-m-gl_nmathbbz_m" class="section level2">
+<h2><span class="header-section-number">5.2</span> Matrix Multiplication Mod m: <span class="math inline">\(GL_n(\mathbb{Z}_m)\)</span></h2>
+<p>You can use the <code>mod</code> command from <code>pracma</code> to do matrix multiplication mod m.</p>
+<p>For example, notice how the product looks very different for different <span class="math inline">\(\mathbb{Z}_m\)</span>.</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="matrix-groups.html#cb48-1"></a>A =<span class="st"> </span><span class="kw">rbind</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">7</span>))</span>
+<span id="cb48-2"><a href="matrix-groups.html#cb48-2"></a>B =<span class="st"> </span><span class="kw">rbind</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">4</span>),<span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>,<span class="op">-</span><span class="dv">2</span>))</span>
+<span id="cb48-3"><a href="matrix-groups.html#cb48-3"></a>A <span class="op">%*%</span><span class="st"> </span>B</span></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]   -4   -2
+## [2,]  -11   -6</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="matrix-groups.html#cb50-1"></a><span class="kw">mod</span>(A <span class="op">%*%</span><span class="st"> </span>B,<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    0    0
+## [2,]    1    0</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="matrix-groups.html#cb52-1"></a><span class="kw">mod</span>(A <span class="op">%*%</span><span class="st"> </span>B,<span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    2    1
+## [2,]    1    0</code></pre>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="matrix-groups.html#cb54-1"></a><span class="kw">mod</span>(A <span class="op">%*%</span><span class="st"> </span>B,<span class="dv">4</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    0    2
+## [2,]    1    2</code></pre>
 
 </div>
 </div>
@@ -202,8 +244,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           </div>
         </div>
       </div>
-<a href="problem-set-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="important-definitions-and-theorems.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="modular-arithmetic.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="complex-n-th-roots-of-unity.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

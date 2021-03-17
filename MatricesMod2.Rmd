@@ -1,0 +1,19 @@
+---
+title: "MatricesMod2.Rmd"
+author: "T. Halverson"
+date: "3/16/2021"
+output: html_document
+---
+```{r}
+require(pracma)
+```
+
+```{r}
+A = cbind(c(1,1),c(0,1))
+A
+mod(A %*% A,2)
+B = cbind(c(0,1),c(1,1))
+B
+mod(B %*% B %*% B,2)
+```
+

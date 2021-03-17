@@ -1,5 +1,5 @@
 
-# Important Definitions
+# Important Definitions and Theorems
 
 
 ## Groups
@@ -13,3 +13,10 @@ a. (Identity) There exists $e \in \G$ such that $e \ast g= g \ast e = g$ for all
 b. (Inverse) For all $g \in \G$, there exists $g^{-1} \in \G$ such that $g \ast g^{-1} = g^{-1} \ast g = e$.
 
 c. (Associativity) $(ab)c = a (bc)$ for all $a,b,c \in \G$ 
+
+Furthermore, the group is **abelian** if it also satisfies the commutative property:
+
+d. (Commutative) $ab = ba$ for all $a,b \in \G$.
+
+
+### Subgroup
