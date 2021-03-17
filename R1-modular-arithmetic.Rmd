@@ -64,7 +64,7 @@ colnames(T) = G
 T
 ```
 
-We can write a little function to do this.
+Evem better, we can write a little function to do this.
 
 ```{r,echo=TRUE}
 CyclicCayley <- function(n,op="+") {

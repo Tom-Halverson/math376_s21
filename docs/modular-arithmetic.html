@@ -250,7 +250,7 @@ As we can confirm with</p>
 ## 3 3 4 5 0 1 2
 ## 4 4 5 0 1 2 3
 ## 5 5 0 1 2 3 4</code></pre>
-<p>We can write a little function to do this.</p>
+<p>Evem better, we can write a little function to do this.</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="modular-arithmetic.html#cb22-1"></a>CyclicCayley &lt;-<span class="st"> </span><span class="cf">function</span>(n,<span class="dt">op=</span><span class="st">&quot;+&quot;</span>) {</span>
 <span id="cb22-2"><a href="modular-arithmetic.html#cb22-2"></a>  G =<span class="st"> </span><span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>)</span>
 <span id="cb22-3"><a href="modular-arithmetic.html#cb22-3"></a>  T =<span class="st"> </span><span class="kw">mod</span>(<span class="kw">outer</span>(G,G,op),n)</span>
