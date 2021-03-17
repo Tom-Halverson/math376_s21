@@ -21,7 +21,7 @@ d. (Commutative) If $a,b \in \G$, then $ab = ba$.
 
 ### Subgroup
 
-**Def**: A *subset* $\H \subseteq \G$ of a group $\G$ is a **subgroup** if $\H$ is also a group under the same binary operation. We write $\H \le \G$ do denote that $\H$ is a subgroup of $\G$ and write $\H < \G$ if $\H \le \G$ and $\H \not= \G$.
+**Def**: A *subset* $\H \subseteq \G$ of a group $\G$ is a **subgroup** if $\H$ is a group under the same binary operation that it inherits from $\G$. We write $\H \le \G$ do denote that $\H$ is a subgroup of $\G$ and write $\H < \G$ if $\H \le \G$ and $\H \not= \G$.
 
 **Theorem**: (2 step subgroup test) A *nonempty* subset $\H \subseteq \G$ is a subgroup if
 
