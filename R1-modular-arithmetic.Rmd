@@ -72,7 +72,8 @@ CyclicCayley <- function(n,op="+") {
   T = mod(outer(G,G,op),n)
   rownames(T) = G
   colnames(T) = G
-  return(T) }
+  return(T) 
+  }
 ```
 
 Then 
@@ -108,7 +109,8 @@ MultTable <- function(G,n,op="*") {
   T = mod(outer(G,G,op),n)
   rownames(T) = G
   colnames(T) = G
-  return(T)}
+  return(T)
+  }
 ```
 
 And we try it out:
