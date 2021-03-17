@@ -184,19 +184,25 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <h2><span class="header-section-number">3.1</span> Groups</h2>
 <div id="group" class="section level3">
 <h3><span class="header-section-number">3.1.1</span> Group</h3>
-<p>A <strong>group</strong> is a set <span class="math inline">\(\mathsf{G}\)</span> with a binary operation <span class="math inline">\(\ast\)</span> that satisfies the following:</p>
+<p><strong>Def</strong>: A <strong>group</strong> is a set <span class="math inline">\(\mathsf{G}\)</span> with a binary operation <span class="math inline">\(\ast\)</span> that satisfies the following:</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>(Identity) There exists <span class="math inline">\(e \in \mathsf{G}\)</span> such that <span class="math inline">\(e \ast g= g \ast e = g\)</span> for all <span class="math inline">\(g \in \mathsf{G}\)</span>.</p></li>
-<li><p>(Inverse) For all <span class="math inline">\(g \in \mathsf{G}\)</span>, there exists <span class="math inline">\(g^{-1} \in \mathsf{G}\)</span> such that <span class="math inline">\(g \ast g^{-1} = g^{-1} \ast g = e\)</span>.</p></li>
-<li><p>(Associativity) <span class="math inline">\((ab)c = a (bc)\)</span> for all <span class="math inline">\(a,b,c \in \mathsf{G}\)</span></p></li>
+<li><p>(Identity) There exists <span class="math inline">\(e \in \mathsf{G}\)</span> such that: if <span class="math inline">\(g \in \mathsf{G}\)</span>, then <span class="math inline">\(e \ast g= g \ast e = g\)</span>.</p></li>
+<li><p>(Inverse) If <span class="math inline">\(g \in \mathsf{G}\)</span>, then there exists <span class="math inline">\(g^{-1} \in \mathsf{G}\)</span> so that <span class="math inline">\(g \ast g^{-1} = g^{-1} \ast g = e\)</span>.</p></li>
+<li><p>(Associativity) If <span class="math inline">\(a,b,c \in \mathsf{G}\)</span>, then <span class="math inline">\((ab)c = a (bc)\)</span>.</p></li>
 </ol>
 <p>Furthermore, the group is <strong>abelian</strong> if it also satisfies the commutative property:</p>
 <ol start="4" style="list-style-type: lower-alpha">
-<li>(Commutative) <span class="math inline">\(ab = ba\)</span> for all <span class="math inline">\(a,b \in \mathsf{G}\)</span>.</li>
+<li>(Commutative) If <span class="math inline">\(a,b \in \mathsf{G}\)</span>, then <span class="math inline">\(ab = ba\)</span>.</li>
 </ol>
 </div>
 <div id="subgroup" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> Subgroup</h3>
+<p><strong>Def</strong>: A <em>subset</em> <span class="math inline">\(\mathsf{H}\subseteq \mathsf{G}\)</span> of a group <span class="math inline">\(\mathsf{G}\)</span> is a <strong>subgroup</strong> if <span class="math inline">\(\mathsf{H}\)</span> is also a group under the same binary operation. We write <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> do denote that <span class="math inline">\(\mathsf{H}\)</span> is a subgroup of <span class="math inline">\(\mathsf{G}\)</span> and write <span class="math inline">\(\mathsf{H}&lt; \mathsf{G}\)</span> if <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> and <span class="math inline">\(\mathsf{H}\not= \mathsf{G}\)</span>.</p>
+<p><strong>Theorem</strong>: (2 step subgroup test) A <em>nonempty</em> subset <span class="math inline">\(\mathsf{H}\subseteq \mathsf{G}\)</span> is a subgroup if</p>
+<ol style="list-style-type: lower-alpha">
+<li>(closure) If <span class="math inline">\(h_1, h_2 \in \mathsf{H}\)</span>, then <span class="math inline">\(h_1 h_2 \in \mathsf{H}\)</span>.</li>
+<li>(contains inverses) If <span class="math inline">\(h \in \mathsf{H}\)</span>, then <span class="math inline">\(h^{-1} \in \mathsf{H}\)</span>.</li>
+</ol>
 
 </div>
 </div>

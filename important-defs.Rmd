@@ -6,17 +6,26 @@
 
 ### Group
 
-A **group** is a set $\G$ with a binary operation $\ast$ that satisfies the following:
+**Def**: A **group** is a set $\G$ with a binary operation $\ast$ that satisfies the following:
 
-a. (Identity) There exists $e \in \G$ such that $e \ast g= g \ast e = g$ for all $g \in \G$.
+a. (Identity) There exists $e \in \G$ such that: if $g \in \G$, then  $e \ast g= g \ast e = g$.
 
-b. (Inverse) For all $g \in \G$, there exists $g^{-1} \in \G$ such that $g \ast g^{-1} = g^{-1} \ast g = e$.
+b. (Inverse) If $g \in \G$, then there exists $g^{-1} \in \G$ so that $g \ast g^{-1} = g^{-1} \ast g = e$.
 
-c. (Associativity) $(ab)c = a (bc)$ for all $a,b,c \in \G$ 
+c. (Associativity) If $a,b,c \in \G$, then $(ab)c = a (bc)$. 
 
 Furthermore, the group is **abelian** if it also satisfies the commutative property:
 
-d. (Commutative) $ab = ba$ for all $a,b \in \G$.
+d. (Commutative) If $a,b \in \G$, then $ab = ba$.
 
 
 ### Subgroup
+
+**Def**: A *subset* $\H \subseteq \G$ of a group $\G$ is a **subgroup** if $\H$ is also a group under the same binary operation. We write $\H \le \G$ do denote that $\H$ is a subgroup of $\G$ and write $\H < \G$ if $\H \le \G$ and $\H \not= \G$.
+
+**Theorem**: (2 step subgroup test) A *nonempty* subset $\H \subseteq \G$ is a subgroup if
+
+a. (closure) If $h_1, h_2 \in \H$, then $h_1 h_2 \in \H$.
+b. (contains inverses) If $h \in \H$, then $h^{-1} \in \H$.
+
+
