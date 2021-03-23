@@ -21,7 +21,7 @@
 
 ## Modular Multiplication
 
-Make the *multiplication* tables of the following sets and determine which of them are groups under multiplication. You can do this by hand (encouraged to get the feel for it)  or using the R commands in [Modular Arithemtic].
+Make the *multiplication* tables of the following sets and determine which of them are groups under multiplication. You can do this by hand (encouraged to get the feel for it)  or using the R commands in [Modular Arithmetic].
 
 
 a. $\{1,2,3\}$ using multiplication mod 4
@@ -29,23 +29,23 @@ b. $\{1,2,3,4\}$ using multiplication mod 5
 c. $\{1,5,7,11\}$ using multiplication mod 12
 d. $\{5,15,25,35\}$ using multiplication mod 40
 
-## Group of Units $U_n$ mod n
+## Group of Units $U(n)$ mod n
 
-Let $U_n = \{1 \le k < n \mid 1 = \gcd(k,n) \}$. These are the elements of $\ZZ_n$ that are relatively prime to $n$. Note: the book denotes this by $U(n)$. In this problem, we will explore this set and *prove* that it is a group. Notice: by definition $U_n$ has the multiplicative identity 1, since $gcd(1,n) = 1$. And, multiplication mod n is associative. So, we need to make sure it is a binary operation on $U_n$ and that $U_n$ is closed under taking inverses.
+Let $U(n) = \{1 \le k < n \mid 1 = \gcd(k,n) \}$. These are the elements of $\ZZ_n$ that are relatively prime to $n$. In this problem, we will explore this set and *prove* that it is a group. Notice: by definition $U(n)$ has the multiplicative identity 1, since $gcd(1,n) = 1$. And, multiplication mod n is associative. So, we need to make sure it is a binary operation on $U(n)$ and that $U(n)$ is closed under taking inverses.
 
-a. Compute the sets $U_6,U_7,U_8$.
+a. Compute the sets $U(6),U(7),U(8)$.
 
 b. Use the R-code in [Modular Arithmetic] to do the following (you can do it by hand if you prefer).
 
-    i. Make the multiplication tables of $\ZZ_8$ and $U_8$ mod 8.
-    ii. Make the multiplication table of $U_9$.
-    iii. Make the multiplication table of $U_{14}$.
+    i. Make the multiplication tables of $\ZZ_8$ and $U(8)$ mod 8.
+    ii. Make the multiplication table of $U(9)$.
+    iii. Make the multiplication table of $U(14)$.
 
-c. Show that if $a \in U_n$ then $a$ has a multiplicative **inverse** in $U_n$. Hint: use the Extended GCD from Chapter 0, the cyclic groups voicethread, and [Modular Arithmetic].
+c. Show that if $a \in U(n)$ then $a$ has a multiplicative **inverse** in $U(n)$. Hint: use the Extended GCD from Chapter 0, the cyclic groups voicethread, and [Modular Arithmetic].
 
-d. Show that $U_n$ is closed under multiplication. That is if $a, b \in U_n$, then $ab \in U_n$. This shows that multiplication mod $n$ is a **binary operation** *on* $U_n$. Hint 1: if $a$ is invertible mod n and $b$ is invertible mod n, then must $ab$ be invertible mod $n$. Hint 2: think about your shoes and socks.
+d. Show that $U(n)$ is closed under multiplication. That is if $a, b \in U(n)$, then $ab \in U(n)$. This shows that multiplication mod $n$ is a **binary operation** *on* $U(n)$. Hint 1: if $a$ is invertible mod n and $b$ is invertible mod n, then must $ab$ be invertible mod $n$. Hint 2: think about your shoes and socks.
 
-e. Are $U_8$, $U_9$, and/or $U_{14}$ cyclic? Justify your answers.
+e. Are $U(8)$, $U(9)$, and/or $U(14)$ cyclic? Justify your answers.
 
 ## Two-by-two mod 2
 
@@ -100,7 +100,7 @@ Compute the elements of the following cyclic subgroups.
 a. $\langle 5 \rangle  \le \ZZ$
 a. $\langle 5 \rangle \le \ZZ_{30}$
 a. $\langle 5 \rangle \le \RR^\ast$
-a. $\langle 5 \rangle \le U_{28}$
+a. $\langle 5 \rangle \le U({28})$
 a. $\langle (\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}i) \rangle  \le \CC^\ast$
 
 

@@ -131,7 +131,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="part"><span><b>I Problem Sets</b></span></li>
 <li class="chapter" data-level="1" data-path="problem-set-1.html"><a href="problem-set-1.html"><i class="fa fa-check"></i><b>1</b> Problem Set 1</a><ul>
 <li class="chapter" data-level="1.1" data-path="problem-set-1.html"><a href="problem-set-1.html#modular-multiplication"><i class="fa fa-check"></i><b>1.1</b> Modular Multiplication</a></li>
-<li class="chapter" data-level="1.2" data-path="problem-set-1.html"><a href="problem-set-1.html#group-of-units-u_n-mod-n"><i class="fa fa-check"></i><b>1.2</b> Group of Units <span class="math inline">\(U_n\)</span> mod n</a></li>
+<li class="chapter" data-level="1.2" data-path="problem-set-1.html"><a href="problem-set-1.html#group-of-units-un-mod-n"><i class="fa fa-check"></i><b>1.2</b> Group of Units <span class="math inline">\(U(n)\)</span> mod n</a></li>
 <li class="chapter" data-level="1.3" data-path="problem-set-1.html"><a href="problem-set-1.html#two-by-two-mod-2"><i class="fa fa-check"></i><b>1.3</b> Two-by-two mod 2</a></li>
 <li class="chapter" data-level="1.4" data-path="problem-set-1.html"><a href="problem-set-1.html#outer-cancellation"><i class="fa fa-check"></i><b>1.4</b> Outer Cancellation</a></li>
 <li class="chapter" data-level="1.5" data-path="problem-set-1.html"><a href="problem-set-1.html#distributing-powers"><i class="fa fa-check"></i><b>1.5</b> Distributing Powers</a></li>
@@ -192,7 +192,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ul>
 <div id="modular-multiplication" class="section level2">
 <h2><span class="header-section-number">1.1</span> Modular Multiplication</h2>
-<p>Make the <em>multiplication</em> tables of the following sets and determine which of them are groups under multiplication. You can do this by hand (encouraged to get the feel for it) or using the R commands in [Modular Arithemtic].</p>
+<p>Make the <em>multiplication</em> tables of the following sets and determine which of them are groups under multiplication. You can do this by hand (encouraged to get the feel for it) or using the R commands in <a href="modular-arithmetic.html#modular-arithmetic">Modular Arithmetic</a>.</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\{1,2,3\}\)</span> using multiplication mod 4</li>
 <li><span class="math inline">\(\{1,2,3,4\}\)</span> using multiplication mod 5</li>
@@ -200,20 +200,20 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li><span class="math inline">\(\{5,15,25,35\}\)</span> using multiplication mod 40</li>
 </ol>
 </div>
-<div id="group-of-units-u_n-mod-n" class="section level2">
-<h2><span class="header-section-number">1.2</span> Group of Units <span class="math inline">\(U_n\)</span> mod n</h2>
-<p>Let <span class="math inline">\(U_n = \{1 \le k &lt; n \mid 1 = \gcd(k,n) \}\)</span>. These are the elements of <span class="math inline">\(\mathbb{Z}_n\)</span> that are relatively prime to <span class="math inline">\(n\)</span>. Note: the book denotes this by <span class="math inline">\(U(n)\)</span>. In this problem, we will explore this set and <em>prove</em> that it is a group. Notice: by definition <span class="math inline">\(U_n\)</span> has the multiplicative identity 1, since <span class="math inline">\(gcd(1,n) = 1\)</span>. And, multiplication mod n is associative. So, we need to make sure it is a binary operation on <span class="math inline">\(U_n\)</span> and that <span class="math inline">\(U_n\)</span> is closed under taking inverses.</p>
+<div id="group-of-units-un-mod-n" class="section level2">
+<h2><span class="header-section-number">1.2</span> Group of Units <span class="math inline">\(U(n)\)</span> mod n</h2>
+<p>Let <span class="math inline">\(U(n) = \{1 \le k &lt; n \mid 1 = \gcd(k,n) \}\)</span>. These are the elements of <span class="math inline">\(\mathbb{Z}_n\)</span> that are relatively prime to <span class="math inline">\(n\)</span>. In this problem, we will explore this set and <em>prove</em> that it is a group. Notice: by definition <span class="math inline">\(U(n)\)</span> has the multiplicative identity 1, since <span class="math inline">\(gcd(1,n) = 1\)</span>. And, multiplication mod n is associative. So, we need to make sure it is a binary operation on <span class="math inline">\(U(n)\)</span> and that <span class="math inline">\(U(n)\)</span> is closed under taking inverses.</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>Compute the sets <span class="math inline">\(U_6,U_7,U_8\)</span>.</p></li>
+<li><p>Compute the sets <span class="math inline">\(U(6),U(7),U(8)\)</span>.</p></li>
 <li><p>Use the R-code in <a href="modular-arithmetic.html#modular-arithmetic">Modular Arithmetic</a> to do the following (you can do it by hand if you prefer).</p>
 <ol style="list-style-type: lower-roman">
-<li>Make the multiplication tables of <span class="math inline">\(\mathbb{Z}_8\)</span> and <span class="math inline">\(U_8\)</span> mod 8.</li>
-<li>Make the multiplication table of <span class="math inline">\(U_9\)</span>.</li>
-<li>Make the multiplication table of <span class="math inline">\(U_{14}\)</span>.</li>
+<li>Make the multiplication tables of <span class="math inline">\(\mathbb{Z}_8\)</span> and <span class="math inline">\(U(8)\)</span> mod 8.</li>
+<li>Make the multiplication table of <span class="math inline">\(U(9)\)</span>.</li>
+<li>Make the multiplication table of <span class="math inline">\(U(14)\)</span>.</li>
 </ol></li>
-<li><p>Show that if <span class="math inline">\(a \in U_n\)</span> then <span class="math inline">\(a\)</span> has a multiplicative <strong>inverse</strong> in <span class="math inline">\(U_n\)</span>. Hint: use the Extended GCD from Chapter 0, the cyclic groups voicethread, and <a href="modular-arithmetic.html#modular-arithmetic">Modular Arithmetic</a>.</p></li>
-<li><p>Show that <span class="math inline">\(U_n\)</span> is closed under multiplication. That is if <span class="math inline">\(a, b \in U_n\)</span>, then <span class="math inline">\(ab \in U_n\)</span>. This shows that multiplication mod <span class="math inline">\(n\)</span> is a <strong>binary operation</strong> <em>on</em> <span class="math inline">\(U_n\)</span>. Hint 1: if <span class="math inline">\(a\)</span> is invertible mod n and <span class="math inline">\(b\)</span> is invertible mod n, then must <span class="math inline">\(ab\)</span> be invertible mod <span class="math inline">\(n\)</span>. Hint 2: think about your shoes and socks.</p></li>
-<li><p>Are <span class="math inline">\(U_8\)</span>, <span class="math inline">\(U_9\)</span>, and/or <span class="math inline">\(U_{14}\)</span> cyclic? Justify your answers.</p></li>
+<li><p>Show that if <span class="math inline">\(a \in U(n)\)</span> then <span class="math inline">\(a\)</span> has a multiplicative <strong>inverse</strong> in <span class="math inline">\(U(n)\)</span>. Hint: use the Extended GCD from Chapter 0, the cyclic groups voicethread, and <a href="modular-arithmetic.html#modular-arithmetic">Modular Arithmetic</a>.</p></li>
+<li><p>Show that <span class="math inline">\(U(n)\)</span> is closed under multiplication. That is if <span class="math inline">\(a, b \in U(n)\)</span>, then <span class="math inline">\(ab \in U(n)\)</span>. This shows that multiplication mod <span class="math inline">\(n\)</span> is a <strong>binary operation</strong> <em>on</em> <span class="math inline">\(U(n)\)</span>. Hint 1: if <span class="math inline">\(a\)</span> is invertible mod n and <span class="math inline">\(b\)</span> is invertible mod n, then must <span class="math inline">\(ab\)</span> be invertible mod <span class="math inline">\(n\)</span>. Hint 2: think about your shoes and socks.</p></li>
+<li><p>Are <span class="math inline">\(U(8)\)</span>, <span class="math inline">\(U(9)\)</span>, and/or <span class="math inline">\(U(14)\)</span> cyclic? Justify your answers.</p></li>
 </ol>
 </div>
 <div id="two-by-two-mod-2" class="section level2">
@@ -265,7 +265,7 @@ Compute the elements of the following cyclic subgroups.</p>
 <li><span class="math inline">\(\langle 5 \rangle \le \mathbb{Z}\)</span></li>
 <li><span class="math inline">\(\langle 5 \rangle \le \mathbb{Z}_{30}\)</span></li>
 <li><span class="math inline">\(\langle 5 \rangle \le \mathbb{R}^\ast\)</span></li>
-<li><span class="math inline">\(\langle 5 \rangle \le U_{28}\)</span></li>
+<li><span class="math inline">\(\langle 5 \rangle \le U({28})\)</span></li>
 <li><span class="math inline">\(\langle (\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}i) \rangle \le \mathbb{C}^\ast\)</span></li>
 </ol>
 

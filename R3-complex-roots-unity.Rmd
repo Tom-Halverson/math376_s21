@@ -8,7 +8,18 @@ ii = 0+1i
 w = exp(2*pi*ii/n)
 G = w^(0:(n-1))
 G
-plot(Re(G),Im(G),col='red',pch=19)
+plot(Re(G),Im(G),col='red',pch=19,xlim=c(-2,2),ylim=c(-2,2))
 grid()
 ```
+```{r,fig.width=4.5,fig.height=4.5}
+n = 17
+ii = 0+1i
+w = 1.02*exp(2*pi*ii/n)
+G = w^(-50:100)
+plot(Re(G),Im(G),col='gray',xlim=c(-2,2),ylim=c(-2,2),type='l')
+grid()
+tt = seq(0,2*pi,length=1000)
 
+points(Re(G),Im(G),col='orange',pch=19)
+points(Re(w),Im(w),pch=19,col='blue')
+```

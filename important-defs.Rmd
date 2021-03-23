@@ -19,6 +19,31 @@ Furthermore, the group is **abelian** if it also satisfies the commutative prope
 d. (Commutative) If $a,b \in \G$, then $ab = ba$.
 
 
+**Proposition** (Uniqueness) Let $\G$ be a group. Then
+
+a. $\G$ has a unique identity element $e$.
+
+b. If $a,b,c \in \G$ and $ab = e$ and $ca = e$, then $a = c$.
+
+b. If $g \in \G$ then t
+here is a unique element $g^{-1}$ such that $g g^{-1} = g^{-1} g = e$.
+
+**Proposition** (Cancellation) Let $\G$ be a group and $a,b,c \in \G$.
+
+a. If $a b = a c$ then $b = c$.
+b. If $b a = c a$ then $b = c$.
+
+
+**Proposition** ($ax =b$) Let $\G$ be a group and $a,b \in \G$.
+
+a. The equation $a x = b$ has a unique solution $x = a^{-1} b$.
+b. The equation $x a = b$ has a unique solution $x = b a^{-1}$.
+
+**Proposition** (Latin Square) Let $\G$ be a group and $a \in \G$.
+
+a. The function $\G \to \G$ defined by left multiplication by $a$,  $g \mapsto a g$, is one-to-one and onto.
+b. The function $\G \to \G$ defined by right multiplication by $a$,  $g \mapsto g a$, is one-to-one and onto.
+
 ### Subgroup
 
 **Def**: A *subset* $\H \subseteq \G$ of a group $\G$ is a **subgroup** if $\H$ is a group under the same binary operation that it inherits from $\G$. We write $\H \le \G$ to denote that $\H$ is a subgroup of $\G$ and write $\H < \G$ if $\H \le \G$ and $\H \not= \G$.

@@ -1,6 +1,6 @@
 problem-set-1
 modular-multiplication
-group-of-units-u_n-mod-n
+group-of-units-un-mod-n
 two-by-two-mod-2
 outer-cancellation
 distributing-powers
