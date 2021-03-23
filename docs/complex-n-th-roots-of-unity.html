@@ -186,14 +186,13 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <span id="cb56-3"><a href="complex-n-th-roots-of-unity.html#cb56-3"></a>w =<span class="st"> </span><span class="kw">exp</span>(<span class="dv">2</span><span class="op">*</span>pi<span class="op">*</span>ii<span class="op">/</span>n)</span>
 <span id="cb56-4"><a href="complex-n-th-roots-of-unity.html#cb56-4"></a>G =<span class="st"> </span>w<span class="op">^</span>(<span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>))</span>
 <span id="cb56-5"><a href="complex-n-th-roots-of-unity.html#cb56-5"></a>G</span></code></pre></div>
-<pre><code>##  [1]  1.0000000+0.0000000i  0.9009689+0.4338837i  0.6234898+0.7818315i
-##  [4]  0.2225209+0.9749279i -0.2225209+0.9749279i -0.6234898+0.7818315i
-##  [7] -0.9009689+0.4338837i -1.0000000+0.0000000i -0.9009689-0.4338837i
-## [10] -0.6234898-0.7818315i -0.2225209-0.9749279i  0.2225209-0.9749279i
+<pre><code>##  [1]  1.0000000+0.0000000i  0.9009689+0.4338837i  0.6234898+0.7818315i  0.2225209+0.9749279i
+##  [5] -0.2225209+0.9749279i -0.6234898+0.7818315i -0.9009689+0.4338837i -1.0000000+0.0000000i
+##  [9] -0.9009689-0.4338837i -0.6234898-0.7818315i -0.2225209-0.9749279i  0.2225209-0.9749279i
 ## [13]  0.6234898-0.7818315i  0.9009689-0.4338837i</code></pre>
 <div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="complex-n-th-roots-of-unity.html#cb58-1"></a><span class="kw">plot</span>(<span class="kw">Re</span>(G),<span class="kw">Im</span>(G),<span class="dt">col=</span><span class="st">&#39;red&#39;</span>,<span class="dt">pch=</span><span class="dv">19</span>,<span class="dt">xlim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>),<span class="dt">ylim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>))</span>
 <span id="cb58-2"><a href="complex-n-th-roots-of-unity.html#cb58-2"></a><span class="kw">grid</span>()</span></code></pre></div>
-<p><img src="math376_handbook_files/figure-html/unnamed-chunk-22-1.png" width="432" /></p>
+<p><img src="math376_handbook_files/figure-html/unnamed-chunk-95-1.png" width="432" /></p>
 <div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="complex-n-th-roots-of-unity.html#cb59-1"></a>n =<span class="st"> </span><span class="dv">17</span></span>
 <span id="cb59-2"><a href="complex-n-th-roots-of-unity.html#cb59-2"></a>ii =<span class="st"> </span><span class="dv">0</span><span class="op">+</span>1i</span>
 <span id="cb59-3"><a href="complex-n-th-roots-of-unity.html#cb59-3"></a>w =<span class="st"> </span><span class="fl">1.02</span><span class="op">*</span><span class="kw">exp</span>(<span class="dv">2</span><span class="op">*</span>pi<span class="op">*</span>ii<span class="op">/</span>n)</span>
@@ -204,7 +203,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <span id="cb59-8"><a href="complex-n-th-roots-of-unity.html#cb59-8"></a></span>
 <span id="cb59-9"><a href="complex-n-th-roots-of-unity.html#cb59-9"></a><span class="kw">points</span>(<span class="kw">Re</span>(G),<span class="kw">Im</span>(G),<span class="dt">col=</span><span class="st">&#39;orange&#39;</span>,<span class="dt">pch=</span><span class="dv">19</span>)</span>
 <span id="cb59-10"><a href="complex-n-th-roots-of-unity.html#cb59-10"></a><span class="kw">points</span>(<span class="kw">Re</span>(w),<span class="kw">Im</span>(w),<span class="dt">pch=</span><span class="dv">19</span>,<span class="dt">col=</span><span class="st">&#39;blue&#39;</span>)</span></code></pre></div>
-<p><img src="math376_handbook_files/figure-html/unnamed-chunk-23-1.png" width="432" /></p>
+<p><img src="math376_handbook_files/figure-html/unnamed-chunk-96-1.png" width="432" /></p>
 
 </div>
             </section>

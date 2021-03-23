@@ -1,0 +1,37 @@
+# (PART) Problem Sets {-}
+
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\G}{\mathsf{G}}
+\newcommand{\H}{\mathsf{H}}
+
+# Problem Set 1 
+
+**Due**: Friday April 2, 5:00PM CST. 
+
+* You should upload your assignment on Moodle. 
+* You can hand write your solutions and scan them, or typeset them in R or LaTex. But you should upload the assignment in a single PDF or a single HTML file. 
+* Ideally, submit the problems in order, but if that is not possible, the problems should be clearly labeled.
+* You should **justify** all answers, unless the assignment is to *compute* something. Then you should clearly display your computed work. 
+* All assignments will be out of **30 points**. For example, this assignment has six 5-point problems. 
+* **Late work**: assignments will be lowered by 10% each day they are late. The solution will be posted on Tuesday. From that point on, I will still accept assignment write-ups, but you can earn a maximum of half of the points.
+* **Collaboration** is encouraged. In fact, it has been shown that people who form study groups, and talk about assignments, learn more and perform better. However, you should write up your own work in your own words (blatent copying is not acceptable), and if you receive substantial help from a classmate, you should give that person credit in your write-up (no pentalty for this!).
+
+## Conjugate Subgroups
+
+If $\H \le \G$ and $g \in \G$ define $g \H g^{-1} = \{ g h g^{-1} \mid h \in \H\}$. This is called the **conjugate** of $\H$ by $g$.
+
+a. Prove that $g \H g^{-1}$ is a subgroup of $\G$.
+
+b. In the dihedral group $D_4$ find the conjugate subgroup $g \H g^{-1}$ in the following two cases:
+
+    (i) $\H = \{1, f\}$ and $g = r$.
+    (ii) $\H = \{1, r^2, f, r^2 f\}$ and $g = r$.
+
+c. In the symmetric group $S_4$ of permutations of $\{1,2,3,4\}$ let $\H = \{ \sigma \in S_4 \mid \sigma(3) = 3 \}$ be the subgroup that fixes 3. Compute $\alpha \H \alpha^{-1}$ if $\alpha = \begin{pmatrix} 1 & 2 & 3 & 4 \\ 4 & 3 & 1 & 2 \end{pmatrix}$. What do the permutations in $\alpha \H \alpha^{-1}$ have in common?
+
+
+
+
