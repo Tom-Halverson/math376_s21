@@ -64,7 +64,7 @@ colnames(T) = G
 T
 ```
 
-Evem better, we can write a little function to do this.
+Even better, we can write a little function to do this.
 
 ```{r,echo=TRUE}
 CyclicCayley <- function(n,op="+") {
@@ -87,7 +87,13 @@ and
 CyclicCayley(15)
 ```
 
-## Multiplication Mod n: $U_n$
+## Multiplication Mod n: $U(n)$
+
+The group of **units** mod $n$ is the set
+$$
+U(n) = \{1 \le k < n \mid \gcd(k,n) = 1\}
+$$
+of integers that are relatively prime to $n$. As you show in PS1.2, $U(n)$ is group under multiplication mod $n$. That is, you show that it is closed under multiplication and that every number that is relatively prime to $n$ has a multipliciative inverse mod $n$.
 
 The functions below will give us $\ZZ_n$ and $U_n$.
 
@@ -117,6 +123,38 @@ And we try it out:
 ```{r,echo=TRUE}
 MultTable(Cyclic(10),10)
 ```
+
 ```{r,echo=TRUE}
 MultTable(Units(10),10)
 ```
+
+```{r,echo=TRUE}
+MultTable(Units(2),2,op="*")
+```
+
+```{r,echo=TRUE}
+MultTable(Units(3),3,op="*")
+```
+
+```{r,echo=TRUE}
+MultTable(Units(5),5,op="*")
+```
+
+```{r,echo=TRUE}
+MultTable(Units(7),7,op="*")
+```
+```{r,echo=TRUE}
+MultTable(Units(11),11,op="*")
+````
+
+Suppose that we want to know the order of 5 in U(22). We could look at the Cayley table and keep multiplying by 5 until we get to 1. 
+```{r,echo=TRUE}
+MultTable(Units(22),22,op="*")
+````
+
+Or we can take the powers of 5 mod 22. Here are the first 10 powers of 5. We see that |5| = 5 in U(22).
+
+```{r,echo=TRUE}
+5^(0:10)
+mod(5^(0:10),22)
+````

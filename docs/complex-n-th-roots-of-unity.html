@@ -151,13 +151,20 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="4" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html"><i class="fa fa-check"></i><b>4</b> Modular Arithmetic</a><ul>
 <li class="chapter" data-level="4.1" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#integer-division-and-gcd"><i class="fa fa-check"></i><b>4.1</b> Integer division and GCD</a></li>
 <li class="chapter" data-level="4.2" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#addition-mod-n-mathbbz_n"><i class="fa fa-check"></i><b>4.2</b> Addition Mod n: <span class="math inline">\(\mathbb{Z}_n\)</span></a></li>
-<li class="chapter" data-level="4.3" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#multiplication-mod-n-u_n"><i class="fa fa-check"></i><b>4.3</b> Multiplication Mod n: <span class="math inline">\(U_n\)</span></a></li>
+<li class="chapter" data-level="4.3" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#multiplication-mod-n-un"><i class="fa fa-check"></i><b>4.3</b> Multiplication Mod n: <span class="math inline">\(U(n)\)</span></a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="matrix-groups.html"><a href="matrix-groups.html"><i class="fa fa-check"></i><b>5</b> Matrix Groups</a><ul>
 <li class="chapter" data-level="5.1" data-path="matrix-groups.html"><a href="matrix-groups.html#the-general-linear-group-gl_nmathbbr"><i class="fa fa-check"></i><b>5.1</b> The General Linear Group <span class="math inline">\(GL_n(\mathbb{R})\)</span></a></li>
 <li class="chapter" data-level="5.2" data-path="matrix-groups.html"><a href="matrix-groups.html#matrix-multiplication-mod-m-gl_nmathbbz_m"><i class="fa fa-check"></i><b>5.2</b> Matrix Multiplication Mod m: <span class="math inline">\(GL_n(\mathbb{Z}_m)\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html"><i class="fa fa-check"></i><b>6</b> Complex n-th roots of unity</a></li>
+<li class="chapter" data-level="6" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html"><i class="fa fa-check"></i><b>6</b> Complex n-th roots of unity</a><ul>
+<li class="chapter" data-level="6.1" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#cyclic-subgroups-of-mathbbcast"><i class="fa fa-check"></i><b>6.1</b> Cyclic subgroups of <span class="math inline">\(\mathbb{C}^\ast\)</span></a></li>
+<li class="chapter" data-level="6.2" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#roots-of-unity"><i class="fa fa-check"></i><b>6.2</b> Roots of Unity</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#cube-roots-of-unity"><i class="fa fa-check"></i><b>6.2.1</b> Cube Roots of Unity</a></li>
+<li class="chapter" data-level="6.2.2" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#th-roots-of-unity"><i class="fa fa-check"></i><b>6.2.2</b> 4th Roots of Unity</a></li>
+<li class="chapter" data-level="6.2.3" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#th-roots-of-unity-1"><i class="fa fa-check"></i><b>6.2.3</b> 8th Roots of Unity</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
 
@@ -180,31 +187,105 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
             <section class="normal" id="section-">
 <div id="complex-n-th-roots-of-unity" class="section level1">
 <h1><span class="header-section-number">Section 6</span> Complex n-th roots of unity</h1>
-<p>More information forthcoming. Here are the complex 14-th roots of unity. These are the 14 solutions to the equation <span class="math inline">\(x^{14} - 1 = 0\)</span>. There are only 2 real solutions <span class="math inline">\(1\)</span> and <span class="math inline">\(-1\)</span>.</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="complex-n-th-roots-of-unity.html#cb56-1"></a>n =<span class="st"> </span><span class="dv">14</span></span>
-<span id="cb56-2"><a href="complex-n-th-roots-of-unity.html#cb56-2"></a>ii =<span class="st"> </span><span class="dv">0</span><span class="op">+</span>1i</span>
-<span id="cb56-3"><a href="complex-n-th-roots-of-unity.html#cb56-3"></a>w =<span class="st"> </span><span class="kw">exp</span>(<span class="dv">2</span><span class="op">*</span>pi<span class="op">*</span>ii<span class="op">/</span>n)</span>
-<span id="cb56-4"><a href="complex-n-th-roots-of-unity.html#cb56-4"></a>G =<span class="st"> </span>w<span class="op">^</span>(<span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>))</span>
-<span id="cb56-5"><a href="complex-n-th-roots-of-unity.html#cb56-5"></a>G</span></code></pre></div>
-<pre><code>##  [1]  1.0000000+0.0000000i  0.9009689+0.4338837i  0.6234898+0.7818315i  0.2225209+0.9749279i
-##  [5] -0.2225209+0.9749279i -0.6234898+0.7818315i -0.9009689+0.4338837i -1.0000000+0.0000000i
-##  [9] -0.9009689-0.4338837i -0.6234898-0.7818315i -0.2225209-0.9749279i  0.2225209-0.9749279i
-## [13]  0.6234898-0.7818315i  0.9009689-0.4338837i</code></pre>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="complex-n-th-roots-of-unity.html#cb58-1"></a><span class="kw">plot</span>(<span class="kw">Re</span>(G),<span class="kw">Im</span>(G),<span class="dt">col=</span><span class="st">&#39;red&#39;</span>,<span class="dt">pch=</span><span class="dv">19</span>,<span class="dt">xlim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>),<span class="dt">ylim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>))</span>
-<span id="cb58-2"><a href="complex-n-th-roots-of-unity.html#cb58-2"></a><span class="kw">grid</span>()</span></code></pre></div>
-<p><img src="math376_handbook_files/figure-html/unnamed-chunk-95-1.png" width="432" /></p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="complex-n-th-roots-of-unity.html#cb59-1"></a>n =<span class="st"> </span><span class="dv">17</span></span>
-<span id="cb59-2"><a href="complex-n-th-roots-of-unity.html#cb59-2"></a>ii =<span class="st"> </span><span class="dv">0</span><span class="op">+</span>1i</span>
-<span id="cb59-3"><a href="complex-n-th-roots-of-unity.html#cb59-3"></a>w =<span class="st"> </span><span class="fl">1.02</span><span class="op">*</span><span class="kw">exp</span>(<span class="dv">2</span><span class="op">*</span>pi<span class="op">*</span>ii<span class="op">/</span>n)</span>
-<span id="cb59-4"><a href="complex-n-th-roots-of-unity.html#cb59-4"></a>G =<span class="st"> </span>w<span class="op">^</span>(<span class="op">-</span><span class="dv">50</span><span class="op">:</span><span class="dv">100</span>)</span>
-<span id="cb59-5"><a href="complex-n-th-roots-of-unity.html#cb59-5"></a><span class="kw">plot</span>(<span class="kw">Re</span>(G),<span class="kw">Im</span>(G),<span class="dt">col=</span><span class="st">&#39;gray&#39;</span>,<span class="dt">xlim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>),<span class="dt">ylim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>),<span class="dt">type=</span><span class="st">&#39;l&#39;</span>)</span>
-<span id="cb59-6"><a href="complex-n-th-roots-of-unity.html#cb59-6"></a><span class="kw">grid</span>()</span>
-<span id="cb59-7"><a href="complex-n-th-roots-of-unity.html#cb59-7"></a>tt =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="op">*</span>pi,<span class="dt">length=</span><span class="dv">1000</span>)</span>
-<span id="cb59-8"><a href="complex-n-th-roots-of-unity.html#cb59-8"></a></span>
-<span id="cb59-9"><a href="complex-n-th-roots-of-unity.html#cb59-9"></a><span class="kw">points</span>(<span class="kw">Re</span>(G),<span class="kw">Im</span>(G),<span class="dt">col=</span><span class="st">&#39;orange&#39;</span>,<span class="dt">pch=</span><span class="dv">19</span>)</span>
-<span id="cb59-10"><a href="complex-n-th-roots-of-unity.html#cb59-10"></a><span class="kw">points</span>(<span class="kw">Re</span>(w),<span class="kw">Im</span>(w),<span class="dt">pch=</span><span class="dv">19</span>,<span class="dt">col=</span><span class="st">&#39;blue&#39;</span>)</span></code></pre></div>
-<p><img src="math376_handbook_files/figure-html/unnamed-chunk-96-1.png" width="432" /></p>
+<div id="cyclic-subgroups-of-mathbbcast" class="section level2">
+<h2><span class="header-section-number">6.1</span> Cyclic subgroups of <span class="math inline">\(\mathbb{C}^\ast\)</span></h2>
+<p>Let’s look at the cyclic subgroup generated by the complex number given in polar and rectangular form by
+<span class="math display">\[
+z = 1.02 e^{2 \pi i /17} = 0.9511 + 0.3685 i
+\]</span>
+First, here is how to define it in R.</p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="complex-n-th-roots-of-unity.html#cb72-1"></a>n =<span class="st"> </span><span class="dv">17</span></span>
+<span id="cb72-2"><a href="complex-n-th-roots-of-unity.html#cb72-2"></a>ii =<span class="st"> </span><span class="dv">0</span><span class="op">+</span>1i</span>
+<span id="cb72-3"><a href="complex-n-th-roots-of-unity.html#cb72-3"></a>z =<span class="st"> </span><span class="fl">1.02</span><span class="op">*</span><span class="kw">exp</span>(<span class="dv">2</span><span class="op">*</span>pi<span class="op">*</span>ii<span class="op">/</span>n)</span>
+<span id="cb72-4"><a href="complex-n-th-roots-of-unity.html#cb72-4"></a>z</span></code></pre></div>
+<pre><code>## [1] 0.9511217+0.3684665i</code></pre>
+<p>Observe that the length of <span class="math inline">\(z\)</span> is 1.02 and its angle is <span class="math inline">\(2 \pi/17\)</span>, or <span class="math inline">\(1/17\)</span> of a circle.</p>
+<p>Now, we can plot <span class="math inline">\(\langle z \rangle\)</span> by raising it to a bunch of powers and plotting it according to its real and imaginary parts. You see that the positive powers of z cycle out to infinity and the negative powers cycle in to 0.</p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="complex-n-th-roots-of-unity.html#cb74-1"></a>G =<span class="st"> </span>z<span class="op">^</span>(<span class="op">-</span><span class="dv">50</span><span class="op">:</span><span class="dv">100</span>)</span>
+<span id="cb74-2"><a href="complex-n-th-roots-of-unity.html#cb74-2"></a><span class="kw">plot</span>(<span class="kw">Re</span>(G),<span class="kw">Im</span>(G),<span class="dt">col=</span><span class="st">&#39;gray&#39;</span>,<span class="dt">xlim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>),<span class="dt">ylim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>),<span class="dt">type=</span><span class="st">&#39;l&#39;</span>,<span class="dt">xlab=</span><span class="st">&quot;Re&quot;</span>,<span class="dt">ylab=</span><span class="st">&quot;Im&quot;</span>)</span>
+<span id="cb74-3"><a href="complex-n-th-roots-of-unity.html#cb74-3"></a><span class="kw">grid</span>()</span>
+<span id="cb74-4"><a href="complex-n-th-roots-of-unity.html#cb74-4"></a><span class="kw">points</span>(<span class="kw">Re</span>(G),<span class="kw">Im</span>(G),<span class="dt">col=</span><span class="st">&#39;black&#39;</span>,<span class="dt">pch=</span><span class="dv">19</span>)</span>
+<span id="cb74-5"><a href="complex-n-th-roots-of-unity.html#cb74-5"></a><span class="kw">points</span>(<span class="kw">Re</span>(z),<span class="kw">Im</span>(z),<span class="dt">pch=</span><span class="dv">19</span>,<span class="dt">col=</span><span class="st">&#39;blue&#39;</span>)</span></code></pre></div>
+<p><img src="math376_handbook_files/figure-html/unnamed-chunk-33-1.png" width="576" /></p>
+<p>In this case we get an infinite cyclic group
+<span class="math display">\[
+\langle z \rangle = \{ \ldots, z^{-3}, z^{-2}, z^{-1}, 1, z, z^2, z^3, \ldots \} \le \mathbb{C}^\ast,
+\]</span>
+and all of these powers of <span class="math inline">\(z\)</span> are distinct elements in $^</p>
+</div>
+<div id="roots-of-unity" class="section level2">
+<h2><span class="header-section-number">6.2</span> Roots of Unity</h2>
+<p>Suppose now that we pick a point on the unit circle and do the same thing. For this first example, we will use a point that is 1/14 of the way around the circle. Notice that we are choosing <span class="math inline">\(r = 1\)</span> to get a point on the unit circle.
+<span class="math display">\[
+w = e^{2 \pi i/14} = 0.9009698 + 0.4338837 i
+\]</span></p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="complex-n-th-roots-of-unity.html#cb75-1"></a>n =<span class="st"> </span><span class="dv">14</span></span>
+<span id="cb75-2"><a href="complex-n-th-roots-of-unity.html#cb75-2"></a>ii =<span class="st"> </span><span class="dv">0</span><span class="op">+</span>1i</span>
+<span id="cb75-3"><a href="complex-n-th-roots-of-unity.html#cb75-3"></a>w =<span class="st"> </span><span class="kw">exp</span>(<span class="dv">2</span><span class="op">*</span>pi<span class="op">*</span>ii<span class="op">/</span>n)</span>
+<span id="cb75-4"><a href="complex-n-th-roots-of-unity.html#cb75-4"></a>w</span></code></pre></div>
+<pre><code>## [1] 0.9009689+0.4338837i</code></pre>
+<p>When we plot <span class="math inline">\(\langle w \rangle\)</span> we get</p>
+<p><img src="math376_handbook_files/figure-html/unnamed-chunk-35-1.png" width="576" /></p>
+<p>In this case we get a cyclic subgroup of order 14
+<span class="math display">\[
+\langle w \rangle = \{1, w, w^2, \dots, w^{13}\} \le \mathbb{C}^\ast,
+\]</span>
+and we really see, geometrically, why the term <strong>cyclic</strong> subgroup makes sense, because the numbers cycle around.</p>
+<p>We can even see subgroups in here. For example, the next picture shows the subgroup <span class="math inline">\(\langle w^2 \rangle \le \langle w \rangle\)</span>.
+<span class="math display">\[
+\langle w^2 \rangle = \{1, w^2, w^4, w^6, w^8, w^{10}, w^{12}\} \le \{1, w, w^2,w^3,w^4,w^5,w^6,w^7,w^8,w^9,w^{10},w^{11},w^{12} w^{13}\} = \langle w \rangle.
+\]</span></p>
+<p><img src="math376_handbook_files/figure-html/unnamed-chunk-36-1.png" width="576" /></p>
+<p>In this example, the complex number <span class="math inline">\(w\)</span> has the property that
+<span class="math display">\[
+w^{14} = 1.
+\]</span>
+and if we take any other element fro the group it also has this property
+<span class="math display">\[
+\text{ if } \quad w^j \in \langle w \rangle \quad \text{then} \quad (w^j)^{14} = w^{14 j} = (w^{14})^j = 1^j = 1.
+\]</span>
+So all 14 elements of <span class="math inline">\(\langle w rangle\)</span> are solutions to the equation
+<span class="math display">\[
+x^{14} = 1 \qquad \hbox{or} \qquad x^{14} - 1 = 0.
+\]</span>
+Since this is a 14th degree polynomial equation, it has 14 complex solutions (according to the Fundamental Theorem of Algebra), and so these are <em>all</em> of the solutions to this equation. There are two real solutions 1 and -1 and the other 12 are purely complex. These are called the <strong>14th roots of unity</strong>.</p>
+<div id="cube-roots-of-unity" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Cube Roots of Unity</h3>
+<p>The cube roots of unity are solutions to <span class="math inline">\(x^3 - 1 = 0\)</span>. They are generated by the complex number that is 1/3 of the way around the circle.
+<span class="math display">\[
+w  = e^{2 \pi i /3} = \cos(2 \pi/3) + \sin(2 \pi/3) i =  \frac{1}{2} + \frac{\sqrt{3}}{2} i.
+\]</span></p>
+<p>They generate a cyclic group of order 3:
+<span class="math display">\[
+\langle w \rangle = \{ w^0 = 1, \quad w =  \frac{1}{2} + \frac{\sqrt{3}}{2} i, \quad w^2 =  \frac{1}{2} - \frac{\sqrt{3}}{2} i\}
+\]</span>
+which we see here:</p>
+<p><img src="math376_handbook_files/figure-html/unnamed-chunk-37-1.png" width="576" /></p>
+</div>
+<div id="th-roots-of-unity" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> 4th Roots of Unity</h3>
+<p>The 4th roots of unity are solutions to <span class="math inline">\(x^4 - 1 = 0\)</span>. They are generated by <span class="math inline">\(i\)</span>:
+<span class="math display">\[
+w  = e^{2 \pi i /4} = \cos(\pi/2) + \sin(\pi/2) i =  i.
+\]</span>
+and
+<span class="math display">\[
+\langle i \rangle = \{1, i, -1, - i\}.
+\]</span></p>
+<p>They generate a cyclic group of order 4:</p>
+<p><img src="math376_handbook_files/figure-html/unnamed-chunk-38-1.png" width="576" /></p>
+</div>
+<div id="th-roots-of-unity-1" class="section level3">
+<h3><span class="header-section-number">6.2.3</span> 8th Roots of Unity</h3>
+<p>The 8th roots of unity are solutions to <span class="math inline">\(x^8 - 1 = 0\)</span>. They are generated by <span class="math inline">\(i\)</span>:
+<span class="math display">\[
+w  = e^{2 \pi i /8} = \cos(\pi/4) + \sin(\pi/4) i =  \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2} i.
+\]</span></p>
+<p>They generate a cyclic group of order 8:</p>
+<p><img src="math376_handbook_files/figure-html/unnamed-chunk-39-1.png" width="576" /></p>
 
+</div>
+</div>
 </div>
             </section>
 

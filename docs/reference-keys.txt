@@ -14,8 +14,13 @@ subgroup
 modular-arithmetic
 integer-division-and-gcd
 addition-mod-n-mathbbz_n
-multiplication-mod-n-u_n
+multiplication-mod-n-un
 matrix-groups
 the-general-linear-group-gl_nmathbbr
 matrix-multiplication-mod-m-gl_nmathbbz_m
 complex-n-th-roots-of-unity
+cyclic-subgroups-of-mathbbcast
+roots-of-unity
+cube-roots-of-unity
+th-roots-of-unity
+th-roots-of-unity-1

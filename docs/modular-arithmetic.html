@@ -151,13 +151,20 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="4" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html"><i class="fa fa-check"></i><b>4</b> Modular Arithmetic</a><ul>
 <li class="chapter" data-level="4.1" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#integer-division-and-gcd"><i class="fa fa-check"></i><b>4.1</b> Integer division and GCD</a></li>
 <li class="chapter" data-level="4.2" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#addition-mod-n-mathbbz_n"><i class="fa fa-check"></i><b>4.2</b> Addition Mod n: <span class="math inline">\(\mathbb{Z}_n\)</span></a></li>
-<li class="chapter" data-level="4.3" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#multiplication-mod-n-u_n"><i class="fa fa-check"></i><b>4.3</b> Multiplication Mod n: <span class="math inline">\(U_n\)</span></a></li>
+<li class="chapter" data-level="4.3" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#multiplication-mod-n-un"><i class="fa fa-check"></i><b>4.3</b> Multiplication Mod n: <span class="math inline">\(U(n)\)</span></a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="matrix-groups.html"><a href="matrix-groups.html"><i class="fa fa-check"></i><b>5</b> Matrix Groups</a><ul>
 <li class="chapter" data-level="5.1" data-path="matrix-groups.html"><a href="matrix-groups.html#the-general-linear-group-gl_nmathbbr"><i class="fa fa-check"></i><b>5.1</b> The General Linear Group <span class="math inline">\(GL_n(\mathbb{R})\)</span></a></li>
 <li class="chapter" data-level="5.2" data-path="matrix-groups.html"><a href="matrix-groups.html#matrix-multiplication-mod-m-gl_nmathbbz_m"><i class="fa fa-check"></i><b>5.2</b> Matrix Multiplication Mod m: <span class="math inline">\(GL_n(\mathbb{Z}_m)\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html"><i class="fa fa-check"></i><b>6</b> Complex n-th roots of unity</a></li>
+<li class="chapter" data-level="6" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html"><i class="fa fa-check"></i><b>6</b> Complex n-th roots of unity</a><ul>
+<li class="chapter" data-level="6.1" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#cyclic-subgroups-of-mathbbcast"><i class="fa fa-check"></i><b>6.1</b> Cyclic subgroups of <span class="math inline">\(\mathbb{C}^\ast\)</span></a></li>
+<li class="chapter" data-level="6.2" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#roots-of-unity"><i class="fa fa-check"></i><b>6.2</b> Roots of Unity</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#cube-roots-of-unity"><i class="fa fa-check"></i><b>6.2.1</b> Cube Roots of Unity</a></li>
+<li class="chapter" data-level="6.2.2" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#th-roots-of-unity"><i class="fa fa-check"></i><b>6.2.2</b> 4th Roots of Unity</a></li>
+<li class="chapter" data-level="6.2.3" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#th-roots-of-unity-1"><i class="fa fa-check"></i><b>6.2.3</b> 8th Roots of Unity</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
 
@@ -251,7 +258,7 @@ As we can confirm with</p>
 ## 3 3 4 5 0 1 2
 ## 4 4 5 0 1 2 3
 ## 5 5 0 1 2 3 4</code></pre>
-<p>Evem better, we can write a little function to do this.</p>
+<p>Even better, we can write a little function to do this.</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="modular-arithmetic.html#cb22-1"></a>CyclicCayley &lt;-<span class="st"> </span><span class="cf">function</span>(n,<span class="dt">op=</span><span class="st">&quot;+&quot;</span>) {</span>
 <span id="cb22-2"><a href="modular-arithmetic.html#cb22-2"></a>  G =<span class="st"> </span><span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>)</span>
 <span id="cb22-3"><a href="modular-arithmetic.html#cb22-3"></a>  T =<span class="st"> </span><span class="kw">mod</span>(<span class="kw">outer</span>(G,G,op),n)</span>
@@ -286,8 +293,13 @@ As we can confirm with</p>
 ## 13 13 14  0  1  2  3  4  5  6  7  8  9 10 11 12
 ## 14 14  0  1  2  3  4  5  6  7  8  9 10 11 12 13</code></pre>
 </div>
-<div id="multiplication-mod-n-u_n" class="section level2">
-<h2><span class="header-section-number">4.3</span> Multiplication Mod n: <span class="math inline">\(U_n\)</span></h2>
+<div id="multiplication-mod-n-un" class="section level2">
+<h2><span class="header-section-number">4.3</span> Multiplication Mod n: <span class="math inline">\(U(n)\)</span></h2>
+<p>The group of <strong>units</strong> mod <span class="math inline">\(n\)</span> is the set
+<span class="math display">\[
+U(n) = \{1 \le k &lt; n \mid \gcd(k,n) = 1\}
+\]</span>
+of integers that are relatively prime to <span class="math inline">\(n\)</span>. As you show in PS1.2, <span class="math inline">\(U(n)\)</span> is group under multiplication mod <span class="math inline">\(n\)</span>. That is, you show that it is closed under multiplication and that every number that is relatively prime to <span class="math inline">\(n\)</span> has a multipliciative inverse mod <span class="math inline">\(n\)</span>.</p>
 <p>The functions below will give us <span class="math inline">\(\mathbb{Z}_n\)</span> and <span class="math inline">\(U_n\)</span>.</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="modular-arithmetic.html#cb27-1"></a>Cyclic &lt;-<span class="st"> </span><span class="cf">function</span>(n) { <span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>) }</span>
 <span id="cb27-2"><a href="modular-arithmetic.html#cb27-2"></a>Units &lt;-<span class="st"> </span><span class="cf">function</span>(n) { (<span class="dv">1</span><span class="op">:</span>(n<span class="dv">-1</span>))[<span class="kw">gcd</span>(<span class="dv">1</span><span class="op">:</span>(n<span class="dv">-1</span>),n)<span class="op">==</span><span class="dv">1</span>] }</span></code></pre></div>
@@ -322,6 +334,57 @@ As we can confirm with</p>
 ## 3 3 9 1 7
 ## 7 7 1 9 3
 ## 9 9 7 3 1</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="modular-arithmetic.html#cb37-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">2</span>),<span class="dv">2</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
+<pre><code>##   1
+## 1 1</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="modular-arithmetic.html#cb39-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">3</span>),<span class="dv">3</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
+<pre><code>##   1 2
+## 1 1 2
+## 2 2 1</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="modular-arithmetic.html#cb41-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">5</span>),<span class="dv">5</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
+<pre><code>##   1 2 3 4
+## 1 1 2 3 4
+## 2 2 4 1 3
+## 3 3 1 4 2
+## 4 4 3 2 1</code></pre>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="modular-arithmetic.html#cb43-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">7</span>),<span class="dv">7</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
+<pre><code>##   1 2 3 4 5 6
+## 1 1 2 3 4 5 6
+## 2 2 4 6 1 3 5
+## 3 3 6 2 5 1 4
+## 4 4 1 5 2 6 3
+## 5 5 3 1 6 4 2
+## 6 6 5 4 3 2 1</code></pre>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="modular-arithmetic.html#cb45-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">11</span>),<span class="dv">11</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
+<pre><code>##     1  2  3  4  5  6  7  8  9 10
+## 1   1  2  3  4  5  6  7  8  9 10
+## 2   2  4  6  8 10  1  3  5  7  9
+## 3   3  6  9  1  4  7 10  2  5  8
+## 4   4  8  1  5  9  2  6 10  3  7
+## 5   5 10  4  9  3  8  2  7  1  6
+## 6   6  1  7  2  8  3  9  4 10  5
+## 7   7  3 10  6  2  9  5  1  8  4
+## 8   8  5  2 10  7  4  1  9  6  3
+## 9   9  7  5  3  1 10  8  6  4  2
+## 10 10  9  8  7  6  5  4  3  2  1</code></pre>
+<p>Suppose that we want to know the order of 5 in U(22). We could look at the Cayley table and keep multiplying by 5 until we get to 1.</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="modular-arithmetic.html#cb47-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">22</span>),<span class="dv">22</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
+<pre><code>##     1  3  5  7  9 13 15 17 19 21
+## 1   1  3  5  7  9 13 15 17 19 21
+## 3   3  9 15 21  5 17  1  7 13 19
+## 5   5 15  3 13  1 21  9 19  7 17
+## 7   7 21 13  5 19  3 17  9  1 15
+## 9   9  5  1 19 15  7  3 21 17 13
+## 13 13 17 21  3  7 15 19  1  5  9
+## 15 15  1  9 17  3 19  5 13 21  7
+## 17 17  7 19  9 21  1 13  3 15  5
+## 19 19 13  7  1 17  5 21 15  9  3
+## 21 21 19 17 15 13  9  7  5  3  1</code></pre>
+<p>Or we can take the powers of 5 mod 22. Here are the first 10 powers of 5. We see that |5| = 5 in U(22).</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="modular-arithmetic.html#cb49-1"></a><span class="dv">5</span><span class="op">^</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">10</span>)</span></code></pre></div>
+<pre><code>##  [1]       1       5      25     125     625    3125   15625   78125  390625 1953125 9765625</code></pre>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="modular-arithmetic.html#cb51-1"></a><span class="kw">mod</span>(<span class="dv">5</span><span class="op">^</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">10</span>),<span class="dv">22</span>)</span></code></pre></div>
+<pre><code>##  [1]  1  5  3 15  9  1  5  3 15  9  1</code></pre>
 
 </div>
 </div>
