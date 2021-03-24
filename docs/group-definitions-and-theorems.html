@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 1 Problem Set 1 | MATH 376: Algebraic Structures</title>
+  <title>Section 3 Group Definitions and Theorems | MATH 376: Algebraic Structures</title>
   <meta name="description" content="This is the class activity manual for MATH 376 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 1 Problem Set 1 | MATH 376: Algebraic Structures" />
+  <meta property="og:title" content="Section 3 Group Definitions and Theorems | MATH 376: Algebraic Structures" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Tom-Halverson/math236_s21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 1 Problem Set 1 | MATH 376: Algebraic Structures" />
+  <meta name="twitter:title" content="Section 3 Group Definitions and Theorems | MATH 376: Algebraic Structures" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 376 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="cyclic-groups.html"/>
+<link rel="prev" href="cyclic-groups.html"/>
+<link rel="next" href="modular-arithmetic.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -141,10 +141,10 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="2" data-path="cyclic-groups.html"><a href="cyclic-groups.html"><i class="fa fa-check"></i><b>2</b> Cyclic Groups</a><ul>
 <li class="chapter" data-level="2.1" data-path="cyclic-groups.html"><a href="cyclic-groups.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="groups.html"><a href="groups.html"><i class="fa fa-check"></i><b>3</b> Groups</a><ul>
-<li class="chapter" data-level="3.1" data-path="groups.html"><a href="groups.html#groups-1"><i class="fa fa-check"></i><b>3.1</b> Groups</a></li>
-<li class="chapter" data-level="3.2" data-path="groups.html"><a href="groups.html#subgroups"><i class="fa fa-check"></i><b>3.2</b> Subgroups</a></li>
-<li class="chapter" data-level="3.3" data-path="groups.html"><a href="groups.html#cyclic-groups-1"><i class="fa fa-check"></i><b>3.3</b> Cyclic Groups</a></li>
+<li class="chapter" data-level="3" data-path="group-definitions-and-theorems.html"><a href="group-definitions-and-theorems.html"><i class="fa fa-check"></i><b>3</b> Group Definitions and Theorems</a><ul>
+<li class="chapter" data-level="3.1" data-path="group-definitions-and-theorems.html"><a href="group-definitions-and-theorems.html#groups"><i class="fa fa-check"></i><b>3.1</b> Groups</a></li>
+<li class="chapter" data-level="3.2" data-path="group-definitions-and-theorems.html"><a href="group-definitions-and-theorems.html#subgroups"><i class="fa fa-check"></i><b>3.2</b> Subgroups</a></li>
+<li class="chapter" data-level="3.3" data-path="group-definitions-and-theorems.html"><a href="group-definitions-and-theorems.html#cyclic-groups-1"><i class="fa fa-check"></i><b>3.3</b> Cyclic Groups</a></li>
 </ul></li>
 <li class="part"><span><b>III Algebraic Structures in R</b></span></li>
 <li class="chapter" data-level="4" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html"><i class="fa fa-check"></i><b>4</b> Modular Arithmetic</a><ul>
@@ -184,95 +184,77 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="problem-set-1" class="section level1">
-<h1><span class="header-section-number">Section 1</span> Problem Set 1</h1>
-<p><strong>Due</strong>: Friday March 26, 5:00PM CST.</p>
-<ul>
-<li>You should upload your assignment under the PS1 link on Moodle.</li>
-<li>You can hand write your solutions and scan them, or typeset them in R or LaTex. But you should upload the assignment in a single PDF or a single HTML file.</li>
-<li>Ideally, submit the problems in order, but if that is not possible, the problems should be clearly labeled.</li>
-<li>You should <strong>justify</strong> all answers, unless the assignment is to <em>compute</em> something. Then you should clearly display your computed work.</li>
-<li>All assignments will be out of <strong>30 points</strong>. For example, this assignment has six 5-point problems.</li>
-<li><strong>Late work</strong>: assignments will be lowered by 10% each day they are late. The solution will be posted on Tuesday. From that point on, I will still accept assignment write-ups, but you can earn a maximum of half of the points.</li>
-<li><strong>Collaboration</strong> is encouraged. In fact, it has been shown that people who form study groups, and talk about assignments, learn more and perform better. However, you should write up your own work in your own words (blatent copying is not acceptable), and if you receive substantial help from a classmate, you should give that person credit in your write-up (no pentalty for this!).</li>
-</ul>
-<div id="modular-multiplication" class="section level2">
-<h2><span class="header-section-number">1.1</span> Modular Multiplication</h2>
-<p>Make the <em>multiplication</em> tables of the following sets and determine which of them are groups under multiplication. You can do this by hand (encouraged to get the feel for it) or using the R commands in <a href="modular-arithmetic.html#modular-arithmetic">Modular Arithmetic</a>.</p>
+<div id="group-definitions-and-theorems" class="section level1">
+<h1><span class="header-section-number">Section 3</span> Group Definitions and Theorems</h1>
+<div id="groups" class="section level2">
+<h2><span class="header-section-number">3.1</span> Groups</h2>
+<p><strong>Def</strong>: A <strong>group</strong> is a set <span class="math inline">\(\mathsf{G}\)</span> with a binary operation <span class="math inline">\(\ast\)</span> that satisfies the following:</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\{1,2,3\}\)</span> using multiplication mod 4</li>
-<li><span class="math inline">\(\{1,2,3,4\}\)</span> using multiplication mod 5</li>
-<li><span class="math inline">\(\{1,5,7,11\}\)</span> using multiplication mod 12</li>
-<li><span class="math inline">\(\{5,15,25,35\}\)</span> using multiplication mod 40</li>
+<li><p>(Identity) There exists <span class="math inline">\(e \in \mathsf{G}\)</span> such that: if <span class="math inline">\(g \in \mathsf{G}\)</span>, then <span class="math inline">\(e \ast g= g \ast e = g\)</span>.</p></li>
+<li><p>(Inverse) If <span class="math inline">\(g \in \mathsf{G}\)</span>, then there exists <span class="math inline">\(g^{-1} \in \mathsf{G}\)</span> so that <span class="math inline">\(g \ast g^{-1} = g^{-1} \ast g = e\)</span>.</p></li>
+<li><p>(Associativity) If <span class="math inline">\(a,b,c \in \mathsf{G}\)</span>, then <span class="math inline">\((ab)c = a (bc)\)</span>.</p></li>
+</ol>
+<p>Furthermore, the group is <strong>abelian</strong> if it also satisfies the commutative property:</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>(Commutative) If <span class="math inline">\(a,b \in \mathsf{G}\)</span>, then <span class="math inline">\(ab = ba\)</span>.</li>
+</ol>
+<p><strong>Proposition</strong> (Uniqueness) Let <span class="math inline">\(\mathsf{G}\)</span> be a group. Then</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\mathsf{G}\)</span> has a unique identity element <span class="math inline">\(e\)</span>.</p></li>
+<li><p>If <span class="math inline">\(a,b,c \in \mathsf{G}\)</span> and <span class="math inline">\(ab = e\)</span> and <span class="math inline">\(ca = e\)</span>, then <span class="math inline">\(a = c\)</span>.</p></li>
+<li><p>If <span class="math inline">\(g \in \mathsf{G}\)</span> then t
+here is a unique element <span class="math inline">\(g^{-1}\)</span> such that <span class="math inline">\(g g^{-1} = g^{-1} g = e\)</span>.</p></li>
+</ol>
+<p><strong>Proposition</strong> (Cancellation) Let <span class="math inline">\(\mathsf{G}\)</span> be a group and <span class="math inline">\(a,b,c \in \mathsf{G}\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(a b = a c\)</span> then <span class="math inline">\(b = c\)</span>.</li>
+<li>If <span class="math inline">\(b a = c a\)</span> then <span class="math inline">\(b = c\)</span>.</li>
+</ol>
+<p><strong>Proposition</strong> (<span class="math inline">\(ax =b\)</span>) Let <span class="math inline">\(\mathsf{G}\)</span> be a group and <span class="math inline">\(a,b \in \mathsf{G}\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>The equation <span class="math inline">\(a x = b\)</span> has a unique solution <span class="math inline">\(x = a^{-1} b\)</span>.</li>
+<li>The equation <span class="math inline">\(x a = b\)</span> has a unique solution <span class="math inline">\(x = b a^{-1}\)</span>.</li>
+</ol>
+<p><strong>Proposition</strong> (Latin Square) Let <span class="math inline">\(\mathsf{G}\)</span> be a group and <span class="math inline">\(a \in \mathsf{G}\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>The function <span class="math inline">\(\mathsf{G}\to \mathsf{G}\)</span> defined by left multiplication by <span class="math inline">\(a\)</span>, <span class="math inline">\(g \mapsto a g\)</span>, is one-to-one and onto.</li>
+<li>The function <span class="math inline">\(\mathsf{G}\to \mathsf{G}\)</span> defined by right multiplication by <span class="math inline">\(a\)</span>, <span class="math inline">\(g \mapsto g a\)</span>, is one-to-one and onto.</li>
 </ol>
 </div>
-<div id="group-of-units-un-mod-n" class="section level2">
-<h2><span class="header-section-number">1.2</span> Group of Units <span class="math inline">\(U(n)\)</span> mod n</h2>
-<p>Let <span class="math inline">\(U(n) = \{1 \le k &lt; n \mid 1 = \gcd(k,n) \}\)</span>. These are the elements of <span class="math inline">\(\mathbb{Z}_n\)</span> that are relatively prime to <span class="math inline">\(n\)</span>. In this problem, we will explore this set and <em>prove</em> that it is a group. Notice: by definition <span class="math inline">\(U(n)\)</span> has the multiplicative identity 1, since <span class="math inline">\(gcd(1,n) = 1\)</span>. And, multiplication mod n is associative. So, we need to make sure it is a binary operation on <span class="math inline">\(U(n)\)</span> and that <span class="math inline">\(U(n)\)</span> is closed under taking inverses.</p>
+<div id="subgroups" class="section level2">
+<h2><span class="header-section-number">3.2</span> Subgroups</h2>
+<p><strong>Def</strong>: A <em>subset</em> <span class="math inline">\(\mathsf{H}\subseteq \mathsf{G}\)</span> of a group <span class="math inline">\(\mathsf{G}\)</span> is a <strong>subgroup</strong> if <span class="math inline">\(\mathsf{H}\)</span> is a group under the same binary operation that it inherits from <span class="math inline">\(\mathsf{G}\)</span>. We write <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> to denote that <span class="math inline">\(\mathsf{H}\)</span> is a subgroup of <span class="math inline">\(\mathsf{G}\)</span> and write <span class="math inline">\(\mathsf{H}&lt; \mathsf{G}\)</span> if <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> and <span class="math inline">\(\mathsf{H}\not= \mathsf{G}\)</span>.</p>
+<p><strong>Theorem</strong>: (Subgroup Test) A <em>nonempty</em> subset <span class="math inline">\(\mathsf{H}\subseteq \mathsf{G}\)</span> is a subgroup if</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>Compute the sets <span class="math inline">\(U(6),U(7),U(8)\)</span>.</p></li>
-<li><p>Use the R-code in <a href="modular-arithmetic.html#modular-arithmetic">Modular Arithmetic</a> to do the following (you can do it by hand if you prefer).</p>
-<ol style="list-style-type: lower-roman">
-<li>Make the multiplication tables of <span class="math inline">\(\mathbb{Z}_8\)</span> and <span class="math inline">\(U(8)\)</span> mod 8.</li>
-<li>Make the multiplication table of <span class="math inline">\(U(9)\)</span>.</li>
-<li>Make the multiplication table of <span class="math inline">\(U(14)\)</span>.</li>
-</ol></li>
-<li><p>Show that if <span class="math inline">\(a \in U(n)\)</span> then <span class="math inline">\(a\)</span> has a multiplicative <strong>inverse</strong> in <span class="math inline">\(U(n)\)</span>. Hint: use the Extended GCD from Chapter 0, the cyclic groups voicethread, and <a href="modular-arithmetic.html#modular-arithmetic">Modular Arithmetic</a>.</p></li>
-<li><p>Show that <span class="math inline">\(U(n)\)</span> is closed under multiplication. That is if <span class="math inline">\(a, b \in U(n)\)</span>, then <span class="math inline">\(ab \in U(n)\)</span>. This shows that multiplication mod <span class="math inline">\(n\)</span> is a <strong>binary operation</strong> <em>on</em> <span class="math inline">\(U(n)\)</span>. Hint 1: if <span class="math inline">\(a\)</span> is invertible mod n and <span class="math inline">\(b\)</span> is invertible mod n, then must <span class="math inline">\(ab\)</span> be invertible mod <span class="math inline">\(n\)</span>. Hint 2: think about your shoes and socks.</p></li>
-<li><p>Are <span class="math inline">\(U(8)\)</span>, <span class="math inline">\(U(9)\)</span>, and/or <span class="math inline">\(U(14)\)</span> cyclic? Justify your answers.</p></li>
+<li>(identity) <span class="math inline">\(e \in \mathsf{H}\)</span>, where <span class="math inline">\(e\)</span> is the identity in <span class="math inline">\(\mathsf{G}\)</span>.</li>
+<li>(closure) If <span class="math inline">\(h_1, h_2 \in \mathsf{H}\)</span>, then <span class="math inline">\(h_1 h_2 \in \mathsf{H}\)</span>.</li>
+<li>(contains inverses) If <span class="math inline">\(h \in \mathsf{H}\)</span>, then <span class="math inline">\(h^{-1} \in \mathsf{H}\)</span>.</li>
 </ol>
-</div>
-<div id="two-by-two-mod-2" class="section level2">
-<h2><span class="header-section-number">1.3</span> Two-by-two mod 2</h2>
-<p>The group <span class="math inline">\(GL_2(\mathbb{Z}_2)\)</span> is the group of all invertible <span class="math inline">\(2\times 2\)</span> matrices with entries from <span class="math inline">\(\mathbb{Z}_2 = \{0,1\}\)</span> and all arithmetic done mod 2. That is,
+<p>Note: (a) follows from (b) and (c).</p>
+<p><strong>Def</strong>: The <strong>order</strong> of an element <span class="math inline">\(g \in \mathsf{G}\)</span> is the smallest positive integer <span class="math inline">\(m\)</span> such that <span class="math inline">\(g^m = e\)</span>, and we write <span class="math inline">\(|g| = m\)</span>. If there is no such <span class="math inline">\(m\)</span>, then <span class="math inline">\(|g| = \infty\)</span>.</p>
+<p><strong>Def</strong>: The <strong>center</strong> of a group <span class="math inline">\(\mathsf{G}\)</span> is the following subgroup
 <span class="math display">\[
-GL_2(\mathbb{Z}_2) =
-\left\{
-A=\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} 
-\mid a,b,c,d \in \{0,1\} \hbox{ and $A$ is invertible}
-\right\}.
-\]</span>
-The operation is usual matrix multiplication with arithmetic done mod 2 so that: 0+0 = 0, 0+1 = 1+0 = 1, 1+1 = 0.</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>There are 16 matrices of this form (two choices 0 or 1 for each of the four matrix entries), determine which of these are invertible (you can use the determinant mod 2).</p></li>
-<li><p>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be the matrices below
+Z(\mathsf{G}) = \{ a \in \mathsf{G}\mid \hbox{ if $g \in \mathsf{G}$ then $ag  = ga$ } \}.
+\]</span></p>
+<p><strong>Def</strong>: If <span class="math inline">\(g \in \mathsf{G}\)</span> then <span class="math inline">\(\langle g \rangle\)</span> is the smallest subgroup of <span class="math inline">\(\mathsf{G}\)</span> that contains <span class="math inline">\(g\)</span>. It is called the <strong>cyclic subgroup generated by</strong> <span class="math inline">\(g\)</span>. This subgroup contains all possible powers of <span class="math inline">\(g\)</span>:
 <span class="math display">\[
-A = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 1 \end{pmatrix} \qquad\hbox{and}\qquad
-B = \begin{pmatrix}  1 &amp; 1 \\ 0 &amp; 1 \end{pmatrix}.
-\]</span>
-Show that every element in this group is of the form <span class="math inline">\(A^i B^j\)</span> for some powers <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> (these powers can be 0).</p></li>
-<li><p>Since <span class="math inline">\(BA\)</span> is in the group, it must be equal to <span class="math inline">\(A^i B^j\)</span> for some <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>. Find <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>.</p></li>
-</ol>
-</div>
-<div id="outer-cancellation" class="section level2">
-<h2><span class="header-section-number">1.4</span> Outer Cancellation</h2>
-<p>A group <span class="math inline">\(\mathsf{G}\)</span> has the special property that for all <span class="math inline">\(x,y,z \in G\)</span>, if <span class="math inline">\(xy = zx\)</span> then <span class="math inline">\(y = z\)</span>. Prove that <span class="math inline">\(\mathsf{G}\)</span> is abelian.</p>
-</div>
-<div id="distributing-powers" class="section level2">
-<h2><span class="header-section-number">1.5</span> Distributing Powers</h2>
-<p>Prove that for <span class="math inline">\(a, b\)</span> in a group <span class="math inline">\(\mathsf{G}\)</span> we have
-<span class="math display">\[
-(ab)^2=a^2b^2
-\quad \hbox{ if and only if } \quad 
-ab=ba.
+\langle g \rangle = \{ g^k \mid k \in \mathbb{Z}}.
 \]</span></p>
 </div>
-<div id="cyclic-subgroups" class="section level2">
-<h2><span class="header-section-number">1.6</span> Cyclic Subgroups</h2>
-<p>If <span class="math inline">\(g \in \mathsf{G}\)</span>, then <span class="math inline">\(\langle g \rangle \le \mathsf{G}\)</span> is the smallest subgroup of <span class="math inline">\(\mathsf{G}\)</span> that contains <span class="math inline">\(g\)</span>. We will show in class that
-<span class="math display">\[
-\begin{array}{rcll}
-\langle g \rangle &amp;=&amp; \{ g^k \mid k \in \mathbb{Z}\}, &amp; \hbox{if $|g| = \infty$}.\\
-\langle g \rangle &amp;=&amp; \{1, g, g^2, \ldots, g^{n-1}\}, \quad  &amp;  \hbox{if $|g| = n$}.\\
-\end{array}
-\]</span>
-Compute the elements of the following cyclic subgroups.</p>
+<div id="cyclic-groups-1" class="section level2">
+<h2><span class="header-section-number">3.3</span> Cyclic Groups</h2>
+<p>A group <span class="math inline">\(\mathsf{G}\)</span> is <strong>cyclic</strong> if <span class="math inline">\(\mathsf{G}= \langle g \rangle\)</span> for some <span class="math inline">\(g \in \mathsf{G}\)</span>.</p>
+<p><strong>Theorem.</strong> (Fundamental Theorem of Cyclic Groups) If <span class="math inline">\(\mathsf{G}= \langle g\rangle\)</span>, then</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\langle 5 \rangle \le \mathbb{Z}\)</span></li>
-<li><span class="math inline">\(\langle 5 \rangle \le \mathbb{Z}_{30}\)</span></li>
-<li><span class="math inline">\(\langle 5 \rangle \le \mathbb{R}^\ast\)</span></li>
-<li><span class="math inline">\(\langle 5 \rangle \le U({28})\)</span></li>
-<li><span class="math inline">\(\langle (\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}i) \rangle \le \mathbb{C}^\ast\)</span></li>
+<li><p>Every subgroup <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> is cyclic (thus, <span class="math inline">\(\mathsf{H}= \langle g^k \rangle\)</span>).</p></li>
+<li><p>If <span class="math inline">\(|g| = \infty\)</span> then <span class="math inline">\(\langle g \rangle = \{ \ldots, g^{-3}, g^{-2}, g^{-1}, 1, g, g^2, g^3, \ldots \}\)</span> and all of these elements are distinct.</p></li>
+<li><p>If <span class="math inline">\(|g| = n\)</span> then <span class="math inline">\(\langle g \rangle = \{1, g, g^2, \ldots, g^{n-1} \}\)</span> and all of these elements are distinct (thus, <span class="math inline">\(|g| = |\langle g \rangle|\)</span>).</p></li>
+<li><p>If <span class="math inline">\(|g| = n\)</span> then the subgroups of <span class="math inline">\(\langle g \rangle\)</span> satisfy:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(\langle g^k \rangle = \langle g^d \rangle\)</span>, where <span class="math inline">\(d = \gcd(k,n)\)</span>.</p></li>
+<li><p><span class="math inline">\(|\langle g^k \rangle| = \frac{n}{d}= \frac{n}{\gcd(k,n)}\)</span>, which is a divisor of <span class="math inline">\(n\)</span>.</p></li>
+<li><p>If <span class="math inline">\(\ell \vert n\)</span>, then <span class="math inline">\(|\langle g^{n/\ell} \rangle|\)</span> is a subgroup of size <span class="math inline">\(\ell\)</span> and is the only subgroup of size <span class="math inline">\(\ell\)</span>.</p></li>
+</ol></li>
 </ol>
 
 </div>
@@ -285,8 +267,8 @@ Compute the elements of the following cyclic subgroups.</p>
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="cyclic-groups.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="cyclic-groups.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="modular-arithmetic.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

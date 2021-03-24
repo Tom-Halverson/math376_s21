@@ -141,11 +141,10 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="2" data-path="cyclic-groups.html"><a href="cyclic-groups.html"><i class="fa fa-check"></i><b>2</b> Cyclic Groups</a><ul>
 <li class="chapter" data-level="2.1" data-path="cyclic-groups.html"><a href="cyclic-groups.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="important-definitions-and-theorems.html"><a href="important-definitions-and-theorems.html"><i class="fa fa-check"></i><b>3</b> Important Definitions and Theorems</a><ul>
-<li class="chapter" data-level="3.1" data-path="important-definitions-and-theorems.html"><a href="important-definitions-and-theorems.html#groups"><i class="fa fa-check"></i><b>3.1</b> Groups</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="important-definitions-and-theorems.html"><a href="important-definitions-and-theorems.html#group"><i class="fa fa-check"></i><b>3.1.1</b> Group</a></li>
-<li class="chapter" data-level="3.1.2" data-path="important-definitions-and-theorems.html"><a href="important-definitions-and-theorems.html#subgroup"><i class="fa fa-check"></i><b>3.1.2</b> Subgroup</a></li>
-</ul></li>
+<li class="chapter" data-level="3" data-path="groups.html"><a href="groups.html"><i class="fa fa-check"></i><b>3</b> Groups</a><ul>
+<li class="chapter" data-level="3.1" data-path="groups.html"><a href="groups.html#groups-1"><i class="fa fa-check"></i><b>3.1</b> Groups</a></li>
+<li class="chapter" data-level="3.2" data-path="groups.html"><a href="groups.html#subgroups"><i class="fa fa-check"></i><b>3.2</b> Subgroups</a></li>
+<li class="chapter" data-level="3.3" data-path="groups.html"><a href="groups.html#cyclic-groups-1"><i class="fa fa-check"></i><b>3.3</b> Cyclic Groups</a></li>
 </ul></li>
 <li class="part"><span><b>III Algebraic Structures in R</b></span></li>
 <li class="chapter" data-level="4" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html"><i class="fa fa-check"></i><b>4</b> Modular Arithmetic</a><ul>
@@ -206,7 +205,7 @@ First, here is how to define it in R.</p>
 <span id="cb74-3"><a href="complex-n-th-roots-of-unity.html#cb74-3"></a><span class="kw">grid</span>()</span>
 <span id="cb74-4"><a href="complex-n-th-roots-of-unity.html#cb74-4"></a><span class="kw">points</span>(<span class="kw">Re</span>(G),<span class="kw">Im</span>(G),<span class="dt">col=</span><span class="st">&#39;black&#39;</span>,<span class="dt">pch=</span><span class="dv">19</span>)</span>
 <span id="cb74-5"><a href="complex-n-th-roots-of-unity.html#cb74-5"></a><span class="kw">points</span>(<span class="kw">Re</span>(z),<span class="kw">Im</span>(z),<span class="dt">pch=</span><span class="dv">19</span>,<span class="dt">col=</span><span class="st">&#39;blue&#39;</span>)</span></code></pre></div>
-<p><img src="math376_handbook_files/figure-html/unnamed-chunk-33-1.png" width="576" /></p>
+<p><img src="math376_handbook_files/figure-html/unnamed-chunk-30-1.png" width="576" /></p>
 <p>In this case we get an infinite cyclic group
 <span class="math display">\[
 \langle z \rangle = \{ \ldots, z^{-3}, z^{-2}, z^{-1}, 1, z, z^2, z^3, \ldots \} \le \mathbb{C}^\ast,
@@ -225,7 +224,7 @@ w = e^{2 \pi i/14} = 0.9009698 + 0.4338837 i
 <span id="cb75-4"><a href="complex-n-th-roots-of-unity.html#cb75-4"></a>w</span></code></pre></div>
 <pre><code>## [1] 0.9009689+0.4338837i</code></pre>
 <p>When we plot <span class="math inline">\(\langle w \rangle\)</span> we get</p>
-<p><img src="math376_handbook_files/figure-html/unnamed-chunk-35-1.png" width="576" /></p>
+<p><img src="math376_handbook_files/figure-html/unnamed-chunk-32-1.png" width="576" /></p>
 <p>In this case we get a cyclic subgroup of order 14
 <span class="math display">\[
 \langle w \rangle = \{1, w, w^2, \dots, w^{13}\} \le \mathbb{C}^\ast,
@@ -235,7 +234,7 @@ and we really see, geometrically, why the term <strong>cyclic</strong> subgroup 
 <span class="math display">\[
 \langle w^2 \rangle = \{1, w^2, w^4, w^6, w^8, w^{10}, w^{12}\} \le \{1, w, w^2,w^3,w^4,w^5,w^6,w^7,w^8,w^9,w^{10},w^{11},w^{12} w^{13}\} = \langle w \rangle.
 \]</span></p>
-<p><img src="math376_handbook_files/figure-html/unnamed-chunk-36-1.png" width="576" /></p>
+<p><img src="math376_handbook_files/figure-html/unnamed-chunk-33-1.png" width="576" /></p>
 <p>In this example, the complex number <span class="math inline">\(w\)</span> has the property that
 <span class="math display">\[
 w^{14} = 1.
@@ -260,7 +259,7 @@ w  = e^{2 \pi i /3} = \cos(2 \pi/3) + \sin(2 \pi/3) i =  \frac{1}{2} + \frac{\sq
 \langle w \rangle = \{ w^0 = 1, \quad w =  \frac{1}{2} + \frac{\sqrt{3}}{2} i, \quad w^2 =  \frac{1}{2} - \frac{\sqrt{3}}{2} i\}
 \]</span>
 which we see here:</p>
-<p><img src="math376_handbook_files/figure-html/unnamed-chunk-37-1.png" width="576" /></p>
+<p><img src="math376_handbook_files/figure-html/unnamed-chunk-34-1.png" width="576" /></p>
 </div>
 <div id="th-roots-of-unity" class="section level3">
 <h3><span class="header-section-number">6.2.2</span> 4th Roots of Unity</h3>
@@ -273,7 +272,7 @@ and
 \langle i \rangle = \{1, i, -1, - i\}.
 \]</span></p>
 <p>They generate a cyclic group of order 4:</p>
-<p><img src="math376_handbook_files/figure-html/unnamed-chunk-38-1.png" width="576" /></p>
+<p><img src="math376_handbook_files/figure-html/unnamed-chunk-35-1.png" width="576" /></p>
 </div>
 <div id="th-roots-of-unity-1" class="section level3">
 <h3><span class="header-section-number">6.2.3</span> 8th Roots of Unity</h3>
@@ -282,7 +281,7 @@ and
 w  = e^{2 \pi i /8} = \cos(\pi/4) + \sin(\pi/4) i =  \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2} i.
 \]</span></p>
 <p>They generate a cyclic group of order 8:</p>
-<p><img src="math376_handbook_files/figure-html/unnamed-chunk-39-1.png" width="576" /></p>
+<p><img src="math376_handbook_files/figure-html/unnamed-chunk-36-1.png" width="576" /></p>
 
 </div>
 </div>

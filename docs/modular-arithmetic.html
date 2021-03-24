@@ -29,7 +29,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="important-definitions-and-theorems.html"/>
+<link rel="prev" href="groups.html"/>
 <link rel="next" href="matrix-groups.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -141,11 +141,10 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="2" data-path="cyclic-groups.html"><a href="cyclic-groups.html"><i class="fa fa-check"></i><b>2</b> Cyclic Groups</a><ul>
 <li class="chapter" data-level="2.1" data-path="cyclic-groups.html"><a href="cyclic-groups.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="important-definitions-and-theorems.html"><a href="important-definitions-and-theorems.html"><i class="fa fa-check"></i><b>3</b> Important Definitions and Theorems</a><ul>
-<li class="chapter" data-level="3.1" data-path="important-definitions-and-theorems.html"><a href="important-definitions-and-theorems.html#groups"><i class="fa fa-check"></i><b>3.1</b> Groups</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="important-definitions-and-theorems.html"><a href="important-definitions-and-theorems.html#group"><i class="fa fa-check"></i><b>3.1.1</b> Group</a></li>
-<li class="chapter" data-level="3.1.2" data-path="important-definitions-and-theorems.html"><a href="important-definitions-and-theorems.html#subgroup"><i class="fa fa-check"></i><b>3.1.2</b> Subgroup</a></li>
-</ul></li>
+<li class="chapter" data-level="3" data-path="groups.html"><a href="groups.html"><i class="fa fa-check"></i><b>3</b> Groups</a><ul>
+<li class="chapter" data-level="3.1" data-path="groups.html"><a href="groups.html#groups-1"><i class="fa fa-check"></i><b>3.1</b> Groups</a></li>
+<li class="chapter" data-level="3.2" data-path="groups.html"><a href="groups.html#subgroups"><i class="fa fa-check"></i><b>3.2</b> Subgroups</a></li>
+<li class="chapter" data-level="3.3" data-path="groups.html"><a href="groups.html#cyclic-groups-1"><i class="fa fa-check"></i><b>3.3</b> Cyclic Groups</a></li>
 </ul></li>
 <li class="part"><span><b>III Algebraic Structures in R</b></span></li>
 <li class="chapter" data-level="4" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html"><i class="fa fa-check"></i><b>4</b> Modular Arithmetic</a><ul>
@@ -197,7 +196,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="modular-arithmetic.html#cb6-1"></a><span class="kw">idivide</span>(<span class="dv">68</span>,<span class="dv">15</span>)</span></code></pre></div>
 <pre><code>## [1] 4</code></pre>
 <p>Since <span class="math inline">\(68 = 15 \cdot 4 + 8\)</span>.</p>
-<p>The <strong>greatest commond diviso GCD</strong> of two integers is computed with the <code>gcd(m,n)</code> command. For example,</p>
+<p>The <strong>greatest commond divisor GCD</strong> of two integers is computed with the <code>gcd(m,n)</code> command. For example,</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="modular-arithmetic.html#cb8-1"></a><span class="kw">gcd</span>(<span class="dv">70</span>,<span class="dv">42</span>)</span></code></pre></div>
 <pre><code>## [1] 14</code></pre>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="modular-arithmetic.html#cb10-1"></a><span class="kw">gcd</span>(<span class="dv">68</span>,<span class="dv">15</span>)</span></code></pre></div>
@@ -382,7 +381,8 @@ of integers that are relatively prime to <span class="math inline">\(n\)</span>.
 ## 21 21 19 17 15 13  9  7  5  3  1</code></pre>
 <p>Or we can take the powers of 5 mod 22. Here are the first 10 powers of 5. We see that |5| = 5 in U(22).</p>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="modular-arithmetic.html#cb49-1"></a><span class="dv">5</span><span class="op">^</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1]       1       5      25     125     625    3125   15625   78125  390625 1953125 9765625</code></pre>
+<pre><code>##  [1]       1       5      25     125     625    3125   15625   78125  390625
+## [10] 1953125 9765625</code></pre>
 <div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="modular-arithmetic.html#cb51-1"></a><span class="kw">mod</span>(<span class="dv">5</span><span class="op">^</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">10</span>),<span class="dv">22</span>)</span></code></pre></div>
 <pre><code>##  [1]  1  5  3 15  9  1  5  3 15  9  1</code></pre>
 
@@ -393,7 +393,7 @@ of integers that are relatively prime to <span class="math inline">\(n\)</span>.
           </div>
         </div>
       </div>
-<a href="important-definitions-and-theorems.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="groups.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="matrix-groups.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

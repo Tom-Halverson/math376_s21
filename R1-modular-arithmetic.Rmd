@@ -16,7 +16,7 @@ idivide(68,15)
 ```
 Since $68 = 15 \cdot 4 + 8$.
 
-The **greatest commond diviso GCD** of two integers is computed with the `gcd(m,n)` command. For example,
+The **greatest commond divisor GCD** of two integers is computed with the `gcd(m,n)` command. For example,
 ```{r,echo=TRUE}
 gcd(70,42)
 gcd(68,15)

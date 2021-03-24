@@ -7,10 +7,10 @@ distributing-powers
 cyclic-subgroups
 cyclic-groups
 overview
-important-definitions-and-theorems
 groups
-group
-subgroup
+groups-1
+subgroups
+cyclic-groups-1
 modular-arithmetic
 integer-division-and-gcd
 addition-mod-n-mathbbz_n

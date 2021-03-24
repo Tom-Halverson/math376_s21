@@ -107,7 +107,7 @@ $$
 
 They generate a cyclic group of order 3:
 $$
-\langle w \rangle = \{ w^0 = 1, \quad w =  \frac{1}{2} + \frac{\sqrt{3}}{2} i, \quad w^2 =  \frac{1}{2} - \frac{\sqrt{3}}{2} i\}
+\langle w \rangle = \{ w^0 = 1, \quad w =  -\frac{1}{2} + \frac{\sqrt{3}}{2} i, \quad w^2 = - \frac{1}{2} - \frac{\sqrt{3}}{2} i\}
 $$
 which we see here:
 
