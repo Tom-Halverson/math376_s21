@@ -6,6 +6,8 @@
 \newcommand{\CC}{\mathbb{C}}
 \newcommand{\G}{\mathsf{G}}
 \newcommand{\H}{\mathsf{H}}
+\newcommand{\D}{\mathsf{D}}
+\newcommand{\S}{\mathsf{S}}
 
 # Problem Set 1 
 

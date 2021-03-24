@@ -6,9 +6,7 @@ outer-cancellation
 distributing-powers
 cyclic-subgroups
 cyclic-groups
-overview
 groups
-groups-1
 subgroups
 cyclic-groups-1
 modular-arithmetic

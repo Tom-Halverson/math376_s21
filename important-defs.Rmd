@@ -2,8 +2,6 @@
 # Groups
 
 
-## Groups
-
 
 **Def**: A **group** is a set $\G$ with a binary operation $\ast$ that satisfies the following:
 
@@ -43,7 +41,7 @@ b. The equation $x a = b$ has a unique solution $x = b a^{-1}$.
 a. The function $\G \to \G$ defined by left multiplication by $a$,  $g \mapsto a g$, is one-to-one and onto.
 b. The function $\G \to \G$ defined by right multiplication by $a$,  $g \mapsto g a$, is one-to-one and onto.
 
-## Subgroups
+# Subgroups
 
 **Def**: A *subset* $\H \subseteq \G$ of a group $\G$ is a **subgroup** if $\H$ is a group under the same binary operation that it inherits from $\G$. We write $\H \le \G$ to denote that $\H$ is a subgroup of $\G$ and write $\H < \G$ if $\H \le \G$ and $\H \not= \G$.
 
@@ -68,7 +66,7 @@ $$
 \langle g \rangle = \{ g^k \mid k \in \ZZ \}.
 $$
 
-## Cyclic Groups
+# Cyclic Groups
 
 A group $\G$ is **cyclic** if $\G = \langle g \rangle$ for some $g \in \G$.
 

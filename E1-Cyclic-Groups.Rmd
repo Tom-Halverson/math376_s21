@@ -12,8 +12,6 @@ CyclicCayley <- function(n,op="+") {
   return(T) }
 ```
 
-## Overview
-
 The finite **cyclic** group $\ZZ_{n} = \{ 0, 1, 2, \ldots, n-1\}$ is the group under addition mod $n$. For example, here is the Cayley table of $\ZZ_{10}$. See [Modular Arithmetic] for the R function that produces these tables for any value of $n$.
 
 
@@ -22,4 +20,46 @@ CyclicCayley(10)
 ```
 
 
+```{r,echo=TRUE}
+CyclicCayley(24)
+```
 
+A group $\G$ is **cyclic** if $\G = \langle g \rangle$ for some $g \in \G$.
+
+
+**Theorem.** (Fundamental Theorem of Cyclic Groups) If $\G = \langle g\rangle$, then
+
+
+a.  Every subgroup $\H \le \G$ is cyclic (thus, $\H = \langle g^k \rangle$).
+
+b.  If $|g| = \infty$ then $\langle g \rangle = \{ \ldots, g^{-3}, g^{-2}, g^{-1}, 1, g, g^2, g^3, \ldots \}$ and all of these elements are distinct. 
+
+c.  If $|g| = n$ then $\langle g \rangle = \{1, g, g^2, \ldots, g^{n-1} \}$ and all of these elements are distinct (thus, $|g| = |\langle g \rangle|$).
+
+d.  If $|g| = n$ then  the subgroups of $\langle g \rangle$ satisfy:
+
+
+    i.  $\langle g^k \rangle = \langle g^d \rangle$, where $d = \gcd(k,n)$.
+
+    ii.  $|\langle g^k \rangle| = \frac{n}{d}= \frac{n}{\gcd(k,n)}$, which is a divisor of $n$.
+
+    iii. If $\ell \vert n$, then $|\langle g^{n/\ell} \rangle|$ is a subgroup of size $\ell$ and is the only subgroup of size $\ell$.
+
+Note: (d) says that, in a finite cyclic group of order $n$, there is exactly one subgroup for each divisor of $n$ and those are all the subgroups.
+
+<center>
+![](images/SubgroupLatticeC24.png){width=100%}
+</center>
+
+
+
+Other examples of finite cyclic groups:
+
+1. The [Complex n-th roots of unity]. 
+
+2. The rotation group of an n-gon:
+$$
+R_n = \{1, r, r^2, \ldots, r^{n-1}\} \le \D_n
+$$
+
+3. Sometimes the group of units $U(n)$ under multiplication mod $n$ is cyclic. For example,
