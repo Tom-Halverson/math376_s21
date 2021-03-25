@@ -27,6 +27,8 @@ The **Extended GCD** gives a little more information that can be quite useful in
 $$
 d = s a+ t b.
 $$
+Furthermore, $d = \gcd(a,b)$ is the smallest positive integer of the form $s a + t b$. It follos that $a$ and $b$ are relatively prime if and only if it is possible to write $1 = s a + t b$ for some $s$ and $t$.
+
 You can find a proof of this fact in Chapter 0. We can use it here:
 ```{r,echo=TRUE}
 gcd(70,42,extended=TRUE)

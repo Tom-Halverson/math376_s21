@@ -91,7 +91,3 @@ d.  If $|g| = n$ then  the subgroups of $\langle g \rangle$ satisfy:
 
 Note: (d) says that, in a finite cyclic group of order $n$, there is exactly one subgroup for each divisor of $n$ and those are all the subgroups.
 
-<center>
-![](images/SubgroupLatticeC24.png){width=70%}
-</center>
-
