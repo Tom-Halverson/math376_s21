@@ -5,6 +5,13 @@ two-by-two-mod-2
 outer-cancellation
 distributing-powers
 cyclic-subgroups
+problem-set-2
+complex-roots-of-unity.
+permutation-computations
+conjugate-subgroups
+subgroup-of-squares
+half-of-a-subgroup
+coming
 cyclic-groups
 groups
 subgroups
