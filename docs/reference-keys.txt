@@ -11,7 +11,8 @@ permutation-computations
 conjugate-subgroups
 subgroup-of-squares
 half-of-a-subgroup
-coming
+symmetry-group-of-the-cube
+extra-credit
 cyclic-groups
 groups
 subgroups

@@ -1,5 +1,6 @@
 # (PART) Problem Sets {-}
 
+\newcommand{\A}{{\mathsf{A}}}
 
 # Problem Set 2
 
@@ -27,22 +28,23 @@ c. Show that the *sum* of the elements of $C_{12}$ is 0. Do it as follows. We kn
 
 ## Permutation Computations
 
-a. The following permutation is given as a product of non-joint cycles in $S_6$. Write it in disjoint cycle notation. 
+a. The following permutation is given as a product of non-joint cycles in $\S_6$. Write it in disjoint cycle notation. 
 $$
 \sigma = (123456) (632)(134)(25) (316)
 $$
 
 b. Write the permutation below (a) in disjoint cycle notation, (b) as a product of transpositions, and (c) as a product of adjacent transpositions. Use fewer transpositions in your answer to (b) than you use in your answer for (c).
-$$\sigma = 
+$$
+\sigma = 
 \begin{pmatrix} 
 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 
 4 & 8 & 2 & 1 & 7 & 5 & 6 & 3 \\
 \end{pmatrix}
 $$
 
-c. The symmetric group $S_6$ has 720 elements. How many of these elements have order 2? How many of these elements have order 4? Justify your answers.
+c. The symmetric group $\S_6$ has 720 elements. How many of these elements have order 2? How many of these elements have order 4? Justify your answers.
 
-c. The symmetric group $S_{10}$ has 3.6 million elements in it. Find a permutation $\sigma \in S_{10}$ of maximum order. Justify your answer. 
+c. The symmetric group $\S_{10}$ has 3.6 million elements in it. Find a permutation $\sigma \in \S_{10}$ of maximum order. Justify your answer. 
 
 ## Conjugate Subgroups
 
@@ -61,28 +63,55 @@ c. In the symmetric group $S_4$ of permutations of $\{1,2,3,4\}$ let $\H = \{ \s
 ## Subgroup of Squares
 
 
-In a group $G$ define the set of squares to be
+In a group $\G$ define the *set* of squares to be
 $K = \{ g^2 \mid g \in \G\}.$
 
 a. Prove that if $\G$ is abelian, then $K \le \G$.
 
-b. In $A_4$ (the alternating group of even permutations in $S_4$), find two permutations $a,b\in A_4$ such that $a$ and $b$ are each squares (i.e., $a = x^2$ and $b = y^2$ for $x,y \in A_4$) but $ab$ is not a square. This shows that if $G$ is nonabelian $K$ may not be a subgroup (this is the smallest group that exhibits this phenomenon).
+b. In $\A_4$ (the alternating group of even permutations in $\S_4$ discussed on Tuesday), find two permutations $a,b\in \A_4$ such that $a$ and $b$ are each squares (i.e., $a = x^2$ and $b = y^2$ for $x,y \in \A_4$) but $ab$ is not a square. This shows that if $G$ is nonabelian $K$ may not be a subgroup (this is the smallest group that exhibits this phenomenon).
 
 
 
 ## Half of a Subgroup
 
-a. Prove that if $H$ is a subgroup of $S_n$ then either $H \le A_n$ or exactly half of $H$ is even and half of $H$ is odd. 
+a. Prove that if $\H$ is a subgroup of $\S_n$ then either $\H \le \A_n$ or exactly half of $\H$ is even and half of $\H$ is odd. 
 
-* **Hint**: If $H$ has an element $\alpha$ of odd order, then define a map 
+* **Hint**: If $\H$ has an element $\alpha$ of odd order, then define a map 
 $$
 \begin{array}{ccc}
-H &\to& H \\
+\H &\to& \H \\
 h & \mapsto & h \alpha \\
 \end{array}
 $$
-Argue that the image of this map is $H$? What does this map do to even elements? to odd elements?
+Argue that the image of this map is $\H$? What does this map do to even elements? to odd elements?
 
-b. Prove: If $H \le S_n$ has odd order, then $H \le A_n$.
+b. Prove: If $\H \le \S_n$ has odd order, then $\H \le \A_n$.
 
-## Coming
+## Symmetry group of the cube
+
+The symmetric group $\S_4$ is isomorphic to the rotation group of a cube. There are four long diagonals of the cube. In the picture below, these diagonals connect the vertices labeled 1 to one another, the vertices labeled 2 to one another, the vertices labeled 3 to one another, and the vertices labeled 4 to one another.  (The diagonals are not drawn in this picture).
+
+<center>
+![](images/cube.png){width=30%}
+</center>
+
+The rotation corresponding to the permutation $\sigma \in \S_4$ permutes diagonal $i$ to diagonal $j$ if $\sigma(i) = j$. For example, the rotation corresponding to the 4-cycle $\sigma = (1,2,3,4)$ is shown here.
+
+<center>
+![](images/RotateCube.png){width=75%}
+</center>
+
+Find the rotation corresponding to each of the permutations below (given below in cycle notation). For each of them, indicate the axes of rotation and the number of radians (and direction) that you rotate by, and give the before and after picture with the vertices labeled and colored as I have done above for $(1,2,3,4)$. 
+
+
+a. $(1,2)$
+
+b. $(1,2,3)$
+
+c. $(1,2)(3,4)$
+
+I recommend using a [paper model of the cube](https://www.mathsisfun.com/geometry/cube-model). 
+
+## Extra Credit
+
+(**2 pts**) Give, with proof, a formula for the number of permutations of cycle type $\mu = [\mu_1, \mu_2, \ldots, \mu_\ell]$.
