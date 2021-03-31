@@ -32,7 +32,7 @@ $$
 \sigma = (123456) (632)(134)(25) (316)
 $$
 
-b. Write the permutation below (a) in disjoint cycle notation, (b) as a product of transpositions, and (c) as a product of adjacent transpositions. Use fewer transpositions in your answer to (b) than you use in your answer for (c).
+b. Write the permutation below (a) in disjoint cycle notation, (b) as a product of transpositions, and (c) as a product of adjacent transpositions. Give a different asnwer to (b) than you give for (c).
 $$
 \sigma = 
 \begin{pmatrix} 
@@ -43,13 +43,15 @@ $$
 
 c. The symmetric group $\S_6$ has 720 elements. How many of these elements have order 2? How many of these elements have order 4? Justify your answers.
 
-c. The symmetric group $\S_{10}$ has 3.6 million elements in it. Find a permutation $\sigma \in \S_{10}$ of maximum order. Justify your answer. 
+c. The symmetric group $\S_{10}$ has 3.6 million elements in it. Find a permutation $\sigma \in \S_{10}$ of maximum order. You don't need to prove that your answer is correct, but describe your strategy. 
 
 ## Conjugate Subgroups
 
 If $\H \le \G$ and $g \in \G$ define $g \H g^{-1} = \{ g h g^{-1} \mid h \in \H\}$. This is called the **conjugate** of $\H$ by $g$.
 
 a. Prove that $g \H g^{-1}$ is a subgroup of $\G$.
+
+
 
 b. In the dihedral group $D_4$ find the conjugate subgroup $g \H g^{-1}$ in the following two cases:
 
@@ -88,7 +90,7 @@ b. Prove: If $\H \le \S_n$ has odd order, then $\H \le \A_n$.
 
 ## Symmetry group of the cube
 
-The symmetric group $\S_4$ is isomorphic to the rotation group of a cube. There are four long diagonals of the cube. In the picture below, these diagonals connect the vertices labeled 1 to one another, the vertices labeled 2 to one another, the vertices labeled 3 to one another, and the vertices labeled 4 to one another.  (The diagonals are not drawn in this picture).
+The symmetric group $\S_4$ is isomorphic to the rotation group of a cube. There are four long diagonals of the cube. In the picture below, these diagonals connect the vertices labeled 1 to one another, the vertices labeled 2 to one another, the vertices labeled 3 to one another, and the vertices labeled 4 to one another.  (They are color coded).
 
 <center>
 ![](images/cube.png){width=30%}
@@ -97,7 +99,7 @@ The symmetric group $\S_4$ is isomorphic to the rotation group of a cube. There 
 The rotation corresponding to the permutation $\sigma \in \S_4$ permutes diagonal $i$ to diagonal $j$ if $\sigma(i) = j$. For example, the rotation corresponding to the 4-cycle $\sigma = (1,2,3,4)$ is shown here.
 
 <center>
-![](images/RotateCube.png){width=75%}
+![](images/cube-1234-solved.png){width=75%}
 </center>
 
 Find the rotation corresponding to each of the permutations below (given below in cycle notation). For each of them, indicate the axes of rotation and the number of radians (and direction) that you rotate by, and give the before and after picture with the vertices labeled and colored as I have done above for $(1,2,3,4)$. 
@@ -105,9 +107,21 @@ Find the rotation corresponding to each of the permutations below (given below i
 
 a. $(1,2)$
 
+<center>
+![](images/cube-12.png){width=75%}
+</center>
+
 b. $(1,2,3)$
 
+<center>
+![](images/cube-123.png){width=75%}
+</center>
+
 c. $(1,2)(3,4)$
+
+<center>
+![](images/cube-12-34.png){width=75%}
+</center>
 
 I recommend using a [paper model of the cube](https://www.mathsisfun.com/geometry/cube-model). 
 

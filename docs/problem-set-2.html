@@ -219,7 +219,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <span class="math display">\[
 \sigma = (123456) (632)(134)(25) (316)
 \]</span></p></li>
-<li><p>Write the permutation below (a) in disjoint cycle notation, (b) as a product of transpositions, and (c) as a product of adjacent transpositions. Use fewer transpositions in your answer to (b) than you use in your answer for (c).
+<li><p>Write the permutation below (a) in disjoint cycle notation, (b) as a product of transpositions, and (c) as a product of adjacent transpositions. Give a different asnwer to (b) than you give for (c).
 <span class="math display">\[
 \sigma = 
 \begin{pmatrix} 
@@ -228,7 +228,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 \end{pmatrix}
 \]</span></p></li>
 <li><p>The symmetric group <span class="math inline">\(\mathsf{S}_6\)</span> has 720 elements. How many of these elements have order 2? How many of these elements have order 4? Justify your answers.</p></li>
-<li><p>The symmetric group <span class="math inline">\(\mathsf{S}_{10}\)</span> has 3.6 million elements in it. Find a permutation <span class="math inline">\(\sigma \in \mathsf{S}_{10}\)</span> of maximum order. Justify your answer.</p></li>
+<li><p>The symmetric group <span class="math inline">\(\mathsf{S}_{10}\)</span> has 3.6 million elements in it. Find a permutation <span class="math inline">\(\sigma \in \mathsf{S}_{10}\)</span> of maximum order. You don’t need to prove that your answer is correct, but describe your strategy.</p></li>
 </ol>
 </div>
 <div id="conjugate-subgroups" class="section level2">
@@ -274,20 +274,33 @@ Argue that the image of this map is <span class="math inline">\(\mathsf{H}\)</sp
 </div>
 <div id="symmetry-group-of-the-cube" class="section level2">
 <h2><span class="header-section-number">2.6</span> Symmetry group of the cube</h2>
-<p>The symmetric group <span class="math inline">\(\mathsf{S}_4\)</span> is isomorphic to the rotation group of a cube. There are four long diagonals of the cube. In the picture below, these diagonals connect the vertices labeled 1 to one another, the vertices labeled 2 to one another, the vertices labeled 3 to one another, and the vertices labeled 4 to one another. (The diagonals are not drawn in this picture).</p>
+<p>The symmetric group <span class="math inline">\(\mathsf{S}_4\)</span> is isomorphic to the rotation group of a cube. There are four long diagonals of the cube. In the picture below, these diagonals connect the vertices labeled 1 to one another, the vertices labeled 2 to one another, the vertices labeled 3 to one another, and the vertices labeled 4 to one another. (They are color coded).</p>
 <center>
 <img src="images/cube.png" style="width:30.0%" />
 </center>
 <p>The rotation corresponding to the permutation <span class="math inline">\(\sigma \in \mathsf{S}_4\)</span> permutes diagonal <span class="math inline">\(i\)</span> to diagonal <span class="math inline">\(j\)</span> if <span class="math inline">\(\sigma(i) = j\)</span>. For example, the rotation corresponding to the 4-cycle <span class="math inline">\(\sigma = (1,2,3,4)\)</span> is shown here.</p>
 <center>
-<img src="images/RotateCube.png" style="width:75.0%" />
+<img src="images/cube-1234-solved.png" style="width:75.0%" />
 </center>
 <p>Find the rotation corresponding to each of the permutations below (given below in cycle notation). For each of them, indicate the axes of rotation and the number of radians (and direction) that you rotate by, and give the before and after picture with the vertices labeled and colored as I have done above for <span class="math inline">\((1,2,3,4)\)</span>.</p>
 <ol style="list-style-type: lower-alpha">
-<li><p><span class="math inline">\((1,2)\)</span></p></li>
-<li><p><span class="math inline">\((1,2,3)\)</span></p></li>
-<li><p><span class="math inline">\((1,2)(3,4)\)</span></p></li>
+<li><span class="math inline">\((1,2)\)</span></li>
 </ol>
+<center>
+<img src="images/cube-12.png" style="width:75.0%" />
+</center>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><span class="math inline">\((1,2,3)\)</span></li>
+</ol>
+<center>
+<img src="images/cube-123.png" style="width:75.0%" />
+</center>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><span class="math inline">\((1,2)(3,4)\)</span></li>
+</ol>
+<center>
+<img src="images/cube-12-34.png" style="width:75.0%" />
+</center>
 <p>I recommend using a <a href="https://www.mathsisfun.com/geometry/cube-model">paper model of the cube</a>.</p>
 </div>
 <div id="extra-credit" class="section level2">
