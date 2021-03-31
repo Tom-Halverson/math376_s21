@@ -32,7 +32,7 @@ $$
 \sigma = (123456) (632)(134)(25) (316)
 $$
 
-b. Write the permutation below (a) in disjoint cycle notation, (b) as a product of transpositions, and (c) as a product of adjacent transpositions. Use fewer transpositions in your answer to (b) than you use in your answer for (c).
+b. Write the permutation below (a) in disjoint cycle notation, (b) as a product of transpositions, and (c) as a product of adjacent transpositions. Give a different asnwer to (b) than you give for (c).
 $$
 \sigma = 
 \begin{pmatrix} 
