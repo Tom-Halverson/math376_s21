@@ -191,10 +191,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
             <section class="normal" id="section-">
 <div id="cyclic-groups" class="section level1">
 <h1><span class="header-section-number">Section 3</span> Cyclic Groups</h1>
+<pre><code>## Loading required package: pracma</code></pre>
 <p>A group <span class="math inline">\(\mathsf{G}\)</span> is <strong>cyclic</strong> if <span class="math inline">\(\mathsf{G}= \langle g \rangle\)</span> for some <span class="math inline">\(g \in \mathsf{G}\)</span>.</p>
 <p>For example, <span class="math inline">\(\mathbb{Z}= \langle 1 \rangle\)</span> is an infinite cyclic group under addition, and <span class="math inline">\(\mathbb{Z}_{n} = \{ 0, 1, 2, \ldots, n-1\} = \langle 1 \rangle\)</span> is a cyclic group under addition mod <span class="math inline">\(n\)</span>.</p>
 <p>Here is the Cayley table of <span class="math inline">\(\mathbb{Z}_{10}\)</span>. See <a href="modular-arithmetic.html#modular-arithmetic">Modular Arithmetic</a> for the R function that produces these tables for any value of <span class="math inline">\(n\)</span>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="cyclic-groups.html#cb1-1"></a><span class="kw">CyclicCayley</span>(<span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="cyclic-groups.html#cb2-1"></a><span class="kw">CyclicCayley</span>(<span class="dv">10</span>)</span></code></pre></div>
 <pre><code>##   0 1 2 3 4 5 6 7 8 9
 ## 0 0 1 2 3 4 5 6 7 8 9
 ## 1 1 2 3 4 5 6 7 8 9 0
@@ -224,7 +225,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </center>
 <p><strong>Corollary</strong> If <span class="math inline">\(\mathsf{G}= \langle g \rangle\)</span> is a finite cyclic group of order <span class="math inline">\(n\)</span>. Then <span class="math inline">\(\mathsf{G}= \langle g^k rangle\)</span> if and only if <span class="math inline">\(\gcd(k,n) = 1\)</span>.</p>
 <p>Thus, for example, the generators of <span class="math inline">\(\mathbb{Z}_{10}\)</span> above are</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="cyclic-groups.html#cb3-1"></a><span class="kw">Units</span>(<span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="cyclic-groups.html#cb4-1"></a><span class="kw">Units</span>(<span class="dv">10</span>)</span></code></pre></div>
 <pre><code>## [1] 1 3 7 9</code></pre>
 <p>Infinite cyclic groups:</p>
 <ol style="list-style-type: decimal">
@@ -244,9 +245,9 @@ R_n = \{1, r, r^2, \ldots, r^{n-1}\} \le \mathsf{D}_n
 \]</span></p></li>
 <li><p>Sometimes the group of units <span class="math inline">\(U(n)\)</span> under multiplication mod <span class="math inline">\(n\)</span> is cyclic. For example, here is a demonstration that <span class="math inline">\(U(21) = \langle 2 \rangle\)</span>. This is a cyclic group of order 18.</p></li>
 </ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="cyclic-groups.html#cb5-1"></a><span class="kw">Units</span>(<span class="dv">27</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="cyclic-groups.html#cb6-1"></a><span class="kw">Units</span>(<span class="dv">27</span>)</span></code></pre></div>
 <pre><code>##  [1]  1  2  4  5  7  8 10 11 13 14 16 17 19 20 22 23 25 26</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="cyclic-groups.html#cb7-1"></a><span class="kw">mod</span>(<span class="dv">2</span><span class="op">^</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">18</span>),<span class="dv">27</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="cyclic-groups.html#cb8-1"></a><span class="kw">mod</span>(<span class="dv">2</span><span class="op">^</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">18</span>),<span class="dv">27</span>)</span></code></pre></div>
 <pre><code>##  [1]  1  2  4  8 16  5 10 20 13 26 25 23 19 11 22 17  7 14  1</code></pre>
 
 </div>
