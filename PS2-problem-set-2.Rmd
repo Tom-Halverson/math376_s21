@@ -1,8 +1,7 @@
-# (PART) Problem Sets {-}
+# Problem Set 2
 
 \newcommand{\A}{{\mathsf{A}}}
 
-# Problem Set 2
 
 **Due**: Friday April 2, 5:00PM CST. 
 
