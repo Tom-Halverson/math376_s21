@@ -1,7 +1,8 @@
+# (PART) Definitions and Theorems {-}
 
 # Groups
 
-
+## Groups
 
 **Def**: A **group** is a set $\G$ with a binary operation $\ast$ that satisfies the following:
 
@@ -41,7 +42,7 @@ b. The equation $x a = b$ has a unique solution $x = b a^{-1}$.
 a. The function $\G \to \G$ defined by left multiplication by $a$,  $g \mapsto a g$, is one-to-one and onto.
 b. The function $\G \to \G$ defined by right multiplication by $a$,  $g \mapsto g a$, is one-to-one and onto.
 
-# Subgroups
+## Subgroups
 
 **Def**: A *subset* $\H \subseteq \G$ of a group $\G$ is a **subgroup** if $\H$ is a group under the same binary operation that it inherits from $\G$. We write $\H \le \G$ to denote that $\H$ is a subgroup of $\G$ and write $\H < \G$ if $\H \le \G$ and $\H \not= \G$.
 
@@ -66,7 +67,7 @@ $$
 \langle g \rangle = \{ g^k \mid k \in \ZZ \}.
 $$
 
-# Cyclic Groups
+## Cyclic Groups
 
 A group $\G$ is **cyclic** if $\G = \langle g \rangle$ for some $g \in \G$.
 
@@ -91,3 +92,83 @@ d.  If $|g| = n$ then  the subgroups of $\langle g \rangle$ satisfy:
 
 Note: (d) says that, in a finite cyclic group of order $n$, there is exactly one subgroup for each divisor of $n$ and those are all the subgroups.
 
+## Isomorphisms
+
+**Def**: An *isomorphism* between groups $\G_1$ and $\G_2$ is a function $\phi: \G \to \G_2$ such that $\phi$ is \emph{one-to-one} and \emph{onto}  (a bijection) and
+$$
+\phi( a b) = \phi(a) \phi(b).
+$$
+We write $\G_1 \cong \G_2$ to denote that $\G_1$ and $\G_2$ are isomorphic.
+
+**Theorem** (Properties of Isomorphisms): if $\phi: \G_1 \to \G_2$ is an isomorphism, and $g \in \G_1$, then
+
+
+a. $\phi(e_\G) = e_\H$.
+a. $\phi(g^{-1}) = \phi(g)^{-1}$
+a. $\phi(g^k) = \phi(g)^k$ for all $k \in \ZZ$
+a. $|g| = |\phi(g)|$
+a. $\phi^{-1}: \G_2 \to \G_1$ is an isomorphism
+a. If $H\le \G_1$ then $\phi(\H) \le G_2$ where $\phi(\H) = \{ \phi(h) \mid h \in \H \}$.
+a. $|\G| = |\H|$
+a. $\G_1$ is abelian if and only if $\G_2$ is abelian
+a. $\G_1$ is cyclic if and only if $\G_2$ is cyclic
+a. $\G_1$ has $k$ elements of order $m$ if and only if $\G_2$ has $k$ elements of order $m$.
+
+
+
+## Cosets 
+
+**Def**: If $\H \le \G$ and $g \in \G$, then the left **coset** of $\H$ by $g$ is the set
+$$
+g \H = \left\{ g h \mid h \in H \right\},
+$$
+and the right coset of $\H$ by $g$ is the set
+$$
+\H g = \left\{ h g \mid h \in H \right\}.
+$$
+
+**Example**: If $\H = \{1, (123), (132)\} = \langle (123) \rangle \le \A_4$. Then the left cosets and right cosets of $\H$ are:
+$$
+\begin{array}{rlcrl}
+\H & = \{1, (123), (132)\} &\qquad&  \H & = \{1, (123), (132)\}\\
+(124) \H & = \{(124), (14)(23), (134)\}&&  
+\H (124) & = \{(124), (13)(24), (243)\} \\
+(142)\H & = \{(142), (234), (13)(24)\} &&
+\H (142) & =\{(142), (143), (14)(23)\}\\
+(143)\H & = \{(143), (12)(34), (243)\} &&
+\H (143) & = \{(143), (14)(23), (142)\}\\
+\end{array}
+$$
+
+**Theorem** (Properties of Cosets): If $\H \le \G$ and $a,b, \in \G$, then
+
+a. $a \in a \H$,
+b. $a \H  = \H$ if and only if $a \in \H$,
+c. $a \H = b \H$ if and only if $a \in b \H$,
+d. $a \H = b \H$ if and only if $b^{-1} a \in \H$,
+e. $a \H \cap b \H = \emptyset$ or $a \H = b\H$,
+f. $|a \H| = |b \H|$.
+
+
+Parts (a) and (e) tell us that cosets **partition** the group into a set of *disjoint* subsets whose union is $\G$. Part (f) tells us that these subsets all have the *same size*. This can be pictured as:
+
+<center>
+![](images/group-partition.png){width=60%}
+</center>
+
+
+**Def**: The **index** of $\H$ in $\G$ is
+$$
+[\G:\H] = \#(\text{cosets of } \H \text{ in } \G).
+$$
+The following theorem follows immediately from the fact that the cosets partition the group and they are all the same size:
+
+**Lagrange's Theorem**: $|\G| = |\H| [\G:\H]$.
+
+**Corollary 1**: If $|\G|$ is finite, then $|\H|$ divides $|\G|$ (this is often written as $|\H|\, \big\vert \,|\G|)$.
+
+**Corollary 2**: If $|\G| = p$ (prime), then the only subgroups of $\G$ are $\{e\}$ and $\G$ (i.e, $\G$ has no nontrivial, proper subgroups).
+
+**Corollary 3**: If $g \in \G$, then $|g| = |\langle g \rangle|$ divides $|G|$.
+
+**Corollary 4**: If $|\G|$ is finite and $g \in \G$, then $g^{|\G|} = e$.

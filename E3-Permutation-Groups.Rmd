@@ -1,0 +1,93 @@
+# Permutation Groups
+
+## Permutation Notation
+
+We use several notations for permutations. The most common are **two-line** and **one-line** notation. For example,
+$$
+\sigma = \begin{pmatrix}
+1 & 2 & 3 & 4 & 5 & 6 \\
+3 & 5 & 2 & 4 & 6 & 1
+\end{pmatrix} = [3,5,2,4,6,1] 
+$$
+and
+$$
+\tau = \begin{pmatrix}
+1 & 2 & 3 & 4 & 5 & 6 \\
+2 & 1 & 4 & 3 & 6 & 5
+\end{pmatrix} = [2,1,4,3,6,5.]
+$$
+The operation is composition of functions, so that $(\sigma  \tau)(1) = \sigma(\tau(1))$. Thus,
+$$
+\begin{pmatrix}
+1 & 2 & 3 & 4 & 5 & 6 \\
+3 & 5 & 2 & 4 & 6 & 1
+\end{pmatrix}\circ \begin{pmatrix}
+1 & 2 & 3 & 4 & 5 & 6 \\
+2 & 1 & 4 & 3 & 6 & 5
+\end{pmatrix} = 
+\begin{pmatrix}
+1 & 2 & 3 & 4 & 5 & 6 \\
+5 & 3 & 4 & 2 & 1 & 6
+\end{pmatrix}
+$$
+We will also write these in **matrix** notation.The matrix of $\sigma$ is
+$$
+\begin{pmatrix}
+1 & 2 & 3 & 4 & 5 & 6 \\
+3 & 5 & 2 & 4 & 6 & 1
+\end{pmatrix} =  \begin{bmatrix}
+0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+\end{bmatrix}
+$$
+In this notation we put a 1 in the $(i,j)$-entry of the matrix if $\sigma(j) = i$. This means that, for example in this case $M_\sigma e_1 = e_3, M_\sigma e_2 = e_5$, and so on. That is, the matrix of $\sigma$ permutes the standard basis vectors according to $\sigma$.
+
+In this notation, matrix multiplication corresponds to permutation composition. That is,
+$$
+\underbrace{\begin{bmatrix}
+0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+\end{bmatrix}}_\sigma \underbrace{\begin{bmatrix}
+0 & 1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+\end{bmatrix}}_\tau =  \underbrace{\begin{bmatrix}
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 \\
+\end{bmatrix}}_{\sigma \tau}
+$$
+Matrix multiplication of the matrices of $\sigma$ and $\tau$ gives the matrix of $\sigma \tau$. This is what Math 476 Representation Theory is all about. Representing group elements with linear transformations and using group theory and linear algebra in concert with one another.
+
+**diagram** notatino needs to be added
+
+## Cycle notation and Order
+
+## Even and Odd Permutations
+
+
+A permutation is **even** if it can be written using an even number of transpositions and it is odd if it can be written as the product of an odd number of permutations. 
+
+**Theorem** Every permutation is even or odd, but not both.
+
+## The Alternating Group
+
+When multiplying permutations: $(even)*(even) = (even),$ $(odd)*(odd) = (odd)$, and $(even)*(odd)= (odd)*(even) = (odd)$. 
+
+The **alternating group** is the subgroup $\A_n \le \S_n$ of even permutations.
+
+**Theorem** $|A_n| = \frac{1}{2} |\S_n|$. Thus, half the permutations are even and half are odd.

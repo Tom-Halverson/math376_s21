@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 6 Cyclic Groups | MATH 376: Algebraic Structures</title>
+  <title>Section 8 Cyclic Groups | MATH 376: Algebraic Structures</title>
   <meta name="description" content="This is the class activity manual for MATH 376 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 6 Cyclic Groups | MATH 376: Algebraic Structures" />
+  <meta property="og:title" content="Section 8 Cyclic Groups | MATH 376: Algebraic Structures" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Tom-Halverson/math236_s21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 6 Cyclic Groups | MATH 376: Algebraic Structures" />
+  <meta name="twitter:title" content="Section 8 Cyclic Groups | MATH 376: Algebraic Structures" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 376 at Macalester College." />
   
@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="subgroups.html"/>
-<link rel="next" href="modular-arithmetic.html"/>
+<link rel="next" href="isomorphisms.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -148,27 +148,38 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ul></li>
 <li class="part"><span><b>II Group Examples</b></span></li>
 <li class="chapter" data-level="3" data-path="cyclic-groups.html"><a href="cyclic-groups.html"><i class="fa fa-check"></i><b>3</b> Cyclic Groups</a></li>
-<li class="chapter" data-level="4" data-path="groups.html"><a href="groups.html"><i class="fa fa-check"></i><b>4</b> Groups</a></li>
-<li class="chapter" data-level="5" data-path="subgroups.html"><a href="subgroups.html"><i class="fa fa-check"></i><b>5</b> Subgroups</a></li>
-<li class="chapter" data-level="6" data-path="cyclic-groups-1.html"><a href="cyclic-groups-1.html"><i class="fa fa-check"></i><b>6</b> Cyclic Groups</a></li>
-<li class="part"><span><b>III Algebraic Structures in R</b></span></li>
-<li class="chapter" data-level="7" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html"><i class="fa fa-check"></i><b>7</b> Modular Arithmetic</a><ul>
-<li class="chapter" data-level="7.1" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#integer-division-and-gcd"><i class="fa fa-check"></i><b>7.1</b> Integer division and GCD</a></li>
-<li class="chapter" data-level="7.2" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#addition-mod-n-mathbbz_n"><i class="fa fa-check"></i><b>7.2</b> Addition Mod n: <span class="math inline">\(\mathbb{Z}_n\)</span></a></li>
-<li class="chapter" data-level="7.3" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#multiplication-mod-n-un"><i class="fa fa-check"></i><b>7.3</b> Multiplication Mod n: <span class="math inline">\(U(n)\)</span></a></li>
+<li class="chapter" data-level="4" data-path="dihedral-groups.html"><a href="dihedral-groups.html"><i class="fa fa-check"></i><b>4</b> Dihedral Groups</a></li>
+<li class="chapter" data-level="5" data-path="permutation-groups.html"><a href="permutation-groups.html"><i class="fa fa-check"></i><b>5</b> Permutation Groups</a><ul>
+<li class="chapter" data-level="5.1" data-path="permutation-groups.html"><a href="permutation-groups.html#permutation-notation"><i class="fa fa-check"></i><b>5.1</b> Permutation Notation</a></li>
+<li class="chapter" data-level="5.2" data-path="permutation-groups.html"><a href="permutation-groups.html#cycle-notation-and-order"><i class="fa fa-check"></i><b>5.2</b> Cycle notation and Order</a></li>
+<li class="chapter" data-level="5.3" data-path="permutation-groups.html"><a href="permutation-groups.html#even-and-odd-permutations"><i class="fa fa-check"></i><b>5.3</b> Even and Odd Permutations</a></li>
+<li class="chapter" data-level="5.4" data-path="permutation-groups.html"><a href="permutation-groups.html#the-alternating-group"><i class="fa fa-check"></i><b>5.4</b> The Alternating Group</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="matrix-groups.html"><a href="matrix-groups.html"><i class="fa fa-check"></i><b>8</b> Matrix Groups</a><ul>
-<li class="chapter" data-level="8.1" data-path="matrix-groups.html"><a href="matrix-groups.html#the-general-linear-group-gl_nmathbbr"><i class="fa fa-check"></i><b>8.1</b> The General Linear Group <span class="math inline">\(GL_n(\mathbb{R})\)</span></a></li>
-<li class="chapter" data-level="8.2" data-path="matrix-groups.html"><a href="matrix-groups.html#matrix-multiplication-mod-m-gl_nmathbbz_m"><i class="fa fa-check"></i><b>8.2</b> Matrix Multiplication Mod m: <span class="math inline">\(GL_n(\mathbb{Z}_m)\)</span></a></li>
+<li class="part"><span><b>III Definitions and Theorems</b></span></li>
+<li class="chapter" data-level="6" data-path="groups.html"><a href="groups.html"><i class="fa fa-check"></i><b>6</b> Groups</a></li>
+<li class="chapter" data-level="7" data-path="subgroups.html"><a href="subgroups.html"><i class="fa fa-check"></i><b>7</b> Subgroups</a></li>
+<li class="chapter" data-level="8" data-path="cyclic-groups-1.html"><a href="cyclic-groups-1.html"><i class="fa fa-check"></i><b>8</b> Cyclic Groups</a></li>
+<li class="chapter" data-level="9" data-path="isomorphisms.html"><a href="isomorphisms.html"><i class="fa fa-check"></i><b>9</b> Isomorphisms</a></li>
+<li class="chapter" data-level="10" data-path="cosets.html"><a href="cosets.html"><i class="fa fa-check"></i><b>10</b> Cosets</a></li>
+<li class="part"><span><b>IV Algebraic Structures in R</b></span></li>
+<li class="chapter" data-level="11" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html"><i class="fa fa-check"></i><b>11</b> Modular Arithmetic</a><ul>
+<li class="chapter" data-level="11.1" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#integer-division-and-gcd"><i class="fa fa-check"></i><b>11.1</b> Integer division and GCD</a></li>
+<li class="chapter" data-level="11.2" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#addition-mod-n-mathbbz_n"><i class="fa fa-check"></i><b>11.2</b> Addition Mod n: <span class="math inline">\(\mathbb{Z}_n\)</span></a></li>
+<li class="chapter" data-level="11.3" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html#multiplication-mod-n-un"><i class="fa fa-check"></i><b>11.3</b> Multiplication Mod n: <span class="math inline">\(U(n)\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html"><i class="fa fa-check"></i><b>9</b> Complex n-th roots of unity</a><ul>
-<li class="chapter" data-level="9.1" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#cyclic-subgroups-of-mathbbcast"><i class="fa fa-check"></i><b>9.1</b> Cyclic subgroups of <span class="math inline">\(\mathbb{C}^\ast\)</span></a></li>
-<li class="chapter" data-level="9.2" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#roots-of-unity"><i class="fa fa-check"></i><b>9.2</b> Roots of Unity</a><ul>
-<li class="chapter" data-level="9.2.1" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#cube-roots-of-unity"><i class="fa fa-check"></i><b>9.2.1</b> Cube Roots of Unity</a></li>
-<li class="chapter" data-level="9.2.2" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#th-roots-of-unity"><i class="fa fa-check"></i><b>9.2.2</b> 4th Roots of Unity</a></li>
-<li class="chapter" data-level="9.2.3" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#th-roots-of-unity-1"><i class="fa fa-check"></i><b>9.2.3</b> 8th Roots of Unity</a></li>
+<li class="chapter" data-level="12" data-path="matrix-groups.html"><a href="matrix-groups.html"><i class="fa fa-check"></i><b>12</b> Matrix Groups</a><ul>
+<li class="chapter" data-level="12.1" data-path="matrix-groups.html"><a href="matrix-groups.html#the-general-linear-group-gl_nmathbbr"><i class="fa fa-check"></i><b>12.1</b> The General Linear Group <span class="math inline">\(GL_n(\mathbb{R})\)</span></a></li>
+<li class="chapter" data-level="12.2" data-path="matrix-groups.html"><a href="matrix-groups.html#matrix-multiplication-mod-m-gl_nmathbbz_m"><i class="fa fa-check"></i><b>12.2</b> Matrix Multiplication Mod m: <span class="math inline">\(GL_n(\mathbb{Z}_m)\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html"><i class="fa fa-check"></i><b>13</b> Complex n-th roots of unity</a><ul>
+<li class="chapter" data-level="13.1" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#cyclic-subgroups-of-mathbbcast"><i class="fa fa-check"></i><b>13.1</b> Cyclic subgroups of <span class="math inline">\(\mathbb{C}^\ast\)</span></a></li>
+<li class="chapter" data-level="13.2" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#roots-of-unity"><i class="fa fa-check"></i><b>13.2</b> Roots of Unity</a><ul>
+<li class="chapter" data-level="13.2.1" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#cube-roots-of-unity"><i class="fa fa-check"></i><b>13.2.1</b> Cube Roots of Unity</a></li>
+<li class="chapter" data-level="13.2.2" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#th-roots-of-unity"><i class="fa fa-check"></i><b>13.2.2</b> 4th Roots of Unity</a></li>
+<li class="chapter" data-level="13.2.3" data-path="complex-n-th-roots-of-unity.html"><a href="complex-n-th-roots-of-unity.html#th-roots-of-unity-1"><i class="fa fa-check"></i><b>13.2.3</b> 8th Roots of Unity</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="14" data-path="permutations.html"><a href="permutations.html"><i class="fa fa-check"></i><b>14</b> Permutations</a></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
 
@@ -190,7 +201,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
             <section class="normal" id="section-">
 <div id="cyclic-groups-1" class="section level1">
-<h1><span class="header-section-number">Section 6</span> Cyclic Groups</h1>
+<h1><span class="header-section-number">Section 8</span> Cyclic Groups</h1>
 <p>A group <span class="math inline">\(\mathsf{G}\)</span> is <strong>cyclic</strong> if <span class="math inline">\(\mathsf{G}= \langle g \rangle\)</span> for some <span class="math inline">\(g \in \mathsf{G}\)</span>.</p>
 <p><strong>Theorem.</strong> (Fundamental Theorem of Cyclic Groups) If <span class="math inline">\(\mathsf{G}= \langle g\rangle\)</span>, then</p>
 <ol style="list-style-type: lower-alpha">
@@ -205,18 +216,14 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ol></li>
 </ol>
 <p>Note: (d) says that, in a finite cyclic group of order <span class="math inline">\(n\)</span>, there is exactly one subgroup for each divisor of <span class="math inline">\(n\)</span> and those are all the subgroups.</p>
-
 </div>
-
-
-
             </section>
 
           </div>
         </div>
       </div>
 <a href="subgroups.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="modular-arithmetic.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="isomorphisms.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

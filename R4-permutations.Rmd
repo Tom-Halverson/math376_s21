@@ -1,0 +1,53 @@
+# Permutations
+
+There is an additional package you can add to work with permutations in R. The first time you use it, you will likely have to retrieve it. Got to the `Packages` tab in the lower right corner. Choose `Install` and search for `permutations` in the `Packages` window.
+```{r,echo=TRUE,warning=FALSE}
+require(permutations)
+```
+
+You can define permutations via their 1-line notation. Thus,
+```{r}
+f <- as.word(c(9,2,6,3,5,4,1,7,8))
+```
+And then give its disjoint cycle type as
+```{r}
+as.cycle(f)
+```
+```{r}
+inverse(f)
+```
+
+We can also input a permutation in cycle notation
+
+```{r}
+g <- as.cycle(c(1,4,2))
+```
+
+R multiplies permutations in the opposite order that we do in class. That is, it applies them from left to right. This is something that one needs to be used to in working with permutations. So in this package (f*g)(1) means g(f(1)) as upi cam see here. 
+```{r}
+f
+g
+f * g
+g * f
+```
+You can tell if a permutation is even or odd
+```{r}
+is.even(f)
+is.even(g)
+```
+
+```{r}
+S4 <- allperms(4)
+S4
+```
+
+```{r}
+is.even(S4)
+A4 <- S4[is.even(S4)]
+A4
+```
+```{r}
+cayley(A4)
+```
+
+

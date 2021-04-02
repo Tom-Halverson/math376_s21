@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 7 Subgroups | MATH 376: Algebraic Structures</title>
+  <title>Section 9 Isomorphisms | MATH 376: Algebraic Structures</title>
   <meta name="description" content="This is the class activity manual for MATH 376 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 7 Subgroups | MATH 376: Algebraic Structures" />
+  <meta property="og:title" content="Section 9 Isomorphisms | MATH 376: Algebraic Structures" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Tom-Halverson/math236_s21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 7 Subgroups | MATH 376: Algebraic Structures" />
+  <meta name="twitter:title" content="Section 9 Isomorphisms | MATH 376: Algebraic Structures" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 376 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="groups.html"/>
-<link rel="next" href="cyclic-groups-1.html"/>
+<link rel="prev" href="cyclic-groups-1.html"/>
+<link rel="next" href="cosets.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -200,33 +200,34 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="subgroups" class="section level1">
-<h1><span class="header-section-number">Section 7</span> Subgroups</h1>
-<p><strong>Def</strong>: A <em>subset</em> <span class="math inline">\(\mathsf{H}\subseteq \mathsf{G}\)</span> of a group <span class="math inline">\(\mathsf{G}\)</span> is a <strong>subgroup</strong> if <span class="math inline">\(\mathsf{H}\)</span> is a group under the same binary operation that it inherits from <span class="math inline">\(\mathsf{G}\)</span>. We write <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> to denote that <span class="math inline">\(\mathsf{H}\)</span> is a subgroup of <span class="math inline">\(\mathsf{G}\)</span> and write <span class="math inline">\(\mathsf{H}&lt; \mathsf{G}\)</span> if <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> and <span class="math inline">\(\mathsf{H}\not= \mathsf{G}\)</span>.</p>
-<p><strong>Theorem</strong>: (Subgroup Test) A <em>nonempty</em> subset <span class="math inline">\(\mathsf{H}\subseteq \mathsf{G}\)</span> is a subgroup if</p>
+<div id="isomorphisms" class="section level1">
+<h1><span class="header-section-number">Section 9</span> Isomorphisms</h1>
+<p><strong>Definition</strong>. An <em>isomorphism</em> between groups <span class="math inline">\(\mathsf{G}_1\)</span> and <span class="math inline">\(\mathsf{G}_2\)</span> is a function <span class="math inline">\(\phi: \mathsf{G}\to \mathsf{G}_2\)</span> such that <span class="math inline">\(\phi\)</span> is  and  (a bijection) and
+<span class="math display">\[
+\phi( a b) = \phi(a) \phi(b).
+\]</span>
+We write <span class="math inline">\(\mathsf{G}_1 \cong \mathsf{G}_2\)</span> to denote that <span class="math inline">\(\mathsf{G}_1\)</span> and <span class="math inline">\(\mathsf{G}_2\)</span> are isomorphic.</p>
+<p><strong>Theorem</strong> Properties of Isomorphisms: if <span class="math inline">\(\phi: \mathsf{G}_1 \to \mathsf{G}_2\)</span> is an isomorphism, and <span class="math inline">\(g \in \mathsf{G}_1\)</span>, then</p>
 <ol style="list-style-type: lower-alpha">
-<li>(identity) <span class="math inline">\(e \in \mathsf{H}\)</span>, where <span class="math inline">\(e\)</span> is the identity in <span class="math inline">\(\mathsf{G}\)</span>.</li>
-<li>(closure) If <span class="math inline">\(h_1, h_2 \in \mathsf{H}\)</span>, then <span class="math inline">\(h_1 h_2 \in \mathsf{H}\)</span>.</li>
-<li>(contains inverses) If <span class="math inline">\(h \in \mathsf{H}\)</span>, then <span class="math inline">\(h^{-1} \in \mathsf{H}\)</span>.</li>
+<li><span class="math inline">\(\phi(e_\mathsf{G}) = e_\mathsf{H}\)</span>.</li>
+<li><span class="math inline">\(\phi(g^{-1}) = \phi(g)^{-1}\)</span></li>
+<li><span class="math inline">\(\phi(g^k) = \phi(g)^k\)</span> for all <span class="math inline">\(k \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(|g| = |\phi(g)|\)</span></li>
+<li><span class="math inline">\(\phi^{-1}: \mathsf{G}_2 \to \mathsf{G}_1\)</span> is an isomorphism</li>
+<li>If <span class="math inline">\(H\le \mathsf{G}_1\)</span> then <span class="math inline">\(\phi(\mathsf{H}) \le G_2\)</span> where <span class="math inline">\(\phi(\mathsf{H}) = \{ \phi(h) \mid h \in \mathsf{H}\}\)</span>.</li>
+<li><span class="math inline">\(|\mathsf{G}| = |\mathsf{H}|\)</span></li>
+<li><span class="math inline">\(\mathsf{G}_1\)</span> is abelian if and only if <span class="math inline">\(\mathsf{G}_2\)</span> is abelian</li>
+<li><span class="math inline">\(\mathsf{G}_1\)</span> is cyclic if and only if <span class="math inline">\(\mathsf{G}_2\)</span> is cyclic</li>
+<li><span class="math inline">\(\mathsf{G}_1\)</span> has <span class="math inline">\(k\)</span> elements of order <span class="math inline">\(m\)</span> if and only if <span class="math inline">\(\mathsf{G}_2\)</span> has <span class="math inline">\(k\)</span> elements of order <span class="math inline">\(m\)</span>.</li>
 </ol>
-<p>Note: (a) follows from (b) and (c).</p>
-<p><strong>Def</strong>: The <strong>order</strong> of an element <span class="math inline">\(g \in \mathsf{G}\)</span> is the smallest positive integer <span class="math inline">\(m\)</span> such that <span class="math inline">\(g^m = e\)</span>, and we write <span class="math inline">\(|g| = m\)</span>. If there is no such <span class="math inline">\(m\)</span>, then <span class="math inline">\(|g| = \infty\)</span>.</p>
-<p><strong>Def</strong>: The <strong>center</strong> of a group <span class="math inline">\(\mathsf{G}\)</span> is the following subgroup
-<span class="math display">\[
-Z(\mathsf{G}) = \{ a \in \mathsf{G}\mid \hbox{ if $g \in \mathsf{G}$ then $ag  = ga$ } \}.
-\]</span></p>
-<p><strong>Def</strong>: If <span class="math inline">\(g \in \mathsf{G}\)</span> then <span class="math inline">\(\langle g \rangle\)</span> is the smallest subgroup of <span class="math inline">\(\mathsf{G}\)</span> that contains <span class="math inline">\(g\)</span>. It is called the <strong>cyclic subgroup generated by</strong> <span class="math inline">\(g\)</span>. This subgroup contains all possible powers of <span class="math inline">\(g\)</span>:
-<span class="math display">\[
-\langle g \rangle = \{ g^k \mid k \in \mathbb{Z}\}.
-\]</span></p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="groups.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="cyclic-groups-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="cyclic-groups-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cosets.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

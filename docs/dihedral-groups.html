@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 9 Matrix Groups | MATH 376: Algebraic Structures</title>
+  <title>Section 5 Dihedral Groups | MATH 376: Algebraic Structures</title>
   <meta name="description" content="This is the class activity manual for MATH 376 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 9 Matrix Groups | MATH 376: Algebraic Structures" />
+  <meta property="og:title" content="Section 5 Dihedral Groups | MATH 376: Algebraic Structures" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Tom-Halverson/math236_s21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 9 Matrix Groups | MATH 376: Algebraic Structures" />
+  <meta name="twitter:title" content="Section 5 Dihedral Groups | MATH 376: Algebraic Structures" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 376 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="modular-arithmetic.html"/>
-<link rel="next" href="complex-n-th-roots-of-unity.html"/>
+<link rel="prev" href="cyclic-groups.html"/>
+<link rel="next" href="permutation-groups.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -208,75 +208,17 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="matrix-groups" class="section level1">
-<h1><span class="header-section-number">Section 9</span> Matrix Groups</h1>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="matrix-groups.html#cb59-1"></a><span class="kw">require</span>(pracma)</span></code></pre></div>
-<div id="the-general-linear-group-gl_nmathbbr" class="section level2">
-<h2><span class="header-section-number">9.1</span> The General Linear Group <span class="math inline">\(GL_n(\mathbb{R})\)</span></h2>
-<p>The <strong>general linear group</strong> <span class="math inline">\(GL_n(\mathbb{R})\)</span> is the group of all <em>invertible</em> <span class="math inline">\(n \times n\)</span> matrices with entries from the real numbers <span class="math inline">\(\mathbb{R}\)</span>. This is the world we lived in when we worked with square invertible matrices (and the invertible matrix theorem) in Math 236 Linear Algebra.</p>
-<p>Remember that R has a funny matrix multiplication symbol: <code>%*%</code>. For example,</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="matrix-groups.html#cb60-1"></a>A =<span class="st"> </span><span class="kw">cbind</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>),<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>))</span>
-<span id="cb60-2"><a href="matrix-groups.html#cb60-2"></a>B =<span class="st"> </span><span class="kw">cbind</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">1</span>),<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">3</span>),<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>))</span>
-<span id="cb60-3"><a href="matrix-groups.html#cb60-3"></a>A <span class="op">%*%</span><span class="st"> </span>B</span></code></pre></div>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]   -4    2    3
-## [2,]   -8    6    5
-## [3,]  -13    7    6</code></pre>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="matrix-groups.html#cb62-1"></a>B <span class="op">%*%</span><span class="st"> </span>A</span></code></pre></div>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    0   -3    2
-## [2,]    9    4    3
-## [3,]   10    5    4</code></pre>
-<p>illustrating that matrix multiplication is not-commutative and <span class="math inline">\(GL_n(\mathbb{R})\)</span> is a <strong>nonabelian</strong> group.</p>
-<p>The <strong>identity matrix</strong> is the identity element of the group, and it can be defined with <code>diag(n)</code>. If you have <code>pracma</code> loaded then you can invert the matrix A with <code>inv(A)</code> otherwise, in base R, you can use <code>solve(A)</code>.</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="matrix-groups.html#cb64-1"></a><span class="kw">inv</span>(A)</span></code></pre></div>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    0   -1    1
-## [2,]    1    1   -1
-## [3,]   -1    2   -1</code></pre>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="matrix-groups.html#cb66-1"></a><span class="kw">zapsmall</span>(A <span class="op">%*%</span><span class="st"> </span><span class="kw">inv</span>(A))</span></code></pre></div>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    0    0
-## [2,]    0    1    0
-## [3,]    0    0    1</code></pre>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="matrix-groups.html#cb68-1"></a><span class="kw">diag</span>(<span class="dv">3</span>) <span class="op">%*%</span><span class="st"> </span>A</span></code></pre></div>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    1    0
-## [2,]    2    1    1
-## [3,]    3    1    1</code></pre>
-</div>
-<div id="matrix-multiplication-mod-m-gl_nmathbbz_m" class="section level2">
-<h2><span class="header-section-number">9.2</span> Matrix Multiplication Mod m: <span class="math inline">\(GL_n(\mathbb{Z}_m)\)</span></h2>
-<p>You can use the <code>mod</code> command from <code>pracma</code> to do matrix multiplication mod m.</p>
-<p>For example, notice how the product looks very different for different <span class="math inline">\(\mathbb{Z}_m\)</span>.</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="matrix-groups.html#cb70-1"></a>A =<span class="st"> </span><span class="kw">rbind</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">7</span>))</span>
-<span id="cb70-2"><a href="matrix-groups.html#cb70-2"></a>B =<span class="st"> </span><span class="kw">rbind</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">4</span>),<span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>,<span class="op">-</span><span class="dv">2</span>))</span>
-<span id="cb70-3"><a href="matrix-groups.html#cb70-3"></a>A <span class="op">%*%</span><span class="st"> </span>B</span></code></pre></div>
-<pre><code>##      [,1] [,2]
-## [1,]   -4   -2
-## [2,]  -11   -6</code></pre>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="matrix-groups.html#cb72-1"></a><span class="kw">mod</span>(A <span class="op">%*%</span><span class="st"> </span>B,<span class="dv">2</span>)</span></code></pre></div>
-<pre><code>##      [,1] [,2]
-## [1,]    0    0
-## [2,]    1    0</code></pre>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="matrix-groups.html#cb74-1"></a><span class="kw">mod</span>(A <span class="op">%*%</span><span class="st"> </span>B,<span class="dv">3</span>)</span></code></pre></div>
-<pre><code>##      [,1] [,2]
-## [1,]    2    1
-## [2,]    1    0</code></pre>
-<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="matrix-groups.html#cb76-1"></a><span class="kw">mod</span>(A <span class="op">%*%</span><span class="st"> </span>B,<span class="dv">4</span>)</span></code></pre></div>
-<pre><code>##      [,1] [,2]
-## [1,]    0    2
-## [2,]    1    2</code></pre>
+<div id="dihedral-groups" class="section level1">
+<h1><span class="header-section-number">Section 5</span> Dihedral Groups</h1>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="modular-arithmetic.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="complex-n-th-roots-of-unity.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="cyclic-groups.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="permutation-groups.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

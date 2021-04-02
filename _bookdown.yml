@@ -3,11 +3,15 @@ output_dir: docs/
 rmd_files: ["index.Rmd", 
 "PS1-problem-set-1.Rmd",
 "PS2-problem-set-2.Rmd",
+"PS3-problem-set-3.Rmd",
 "E1-Cyclic-Groups.Rmd",
-"important-defs.Rmd",
+"E2-Dihedral-Groups.Rmd",
+"E3-Permutation-Groups.Rmd",
+"D1-Group-Definitions.Rmd",
 "R1-modular-arithmetic.Rmd",
 "R2-matrix-multiplication.Rmd",
-"R3-complex-roots-unity.Rmd"
+"R3-complex-roots-unity.Rmd",
+"R4-permutations.Rmd"
 ]
 delete_merged_file: true
 language:
