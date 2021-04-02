@@ -15,9 +15,11 @@ symmetry-group-of-the-cube
 extra-credit
 problem-set-3
 centralizer-is-a-group-invariant
+dihedral-cosets
+fermats-little-theorem
 index-of-the-center
 quaternion-quotient
-fermats-little-theorem
+coming-next-week.
 cyclic-groups
 dihedral-groups
 permutation-groups

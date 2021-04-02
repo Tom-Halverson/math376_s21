@@ -1,9 +1,7 @@
 # Problem Set 3
 
 
-**Due**: Friday April 9, 5:00PM CST. 
-
-* Same rules as always.
+**Due**: Friday April 9, 5:00PM CST. No penalty if turned in by **noon on Saturday**.  Same rules as previous assignments.
 
 ## Centralizer is a Group Invariant
 
@@ -13,25 +11,35 @@ C_{\G_1}(a) = \{ g \in \G_1 \mid g a = a g\} \le \G_1.
 $$
 Prove that $\phi(C_{\G_1}(a)) = C_{\G_2}(\phi(a))$.
 
-## Index of the Center
 
-Prove that in a finite group $\G$, the index of the center $[G:Z(\G)]$ cannot be prime. (Hint: let $a \in \G \setminus Z(\G)$ and consider the centralizer $C_\G(a)$).
 
-## Quaternion Quotient
 
-Recall the quaternion group $Q_8 = \{1,-1,i,-i,j,-j,k,-k\}$. 
+## Dihedral Cosets
 
-a. Show that $H = \{1,-1\}$ is a normal subgroup of $Q_8$.
+In this problem, we will work with the dihedral group $\D_{12}$ for the 12-gon pictured below. Per usual, let $r$ be rotation by $2 \pi/12$ counter-clockwise, and let $f$ be the flip over the horizontal axis. Then 
+$$
+\D_{12} = \{1, r, r^2, \ldots, r^{11}, f, r f, r^2 f, \ldots, r^{11} f\}.
+$$
+Let $\H \le \D_{12}$ be the subgroup that fixes the square below in the sense that the square has to go to the square (it can rotate or flip the square but it has to end up in the same place).
 
-a. The quotient group $Q_8/H$ has order 2. You have proved that, up to isomorphism, there are two groups of order 4. They are $\mathbb{Z}_4$ and the Klein-4 group $K_4 = \mathbb{Z}_2 \times \mathbb{Z}_2$. Which of these two groups is $Q_8/H$ isomorphic to?
+a. Find $\H$.
+b. It makes sense that $\H \cong \D_4$ since it it rotates and flips the square. 
+    i. Give an isomorphism $\phi: \D_4 \to \H$ (just state your isomorphism). Let $R$ and $F$ be the generators of $\D_4$ to distinguish them from the generators of $\D_{12}$.
+    ii. Show that $\phi(R)^4 = 1$, $\phi(F)^2 = 1$, and $\phi(F)\phi(R) = \phi(R)^3 \phi(F)$. This proves that $\phi$ is an isomorphism, since these are the defining relations of $\D_4$.
+    
+c. Decompose $\D_{12}$ into left $\H$ cosets.
+d. The elements of each coset share a common property related to the image. What is it?
+
+<center>
+![](images/square-12-gon.png){width=35%}
+</center>
 
 ## Fermat's "Little" Theorem
 
-The point of this problem is to show that many of the interesting and important properties of modular arithmetic and coding theory actually come from group theory. 
+The point of this problem is to show that some of the important properties of modular arithmetic and coding theory actually come from group theory. 
 
 Recall that $U(n) = \{ 1 \le k < n \mid \gcd(k,n) = 1\}$ is the group of units under multiplication mod $n$. Let $\phi(n) = |U(n)|$, so that $\phi(n)$ is the number of positive integers less than $n$ that are relatively prime to $n$. 
 
-Use the corollaries of Lagrange's Theorem to give short proofs of the facts below.
 
 a. Fill out the table
 $$
@@ -48,10 +56,22 @@ b. Prove that $a^{\phi(n)} \equiv 1  (\mathsf{mod}\ n)$. (Hint: use a corollary 
 
 c. Demonstrate that b works for $n = 12$ and each $a \in U(12)$.
 
-d. Show that a special case of b is the following, which is called *Fermat's Little Theorem*: $a^{p} \equiv a (\mathsf{mod}\ n)$ for a prime number $p$.
+d. Use part (b) to prove the following, which is called *Fermat's Little Theorem*: $a^{p} \equiv a (\mathsf{mod}\ n)$ for a prime number $p$.
 
 e. Demonstrate Fermat's Little Theorem for $p = 7$ and each number in $U(7)$.
 
 
+## Index of the Center
+
+Prove that in a finite group $\G$, the index of the center $[G:Z(\G)]$ cannot be prime. (Hint: let $a \in \G \setminus Z(\G)$ and consider the centralizer $C_\G(a)$).
 
 
+## Quaternion Quotient
+
+Recall the quaternion group $Q_8 = \{1,-1,i,-i,j,-j,k,-k\}$. 
+
+a. Show that $H = \{1,-1\}$ is a normal subgroup of $Q_8$.
+
+a. The quotient group $Q_8/H$ has order 2. You have proved that, up to isomorphism, there are two groups of order 4. They are $\mathbb{Z}_4$ and the Klein-4 group $K_4 = \mathbb{Z}_2 \times \mathbb{Z}_2$. Which of these two groups is $Q_8/H$ isomorphic to?
+
+## Coming next week.

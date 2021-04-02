@@ -148,9 +148,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ul></li>
 <li class="chapter" data-level="3" data-path="problem-set-3.html"><a href="problem-set-3.html"><i class="fa fa-check"></i><b>3</b> Problem Set 3</a><ul>
 <li class="chapter" data-level="3.1" data-path="problem-set-3.html"><a href="problem-set-3.html#centralizer-is-a-group-invariant"><i class="fa fa-check"></i><b>3.1</b> Centralizer is a Group Invariant</a></li>
-<li class="chapter" data-level="3.2" data-path="problem-set-3.html"><a href="problem-set-3.html#index-of-the-center"><i class="fa fa-check"></i><b>3.2</b> Index of the Center</a></li>
-<li class="chapter" data-level="3.3" data-path="problem-set-3.html"><a href="problem-set-3.html#quaternion-quotient"><i class="fa fa-check"></i><b>3.3</b> Quaternion Quotient</a></li>
-<li class="chapter" data-level="3.4" data-path="problem-set-3.html"><a href="problem-set-3.html#fermats-little-theorem"><i class="fa fa-check"></i><b>3.4</b> Fermat’s “Little” Theorem</a></li>
+<li class="chapter" data-level="3.2" data-path="problem-set-3.html"><a href="problem-set-3.html#dihedral-cosets"><i class="fa fa-check"></i><b>3.2</b> Dihedral Cosets</a></li>
+<li class="chapter" data-level="3.3" data-path="problem-set-3.html"><a href="problem-set-3.html#fermats-little-theorem"><i class="fa fa-check"></i><b>3.3</b> Fermat’s “Little” Theorem</a></li>
+<li class="chapter" data-level="3.4" data-path="problem-set-3.html"><a href="problem-set-3.html#index-of-the-center"><i class="fa fa-check"></i><b>3.4</b> Index of the Center</a></li>
+<li class="chapter" data-level="3.5" data-path="problem-set-3.html"><a href="problem-set-3.html#quaternion-quotient"><i class="fa fa-check"></i><b>3.5</b> Quaternion Quotient</a></li>
+<li class="chapter" data-level="3.6" data-path="problem-set-3.html"><a href="problem-set-3.html#coming-next-week."><i class="fa fa-check"></i><b>3.6</b> Coming next week.</a></li>
 </ul></li>
 <li class="part"><span><b>II Group Examples</b></span></li>
 <li class="chapter" data-level="4" data-path="cyclic-groups.html"><a href="cyclic-groups.html"><i class="fa fa-check"></i><b>4</b> Cyclic Groups</a></li>
@@ -210,10 +212,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
             <section class="normal" id="section-">
 <div id="problem-set-3" class="section level1">
 <h1><span class="header-section-number">Section 3</span> Problem Set 3</h1>
-<p><strong>Due</strong>: Friday April 9, 5:00PM CST.</p>
-<ul>
-<li>Same rules as always.</li>
-</ul>
+<p><strong>Due</strong>: Friday April 9, 5:00PM CST. No penalty if turned in by <strong>noon on Saturday</strong>. Same rules as previous assignments.</p>
 <div id="centralizer-is-a-group-invariant" class="section level2">
 <h2><span class="header-section-number">3.1</span> Centralizer is a Group Invariant</h2>
 <p>Suppose that <span class="math inline">\(\phi: \mathsf{G}_1 \to \mathsf{G}_2\)</span> is a group isomorphism. Let <span class="math inline">\(a \in \mathsf{G}_1\)</span> and recall that the <em>centralizer</em> of <span class="math inline">\(a\)</span> in <span class="math inline">\(\mathsf{G}_1\)</span> is the subgroup
@@ -222,23 +221,31 @@ C_{\mathsf{G}_1}(a) = \{ g \in \mathsf{G}_1 \mid g a = a g\} \le \mathsf{G}_1.
 \]</span>
 Prove that <span class="math inline">\(\phi(C_{\mathsf{G}_1}(a)) = C_{\mathsf{G}_2}(\phi(a))\)</span>.</p>
 </div>
-<div id="index-of-the-center" class="section level2">
-<h2><span class="header-section-number">3.2</span> Index of the Center</h2>
-<p>Prove that in a finite group <span class="math inline">\(\mathsf{G}\)</span>, the index of the center <span class="math inline">\([G:Z(\mathsf{G})]\)</span> cannot be prime. (Hint: let <span class="math inline">\(a \in \mathsf{G}\setminus Z(\mathsf{G})\)</span> and consider the centralizer <span class="math inline">\(C_\mathsf{G}(a)\)</span>).</p>
-</div>
-<div id="quaternion-quotient" class="section level2">
-<h2><span class="header-section-number">3.3</span> Quaternion Quotient</h2>
-<p>Recall the quaternion group <span class="math inline">\(Q_8 = \{1,-1,i,-i,j,-j,k,-k\}\)</span>.</p>
+<div id="dihedral-cosets" class="section level2">
+<h2><span class="header-section-number">3.2</span> Dihedral Cosets</h2>
+<p>In this problem, we will work with the dihedral group <span class="math inline">\(\mathsf{D}_{12}\)</span> for the 12-gon pictured below. Per usual, let <span class="math inline">\(r\)</span> be rotation by <span class="math inline">\(2 \pi/12\)</span> counter-clockwise, and let <span class="math inline">\(f\)</span> be the flip over the horizontal axis. Then
+<span class="math display">\[
+\mathsf{D}_{12} = \{1, r, r^2, \ldots, r^{11}, f, r f, r^2 f, \ldots, r^{11} f\}.
+\]</span>
+Let <span class="math inline">\(\mathsf{H}\le \mathsf{D}_{12}\)</span> be the subgroup that fixes the square below in the sense that the square has to go to the square (it can rotate or flip the square but it has to end up in the same place).</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>Show that <span class="math inline">\(H = \{1,-1\}\)</span> is a normal subgroup of <span class="math inline">\(Q_8\)</span>.</p></li>
-<li><p>The quotient group <span class="math inline">\(Q_8/H\)</span> has order 2. You have proved that, up to isomorphism, there are two groups of order 4. They are <span class="math inline">\(\mathbb{Z}_4\)</span> and the Klein-4 group <span class="math inline">\(K_4 = \mathbb{Z}_2 \times \mathbb{Z}_2\)</span>. Which of these two groups is <span class="math inline">\(Q_8/H\)</span> isomorphic to?</p></li>
+<li>Find <span class="math inline">\(\mathsf{H}\)</span>.</li>
+<li>It makes sense that <span class="math inline">\(\mathsf{H}\cong \mathsf{D}_4\)</span> since it it rotates and flips the square.
+<ol style="list-style-type: lower-roman">
+<li>Give an isomorphism <span class="math inline">\(\phi: \mathsf{D}_4 \to \mathsf{H}\)</span> (just state your isomorphism). Let <span class="math inline">\(R\)</span> and <span class="math inline">\(F\)</span> be the generators of <span class="math inline">\(\mathsf{D}_4\)</span> to distinguish them from the generators of <span class="math inline">\(\mathsf{D}_{12}\)</span>.</li>
+<li>Show that <span class="math inline">\(\phi(R)^4 = 1\)</span>, <span class="math inline">\(\phi(F)^2 = 1\)</span>, and <span class="math inline">\(\phi(F)\phi(R) = \phi(R)^3 \phi(F)\)</span>. This proves that <span class="math inline">\(\phi\)</span> is an isomorphism, since these are the defining relations of <span class="math inline">\(\mathsf{D}_4\)</span>.</li>
+</ol></li>
+<li>Decompose <span class="math inline">\(\mathsf{D}_{12}\)</span> into left <span class="math inline">\(\mathsf{H}\)</span> cosets.</li>
+<li>The elements of each coset share a common property related to the image. What is it?</li>
 </ol>
+<center>
+<img src="images/square-12-gon.png" style="width:35.0%" />
+</center>
 </div>
 <div id="fermats-little-theorem" class="section level2">
-<h2><span class="header-section-number">3.4</span> Fermat’s “Little” Theorem</h2>
-<p>The point of this problem is to show that many of the interesting and important properties of modular arithmetic and coding theory actually come from group theory.</p>
+<h2><span class="header-section-number">3.3</span> Fermat’s “Little” Theorem</h2>
+<p>The point of this problem is to show that some of the important properties of modular arithmetic and coding theory actually come from group theory.</p>
 <p>Recall that <span class="math inline">\(U(n) = \{ 1 \le k &lt; n \mid \gcd(k,n) = 1\}\)</span> is the group of units under multiplication mod <span class="math inline">\(n\)</span>. Let <span class="math inline">\(\phi(n) = |U(n)|\)</span>, so that <span class="math inline">\(\phi(n)\)</span> is the number of positive integers less than <span class="math inline">\(n\)</span> that are relatively prime to <span class="math inline">\(n\)</span>.</p>
-<p>Use the corollaries of Lagrange’s Theorem to give short proofs of the facts below.</p>
 <ol style="list-style-type: lower-alpha">
 <li><p>Fill out the table
 <span class="math display">\[
@@ -252,9 +259,24 @@ n &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 &amp;
 \]</span></p></li>
 <li><p>Prove that <span class="math inline">\(a^{\phi(n)} \equiv 1 (\mathsf{mod}\ n)\)</span>. (Hint: use a corollary of Lagrange’s Theorem).</p></li>
 <li><p>Demonstrate that b works for <span class="math inline">\(n = 12\)</span> and each <span class="math inline">\(a \in U(12)\)</span>.</p></li>
-<li><p>Show that a special case of b is the following, which is called <em>Fermat’s Little Theorem</em>: <span class="math inline">\(a^{p} \equiv a (\mathsf{mod}\ n)\)</span> for a prime number <span class="math inline">\(p\)</span>.</p></li>
+<li><p>Use part (b) to prove the following, which is called <em>Fermat’s Little Theorem</em>: <span class="math inline">\(a^{p} \equiv a (\mathsf{mod}\ n)\)</span> for a prime number <span class="math inline">\(p\)</span>.</p></li>
 <li><p>Demonstrate Fermat’s Little Theorem for <span class="math inline">\(p = 7\)</span> and each number in <span class="math inline">\(U(7)\)</span>.</p></li>
 </ol>
+</div>
+<div id="index-of-the-center" class="section level2">
+<h2><span class="header-section-number">3.4</span> Index of the Center</h2>
+<p>Prove that in a finite group <span class="math inline">\(\mathsf{G}\)</span>, the index of the center <span class="math inline">\([G:Z(\mathsf{G})]\)</span> cannot be prime. (Hint: let <span class="math inline">\(a \in \mathsf{G}\setminus Z(\mathsf{G})\)</span> and consider the centralizer <span class="math inline">\(C_\mathsf{G}(a)\)</span>).</p>
+</div>
+<div id="quaternion-quotient" class="section level2">
+<h2><span class="header-section-number">3.5</span> Quaternion Quotient</h2>
+<p>Recall the quaternion group <span class="math inline">\(Q_8 = \{1,-1,i,-i,j,-j,k,-k\}\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Show that <span class="math inline">\(H = \{1,-1\}\)</span> is a normal subgroup of <span class="math inline">\(Q_8\)</span>.</p></li>
+<li><p>The quotient group <span class="math inline">\(Q_8/H\)</span> has order 2. You have proved that, up to isomorphism, there are two groups of order 4. They are <span class="math inline">\(\mathbb{Z}_4\)</span> and the Klein-4 group <span class="math inline">\(K_4 = \mathbb{Z}_2 \times \mathbb{Z}_2\)</span>. Which of these two groups is <span class="math inline">\(Q_8/H\)</span> isomorphic to?</p></li>
+</ol>
+</div>
+<div id="coming-next-week." class="section level2">
+<h2><span class="header-section-number">3.6</span> Coming next week.</h2>
 
 </div>
 </div>
