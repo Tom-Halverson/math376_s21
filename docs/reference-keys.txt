@@ -27,6 +27,16 @@ permutation-notation
 cycle-notation-and-order
 even-and-odd-permutations
 the-alternating-group
+groups-of-small-order
+n-1
+n-2
+n-3
+section
+n-5
+n-6
+n-7
+n-8
+the-quaternion-group-q_8
 groups
 groups-1
 subgroups

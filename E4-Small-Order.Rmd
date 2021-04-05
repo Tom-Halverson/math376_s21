@@ -1,0 +1,87 @@
+# Groups of Small Order
+
+Let $|\G| = n$.
+
+## n = 1
+
+The only group of order 1 is the trivial group $G = \{ e \}$.
+
+## n = 2
+
+Since 2 is prime the only group of order 2, up to isomorphism, is $\ZZ_2$.
+
+## n = 3
+
+Since 3 is prime the only group of order 3, up to isomorphism, is $\ZZ_3$.
+
+##
+
+You proved that there are two groups of order 4. They are the cyclic group of order 4 and the Klein-4 group
+$$
+\begin{array}{c|ccc}
+C_4\cong\ZZ_4 & 1 & a & a^2 & a^3 \\
+\hline
+1 & 1 & a & a^2 & a^3 \\
+a & a & a^2 & a^3 & 1 \\
+a^2 & a^2 & a^3 & 1 & a  \\
+a^3 & a^3 & 1 & a & a^2
+\end{array} \qquad
+\begin{array}{c|ccc}
+K_4 & 1 & a & b & c \\
+\hline
+1 & 1 & a & b & c \\
+a & a & 1 & c & b \\
+b & b & c & 1 & a  \\
+c & c & b & a & 1
+\end{array}
+$$
+
+## n = 5
+
+Since 3 is prime the only group of order 5, up to isomorphism, is $\ZZ_5$.
+
+## n = 6
+
+We have the cyclic, and thus abelian group, $\ZZ_6$. Furthermore, you proved in class that $\ZZ_6 \cong \ZZ_3 \times \ZZ_2$. 
+
+We also have $\S_3 \cong \D_3$. 
+
+
+## n = 7
+
+Since 3 is prime the only group of order 7, up to isomorphism, is $\ZZ_7$.
+
+## n = 8
+
+\newcommand{\i}{{\mathbf{i}}}
+\newcommand{\j}{{\mathbf{k}}}
+\newcommand{\k}{{\mathbf{k}}}
+
+### The Quaternion Group $Q_8$
+
+$$
+\begin{array} {| r || c | c | c | c | c | c | c | c |} \hline
+Q_8 & \phantom{\Big\vert} \  1  \  \phantom{\Big\vert} 
+&\  -1 \  &\ \    \i  \  \  &\   -\i \  &\ \    \j \  \  &\  -\j &\  \   \k\  \   &\   -\k\    \\ \hline\hline
+ 1  \phantom{\Big\vert}  
+& 1 & -1 & \i & - \i & \j & -\j & \k & - \k  \\ \hline
+-1 \phantom{\Big\vert} 
+& -1 & 1 & -\i &  \i & -\j & \j & -\k &  \k  \\ \hline
+\i  \phantom{\Big\vert}
+& \i & -\i & -1 & 1 & \k & -\k & -\j & \j  \\ \hline
+-\i  \phantom{\Big\vert}
+& -\i & \i & 1 & -1 & -\k & \k & \j & -\j  \\ \hline
+\j  \phantom{\Big\vert}
+& \j & -\j & -\k & \k & -1& 1& \i & - \i  \\ \hline
+%&&&&&&&& \\ \hline
+-\j  \phantom{\Big\vert}
+& -\j & \j & \k & -\k & 1& -1& -\i & \i  \\ \hline
+\k  \phantom{\Big\vert}
+& \k & -\k & \j& - \j & -\i& \i & -1 & 1 \\ \hline
+-\k  \phantom{\Big\vert}
+& -\k & \k & -\j& \j & \i& -\i & 1 & -1 \\ \hline
+\end{array}
+$$
+
+
+
