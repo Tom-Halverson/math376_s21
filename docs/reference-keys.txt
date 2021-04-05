@@ -37,6 +37,7 @@ n-6
 n-7
 n-8
 the-quaternion-group-q_8
+n-12
 groups
 groups-1
 subgroups

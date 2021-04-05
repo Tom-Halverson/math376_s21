@@ -174,6 +174,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="7.8" data-path="groups-of-small-order.html"><a href="groups-of-small-order.html#n-8"><i class="fa fa-check"></i><b>7.8</b> n = 8</a><ul>
 <li class="chapter" data-level="7.8.1" data-path="groups-of-small-order.html"><a href="groups-of-small-order.html#the-quaternion-group-q_8"><i class="fa fa-check"></i><b>7.8.1</b> The Quaternion Group <span class="math inline">\(Q_8\)</span></a></li>
 </ul></li>
+<li class="chapter" data-level="7.9" data-path="groups-of-small-order.html"><a href="groups-of-small-order.html#n-12"><i class="fa fa-check"></i><b>7.9</b> n = 12</a></li>
 </ul></li>
 <li class="part"><span><b>III Definitions and Theorems</b></span></li>
 <li class="chapter" data-level="8" data-path="groups.html"><a href="groups.html"><i class="fa fa-check"></i><b>8</b> Groups</a><ul>
@@ -300,8 +301,30 @@ Q_8 &amp; \phantom{\Big\vert} \  1  \  \phantom{\Big\vert}
 &amp; -{\mathbf{k}}&amp; {\mathbf{k}}&amp; -{\mathbf{k}}&amp; {\mathbf{k}}&amp; {\mathbf{i}}&amp; -{\mathbf{i}}&amp; 1 &amp; -1 \\ \hline
 \end{array}
 \]</span></p>
-
 </div>
+</div>
+<div id="n-12" class="section level2">
+<h2><span class="header-section-number">7.9</span> n = 12</h2>
+<p>One group of order 12 that we have seen is <span class="math inline">\({\mathsf{A}}_4\)</span>.</p>
+<p><span class="math display">\[
+{\tiny
+\begin{array}{c|cccccccccccc}
+{\mathsf{A}}_4&amp; 1   &amp; (1 2)(3 4) &amp; (1 3)(2 4) &amp; (1 4)(2 3) &amp; (2 34) &amp; (2 4 3) &amp; (1 2 3) &amp; (1 2 4) &amp; (1 3 2) &amp; (1 34) &amp; (1 4 2) &amp; (1 4 3) \\ \hline
+1&amp; 1  &amp; (1 2)(3 4) &amp; (1 3)(2 4) &amp; (1 4)(2 3) &amp; (2 34) &amp; (2 4 3) &amp; (1 2 3) &amp; (1 2 4) &amp; (1 3 2) &amp; (1 34) &amp; (1 4 2) &amp; (1 4 3) \\
+(1 2)(3 4) &amp;(1 2)(3 4) &amp;  1   &amp; (14)(2 3) &amp; (1 3)(2 4) &amp; (1 2 4) &amp; (1 2 3) &amp; (2 43) &amp; (2 3 4) &amp; (1 4 3) &amp; (1 4 2) &amp; (1 3 4) &amp; (1 32) \\
+(1 3)(2 4) &amp;(1 3)(2 4) &amp; (1 4)(2 3) &amp;  1   &amp; (1 2)(34) &amp; (1 3 2) &amp; (1 3 4) &amp; (1 4 2) &amp; (1 4 3) &amp; (2 34) &amp; (2 4 3) &amp; (1 2 3) &amp; (1 2 4) \\
+(1 4)(23) &amp;(1 4)(23) &amp; (1 3)(2 4) &amp; (1 2)(3 4) &amp;  1   &amp; (1 4 3) &amp; (1 42) &amp; (1 3 4) &amp; (1 3 2) &amp; (1 2 4) &amp; (1 2 3) &amp; (2 43) &amp; (2 3 4) \\
+(2 3 4) &amp;(2 3 4) &amp; (1 3 2) &amp; (1 4 3) &amp; (1 24) &amp; (2 4 3) &amp;  1   &amp; (1 3)(2 4) &amp; (1 3 4) &amp; (1 42) &amp; (1 4)(2 3) &amp; (1 2)(3 4) &amp; (1 2 3) \\
+(2 43) &amp;(2 43) &amp; (1 4 2) &amp; (1 2 3) &amp; (1 3 4) &amp;  1   &amp; (2 3 4) &amp; (14 3) &amp; (1 4)(2 3) &amp; (1 2)(3 4) &amp; (1 2 4) &amp; (1 32) &amp; (1 3)(2 4) \\
+(1 2 3) &amp;(1 2 3) &amp; (1 3 4) &amp; (2 43) &amp; (1 4 2) &amp; (1 2)(3 4) &amp; (1 2 4) &amp; (1 3 2) &amp; (1 3)(2 4) &amp;  1   &amp; (2 3 4) &amp; (1 4 3) &amp; (1 4)(23) \\
+(1 2 4) &amp;(1 2 4) &amp; (1 4 3) &amp; (1 3 2) &amp; (2 3 4) &amp; (1 2 3) &amp; (1 2)(3 4) &amp; (1 4)(2 3) &amp; (1 4 2) &amp; (1 34) &amp; (1 3)(2 4) &amp;  1   &amp; 2 4 3) \\
+(1 3 2) &amp;(1 3 2) &amp; (2 34) &amp; (1 2 4) &amp; (1 4 3) &amp; (1 3 4) &amp; (1 3)(24) &amp;  1   &amp; 2 4 3) &amp; (1 2 3) &amp; (1 2)(3 4) &amp; (1 4)(23) &amp; (1 4 2) \\
+(1 3 4) &amp;(1 3 4) &amp; (1 2 3) &amp; (1 4 2) &amp; (2 43) &amp; (1 3)(2 4) &amp; (1 3 2) &amp; (1 2 4) &amp; (1 2)(34) &amp; (1 4)(2 3) &amp; (1 4 3) &amp; (2 3 4) &amp;  1   \\ 
+(1 42) &amp;(1 42) &amp; (2 4 3) &amp; (1 3 4) &amp; (1 2 3) &amp; (1 4)(2 3) &amp; (1 4 3) &amp; (2 3 4) &amp;  1   &amp; (1 3)(2 4) &amp; (1 3 2) &amp; (1 24) &amp; (1 2)(3 4) \\
+(1 4 3) &amp;(1 4 3) &amp; (1 2 4) &amp; (2 34) &amp; (1 3 2) &amp; (1 4 2) &amp; (1 4)(2 3) &amp; (1 2)(34) &amp; (1 2 3) &amp; (2 4 3) &amp;  1   &amp; (1 3)(2 4) &amp; (1 3 4) \\
+\end{array}}
+\]</span></p>
+
 </div>
 </div>
 
