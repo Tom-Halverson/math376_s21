@@ -226,19 +226,19 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="modular-arithmetic" class="section level1">
 <h1><span class="header-section-number">Section 9</span> Modular Arithmetic</h1>
 <p>We will require the package <code>pracma</code>, which you may recall from linear algebra, contains “practical math applications.” It has implementations of modular arithmetic and the GCD algorithms.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="modular-arithmetic.html#cb9-1"></a><span class="kw">require</span>(pracma)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="modular-arithmetic.html#cb10-1"></a><span class="kw">require</span>(pracma)</span></code></pre></div>
 <div id="integer-division-and-gcd" class="section level2">
 <h2><span class="header-section-number">9.1</span> Integer division and GCD</h2>
 <p>The <code>mod</code> function computes the remainder after division by <span class="math inline">\(n\)</span> <code>idivide</code> gives the quotient. Thus, for example,</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="modular-arithmetic.html#cb10-1"></a><span class="kw">mod</span>(<span class="dv">68</span>,<span class="dv">15</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="modular-arithmetic.html#cb11-1"></a><span class="kw">mod</span>(<span class="dv">68</span>,<span class="dv">15</span>)</span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="modular-arithmetic.html#cb12-1"></a><span class="kw">idivide</span>(<span class="dv">68</span>,<span class="dv">15</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="modular-arithmetic.html#cb13-1"></a><span class="kw">idivide</span>(<span class="dv">68</span>,<span class="dv">15</span>)</span></code></pre></div>
 <pre><code>## [1] 4</code></pre>
 <p>Since <span class="math inline">\(68 = 15 \cdot 4 + 8\)</span>.</p>
 <p>The <strong>greatest commond divisor GCD</strong> of two integers is computed with the <code>gcd(m,n)</code> command. For example,</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="modular-arithmetic.html#cb14-1"></a><span class="kw">gcd</span>(<span class="dv">70</span>,<span class="dv">42</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="modular-arithmetic.html#cb15-1"></a><span class="kw">gcd</span>(<span class="dv">70</span>,<span class="dv">42</span>)</span></code></pre></div>
 <pre><code>## [1] 14</code></pre>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="modular-arithmetic.html#cb16-1"></a><span class="kw">gcd</span>(<span class="dv">68</span>,<span class="dv">15</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="modular-arithmetic.html#cb17-1"></a><span class="kw">gcd</span>(<span class="dv">68</span>,<span class="dv">15</span>)</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>telling us that <span class="math inline">\(gcd(70,42) = 14\)</span> and <span class="math inline">\(gcd(68,15) = 1\)</span>, meaning that 68 and 15 are <em>relatively prime</em>.</p>
 <p>The <strong>Extended GCD</strong> gives a little more information that can be quite useful in this course. If <span class="math inline">\(d = gcd(a,b)\)</span> then there exist integers <span class="math inline">\(s,t \in \mathbb{Z}\)</span> such that
@@ -247,7 +247,7 @@ d = s a+ t b.
 \]</span>
 Furthermore, <span class="math inline">\(d = \gcd(a,b)\)</span> is the smallest positive integer of the form <span class="math inline">\(s a + t b\)</span>. It follos that <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are relatively prime if and only if it is possible to write <span class="math inline">\(1 = s a + t b\)</span> for some <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span>.</p>
 <p>You can find a proof of this fact in Chapter 0. We can use it here:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="modular-arithmetic.html#cb18-1"></a><span class="kw">gcd</span>(<span class="dv">70</span>,<span class="dv">42</span>,<span class="dt">extended=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="modular-arithmetic.html#cb19-1"></a><span class="kw">gcd</span>(<span class="dv">70</span>,<span class="dv">42</span>,<span class="dt">extended=</span><span class="ot">TRUE</span>)</span></code></pre></div>
 <pre><code>## $g
 ## [1] 14
 ## 
@@ -256,7 +256,7 @@ Furthermore, <span class="math inline">\(d = \gcd(a,b)\)</span> is the smallest 
 ## 
 ## $d
 ## [1] 2</code></pre>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="modular-arithmetic.html#cb20-1"></a><span class="kw">gcd</span>(<span class="dv">68</span>,<span class="dv">15</span>,<span class="dt">extended=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="modular-arithmetic.html#cb21-1"></a><span class="kw">gcd</span>(<span class="dv">68</span>,<span class="dv">15</span>,<span class="dt">extended=</span><span class="ot">TRUE</span>)</span></code></pre></div>
 <pre><code>## $g
 ## [1] 1
 ## 
@@ -273,23 +273,23 @@ Furthermore, <span class="math inline">\(d = \gcd(a,b)\)</span> is the smallest 
 \end{align*}
 \]</span>
 As we can confirm with</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="modular-arithmetic.html#cb22-1"></a><span class="dv">2</span><span class="op">*</span><span class="dv">68</span> <span class="op">-</span><span class="st"> </span><span class="dv">9</span><span class="op">*</span><span class="dv">15</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="modular-arithmetic.html#cb23-1"></a><span class="dv">2</span><span class="op">*</span><span class="dv">68</span> <span class="op">-</span><span class="st"> </span><span class="dv">9</span><span class="op">*</span><span class="dv">15</span></span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 </div>
 <div id="addition-mod-n-mathbbz_n" class="section level2">
 <h2><span class="header-section-number">9.2</span> Addition Mod n: <span class="math inline">\(\mathbb{Z}_n\)</span></h2>
 <p>We can generate the finite <strong>cyclic</strong> group <span class="math inline">\(\mathbb{Z}_n = \{0, 1, 2, \ldots, n-1\}\)</span> easily as follows:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="modular-arithmetic.html#cb24-1"></a>n =<span class="st"> </span><span class="dv">12</span></span>
-<span id="cb24-2"><a href="modular-arithmetic.html#cb24-2"></a>G =<span class="st"> </span><span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>)  <span class="co"># generates an integer sequence from 0 to n-1.</span></span>
-<span id="cb24-3"><a href="modular-arithmetic.html#cb24-3"></a>G</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="modular-arithmetic.html#cb25-1"></a>n =<span class="st"> </span><span class="dv">12</span></span>
+<span id="cb25-2"><a href="modular-arithmetic.html#cb25-2"></a>G =<span class="st"> </span><span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>)  <span class="co"># generates an integer sequence from 0 to n-1.</span></span>
+<span id="cb25-3"><a href="modular-arithmetic.html#cb25-3"></a>G</span></code></pre></div>
 <pre><code>##  [1]  0  1  2  3  4  5  6  7  8  9 10 11</code></pre>
 <p>And then we can add all of these elements mod n and make the <strong>Cayley table</strong> as follows:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="modular-arithmetic.html#cb26-1"></a>n=<span class="dv">6</span></span>
-<span id="cb26-2"><a href="modular-arithmetic.html#cb26-2"></a>G =<span class="st"> </span><span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>)</span>
-<span id="cb26-3"><a href="modular-arithmetic.html#cb26-3"></a>T =<span class="st"> </span><span class="kw">mod</span>(<span class="kw">outer</span>(G,G,<span class="st">&quot;+&quot;</span>),n)  <span class="co"># the outer sum computes a table of sums i + j</span></span>
-<span id="cb26-4"><a href="modular-arithmetic.html#cb26-4"></a><span class="kw">rownames</span>(T) =<span class="st"> </span>G</span>
-<span id="cb26-5"><a href="modular-arithmetic.html#cb26-5"></a><span class="kw">colnames</span>(T) =<span class="st"> </span>G</span>
-<span id="cb26-6"><a href="modular-arithmetic.html#cb26-6"></a>T</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="modular-arithmetic.html#cb27-1"></a>n=<span class="dv">6</span></span>
+<span id="cb27-2"><a href="modular-arithmetic.html#cb27-2"></a>G =<span class="st"> </span><span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>)</span>
+<span id="cb27-3"><a href="modular-arithmetic.html#cb27-3"></a>T =<span class="st"> </span><span class="kw">mod</span>(<span class="kw">outer</span>(G,G,<span class="st">&quot;+&quot;</span>),n)  <span class="co"># the outer sum computes a table of sums i + j</span></span>
+<span id="cb27-4"><a href="modular-arithmetic.html#cb27-4"></a><span class="kw">rownames</span>(T) =<span class="st"> </span>G</span>
+<span id="cb27-5"><a href="modular-arithmetic.html#cb27-5"></a><span class="kw">colnames</span>(T) =<span class="st"> </span>G</span>
+<span id="cb27-6"><a href="modular-arithmetic.html#cb27-6"></a>T</span></code></pre></div>
 <pre><code>##   0 1 2 3 4 5
 ## 0 0 1 2 3 4 5
 ## 1 1 2 3 4 5 0
@@ -298,15 +298,15 @@ As we can confirm with</p>
 ## 4 4 5 0 1 2 3
 ## 5 5 0 1 2 3 4</code></pre>
 <p>Even better, we can write a little function to do this.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="modular-arithmetic.html#cb28-1"></a>CyclicCayley &lt;-<span class="st"> </span><span class="cf">function</span>(n,<span class="dt">op=</span><span class="st">&quot;+&quot;</span>) {</span>
-<span id="cb28-2"><a href="modular-arithmetic.html#cb28-2"></a>  G =<span class="st"> </span><span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>)</span>
-<span id="cb28-3"><a href="modular-arithmetic.html#cb28-3"></a>  T =<span class="st"> </span><span class="kw">mod</span>(<span class="kw">outer</span>(G,G,op),n)</span>
-<span id="cb28-4"><a href="modular-arithmetic.html#cb28-4"></a>  <span class="kw">rownames</span>(T) =<span class="st"> </span>G</span>
-<span id="cb28-5"><a href="modular-arithmetic.html#cb28-5"></a>  <span class="kw">colnames</span>(T) =<span class="st"> </span>G</span>
-<span id="cb28-6"><a href="modular-arithmetic.html#cb28-6"></a>  <span class="kw">return</span>(T) </span>
-<span id="cb28-7"><a href="modular-arithmetic.html#cb28-7"></a>  }</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="modular-arithmetic.html#cb29-1"></a>CyclicCayley &lt;-<span class="st"> </span><span class="cf">function</span>(n,<span class="dt">op=</span><span class="st">&quot;+&quot;</span>) {</span>
+<span id="cb29-2"><a href="modular-arithmetic.html#cb29-2"></a>  G =<span class="st"> </span><span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>)</span>
+<span id="cb29-3"><a href="modular-arithmetic.html#cb29-3"></a>  T =<span class="st"> </span><span class="kw">mod</span>(<span class="kw">outer</span>(G,G,op),n)</span>
+<span id="cb29-4"><a href="modular-arithmetic.html#cb29-4"></a>  <span class="kw">rownames</span>(T) =<span class="st"> </span>G</span>
+<span id="cb29-5"><a href="modular-arithmetic.html#cb29-5"></a>  <span class="kw">colnames</span>(T) =<span class="st"> </span>G</span>
+<span id="cb29-6"><a href="modular-arithmetic.html#cb29-6"></a>  <span class="kw">return</span>(T) </span>
+<span id="cb29-7"><a href="modular-arithmetic.html#cb29-7"></a>  }</span></code></pre></div>
 <p>Then</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="modular-arithmetic.html#cb29-1"></a><span class="kw">CyclicCayley</span>(<span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="modular-arithmetic.html#cb30-1"></a><span class="kw">CyclicCayley</span>(<span class="dv">5</span>)</span></code></pre></div>
 <pre><code>##   0 1 2 3 4
 ## 0 0 1 2 3 4
 ## 1 1 2 3 4 0
@@ -314,7 +314,7 @@ As we can confirm with</p>
 ## 3 3 4 0 1 2
 ## 4 4 0 1 2 3</code></pre>
 <p>and</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="modular-arithmetic.html#cb31-1"></a><span class="kw">CyclicCayley</span>(<span class="dv">15</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="modular-arithmetic.html#cb32-1"></a><span class="kw">CyclicCayley</span>(<span class="dv">15</span>)</span></code></pre></div>
 <pre><code>##     0  1  2  3  4  5  6  7  8  9 10 11 12 13 14
 ## 0   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14
 ## 1   1  2  3  4  5  6  7  8  9 10 11 12 13 14  0
@@ -340,22 +340,22 @@ U(n) = \{1 \le k &lt; n \mid \gcd(k,n) = 1\}
 \]</span>
 of integers that are relatively prime to <span class="math inline">\(n\)</span>. As you show in PS1.2, <span class="math inline">\(U(n)\)</span> is group under multiplication mod <span class="math inline">\(n\)</span>. That is, you show that it is closed under multiplication and that every number that is relatively prime to <span class="math inline">\(n\)</span> has a multipliciative inverse mod <span class="math inline">\(n\)</span>.</p>
 <p>The functions below will give us <span class="math inline">\(\mathbb{Z}_n\)</span> and <span class="math inline">\(U_n\)</span>.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="modular-arithmetic.html#cb33-1"></a>Cyclic &lt;-<span class="st"> </span><span class="cf">function</span>(n) { <span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>) }</span>
-<span id="cb33-2"><a href="modular-arithmetic.html#cb33-2"></a>Units &lt;-<span class="st"> </span><span class="cf">function</span>(n) { (<span class="dv">1</span><span class="op">:</span>(n<span class="dv">-1</span>))[<span class="kw">gcd</span>(<span class="dv">1</span><span class="op">:</span>(n<span class="dv">-1</span>),n)<span class="op">==</span><span class="dv">1</span>] }</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="modular-arithmetic.html#cb34-1"></a>Cyclic &lt;-<span class="st"> </span><span class="cf">function</span>(n) { <span class="dv">0</span><span class="op">:</span>(n<span class="dv">-1</span>) }</span>
+<span id="cb34-2"><a href="modular-arithmetic.html#cb34-2"></a>Units &lt;-<span class="st"> </span><span class="cf">function</span>(n) { (<span class="dv">1</span><span class="op">:</span>(n<span class="dv">-1</span>))[<span class="kw">gcd</span>(<span class="dv">1</span><span class="op">:</span>(n<span class="dv">-1</span>),n)<span class="op">==</span><span class="dv">1</span>] }</span></code></pre></div>
 <p>For example,</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="modular-arithmetic.html#cb34-1"></a><span class="kw">Cyclic</span>(<span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="modular-arithmetic.html#cb35-1"></a><span class="kw">Cyclic</span>(<span class="dv">10</span>)</span></code></pre></div>
 <pre><code>##  [1] 0 1 2 3 4 5 6 7 8 9</code></pre>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="modular-arithmetic.html#cb36-1"></a><span class="kw">Units</span>(<span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="modular-arithmetic.html#cb37-1"></a><span class="kw">Units</span>(<span class="dv">10</span>)</span></code></pre></div>
 <pre><code>## [1] 1 3 7 9</code></pre>
 <p>We can multiply these by writing a MultTable function that uses the outer product</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="modular-arithmetic.html#cb38-1"></a>MultTable &lt;-<span class="st"> </span><span class="cf">function</span>(G,n,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>) {</span>
-<span id="cb38-2"><a href="modular-arithmetic.html#cb38-2"></a>  T =<span class="st"> </span><span class="kw">mod</span>(<span class="kw">outer</span>(G,G,op),n)</span>
-<span id="cb38-3"><a href="modular-arithmetic.html#cb38-3"></a>  <span class="kw">rownames</span>(T) =<span class="st"> </span>G</span>
-<span id="cb38-4"><a href="modular-arithmetic.html#cb38-4"></a>  <span class="kw">colnames</span>(T) =<span class="st"> </span>G</span>
-<span id="cb38-5"><a href="modular-arithmetic.html#cb38-5"></a>  <span class="kw">return</span>(T)</span>
-<span id="cb38-6"><a href="modular-arithmetic.html#cb38-6"></a>  }</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="modular-arithmetic.html#cb39-1"></a>MultTable &lt;-<span class="st"> </span><span class="cf">function</span>(G,n,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>) {</span>
+<span id="cb39-2"><a href="modular-arithmetic.html#cb39-2"></a>  T =<span class="st"> </span><span class="kw">mod</span>(<span class="kw">outer</span>(G,G,op),n)</span>
+<span id="cb39-3"><a href="modular-arithmetic.html#cb39-3"></a>  <span class="kw">rownames</span>(T) =<span class="st"> </span>G</span>
+<span id="cb39-4"><a href="modular-arithmetic.html#cb39-4"></a>  <span class="kw">colnames</span>(T) =<span class="st"> </span>G</span>
+<span id="cb39-5"><a href="modular-arithmetic.html#cb39-5"></a>  <span class="kw">return</span>(T)</span>
+<span id="cb39-6"><a href="modular-arithmetic.html#cb39-6"></a>  }</span></code></pre></div>
 <p>And we try it out:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="modular-arithmetic.html#cb39-1"></a><span class="kw">MultTable</span>(<span class="kw">Cyclic</span>(<span class="dv">10</span>),<span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="modular-arithmetic.html#cb40-1"></a><span class="kw">MultTable</span>(<span class="kw">Cyclic</span>(<span class="dv">10</span>),<span class="dv">10</span>)</span></code></pre></div>
 <pre><code>##   0 1 2 3 4 5 6 7 8 9
 ## 0 0 0 0 0 0 0 0 0 0 0
 ## 1 0 1 2 3 4 5 6 7 8 9
@@ -367,26 +367,26 @@ of integers that are relatively prime to <span class="math inline">\(n\)</span>.
 ## 7 0 7 4 1 8 5 2 9 6 3
 ## 8 0 8 6 4 2 0 8 6 4 2
 ## 9 0 9 8 7 6 5 4 3 2 1</code></pre>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="modular-arithmetic.html#cb41-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">10</span>),<span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="modular-arithmetic.html#cb42-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">10</span>),<span class="dv">10</span>)</span></code></pre></div>
 <pre><code>##   1 3 7 9
 ## 1 1 3 7 9
 ## 3 3 9 1 7
 ## 7 7 1 9 3
 ## 9 9 7 3 1</code></pre>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="modular-arithmetic.html#cb43-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">2</span>),<span class="dv">2</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="modular-arithmetic.html#cb44-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">2</span>),<span class="dv">2</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
 <pre><code>##   1
 ## 1 1</code></pre>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="modular-arithmetic.html#cb45-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">3</span>),<span class="dv">3</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="modular-arithmetic.html#cb46-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">3</span>),<span class="dv">3</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
 <pre><code>##   1 2
 ## 1 1 2
 ## 2 2 1</code></pre>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="modular-arithmetic.html#cb47-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">5</span>),<span class="dv">5</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="modular-arithmetic.html#cb48-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">5</span>),<span class="dv">5</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
 <pre><code>##   1 2 3 4
 ## 1 1 2 3 4
 ## 2 2 4 1 3
 ## 3 3 1 4 2
 ## 4 4 3 2 1</code></pre>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="modular-arithmetic.html#cb49-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">7</span>),<span class="dv">7</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="modular-arithmetic.html#cb50-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">7</span>),<span class="dv">7</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
 <pre><code>##   1 2 3 4 5 6
 ## 1 1 2 3 4 5 6
 ## 2 2 4 6 1 3 5
@@ -394,7 +394,7 @@ of integers that are relatively prime to <span class="math inline">\(n\)</span>.
 ## 4 4 1 5 2 6 3
 ## 5 5 3 1 6 4 2
 ## 6 6 5 4 3 2 1</code></pre>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="modular-arithmetic.html#cb51-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">11</span>),<span class="dv">11</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="modular-arithmetic.html#cb52-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">11</span>),<span class="dv">11</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
 <pre><code>##     1  2  3  4  5  6  7  8  9 10
 ## 1   1  2  3  4  5  6  7  8  9 10
 ## 2   2  4  6  8 10  1  3  5  7  9
@@ -407,7 +407,7 @@ of integers that are relatively prime to <span class="math inline">\(n\)</span>.
 ## 9   9  7  5  3  1 10  8  6  4  2
 ## 10 10  9  8  7  6  5  4  3  2  1</code></pre>
 <p>Suppose that we want to know the order of 5 in U(22). We could look at the Cayley table and keep multiplying by 5 until we get to 1.</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="modular-arithmetic.html#cb53-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">22</span>),<span class="dv">22</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="modular-arithmetic.html#cb54-1"></a><span class="kw">MultTable</span>(<span class="kw">Units</span>(<span class="dv">22</span>),<span class="dv">22</span>,<span class="dt">op=</span><span class="st">&quot;*&quot;</span>)</span></code></pre></div>
 <pre><code>##     1  3  5  7  9 13 15 17 19 21
 ## 1   1  3  5  7  9 13 15 17 19 21
 ## 3   3  9 15 21  5 17  1  7 13 19
@@ -420,9 +420,9 @@ of integers that are relatively prime to <span class="math inline">\(n\)</span>.
 ## 19 19 13  7  1 17  5 21 15  9  3
 ## 21 21 19 17 15 13  9  7  5  3  1</code></pre>
 <p>Or we can take the powers of 5 mod 22. Here are the first 10 powers of 5. We see that |5| = 5 in U(22).</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="modular-arithmetic.html#cb55-1"></a><span class="dv">5</span><span class="op">^</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="modular-arithmetic.html#cb56-1"></a><span class="dv">5</span><span class="op">^</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">10</span>)</span></code></pre></div>
 <pre><code>##  [1]       1       5      25     125     625    3125   15625   78125  390625 1953125 9765625</code></pre>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="modular-arithmetic.html#cb57-1"></a><span class="kw">mod</span>(<span class="dv">5</span><span class="op">^</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">10</span>),<span class="dv">22</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="modular-arithmetic.html#cb58-1"></a><span class="kw">mod</span>(<span class="dv">5</span><span class="op">^</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">10</span>),<span class="dv">22</span>)</span></code></pre></div>
 <pre><code>##  [1]  1  5  3 15  9  1  5  3 15  9  1</code></pre>
 
 </div>

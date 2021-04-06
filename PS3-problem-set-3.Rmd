@@ -56,7 +56,7 @@ b. Prove that $a^{\phi(n)} \equiv 1  (\mathsf{mod}\ n)$. (Hint: use a corollary 
 
 c. Demonstrate that b works for $n = 12$ and each $a \in U(12)$.
 
-d. Use part (b) to prove the following, which is called *Fermat's Little Theorem*: $a^{p} \equiv a (\mathsf{mod}\ n)$ for a prime number $p$.
+d. Use part (b) to prove the following, which is called *Fermat's Little Theorem*: $a^{p} \equiv a (\mathsf{mod}\ p)$ for a prime number $p$.
 
 e. Demonstrate Fermat's Little Theorem for $p = 7$ and each number in $U(7)$.
 
