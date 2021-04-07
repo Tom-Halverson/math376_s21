@@ -153,6 +153,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="3.4" data-path="problem-set-3.html"><a href="problem-set-3.html#index-of-the-center"><i class="fa fa-check"></i><b>3.4</b> Index of the Center</a></li>
 <li class="chapter" data-level="3.5" data-path="problem-set-3.html"><a href="problem-set-3.html#quaternion-quotient"><i class="fa fa-check"></i><b>3.5</b> Quaternion Quotient</a></li>
 <li class="chapter" data-level="3.6" data-path="problem-set-3.html"><a href="problem-set-3.html#a-matrix-quotient"><i class="fa fa-check"></i><b>3.6</b> A Matrix Quotient</a></li>
+<li class="chapter" data-level="3.7" data-path="problem-set-3.html"><a href="problem-set-3.html#extra-credit-1"><i class="fa fa-check"></i><b>3.7</b> Extra Credit</a></li>
 </ul></li>
 <li class="part"><span><b>II Group Examples</b></span></li>
 <li class="chapter" data-level="4" data-path="cyclic-groups.html"><a href="cyclic-groups.html"><i class="fa fa-check"></i><b>4</b> Cyclic Groups</a></li>
@@ -183,6 +184,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="8.3" data-path="groups.html"><a href="groups.html#cyclic-groups-1"><i class="fa fa-check"></i><b>8.3</b> Cyclic Groups</a></li>
 <li class="chapter" data-level="8.4" data-path="groups.html"><a href="groups.html#isomorphisms"><i class="fa fa-check"></i><b>8.4</b> Isomorphisms</a></li>
 <li class="chapter" data-level="8.5" data-path="groups.html"><a href="groups.html#cosets"><i class="fa fa-check"></i><b>8.5</b> Cosets</a></li>
+<li class="chapter" data-level="8.6" data-path="groups.html"><a href="groups.html#normal-subgroups"><i class="fa fa-check"></i><b>8.6</b> Normal Subgroups</a></li>
+<li class="chapter" data-level="8.7" data-path="groups.html"><a href="groups.html#quotient-groups"><i class="fa fa-check"></i><b>8.7</b> Quotient Groups</a></li>
 </ul></li>
 <li class="part"><span><b>IV Algebraic Structures in R</b></span></li>
 <li class="chapter" data-level="9" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html"><i class="fa fa-check"></i><b>9</b> Modular Arithmetic</a><ul>
@@ -363,6 +366,36 @@ The following theorem follows immediately from the fact that the cosets partitio
 <p><strong>Corollary 2</strong>: If <span class="math inline">\(|\mathsf{G}| = p\)</span> (prime), then the only subgroups of <span class="math inline">\(\mathsf{G}\)</span> are <span class="math inline">\(\{e\}\)</span> and <span class="math inline">\(\mathsf{G}\)</span> (i.e, <span class="math inline">\(\mathsf{G}\)</span> has no nontrivial, proper subgroups).</p>
 <p><strong>Corollary 3</strong>: If <span class="math inline">\(g \in \mathsf{G}\)</span>, then <span class="math inline">\(|g| = |\langle g \rangle|\)</span> divides <span class="math inline">\(|G|\)</span>.</p>
 <p><strong>Corollary 4</strong>: If <span class="math inline">\(|\mathsf{G}|\)</span> is finite and <span class="math inline">\(g \in \mathsf{G}\)</span>, then <span class="math inline">\(g^{|\mathsf{G}|} = e\)</span>.</p>
+</div>
+<div id="normal-subgroups" class="section level2">
+<h2><span class="header-section-number">8.6</span> Normal Subgroups</h2>
+<p><strong>Def</strong>: A subgroup <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> is normal if <span class="math inline">\(g \mathsf{H}= \mathsf{H}g\)</span> for all <span class="math inline">\(g \in \mathsf{G}\)</span>. We write <span class="math inline">\(\mathsf{H}\trianglelefteq \mathsf{G}\)</span> to indicate that <span class="math inline">\(\mathsf{H}\)</span> is normal in <span class="math inline">\(\mathsf{G}\)</span>, and we write <span class="math inline">\(\mathsf{H}\triangleleft \mathsf{G}\)</span> if <span class="math inline">\(\mathsf{H}\)</span> is a proper normal subgroup of <span class="math inline">\(\mathsf{G}\)</span> (i.e. <span class="math inline">\(\mathsf{G}\not= \mathsf{H}\)</span>).</p>
+<p><strong>Examples:</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\{e \}\trianglelefteq \mathsf{G}\)</span>.</li>
+<li><span class="math inline">\(\mathsf{G}\trianglelefteq \mathsf{G}\)</span>.</li>
+<li>If <span class="math inline">\(\mathsf{G}\)</span> is abelian, then every subgroup of <span class="math inline">\(\mathsf{G}\)</span> is normal.</li>
+<li>The center <span class="math inline">\(Z(\mathsf{G})\)</span> is a normal subgroup of <span class="math inline">\(\mathsf{G}\)</span>.</li>
+</ol>
+<p><strong>Proposition</strong> (Normal Subgroup Test): If <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> then
+<span class="math display">\[ 
+  \mathsf{H}\trianglelefteq \mathsf{G}\qquad  \text {if and only if } \qquad \text{$g h g^{-1} \in \mathsf{H}$ for all $g \in \mathsf{G}$ and all $h \in \mathsf{H}$}.
+\]</span></p>
+</div>
+<div id="quotient-groups" class="section level2">
+<h2><span class="header-section-number">8.7</span> Quotient Groups</h2>
+<p><strong>Def</strong>: <span class="math inline">\(\mathsf{G}/\mathsf{H}= \{ g \mathsf{H}\mid g \in \mathsf{G}\}\)</span> is the set of left cosets of <span class="math inline">\(\mathsf{H}\)</span> in <span class="math inline">\(\mathsf{G}\)</span>. Note that
+<span class="math display">\[
+\left| \frac{\mathsf{G}}{\mathsf{H}} \right| = [\mathsf{G}: \mathsf{H}] = \frac{|\mathsf{G}|}{|\mathsf{H}|},
+\]</span>
+where the second equality only makes sense if <span class="math inline">\(\mathsf{G}\)</span> is finite.</p>
+<p><strong>Def</strong> (Coset Multiplication): If <span class="math inline">\(a \mathsf{H}, b \mathsf{H}\in \mathsf{G}/\mathsf{H}\)</span>, then we define <span class="math inline">\((a \mathsf{H}) (b \mathsf{H}) = ab \mathsf{H}\)</span>.</p>
+<p><strong>Theorem</strong>: If <span class="math inline">\(\mathsf{H}\trianglelefteq \mathsf{G}\)</span>, then coset multiplication is well-defined. That is, if <span class="math inline">\(a&#39; \in a \mathsf{H}\)</span> and <span class="math inline">\(b&#39; \in b \mathsf{H}\)</span>, then <span class="math inline">\(a&#39; b&#39; \mathsf{H}= ab \mathsf{H}\)</span>. This makes coset multiplication a binary operation on <span class="math inline">\(\mathsf{G}/\mathsf{H}\)</span>.</p>
+<p>Therefore, if <span class="math inline">\(\mathsf{H}\trianglelefteq \mathsf{G}\)</span>, then the set of cosets <span class="math inline">\(\mathsf{G}/\mathsf{H}\)</span> forms a group under coset multiplication. Such that</p>
+<ol style="list-style-type: lower-alpha">
+<li>The identity is <span class="math inline">\(e \mathsf{H}= \mathsf{H}\)</span> since <span class="math inline">\((e \mathsf{H}) (g \mathsf{H}) = e g \mathsf{H}= g \mathsf{H}\)</span>.</li>
+<li>The inverse of <span class="math inline">\(g \mathsf{H}\)</span> is <span class="math inline">\(g^{-1} \mathsf{H}\)</span> since <span class="math inline">\((g \mathsf{H}) (g^{-1} \mathsf{H}) = g g^{-1} \mathsf{H}= \mathsf{H}\)</span>.</li>
+</ol>
 
 </div>
 </div>

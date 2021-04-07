@@ -87,4 +87,6 @@ a. Show that $\H \le \G$.
 b. Show that $\H \trianglelefteq \G$.
 c. Find a set $X$ that consists of exactly one matrix from each coset of $\G/\H$.
 
+## Extra Credit
 
+We proved that if $\H \trianglelefteq \G$, then coset multiplication on $\G/\H$ is well-defined. Prove the other direction: if coset multiplication is well-defined, then $\H \trianglelefteq \G$. This shows that $\G/\H$ is a group if and only if $\H$ is a normal subgroup.

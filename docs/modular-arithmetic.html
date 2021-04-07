@@ -153,6 +153,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="3.4" data-path="problem-set-3.html"><a href="problem-set-3.html#index-of-the-center"><i class="fa fa-check"></i><b>3.4</b> Index of the Center</a></li>
 <li class="chapter" data-level="3.5" data-path="problem-set-3.html"><a href="problem-set-3.html#quaternion-quotient"><i class="fa fa-check"></i><b>3.5</b> Quaternion Quotient</a></li>
 <li class="chapter" data-level="3.6" data-path="problem-set-3.html"><a href="problem-set-3.html#a-matrix-quotient"><i class="fa fa-check"></i><b>3.6</b> A Matrix Quotient</a></li>
+<li class="chapter" data-level="3.7" data-path="problem-set-3.html"><a href="problem-set-3.html#extra-credit-1"><i class="fa fa-check"></i><b>3.7</b> Extra Credit</a></li>
 </ul></li>
 <li class="part"><span><b>II Group Examples</b></span></li>
 <li class="chapter" data-level="4" data-path="cyclic-groups.html"><a href="cyclic-groups.html"><i class="fa fa-check"></i><b>4</b> Cyclic Groups</a></li>
@@ -183,6 +184,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="8.3" data-path="groups.html"><a href="groups.html#cyclic-groups-1"><i class="fa fa-check"></i><b>8.3</b> Cyclic Groups</a></li>
 <li class="chapter" data-level="8.4" data-path="groups.html"><a href="groups.html#isomorphisms"><i class="fa fa-check"></i><b>8.4</b> Isomorphisms</a></li>
 <li class="chapter" data-level="8.5" data-path="groups.html"><a href="groups.html#cosets"><i class="fa fa-check"></i><b>8.5</b> Cosets</a></li>
+<li class="chapter" data-level="8.6" data-path="groups.html"><a href="groups.html#normal-subgroups"><i class="fa fa-check"></i><b>8.6</b> Normal Subgroups</a></li>
+<li class="chapter" data-level="8.7" data-path="groups.html"><a href="groups.html#quotient-groups"><i class="fa fa-check"></i><b>8.7</b> Quotient Groups</a></li>
 </ul></li>
 <li class="part"><span><b>IV Algebraic Structures in R</b></span></li>
 <li class="chapter" data-level="9" data-path="modular-arithmetic.html"><a href="modular-arithmetic.html"><i class="fa fa-check"></i><b>9</b> Modular Arithmetic</a><ul>
@@ -421,7 +424,8 @@ of integers that are relatively prime to <span class="math inline">\(n\)</span>.
 ## 21 21 19 17 15 13  9  7  5  3  1</code></pre>
 <p>Or we can take the powers of 5 mod 22. Here are the first 10 powers of 5. We see that |5| = 5 in U(22).</p>
 <div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="modular-arithmetic.html#cb55-1"></a><span class="dv">5</span><span class="op">^</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1]       1       5      25     125     625    3125   15625   78125  390625 1953125 9765625</code></pre>
+<pre><code>##  [1]       1       5      25     125     625    3125   15625   78125
+##  [9]  390625 1953125 9765625</code></pre>
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="modular-arithmetic.html#cb57-1"></a><span class="kw">mod</span>(<span class="dv">5</span><span class="op">^</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">10</span>),<span class="dv">22</span>)</span></code></pre></div>
 <pre><code>##  [1]  1  5  3 15  9  1  5  3 15  9  1</code></pre>
 

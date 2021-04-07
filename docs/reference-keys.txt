@@ -20,6 +20,7 @@ fermats-little-theorem
 index-of-the-center
 quaternion-quotient
 a-matrix-quotient
+extra-credit-1
 cyclic-groups
 dihedral-groups
 permutation-groups
@@ -44,6 +45,8 @@ subgroups
 cyclic-groups-1
 isomorphisms
 cosets
+normal-subgroups
+quotient-groups
 modular-arithmetic
 integer-division-and-gcd
 addition-mod-n-mathbbz_n

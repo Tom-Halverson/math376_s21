@@ -172,3 +172,39 @@ The following theorem follows immediately from the fact that the cosets partitio
 **Corollary 3**: If $g \in \G$, then $|g| = |\langle g \rangle|$ divides $|G|$.
 
 **Corollary 4**: If $|\G|$ is finite and $g \in \G$, then $g^{|\G|} = e$.
+
+
+## Normal Subgroups
+
+**Def**: A subgroup $\H \le \G$ is normal if $g \H = \H g$ for all $g \in \G$. We write $\H \trianglelefteq \G$ to indicate that $\H$ is normal in $\G$, and we write $\H \triangleleft \G$ if $\H$ is a proper normal subgroup of $\G$ (i.e. $\G \not= \H$).
+
+**Examples:**
+
+a. $\{e \}\trianglelefteq \G$.
+b. $\G \trianglelefteq \G$.
+c. If $\G$ is abelian, then every subgroup of $\G$ is normal.
+d. The center $Z(\G)$ is a normal subgroup of $\G$.
+
+**Proposition**  (Normal Subgroup Test): If $\H \le \G$ then 
+$$ 
+  \H \trianglelefteq \G \qquad  \text {if and only if } \qquad \text{$g h g^{-1} \in \H$ for all $g \in \G$ and all $h \in \H$}.
+$$
+
+## Quotient Groups
+
+**Def**: $\G/\H = \{ g \H \mid g \in \G\}$ is the set of left cosets of $\H$ in $\G$. Note that
+$$
+\left| \frac{\G}{\H} \right| = [\G : \H] = \frac{|\G|}{|\H|},
+$$
+where the second equality only makes sense if $\G$ is finite.
+
+
+**Def** (Coset Multiplication): If $a \H, b \H \in \G/\H$, then we define $(a \H) (b \H) = ab \H$.
+
+**Theorem**: If $\H \trianglelefteq \G$, then coset multiplication is well-defined. That is, if $a' \in a \H$ and $b' \in b \H$, then $a' b' \H = ab \H$. This makes coset multiplication a binary operation on $\G/\H$.
+
+Therefore, if $\H \trianglelefteq \G$, then the set of cosets $\G/\H$ forms a group under coset multiplication. Such that
+
+a. The identity is $e \H = \H$ since $(e \H) (g \H) = e g \H = g \H$.
+b. The inverse of $g \H$ is $g^{-1} \H$ since $(g \H) (g^{-1}  \H) = g g^{-1} \H = \H$.
+
