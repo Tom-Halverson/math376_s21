@@ -73,4 +73,18 @@ a. Show that $H = \{1,-1\}$ is a normal subgroup of $Q_8$.
 
 a. The quotient group $Q_8/H$ has order 2. You have proved that, up to isomorphism, there are two groups of order 4. They are $\mathbb{Z}_4$ and the Klein-4 group $K_4 = \mathbb{Z}_2 \times \mathbb{Z}_2$. Which of these two groups is $Q_8/H$ isomorphic to?
 
-## Coming next week.
+## A Matrix Quotient
+
+Let $\G$ and $\H$ be defined as below:
+$$
+\G = \left\{\begin{bmatrix} a & b \\ 0 & c \end{bmatrix} \mid a,b,c \in \RR, ac \not=0 \right\}
+\hskip.5in
+\H = \left\{\begin{bmatrix} 1 & d \\ 0 & 1 \end{bmatrix} \mid d \in \RR \right\}.
+$$
+Then $\G$ is a group under matrix multiplication (note: $ac$ is the determinant of the matrix so $ac \not = 0$ means that that the matrix is invertible).
+
+a. Show that $\H \le \G$.
+b. Show that $\H \trianglelefteq \G$.
+c. Find a set $X$ that consists of exactly one matrix from each coset of $\G/\H$.
+
+

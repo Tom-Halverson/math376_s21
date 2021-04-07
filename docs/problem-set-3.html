@@ -152,7 +152,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="3.3" data-path="problem-set-3.html"><a href="problem-set-3.html#fermats-little-theorem"><i class="fa fa-check"></i><b>3.3</b> Fermat’s “Little” Theorem</a></li>
 <li class="chapter" data-level="3.4" data-path="problem-set-3.html"><a href="problem-set-3.html#index-of-the-center"><i class="fa fa-check"></i><b>3.4</b> Index of the Center</a></li>
 <li class="chapter" data-level="3.5" data-path="problem-set-3.html"><a href="problem-set-3.html#quaternion-quotient"><i class="fa fa-check"></i><b>3.5</b> Quaternion Quotient</a></li>
-<li class="chapter" data-level="3.6" data-path="problem-set-3.html"><a href="problem-set-3.html#coming-next-week."><i class="fa fa-check"></i><b>3.6</b> Coming next week.</a></li>
+<li class="chapter" data-level="3.6" data-path="problem-set-3.html"><a href="problem-set-3.html#a-matrix-quotient"><i class="fa fa-check"></i><b>3.6</b> A Matrix Quotient</a></li>
 </ul></li>
 <li class="part"><span><b>II Group Examples</b></span></li>
 <li class="chapter" data-level="4" data-path="cyclic-groups.html"><a href="cyclic-groups.html"><i class="fa fa-check"></i><b>4</b> Cyclic Groups</a></li>
@@ -289,8 +289,20 @@ n &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 &amp;
 <li><p>The quotient group <span class="math inline">\(Q_8/H\)</span> has order 2. You have proved that, up to isomorphism, there are two groups of order 4. They are <span class="math inline">\(\mathbb{Z}_4\)</span> and the Klein-4 group <span class="math inline">\(K_4 = \mathbb{Z}_2 \times \mathbb{Z}_2\)</span>. Which of these two groups is <span class="math inline">\(Q_8/H\)</span> isomorphic to?</p></li>
 </ol>
 </div>
-<div id="coming-next-week." class="section level2">
-<h2><span class="header-section-number">3.6</span> Coming next week.</h2>
+<div id="a-matrix-quotient" class="section level2">
+<h2><span class="header-section-number">3.6</span> A Matrix Quotient</h2>
+<p>Let <span class="math inline">\(\mathsf{G}\)</span> and <span class="math inline">\(\mathsf{H}\)</span> be defined as below:
+<span class="math display">\[
+\mathsf{G}= \left\{\begin{bmatrix} a &amp; b \\ 0 &amp; c \end{bmatrix} \mid a,b,c \in \mathbb{R}, ac \not=0 \right\}
+\hskip.5in
+\mathsf{H}= \left\{\begin{bmatrix} 1 &amp; d \\ 0 &amp; 1 \end{bmatrix} \mid d \in \mathbb{R}\right\}.
+\]</span>
+Then <span class="math inline">\(\mathsf{G}\)</span> is a group under matrix multiplication (note: <span class="math inline">\(ac\)</span> is the determinant of the matrix so <span class="math inline">\(ac \not = 0\)</span> means that that the matrix is invertible).</p>
+<ol style="list-style-type: lower-alpha">
+<li>Show that <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span>.</li>
+<li>Show that <span class="math inline">\(\mathsf{H}\trianglelefteq \mathsf{G}\)</span>.</li>
+<li>Find a set <span class="math inline">\(X\)</span> that consists of exactly one matrix from each coset of <span class="math inline">\(\mathsf{G}/\mathsf{H}\)</span>.</li>
+</ol>
 
 </div>
 </div>

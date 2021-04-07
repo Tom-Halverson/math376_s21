@@ -19,7 +19,7 @@ dihedral-cosets
 fermats-little-theorem
 index-of-the-center
 quaternion-quotient
-coming-next-week.
+a-matrix-quotient
 cyclic-groups
 dihedral-groups
 permutation-groups
