@@ -11,7 +11,7 @@ C_{\G_1}(a) = \{ g \in \G_1 \mid g a = a g\} \le \G_1.
 $$
 Prove that $\phi(C_{\G_1}(a)) = C_{\G_2}(\phi(a))$.
 
-Hint: for one of the directions I used the fact that $x a = a x$ if and only if $x a x^{-1} a^{-1} = e$.
+Hint: use the fact that $\phi$ is one-to-one and onto.
 
 ## Dihedral Cosets
 
