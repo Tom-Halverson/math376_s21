@@ -21,6 +21,11 @@ index-of-the-center
 quaternion-quotient
 a-matrix-quotient
 extra-credit-1
+number-systems
+integers-mathbbz
+rational-numbers-mathbbq
+real-numbers-mathbbr
+complex-numbers-mathbbc
 cyclic-groups
 dihedral-groups
 permutation-groups
@@ -37,6 +42,8 @@ n-5
 n-6
 n-7
 n-8
+abelian-groups
+the-dihedral-group-mathsfd_4
 the-quaternion-group-q_8
 n-12
 groups

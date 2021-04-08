@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 5 Cyclic Groups | MATH 376: Algebraic Structures</title>
+  <title>Section 4 Number Systems | MATH 376: Algebraic Structures</title>
   <meta name="description" content="This is the class activity manual for MATH 376 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 5 Cyclic Groups | MATH 376: Algebraic Structures" />
+  <meta property="og:title" content="Section 4 Number Systems | MATH 376: Algebraic Structures" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Tom-Halverson/math236_s21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 5 Cyclic Groups | MATH 376: Algebraic Structures" />
+  <meta name="twitter:title" content="Section 4 Number Systems | MATH 376: Algebraic Structures" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 376 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="number-systems.html"/>
-<link rel="next" href="dihedral-groups.html"/>
+<link rel="prev" href="problem-set-3.html"/>
+<link rel="next" href="cyclic-groups.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -234,74 +234,107 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="cyclic-groups" class="section level1">
-<h1><span class="header-section-number">Section 5</span> Cyclic Groups</h1>
-<p>A group <span class="math inline">\(\mathsf{G}\)</span> is <strong>cyclic</strong> if <span class="math inline">\(\mathsf{G}= \langle g \rangle\)</span> for some <span class="math inline">\(g \in \mathsf{G}\)</span>.</p>
-<p>For example, <span class="math inline">\(\mathbb{Z}= \langle 1 \rangle\)</span> is an infinite cyclic group under addition, and <span class="math inline">\(\mathbb{Z}_{n} = \{ 0, 1, 2, \ldots, n-1\} = \langle 1 \rangle\)</span> is a cyclic group under addition mod <span class="math inline">\(n\)</span>.</p>
-<p>Here is the Cayley table of <span class="math inline">\(\mathbb{Z}_{10}\)</span>. See <a href="modular-arithmetic.html#modular-arithmetic">Modular Arithmetic</a> for the R function that produces these tables for any value of <span class="math inline">\(n\)</span>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="cyclic-groups.html#cb1-1"></a><span class="kw">CyclicCayley</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##   0 1 2 3 4 5 6 7 8 9
-## 0 0 1 2 3 4 5 6 7 8 9
-## 1 1 2 3 4 5 6 7 8 9 0
-## 2 2 3 4 5 6 7 8 9 0 1
-## 3 3 4 5 6 7 8 9 0 1 2
-## 4 4 5 6 7 8 9 0 1 2 3
-## 5 5 6 7 8 9 0 1 2 3 4
-## 6 6 7 8 9 0 1 2 3 4 5
-## 7 7 8 9 0 1 2 3 4 5 6
-## 8 8 9 0 1 2 3 4 5 6 7
-## 9 9 0 1 2 3 4 5 6 7 8</code></pre>
-<p><strong>Theorem.</strong> (Fundamental Theorem of Cyclic Groups) If <span class="math inline">\(\mathsf{G}= \langle g\rangle\)</span>, then</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>Every subgroup <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> is cyclic (thus, <span class="math inline">\(\mathsf{H}= \langle g^k \rangle\)</span>).</p></li>
-<li><p>If <span class="math inline">\(|g| = \infty\)</span> then <span class="math inline">\(\langle g \rangle = \{ \ldots, g^{-3}, g^{-2}, g^{-1}, 1, g, g^2, g^3, \ldots \}\)</span> and all of these elements are distinct.</p></li>
-<li><p>If <span class="math inline">\(|g| = n\)</span> then <span class="math inline">\(\langle g \rangle = \{1, g, g^2, \ldots, g^{n-1} \}\)</span> and all of these elements are distinct (thus, <span class="math inline">\(|g| = |\langle g \rangle|\)</span>).</p></li>
-<li><p>If <span class="math inline">\(|g| = n\)</span> then the subgroups of <span class="math inline">\(\langle g \rangle\)</span> satisfy:</p>
-<ol style="list-style-type: lower-roman">
-<li><p><span class="math inline">\(\langle g^k \rangle = \langle g^d \rangle\)</span>, where <span class="math inline">\(d = \gcd(k,n)\)</span>.</p></li>
-<li><p><span class="math inline">\(|\langle g^k \rangle| = \frac{n}{d}= \frac{n}{\gcd(k,n)}\)</span>, which is a divisor of <span class="math inline">\(n\)</span>.</p></li>
-<li><p>If <span class="math inline">\(\ell \vert n\)</span>, then <span class="math inline">\(|\langle g^{n/\ell} \rangle|\)</span> is a subgroup of size <span class="math inline">\(\ell\)</span> and is the only subgroup of size <span class="math inline">\(\ell\)</span>.</p></li>
-</ol></li>
-</ol>
-<p>Note: (d) says that, in a finite cyclic group of order <span class="math inline">\(n\)</span>, there is exactly one subgroup for each divisor of <span class="math inline">\(n\)</span> and those are all the subgroups.</p>
-<center>
-<img src="images/SubgroupLatticeC24.png" style="width:100.0%" />
-</center>
-<p><strong>Corollary</strong> If <span class="math inline">\(\mathsf{G}= \langle g \rangle\)</span> is a finite cyclic group of order <span class="math inline">\(n\)</span>. Then <span class="math inline">\(\mathsf{G}= \langle g^k rangle\)</span> if and only if <span class="math inline">\(\gcd(k,n) = 1\)</span>.</p>
-<p>Thus, for example, the generators of <span class="math inline">\(\mathbb{Z}_{10}\)</span> above are</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="cyclic-groups.html#cb3-1"></a><span class="kw">Units</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>## [1] 1 3 7 9</code></pre>
-<p>Infinite cyclic groups:</p>
-<ol style="list-style-type: decimal">
-<li><p>Our favorite infinite cyclic group is the set of integers <span class="math inline">\(\mathbb{Z}\)</span> under addition.</p></li>
-<li><p>The subgroup <span class="math inline">\(\langle \pi \rangle \le \mathbb{R}^\ast\)</span> is an infinite cyclic group
+<div id="number-systems" class="section level1">
+<h1><span class="header-section-number">Section 4</span> Number Systems</h1>
+<div id="integers-mathbbz" class="section level2">
+<h2><span class="header-section-number">4.1</span> Integers <span class="math inline">\(\mathbb{Z}\)</span></h2>
+<p>The integers
 <span class="math display">\[
-\langle \pi \rangle = \{\ldots, \pi^{-3}, \pi^{-2}, \pi^{-1}, 1, \pi, \pi^2, \pi^3, \ldots \} \le \mathbb{R}^\ast.
-\]</span></p></li>
-<li><p>See <a href="complex-n-th-roots-of-unity.html#complex-n-th-roots-of-unity">Complex n-th roots of unity</a> for the infinite cyclic group <span class="math inline">\(\langle 1.02 e^{2 \pi i /17} \rangle \le \mathbb{C}^\ast\)</span>.</p></li>
-</ol>
-<p>Some finite cyclic groups:</p>
-<ol style="list-style-type: decimal">
-<li><p>The <a href="complex-n-th-roots-of-unity.html#complex-n-th-roots-of-unity">Complex n-th roots of unity</a>.</p></li>
-<li><p>The rotation group of an n-gon:
+\mathbb{Z}= \{ \ldots, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, \ldots\}
+\]</span>
+form a cyclic group (and thus abelian group) under addition with identity 0. There are two generators <span class="math inline">\(\mathbb{Z}= \langle 1 \rangle = \langle -1 \rangle\)</span>.</p>
+<p>Under multiplication, the only invertible elements (<em>units</em>) are <span class="math inline">\(1\)</span> and <span class="math inline">\(-1\)</span>, and <span class="math inline">\(\mathbb{Z}^\ast = \{-1,1\}\)</span> is a group of order two under addition.</p>
+</div>
+<div id="rational-numbers-mathbbq" class="section level2">
+<h2><span class="header-section-number">4.2</span> Rational Numbers <span class="math inline">\(\mathbb{Q}\)</span></h2>
+<p>The rational numbers
 <span class="math display">\[
-R_n = \{1, r, r^2, \ldots, r^{n-1}\} \le \mathsf{D}_n
-\]</span></p></li>
-<li><p>Sometimes the group of units <span class="math inline">\(U(n)\)</span> under multiplication mod <span class="math inline">\(n\)</span> is cyclic. For example, here is a demonstration that <span class="math inline">\(U(21) = \langle 2 \rangle\)</span>. This is a cyclic group of order 18.</p></li>
-</ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="cyclic-groups.html#cb5-1"></a><span class="kw">Units</span>(<span class="dv">27</span>)</span></code></pre></div>
-<pre><code>##  [1]  1  2  4  5  7  8 10 11 13 14 16 17 19 20 22 23 25 26</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="cyclic-groups.html#cb7-1"></a><span class="kw">mod</span>(<span class="dv">2</span><span class="op">^</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">18</span>),<span class="dv">27</span>)</span></code></pre></div>
-<pre><code>##  [1]  1  2  4  8 16  5 10 20 13 26 25 23 19 11 22 17  7 14  1</code></pre>
+\mathbb{Q}= \left\{ \frac{p}{q} \mid p,q \in \mathbb{Z}, q \not=0 \right\}
+\]</span>
+also constitute an abelian group under addition with idenity 0. Every rational number except 0 has a multiplicative inverse, and thus
+<span class="math display">\[
+\mathbb{Q}^\ast = \mathbb{Q}\setminus \{0\}
+\]</span>
+is a group under multiplication with multiplicative identity 1. The positive rational numbers are also closed under multiplication and taking multiplicative inverses, so if <span class="math inline">\(\mathbb{Q}_{&gt;0} = \{ a \in \mathbb{Q}\mid a &gt; 0\}\)</span>, then
+<span class="math display">\[
+\mathbb{Q}_{&gt;0} \le \mathbb{Q}^\ast.
+\]</span></p>
+</div>
+<div id="real-numbers-mathbbr" class="section level2">
+<h2><span class="header-section-number">4.3</span> Real Numbers <span class="math inline">\(\mathbb{R}\)</span></h2>
+<p>We’ll leave it to Math 377 to define the real numbers <span class="math inline">\(\mathbb{R}\)</span>. The real numbers form a group under addition, and the only real number that does not have an inverse is 0, so
+<span class="math display">\[
+\mathbb{R}^\ast = \mathbb{R}\setminus \{0\}
+\]</span>
+is an abelian group under multiplication with identity 1. As with the rational numbers, the positive reals also form a multiplicative subgroup
+<span class="math display">\[
+\mathbb{R}_{&gt;0} \le \mathbb{R}^\ast.
+\]</span></p>
+</div>
+<div id="complex-numbers-mathbbc" class="section level2">
+<h2><span class="header-section-number">4.4</span> Complex numbers <span class="math inline">\(\mathbb{C}\)</span></h2>
+<p>The complex numbers consists of pairs of real numbers
+<span class="math display">\[
+\mathbb{C}= \left\{ a + b i \mid a, b \in\mathbb{R}\right\}
+\]</span>
+with <span class="math inline">\(i^2 = -1\)</span>. It is a group under addition,
+<span class="math display">\[
+(a + b i) + (c + d i) = (a+c) + (b+d) i.
+\]</span>
+with identity <span class="math inline">\(0 = 0 + 0 i\)</span>.</p>
+<p>Multiplication in <span class="math inline">\(\mathbb{C}\)</span> is best understood using polar coordinates. We write
+<span class="math display">\[
+a + b i = r (\cos(\theta) + i \sin(\theta)) = r e^{i \theta}
+\]</span>
+where
+<span class="math display">\[
+\begin{array}{lcl}
+r = \sqrt{a^2 + b^2} &amp; &amp; a = r \cos(theta)\\
+\theta = \arctan(b/a) &amp;&amp; b = r \sin(\theta).
+\end{array}
+\]</span>
+In polar notation
+<span class="math display">\[
+\text{ if } \quad z_1 = r_1 e^{i \theta_1} \quad \text{ and }\quad 
+z_2 = r_2 e^{i \theta_2}
+\]</span>
+then
+<span class="math display">\[
+z_1z_2 = (r_1 e^{i \theta_1})(r_2 e^{i \theta_2}) = 
+r_1 r_2 e^{i (\theta_1 + \theta_2)}
+\]</span>
+so that their angles add and their lengths multiply.</p>
+<p>Every complex number other than <span class="math inline">\(0 = 0 + 0i\)</span> has a multiplicative inverse, and
+<span class="math display">\[
+\mathbb{C}^\ast = \mathbb{C}\setminus \{0\}
+\]</span>
+is a multiplicative group with identity <span class="math inline">\(1 = 1 + 0i\)</span>.</p>
+<p>The <strong>circle group</strong> is the set of complex numbers on the unit circle,
+<span class="math display">\[
+C = \{ e^{i \theta} \mid 0 \le \theta &lt; 2 \pi\}.
+\]</span>
+Since lengths multiply and angles add when we multiply complex nubers, the circle group is a multiplicative subgroup
+<span class="math display">\[
+C \le \mathbb{C}^\ast
+\]</span></p>
+<p>As additive groups, we have the following containment of subgroups,
+<span class="math display">\[
+\mathbb{Z}&lt; \mathbb{Q}&lt; \mathbb{R}&lt; \mathbb{C}.
+\]</span>
+And as multiplicative groups, the units in each of these number systems give us containments of subgroups
+<span class="math display">\[
+\{1,-1\} &lt; \mathbb{Q}^\ast &lt; \mathbb{R}^\ast &lt; \mathbb{C}^\ast.
+\]</span></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="number-systems.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="dihedral-groups.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="problem-set-3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cyclic-groups.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

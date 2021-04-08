@@ -62,7 +62,7 @@ e. Demonstrate Fermat's Little Theorem for $p = 7$ and each number in $U(7)$.
 
 ## Index of the Center
 
-Prove that in a finite group $\G$, the index of the center $[G:Z(\G)]$ cannot be prime. (Hint: let $a \in \G \setminus Z(\G)$ and consider the centralizer $C_\G(a)$).
+Prove that in a finite group $\G$, the index of the center $[G:Z(\G)]$ cannot be prime. (Hint: let $a \in \G \setminus Z(\G)$ and consider the centralizer $C_\G(a)$). That is, $a \in \G$ but $a \not \in Z(\G)$.
 
 
 ## Quaternion Quotient

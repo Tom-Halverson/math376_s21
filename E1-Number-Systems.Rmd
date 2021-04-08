@@ -1,0 +1,100 @@
+# (PART) Group Examples {-}
+
+# Number Systems
+
+## Integers $\ZZ$
+
+The integers 
+$$
+\ZZ = \{ \ldots, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, \ldots\}
+$$
+form a cyclic group (and thus abelian group) under addition with identity 0. There are two generators $\ZZ = \langle 1 \rangle = \langle -1 \rangle$.
+
+Under multiplication, the only invertible elements (*units*) are $1$ and $-1$, and $\ZZ^\ast = \{-1,1\}$ is a group of order two under addition.
+
+## Rational Numbers $\QQ$
+
+The rational numbers 
+$$
+\QQ = \left\{ \frac{p}{q} \mid p,q \in \ZZ, q \not=0 \right\}
+$$
+also constitute an abelian group under addition with idenity 0. Every rational number except 0 has a multiplicative inverse, and thus 
+$$
+\QQ^\ast = \QQ \setminus \{0\}
+$$
+is a group under multiplication with multiplicative identity 1. The positive rational numbers are also closed under multiplication and taking multiplicative inverses, so if $\QQ_{>0} = \{ a \in \QQ \mid a > 0\}$, then
+$$
+\QQ_{>0} \le \QQ^\ast.
+$$
+
+## Real Numbers $\RR$
+
+We'll leave it to Math 377 to define the real numbers $\RR$. The real numbers form a group under addition, and the only real number that does not have an inverse is 0, so 
+$$
+\RR^\ast = \RR \setminus \{0\}
+$$
+is an abelian group under multiplication with identity 1. As with the rational numbers, the positive reals also form a multiplicative subgroup
+$$
+\RR_{>0} \le \RR^\ast.
+$$
+
+
+## Complex numbers $\CC$
+
+The complex numbers consists of pairs of real numbers
+$$
+\CC = \left\{ a + b i \mid a, b \in\RR \right\}
+$$
+with $i^2 = -1$. It is a group under addition,
+$$
+(a + b i) + (c + d i) = (a+c) + (b+d) i.
+$$
+with identity $0 = 0 + 0 i$.
+
+Multiplication in $\CC$ is best understood using polar coordinates. We write
+$$
+a + b i = r (\cos(\theta) + i \sin(\theta)) = r e^{i \theta}
+$$
+where 
+$$
+\begin{array}{lcl}
+r = \sqrt{a^2 + b^2} & & a = r \cos(theta)\\
+\theta = \arctan(b/a) && b = r \sin(\theta).
+\end{array}
+$$
+In polar notation
+$$
+\text{ if } \quad z_1 = r_1 e^{i \theta_1} \quad \text{ and }\quad 
+z_2 = r_2 e^{i \theta_2}
+$$
+then
+$$
+z_1z_2 = (r_1 e^{i \theta_1})(r_2 e^{i \theta_2}) = 
+r_1 r_2 e^{i (\theta_1 + \theta_2)}
+$$
+so that their angles add and their lengths multiply.
+
+Every complex number other than $0 = 0 + 0i$ has a multiplicative inverse, and 
+$$
+\CC^\ast = \CC \setminus \{0\}
+$$
+is a multiplicative group with identity $1 = 1 + 0i$.
+
+The **circle group** is the set of complex numbers on the unit circle,
+$$
+C = \{ e^{i \theta} \mid 0 \le \theta < 2 \pi\}.
+$$
+Since lengths multiply and angles add when we multiply complex nubers, the circle group is a multiplicative subgroup
+$$
+C \le \CC^\ast
+$$
+
+As additive groups, we have the following containment of subgroups,
+$$
+\ZZ < \QQ < \RR < \CC.
+$$
+And as multiplicative groups, the units in each of these number systems give us containments of subgroups
+$$
+\{1,-1\} < \QQ^\ast < \RR^\ast < \CC^\ast.
+$$
+

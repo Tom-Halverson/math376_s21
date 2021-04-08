@@ -10,6 +10,15 @@ The only group of order 1 is the trivial group $G = \{ e \}$.
 
 Since 2 is prime the only group of order 2, up to isomorphism, is $\ZZ_2$.
 
+$$
+\begin{array}{c|ccc}
+\mathbb{Z}_2  & 0 & 1   \\
+\hline
+0 & 0 & 1 \\
+1 & 1 & 0 \\
+\end{array}
+$$
+
 ## n = 3
 
 Since 3 is prime the only group of order 3, up to isomorphism, is $\ZZ_3$.
@@ -62,6 +71,15 @@ We also have $\S_3 \cong \D_3$.
 Since 3 is prime the only group of order 7, up to isomorphism, is $\ZZ_7$.
 
 ## n = 8
+
+### Abelian groups
+
+We have  the cyclic group of order 8: $\ZZ_8$. And, we've seen, , by comparing orders of elements, that the following abelian groups of order 8, groups are not isomorphic to one another
+$\ZZ_4 \times \ZZ_2, \ZZ_2 \times \ZZ_2 \times \ZZ_2.
+$
+
+### The Dihedral Group $\D_4$
+
 
 \newcommand{\i}{{\mathbf{i}}}
 \newcommand{\j}{{\mathbf{k}}}
