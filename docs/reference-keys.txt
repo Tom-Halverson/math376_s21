@@ -54,6 +54,7 @@ isomorphisms
 cosets
 normal-subgroups
 quotient-groups
+homomorphisms
 modular-arithmetic
 integer-division-and-gcd
 addition-mod-n-mathbbz_n

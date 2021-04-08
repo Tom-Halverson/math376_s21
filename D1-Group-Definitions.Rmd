@@ -208,3 +208,12 @@ Therefore, if $\H \trianglelefteq \G$, then the set of cosets $\G/\H$ forms a gr
 a. The identity is $e \H = \H$ since $(e \H) (g \H) = e g \H = g \H$.
 b. The inverse of $g \H$ is $g^{-1} \H$ since $(g \H) (g^{-1}  \H) = g g^{-1} \H = \H$.
 
+
+## Homomorphisms
+
+**Def**: If $\G$ and $\H$ are groups, then a *homomorphism* from $\G$ to $\H$ is a function $\phi: \G \to \H$ such that, if $a,b \in \G$, then
+$$
+\phi( a b) = \phi(a) \phi(b).
+$$
+
+
