@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>MATH 376: Algebraic Structures</title>
+  <title>Section 4 Group Basics | MATH 376: Algebraic Structures</title>
   <meta name="description" content="This is the class activity manual for MATH 376 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="MATH 376: Algebraic Structures" />
+  <meta property="og:title" content="Section 4 Group Basics | MATH 376: Algebraic Structures" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Tom-Halverson/math236_s21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="MATH 376: Algebraic Structures" />
+  <meta name="twitter:title" content="Section 4 Group Basics | MATH 376: Algebraic Structures" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 376 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="problem-set-1.html"/>
+<link rel="prev" href="problem-set-3.html"/>
+<link rel="next" href="group-structure.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -237,30 +237,109 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">MATH 376: Algebraic Structures</h1>
+<div id="group-basics" class="section level1">
+<h1><span class="header-section-number">Section 4</span> Group Basics</h1>
+<div id="groups" class="section level2">
+<h2><span class="header-section-number">4.1</span> Groups</h2>
+<p><strong>Def</strong>: A <strong>group</strong> is a set <span class="math inline">\(\mathsf{G}\)</span> with a binary operation <span class="math inline">\(\ast\)</span> that satisfies the following:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>(Identity) There exists <span class="math inline">\(e \in \mathsf{G}\)</span> such that: if <span class="math inline">\(g \in \mathsf{G}\)</span>, then <span class="math inline">\(e \ast g= g \ast e = g\)</span>.</p></li>
+<li><p>(Inverse) If <span class="math inline">\(g \in \mathsf{G}\)</span>, then there exists <span class="math inline">\(g^{-1} \in \mathsf{G}\)</span> so that <span class="math inline">\(g \ast g^{-1} = g^{-1} \ast g = e\)</span>.</p></li>
+<li><p>(Associativity) If <span class="math inline">\(a,b,c \in \mathsf{G}\)</span>, then <span class="math inline">\((ab)c = a (bc)\)</span>.</p></li>
+</ol>
+<p>Furthermore, the group is <strong>abelian</strong> if it also satisfies the commutative property:</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>(Commutative) If <span class="math inline">\(a,b \in \mathsf{G}\)</span>, then <span class="math inline">\(ab = ba\)</span>.</li>
+</ol>
+<p><strong>Proposition</strong> (Uniqueness) Let <span class="math inline">\(\mathsf{G}\)</span> be a group. Then</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\mathsf{G}\)</span> has a unique identity element <span class="math inline">\(e\)</span>.</p></li>
+<li><p>If <span class="math inline">\(a,b,c \in \mathsf{G}\)</span> and <span class="math inline">\(ab = e\)</span> and <span class="math inline">\(ca = e\)</span>, then <span class="math inline">\(a = c\)</span>.</p></li>
+<li><p>If <span class="math inline">\(g \in \mathsf{G}\)</span> then t
+here is a unique element <span class="math inline">\(g^{-1}\)</span> such that <span class="math inline">\(g g^{-1} = g^{-1} g = e\)</span>.</p></li>
+</ol>
+<p><strong>Proposition</strong> (Cancellation) Let <span class="math inline">\(\mathsf{G}\)</span> be a group and <span class="math inline">\(a,b,c \in \mathsf{G}\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(a b = a c\)</span> then <span class="math inline">\(b = c\)</span>.</li>
+<li>If <span class="math inline">\(b a = c a\)</span> then <span class="math inline">\(b = c\)</span>.</li>
+</ol>
+<p><strong>Proposition</strong> (<span class="math inline">\(ax =b\)</span>) Let <span class="math inline">\(\mathsf{G}\)</span> be a group and <span class="math inline">\(a,b \in \mathsf{G}\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>The equation <span class="math inline">\(a x = b\)</span> has a unique solution <span class="math inline">\(x = a^{-1} b\)</span>.</li>
+<li>The equation <span class="math inline">\(x a = b\)</span> has a unique solution <span class="math inline">\(x = b a^{-1}\)</span>.</li>
+</ol>
+<p><strong>Proposition</strong> (Latin Square) Let <span class="math inline">\(\mathsf{G}\)</span> be a group and <span class="math inline">\(a \in \mathsf{G}\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>The function <span class="math inline">\(\mathsf{G}\to \mathsf{G}\)</span> defined by left multiplication by <span class="math inline">\(a\)</span>, <span class="math inline">\(g \mapsto a g\)</span>, is one-to-one and onto.</li>
+<li>The function <span class="math inline">\(\mathsf{G}\to \mathsf{G}\)</span> defined by right multiplication by <span class="math inline">\(a\)</span>, <span class="math inline">\(g \mapsto g a\)</span>, is one-to-one and onto.</li>
+</ol>
 </div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>This is the class handbook for Math 376 Algebraic Structures at Macalester College. The content here was made by <a href="https://www.macalester.edu/~halverson/">Tom Halverson</a> in the <a href="https://www.macalester.edu/mscs/">Department of Mathematics, Statistics and Computer Science</a> at <a href="https://www.macalester.edu/">Macalester College</a>.</p>
-<p><br>
-<br>
-<br></p>
-<p><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></p>
-<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
-
+<div id="subgroups" class="section level2">
+<h2><span class="header-section-number">4.2</span> Subgroups</h2>
+<p><strong>Def</strong>: A <em>subset</em> <span class="math inline">\(\mathsf{H}\subseteq \mathsf{G}\)</span> of a group <span class="math inline">\(\mathsf{G}\)</span> is a <strong>subgroup</strong> if <span class="math inline">\(\mathsf{H}\)</span> is a group under the same binary operation that it inherits from <span class="math inline">\(\mathsf{G}\)</span>. We write <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> to denote that <span class="math inline">\(\mathsf{H}\)</span> is a subgroup of <span class="math inline">\(\mathsf{G}\)</span> and write <span class="math inline">\(\mathsf{H}&lt; \mathsf{G}\)</span> if <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> and <span class="math inline">\(\mathsf{H}\not= \mathsf{G}\)</span>.</p>
+<p><strong>Theorem</strong>: (Subgroup Test) A <em>nonempty</em> subset <span class="math inline">\(\mathsf{H}\subseteq \mathsf{G}\)</span> is a subgroup if</p>
+<ol style="list-style-type: lower-alpha">
+<li>(identity) <span class="math inline">\(e \in \mathsf{H}\)</span>, where <span class="math inline">\(e\)</span> is the identity in <span class="math inline">\(\mathsf{G}\)</span>.</li>
+<li>(closure) If <span class="math inline">\(h_1, h_2 \in \mathsf{H}\)</span>, then <span class="math inline">\(h_1 h_2 \in \mathsf{H}\)</span>.</li>
+<li>(contains inverses) If <span class="math inline">\(h \in \mathsf{H}\)</span>, then <span class="math inline">\(h^{-1} \in \mathsf{H}\)</span>.</li>
+</ol>
+<p>Note: (a) follows from (b) and (c).</p>
+<p><strong>Def</strong>: The <strong>order</strong> of an element <span class="math inline">\(g \in \mathsf{G}\)</span> is the smallest positive integer <span class="math inline">\(m\)</span> such that <span class="math inline">\(g^m = e\)</span>, and we write <span class="math inline">\(|g| = m\)</span>. If there is no such <span class="math inline">\(m\)</span>, then <span class="math inline">\(|g| = \infty\)</span>.</p>
+<p><strong>Def</strong>: The <strong>center</strong> of a group <span class="math inline">\(\mathsf{G}\)</span> is the following subgroup
+<span class="math display">\[
+Z(\mathsf{G}) = \{ a \in \mathsf{G}\mid \hbox{ if $g \in \mathsf{G}$ then $ag  = ga$ } \}.
+\]</span></p>
+<p><strong>Def</strong>: If <span class="math inline">\(g \in \mathsf{G}\)</span> then <span class="math inline">\(\langle g \rangle\)</span> is the smallest subgroup of <span class="math inline">\(\mathsf{G}\)</span> that contains <span class="math inline">\(g\)</span>. It is called the <strong>cyclic subgroup generated by</strong> <span class="math inline">\(g\)</span>. This subgroup contains all possible powers of <span class="math inline">\(g\)</span>:
+<span class="math display">\[
+\langle g \rangle = \{ g^k \mid k \in \mathbb{Z}\}.
+\]</span></p>
 </div>
-
-
-
+<div id="cyclic-groups" class="section level2">
+<h2><span class="header-section-number">4.3</span> Cyclic Groups</h2>
+<p>A group <span class="math inline">\(\mathsf{G}\)</span> is <strong>cyclic</strong> if <span class="math inline">\(\mathsf{G}= \langle g \rangle\)</span> for some <span class="math inline">\(g \in \mathsf{G}\)</span>.</p>
+<p><strong>Theorem.</strong> (Fundamental Theorem of Cyclic Groups) If <span class="math inline">\(\mathsf{G}= \langle g\rangle\)</span>, then</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Every subgroup <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> is cyclic (thus, <span class="math inline">\(\mathsf{H}= \langle g^k \rangle\)</span>).</p></li>
+<li><p>If <span class="math inline">\(|g| = \infty\)</span> then <span class="math inline">\(\langle g \rangle = \{ \ldots, g^{-3}, g^{-2}, g^{-1}, 1, g, g^2, g^3, \ldots \}\)</span> and all of these elements are distinct.</p></li>
+<li><p>If <span class="math inline">\(|g| = n\)</span> then <span class="math inline">\(\langle g \rangle = \{1, g, g^2, \ldots, g^{n-1} \}\)</span> and all of these elements are distinct (thus, <span class="math inline">\(|g| = |\langle g \rangle|\)</span>).</p></li>
+<li><p>If <span class="math inline">\(|g| = n\)</span> then the subgroups of <span class="math inline">\(\langle g \rangle\)</span> satisfy:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(\langle g^k \rangle = \langle g^d \rangle\)</span>, where <span class="math inline">\(d = \gcd(k,n)\)</span>.</p></li>
+<li><p><span class="math inline">\(|\langle g^k \rangle| = \frac{n}{d}= \frac{n}{\gcd(k,n)}\)</span>, which is a divisor of <span class="math inline">\(n\)</span>.</p></li>
+<li><p>If <span class="math inline">\(\ell \vert n\)</span>, then <span class="math inline">\(|\langle g^{n/\ell} \rangle|\)</span> is a subgroup of size <span class="math inline">\(\ell\)</span> and is the only subgroup of size <span class="math inline">\(\ell\)</span>.</p></li>
+</ol></li>
+</ol>
+<p>Note: (d) says that, in a finite cyclic group of order <span class="math inline">\(n\)</span>, there is exactly one subgroup for each divisor of <span class="math inline">\(n\)</span> and those are all the subgroups.</p>
+</div>
+<div id="isomorphisms" class="section level2">
+<h2><span class="header-section-number">4.4</span> Isomorphisms</h2>
+<p><strong>Def</strong>: An <em>isomorphism</em> between groups <span class="math inline">\(\mathsf{G}\)</span> and <span class="math inline">\(\mathsf{H}\)</span> is a function <span class="math inline">\(\phi: \mathsf{G}\to \mathsf{H}\)</span> such that <span class="math inline">\(\phi\)</span> is  and  (a bijection) and
+<span class="math display">\[
+\phi( a b) = \phi(a) \phi(b).
+\]</span>
+We write <span class="math inline">\(\mathsf{G}\cong \mathsf{H}\)</span> to denote that <span class="math inline">\(\mathsf{G}\)</span> and <span class="math inline">\(\mathsf{H}\)</span> are isomorphic.</p>
+<p><strong>Theorem</strong> (Properties of Isomorphisms): if <span class="math inline">\(\phi: \mathsf{G}\to \mathsf{H}\)</span> is an isomorphism, and $g  then</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\phi(e_\mathsf{G}) = e_\mathsf{H}\)</span>.</li>
+<li><span class="math inline">\(\phi(g^{-1}) = \phi(g)^{-1}\)</span></li>
+<li><span class="math inline">\(\phi(g^k) = \phi(g)^k\)</span> for all <span class="math inline">\(k \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(|g| = |\phi(g)|\)</span></li>
+<li><span class="math inline">\(\phi^{-1}: \mathsf{H}\to \mathsf{G}\)</span> is an isomorphism</li>
+<li>If <span class="math inline">\(K \le \mathsf{G}\)</span> then <span class="math inline">\(\phi(\mathsf{K}) \le H\)</span> where <span class="math inline">\(\phi(\mathsf{K}) = \{ \phi(k) \mid k \in \mathsf{K}\}\)</span>.</li>
+<li><span class="math inline">\(|\mathsf{G}| = |\mathsf{H}|\)</span></li>
+<li><span class="math inline">\(\mathsf{G}\)</span> is abelian if and only if <span class="math inline">\(\mathsf{H}\)</span> is abelian</li>
+<li><span class="math inline">\(\mathsf{G}\)</span> is cyclic if and only if <span class="math inline">\(\mathsf{H}\)</span> is cyclic</li>
+<li><span class="math inline">\(\mathsf{G}\)</span> has <span class="math inline">\(k\)</span> elements of order <span class="math inline">\(m\)</span> if and only if <span class="math inline">\(\mathsf{H}\)</span> has <span class="math inline">\(k\)</span> elements of order <span class="math inline">\(m\)</span>.</li>
+</ol>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="problem-set-1.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="problem-set-3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="group-structure.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>MATH 376: Algebraic Structures</title>
+  <title>Section 5 Group Structure | MATH 376: Algebraic Structures</title>
   <meta name="description" content="This is the class activity manual for MATH 376 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="MATH 376: Algebraic Structures" />
+  <meta property="og:title" content="Section 5 Group Structure | MATH 376: Algebraic Structures" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Tom-Halverson/math236_s21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="MATH 376: Algebraic Structures" />
+  <meta name="twitter:title" content="Section 5 Group Structure | MATH 376: Algebraic Structures" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 376 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="problem-set-1.html"/>
+<link rel="prev" href="group-basics.html"/>
+<link rel="next" href="number-systems.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -237,30 +237,159 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">MATH 376: Algebraic Structures</h1>
+<div id="group-structure" class="section level1">
+<h1><span class="header-section-number">Section 5</span> Group Structure</h1>
+<div id="cosets" class="section level2">
+<h2><span class="header-section-number">5.1</span> Cosets</h2>
+<p><strong>Def</strong>: If <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> and <span class="math inline">\(g \in \mathsf{G}\)</span>, then the left <strong>coset</strong> of <span class="math inline">\(\mathsf{H}\)</span> by <span class="math inline">\(g\)</span> is the set
+<span class="math display">\[
+g \mathsf{H}= \left\{ g h \mid h \in H \right\},
+\]</span>
+and the right coset of <span class="math inline">\(\mathsf{H}\)</span> by <span class="math inline">\(g\)</span> is the set
+<span class="math display">\[
+\mathsf{H}g = \left\{ h g \mid h \in H \right\}.
+\]</span></p>
+<p><strong>Example</strong>: If <span class="math inline">\(\mathsf{H}= \{1, (123), (132)\} = \langle (123) \rangle \le {\mathsf{A}}_4\)</span>. Then the left cosets and right cosets of <span class="math inline">\(\mathsf{H}\)</span> are:
+<span class="math display">\[
+\begin{array}{rlcrl}
+\mathsf{H}&amp; = \{1, (123), (132)\} &amp;\qquad&amp;  \mathsf{H}&amp; = \{1, (123), (132)\}\\
+(124) \mathsf{H}&amp; = \{(124), (14)(23), (134)\}&amp;&amp;  
+\mathsf{H}(124) &amp; = \{(124), (13)(24), (243)\} \\
+(142)\mathsf{H}&amp; = \{(142), (234), (13)(24)\} &amp;&amp;
+\mathsf{H}(142) &amp; =\{(142), (143), (14)(23)\}\\
+(143)\mathsf{H}&amp; = \{(143), (12)(34), (243)\} &amp;&amp;
+\mathsf{H}(143) &amp; = \{(143), (14)(23), (142)\}\\
+\end{array}
+\]</span></p>
+<p><strong>Theorem</strong> (Properties of Cosets): If <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> and <span class="math inline">\(a,b, \in \mathsf{G}\)</span>, then</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(a \in a \mathsf{H}\)</span>,</li>
+<li><span class="math inline">\(a \mathsf{H}= \mathsf{H}\)</span> if and only if <span class="math inline">\(a \in \mathsf{H}\)</span>,</li>
+<li><span class="math inline">\(a \mathsf{H}= b \mathsf{H}\)</span> if and only if <span class="math inline">\(a \in b \mathsf{H}\)</span>,</li>
+<li><span class="math inline">\(a \mathsf{H}= b \mathsf{H}\)</span> if and only if <span class="math inline">\(b^{-1} a \in \mathsf{H}\)</span>,</li>
+<li><span class="math inline">\(a \mathsf{H}\cap b \mathsf{H}= \emptyset\)</span> or <span class="math inline">\(a \mathsf{H}= b\mathsf{H}\)</span>,</li>
+<li><span class="math inline">\(|a \mathsf{H}| = |b \mathsf{H}|\)</span>.</li>
+</ol>
+<p>Parts (a) and (e) tell us that cosets <strong>partition</strong> the group into a set of <em>disjoint</em> subsets whose union is <span class="math inline">\(\mathsf{G}\)</span>. Part (f) tells us that these subsets all have the <em>same size</em>. This can be pictured as:</p>
+<center>
+<img src="images/group-partition.png" style="width:60.0%" />
+</center>
+<p><strong>Def</strong>: The <strong>index</strong> of <span class="math inline">\(\mathsf{H}\)</span> in <span class="math inline">\(\mathsf{G}\)</span> is
+<span class="math display">\[
+[\mathsf{G}:\mathsf{H}] = \#(\text{cosets of } \mathsf{H}\text{ in } \mathsf{G}).
+\]</span>
+The following theorem follows immediately from the fact that the cosets partition the group and they are all the same size:</p>
+<p><strong>Lagrange’s Theorem</strong>: <span class="math inline">\(|\mathsf{G}| = |\mathsf{H}| [\mathsf{G}:\mathsf{H}]\)</span>.</p>
+<p><strong>Corollary 1</strong>: If <span class="math inline">\(|\mathsf{G}|\)</span> is finite, then <span class="math inline">\(|\mathsf{H}|\)</span> divides <span class="math inline">\(|\mathsf{G}|\)</span> (this is often written as <span class="math inline">\(|\mathsf{H}|\, \big\vert \,|\mathsf{G}|)\)</span>.</p>
+<p><strong>Corollary 2</strong>: If <span class="math inline">\(|\mathsf{G}| = p\)</span> (prime), then the only subgroups of <span class="math inline">\(\mathsf{G}\)</span> are <span class="math inline">\(\{e\}\)</span> and <span class="math inline">\(\mathsf{G}\)</span> (i.e, <span class="math inline">\(\mathsf{G}\)</span> has no nontrivial, proper subgroups).</p>
+<p><strong>Corollary 3</strong>: If <span class="math inline">\(g \in \mathsf{G}\)</span>, then <span class="math inline">\(|g| = |\langle g \rangle|\)</span> divides <span class="math inline">\(|G|\)</span>.</p>
+<p><strong>Corollary 4</strong>: If <span class="math inline">\(|\mathsf{G}|\)</span> is finite and <span class="math inline">\(g \in \mathsf{G}\)</span>, then <span class="math inline">\(g^{|\mathsf{G}|} = e\)</span>.</p>
+<p><strong>Corollary 5</strong>: If <span class="math inline">\(\mathsf{G}\)</span> is finite and <span class="math inline">\(\mathsf{H}\le \mathsf{K}\le \mathsf{G}\)</span>, then <span class="math inline">\([\mathsf{G}:\mathsf{H}] = [\mathsf{G}:\mathsf{K}] [\mathsf{K}:\mathsf{H}]\)</span>.</p>
 </div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>This is the class handbook for Math 376 Algebraic Structures at Macalester College. The content here was made by <a href="https://www.macalester.edu/~halverson/">Tom Halverson</a> in the <a href="https://www.macalester.edu/mscs/">Department of Mathematics, Statistics and Computer Science</a> at <a href="https://www.macalester.edu/">Macalester College</a>.</p>
-<p><br>
-<br>
-<br></p>
-<p><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></p>
-<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+<div id="normal-subgroups" class="section level2">
+<h2><span class="header-section-number">5.2</span> Normal Subgroups</h2>
+<p><strong>Def</strong>: A subgroup <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> is normal if <span class="math inline">\(g \mathsf{H}= \mathsf{H}g\)</span> for all <span class="math inline">\(g \in \mathsf{G}\)</span>. We write <span class="math inline">\(\mathsf{H}\trianglelefteq \mathsf{G}\)</span> to indicate that <span class="math inline">\(\mathsf{H}\)</span> is normal in <span class="math inline">\(\mathsf{G}\)</span>, and we write <span class="math inline">\(\mathsf{H}\triangleleft \mathsf{G}\)</span> if <span class="math inline">\(\mathsf{H}\)</span> is a proper normal subgroup of <span class="math inline">\(\mathsf{G}\)</span> (i.e. <span class="math inline">\(\mathsf{G}\not= \mathsf{H}\)</span>).</p>
+<p><strong>Examples:</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\{e \}\trianglelefteq \mathsf{G}\)</span>.</li>
+<li><span class="math inline">\(\mathsf{G}\trianglelefteq \mathsf{G}\)</span>.</li>
+<li>If <span class="math inline">\(\mathsf{G}\)</span> is abelian, then every subgroup of <span class="math inline">\(\mathsf{G}\)</span> is normal.</li>
+<li>The center <span class="math inline">\(Z(\mathsf{G})\)</span> is a normal subgroup of <span class="math inline">\(\mathsf{G}\)</span>.</li>
+</ol>
+<p><strong>Proposition</strong> (Normal Subgroup Test): If <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> then
+<span class="math display">\[ 
+  \mathsf{H}\trianglelefteq \mathsf{G}\qquad  \text {if and only if } \qquad \text{$g h g^{-1} \in \mathsf{H}$ for all $g \in \mathsf{G}$ and all $h \in \mathsf{H}$}.
+\]</span></p>
+</div>
+<div id="quotient-groups" class="section level2">
+<h2><span class="header-section-number">5.3</span> Quotient Groups</h2>
+<p><strong>Def</strong>: <span class="math inline">\(\mathsf{G}/\mathsf{H}= \{ g \mathsf{H}\mid g \in \mathsf{G}\}\)</span> is the set of left cosets of <span class="math inline">\(\mathsf{H}\)</span> in <span class="math inline">\(\mathsf{G}\)</span>. Note that
+<span class="math display">\[
+\left| \frac{\mathsf{G}}{\mathsf{H}} \right| = [\mathsf{G}: \mathsf{H}] = \frac{|\mathsf{G}|}{|\mathsf{H}|},
+\]</span>
+where the second equality only makes sense if <span class="math inline">\(\mathsf{G}\)</span> is finite.</p>
+<p><strong>Def</strong> (Coset Multiplication): If <span class="math inline">\(a \mathsf{H}, b \mathsf{H}\in \mathsf{G}/\mathsf{H}\)</span>, then we define <span class="math inline">\((a \mathsf{H}) (b \mathsf{H}) = ab \mathsf{H}\)</span>.</p>
+<p><strong>Theorem</strong>: If <span class="math inline">\(\mathsf{H}\trianglelefteq \mathsf{G}\)</span>, then coset multiplication is well-defined. That is, if <span class="math inline">\(a&#39; \in a \mathsf{H}\)</span> and <span class="math inline">\(b&#39; \in b \mathsf{H}\)</span>, then <span class="math inline">\(a&#39; b&#39; \mathsf{H}= ab \mathsf{H}\)</span>. This makes coset multiplication a binary operation on <span class="math inline">\(\mathsf{G}/\mathsf{H}\)</span>.</p>
+<p>Therefore, if <span class="math inline">\(\mathsf{H}\trianglelefteq \mathsf{G}\)</span>, then the set of cosets <span class="math inline">\(\mathsf{G}/\mathsf{H}\)</span> forms a group under coset multiplication. Such that</p>
+<ol style="list-style-type: lower-alpha">
+<li>The identity is <span class="math inline">\(e \mathsf{H}= \mathsf{H}\)</span> since <span class="math inline">\((e \mathsf{H}) (g \mathsf{H}) = e g \mathsf{H}= g \mathsf{H}\)</span>.</li>
+<li>The inverse of <span class="math inline">\(g \mathsf{H}\)</span> is <span class="math inline">\(g^{-1} \mathsf{H}\)</span> since <span class="math inline">\((g \mathsf{H}) (g^{-1} \mathsf{H}) = g g^{-1} \mathsf{H}= \mathsf{H}\)</span>.</li>
+</ol>
+</div>
+<div id="homomorphisms" class="section level2">
+<h2><span class="header-section-number">5.4</span> Homomorphisms</h2>
+<p><strong>Def</strong>: If <span class="math inline">\(\mathsf{G}\)</span> and <span class="math inline">\(\mathsf{H}\)</span> are groups, then a <em>homomorphism</em> from <span class="math inline">\(\mathsf{G}\)</span> to <span class="math inline">\(\mathsf{H}\)</span> is a function <span class="math inline">\(\phi: \mathsf{G}\to \mathsf{H}\)</span> such that, if <span class="math inline">\(a,b \in \mathsf{G}\)</span>, then
+<span class="math display">\[
+\phi( a b) = \phi(a) \phi(b).
+\]</span>
+<strong>Theorem</strong> (Properties of Homomorphisms): if <span class="math inline">\(\phi: \mathsf{G}\to \mathsf{H}\)</span> is a homomorphism, and <span class="math inline">\(g \in \mathsf{G},\)</span> then</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\phi(e_\mathsf{G}) = e_\mathsf{H}\)</span>.</li>
+<li><span class="math inline">\(\phi(g^{-1}) = \phi(g)^{-1}\)</span></li>
+<li><span class="math inline">\(\phi(g^k) = \phi(g)^k\)</span> for all <span class="math inline">\(k \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(|\phi(g)|\, \Big\vert\, |g|\)</span></li>
+<li>If <span class="math inline">\(K \le \mathsf{G}\)</span> then <span class="math inline">\(\phi(\mathsf{K}) \le H\)</span> where <span class="math inline">\(\phi(\mathsf{K}) = \{ \phi(k) \mid k \in \mathsf{K}\}\)</span>.</li>
+</ol>
+<p><strong>Def</strong>: if <span class="math inline">\(\phi: \mathsf{G}\to \mathsf{H}\)</span> is an homomorphism, then the <strong>kernel</strong> and <strong>image</strong> of <span class="math inline">\(\phi\)</span> are the following subsets of <span class="math inline">\(\mathsf{G}\)</span> and <span class="math inline">\(\mathsf{H}\)</span>, respectively,
+<span class="math display">\[\begin{align*}
+\mathsf{Ker}(\phi) &amp;= \{ g \in \mathsf{G}\mid \phi(g) = e_H\} \\
+\mathsf{Im}(\phi) &amp;= \{ h \in \mathsf{H}\mid 
+\text{there is at least one } g \in \mathsf{G}\text{ such that } \phi(g) = h \} \\
+&amp;= \{ \phi(g) \mid  g \in \mathsf{G}\} 
+\end{align*}\]</span></p>
+<p><strong>Theorem</strong>. If <span class="math inline">\(\phi: \mathsf{G}\to \mathsf{H}\)</span> is a group homomorphism, then</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\mathsf{Ker}(\phi) \trianglelefteq \mathsf{G}\)</span>,</li>
+<li><span class="math inline">\(\mathsf{Im}(\phi) \leq \mathsf{H}\)</span>.</li>
+</ol>
+<p><strong>Proposition</strong>. (Kernel Cosets): If <span class="math inline">\(\phi: \mathsf{G}\to \mathsf{H}\)</span> is a group homomorphism, <span class="math inline">\(\mathsf{K}= \mathsf{Ker}(\phi)\)</span>, and <span class="math inline">\(a,b\in\mathsf{G}\)</span>, then
+<span class="math display">\[
+a \mathsf{K}= b \mathsf{K}\quad \Leftrightarrow \quad \phi(a) = \phi(b).
+\]</span>
+<strong>Def</strong>: If <span class="math inline">\(\phi: \mathsf{G}\to \mathsf{H}\)</span> is a group homomorphism and <span class="math inline">\(h \in \mathsf{H}\)</span>, then the <em>fiber</em> of <span class="math inline">\(h\)</span> is the following <em>subset</em> of <span class="math inline">\(\mathsf{G}\)</span>:
+<span class="math display">\[
+\phi^{-1}(h) = \{g \in \mathsf{G}\mid \phi(g) = h\}.
+\]</span>
+That is, these are the elements of <span class="math inline">\(\mathsf{G}\)</span> that map to <span class="math inline">\(h\)</span>.</p>
+<p>The previous proposition tells us:</p>
+<p><strong>Corollary</strong>: If <span class="math inline">\(\phi: \mathsf{G}\to \mathsf{H}\)</span> is a homomorphism with kernel <span class="math inline">\(\mathsf{K}\)</span>, then</p>
+<ol style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(\phi(g) = h\)</span>, then <span class="math inline">\(\phi^{-1}(h) = g \mathsf{K},\)</span></li>
+<li><span class="math inline">\(\phi\)</span> is <span class="math inline">\(|\mathsf{K}|\)</span>-to-one,</li>
+<li><span class="math inline">\(\phi\)</span> is one-to-one if and only if <span class="math inline">\(\mathsf{K}= \{e\}\)</span>.</li>
+</ol>
+<center>
+<img src="images/fiber.png" style="width:60.0%" />
+</center>
+<p><strong>Example</strong>. The function <span class="math inline">\(\phi: \mathsf{D}_{6} \to \mathbb{Z}_2 \times \mathbb{Z}_2\)</span> given by <span class="math inline">\(r \mapsto (1,0)\)</span> and <span class="math inline">\(f \mapsto (0,1)\)</span> is a homomorphism. The fibers, and thus <span class="math inline">\(\mathsf{Ker}(\phi)\)</span>-cosets, of this function are as follows:
+<span class="math display">\[
+\begin{array}{ccc}
+\phi^{-1}(h) &amp; &amp; h \\ \hline
+\mathsf{K}= \{ 1, r^2, r^4 \} &amp; \mapsto &amp; (0,0) \\
+r \mathsf{K}= \{ r, r^3, r^5 \} &amp; \mapsto &amp; (1,0) \\
+f \mathsf{K}= \{ f, r^2 f, r^4f \} &amp; \mapsto &amp; (0,1) \\
+rf \mathsf{K}= \{ rf, r^3 f, r^5 f \} &amp; \mapsto &amp; (1,1) \\
+\end{array}
+\]</span>
+We see that <span class="math inline">\(\mathsf{D}_6/\mathsf{K}\cong \mathbb{Z}_2 \times \mathbb{Z}_2\)</span> as the next Theorem says in general.</p>
+<p><strong>Theorem</strong>. (First Isomorphism Theorem): If <span class="math inline">\(\phi: \mathsf{G}\to \mathsf{H}\)</span> is a group homomomorphism, then the following map is an isomorphism,
+<span class="math display">\[
+\displaystyle{\frac{\mathsf{G}}{\mathsf{Ker}(\phi)}}  \cong \mathsf{Im}(\phi),
+\]</span>
+and the isomorphism is given by sending the coset <span class="math inline">\(a \mathsf{Ker}(\phi)\)</span> to <span class="math inline">\(\phi(a)\)</span>.</p>
 
+</div>
 </div>
 
 
 
-</div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="problem-set-1.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="group-basics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="number-systems.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

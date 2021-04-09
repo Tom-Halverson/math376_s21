@@ -1,6 +1,10 @@
 # (PART) Definitions and Theorems {-}
 
-# Groups
+\newcommand{\ker}{\mathsf{Ker}}
+\newcommand{\im}{\mathsf{Im}}
+\newcommand{\K}{\mathsf{K}}
+
+# Group Basics
 
 ## Groups
 
@@ -94,27 +98,27 @@ Note: (d) says that, in a finite cyclic group of order $n$, there is exactly one
 
 ## Isomorphisms
 
-**Def**: An *isomorphism* between groups $\G_1$ and $\G_2$ is a function $\phi: \G \to \G_2$ such that $\phi$ is \emph{one-to-one} and \emph{onto}  (a bijection) and
+**Def**: An *isomorphism* between groups $\G$ and $\H$ is a function $\phi: \G \to \H$ such that $\phi$ is \emph{one-to-one} and \emph{onto}  (a bijection) and
 $$
 \phi( a b) = \phi(a) \phi(b).
 $$
-We write $\G_1 \cong \G_2$ to denote that $\G_1$ and $\G_2$ are isomorphic.
+We write $\G \cong \H$ to denote that $\G$ and $\H$ are isomorphic.
 
-**Theorem** (Properties of Isomorphisms): if $\phi: \G_1 \to \G_2$ is an isomorphism, and $g \in \G_1$, then
+**Theorem** (Properties of Isomorphisms): if $\phi: \G \to \H$ is an isomorphism, and $g \in \G, then
 
 
 a. $\phi(e_\G) = e_\H$.
 a. $\phi(g^{-1}) = \phi(g)^{-1}$
 a. $\phi(g^k) = \phi(g)^k$ for all $k \in \ZZ$
 a. $|g| = |\phi(g)|$
-a. $\phi^{-1}: \G_2 \to \G_1$ is an isomorphism
-a. If $H\le \G_1$ then $\phi(\H) \le G_2$ where $\phi(\H) = \{ \phi(h) \mid h \in \H \}$.
+a. $\phi^{-1}: \H \to \G$ is an isomorphism
+a. If $K \le \G$ then $\phi(\K) \le H$ where $\phi(\K) = \{ \phi(k) \mid k \in \K \}$.
 a. $|\G| = |\H|$
-a. $\G_1$ is abelian if and only if $\G_2$ is abelian
-a. $\G_1$ is cyclic if and only if $\G_2$ is cyclic
-a. $\G_1$ has $k$ elements of order $m$ if and only if $\G_2$ has $k$ elements of order $m$.
+a. $\G$ is abelian if and only if $\H$ is abelian
+a. $\G$ is cyclic if and only if $\H$ is cyclic
+a. $\G$ has $k$ elements of order $m$ if and only if $\H$ has $k$ elements of order $m$.
 
-
+# Group Structure
 
 ## Cosets 
 
@@ -173,6 +177,8 @@ The following theorem follows immediately from the fact that the cosets partitio
 
 **Corollary 4**: If $|\G|$ is finite and $g \in \G$, then $g^{|\G|} = e$.
 
+**Corollary 5**: If $\G$ is finite and $\H \le \K \le \G$, then $[\G:\H] = [\G:\K] [\K:\H]$.
+
 
 ## Normal Subgroups
 
@@ -215,5 +221,66 @@ b. The inverse of $g \H$ is $g^{-1} \H$ since $(g \H) (g^{-1}  \H) = g g^{-1} \H
 $$
 \phi( a b) = \phi(a) \phi(b).
 $$
+**Theorem** (Properties of Homomorphisms): if $\phi: \G \to \H$ is a homomorphism, and $g \in \G,$ then
 
+
+a. $\phi(e_\G) = e_\H$.
+a. $\phi(g^{-1}) = \phi(g)^{-1}$
+a. $\phi(g^k) = \phi(g)^k$ for all $k \in \ZZ$
+a. $|\phi(g)|\, \Big\vert\, |g|$
+a. If $K \le \G$ then $\phi(\K) \le H$ where $\phi(\K) = \{ \phi(k) \mid k \in \K \}$.
+
+**Def**: if $\phi: \G \to \H$ is an homomorphism, then the **kernel** and **image** of $\phi$ are the following subsets of $\G$ and $\H$, respectively,
+\begin{align*}
+\ker(\phi) &= \{ g \in \G \mid \phi(g) = e_H\} \\
+\im(\phi) &= \{ h \in \H \mid 
+\text{there is at least one } g \in \G \text{ such that } \phi(g) = h \} \\
+&= \{ \phi(g) \mid  g \in \G  \} 
+\end{align*}
+
+**Theorem**. If $\phi: \G \to \H$ is a group homomorphism, then 
+
+a. $\ker(\phi) \trianglelefteq \G$,
+b. $\im(\phi) \leq \H$.
+
+**Proposition**. (Kernel Cosets): If $\phi: \G \to \H$ is a group homomorphism, $\K = \ker(\phi)$, and $a,b\in\G$, then
+$$
+a \K = b \K \quad \Leftrightarrow \quad \phi(a) = \phi(b).
+$$
+**Def**: If $\phi: \G \to \H$ is a group homomorphism and $h \in \H$, then the *fiber* of $h$ is the following *subset* of $\G$:
+$$
+\phi^{-1}(h) = \{g \in \G \mid \phi(g) = h\}.
+$$
+That is, these are the elements of $\G$ that map to $h$.
+
+The previous proposition tells us:
+
+**Corollary**: If $\phi: \G \to \H$ is a homomorphism with kernel $\K$, then
+
+a. If $\phi(g) = h$, then $\phi^{-1}(h) = g \K,$
+b. $\phi$ is $|\K|$-to-one,
+c. $\phi$ is one-to-one if and only if $\K = \{e\}$.
+
+<center>
+![](images/fiber.png){width=60%}
+</center>
+
+**Example**. The function $\phi: \D_{6} \to \ZZ_2 \times \ZZ_2$ given by $r \mapsto (1,0)$ and $f \mapsto (0,1)$ is a homomorphism. The fibers, and thus $\ker(\phi)$-cosets, of this function are as follows:
+$$
+\begin{array}{ccc}
+\phi^{-1}(h) & & h \\ \hline
+\K = \{ 1, r^2, r^4 \} & \mapsto & (0,0) \\
+r \K = \{ r, r^3, r^5 \} & \mapsto & (1,0) \\
+f \K = \{ f, r^2 f, r^4f \} & \mapsto & (0,1) \\
+rf \K = \{ rf, r^3 f, r^5 f \} & \mapsto & (1,1) \\
+\end{array}
+$$
+We see that $\D_6/\K \cong \ZZ_2 \times \ZZ_2$ as the next Theorem says in general.
+
+
+**Theorem**. (First Isomorphism Theorem): If $\phi: \G \to \H$ is a group homomomorphism, then the following map is an isomorphism,
+$$
+\displaystyle{\frac{\G}{\ker(\phi)}}  \cong \im(\phi),
+$$
+and the isomorphism is given by sending the coset $a \ker(\phi)$ to $\phi(a)$.
 
