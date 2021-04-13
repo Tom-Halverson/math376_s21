@@ -284,3 +284,42 @@ $$
 $$
 and the isomorphism is given by sending the coset $a \ker(\phi)$ to $\phi(a)$.
 
+
+## Group Actions
+
+**Def**: If $\G$ is a group and $X$ is a set, then there is an **action** of $\G$ on $X$ if for every $g \in \G$ and $x \in X$ we can define $g \cdot x \in X$ so that
+
+a. If $x \in X$, then $e \cdot x = x$.
+b. If $x \in X$ and $g, h \in \G$, then $(g h) \cdot x = g \cdot ( h \cdot x)$.
+
+**Examples**. We've seen many of these:
+
+a. The symmetric group $\S_n$ acts on the set $X = \{1,2,3, \ldots n\}$ by permuting the elements of the set. 
+
+b. The general linear group $GL_n(\RR)$ acts on the set ov vectors $X = \RR^n$ by the matrix vector product $A v.$ 
+
+c. The dihedral group $\D_n$ of symmetries of an $n$-gon acts on the sets of vertices $V$ and on the set of edges $E$ of the $n$-gon.
+
+d. Any group $\G$ acts on itself $X = \G$ by left (or right) multiplication: $g \cdot x = gx$.
+
+e. Any group $\G$ acts on itself $X = \G$ by conjugation: $g \cdot x = gxg^{-1}$.
+
+f. Any subgroup $\H \le \G$ acts on $X=\G$ by left (or right) multiplication: $h \cdot g = h g$.
+
+g. A group $\G$ acts on its subgroups $\{ \H \mid \H \le \G\}$ by conjugation: $g \cdot \H = g \H g^{-1}$ (see [Conjugate Subgroups]).
+
+
+
+**Def**: The  **stabilizer** and  **orbit**  of a group action are the sets 
+$$
+\mathsf{Stab}_\G(x) = \{ g \in G \mid g \cdot x = x \}  \le \G \hskip.3in \G x = \{ g \cdot x \mid g \in \G \}  \subseteq X.
+$$
+
+**Theorem**: The stabilizer is a subgroup of $\G$. 
+
+**Theorem** (Orbit-Stabilizer): If $\G$ acts on $X$ and $x \in X$, and $S = \mathsf{Stab}_\G(x)$, then
+
+a. $|\G| = |S| | \G x|$.  In particular $[\G:S] = |\G x|$.
+
+
+b.  If $g \cdot x = y$, then $ g S = \{ h \in \G \mid h \cdot x = y \}$.

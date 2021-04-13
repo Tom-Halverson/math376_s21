@@ -167,6 +167,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="5.2" data-path="group-structure.html"><a href="group-structure.html#normal-subgroups"><i class="fa fa-check"></i><b>5.2</b> Normal Subgroups</a></li>
 <li class="chapter" data-level="5.3" data-path="group-structure.html"><a href="group-structure.html#quotient-groups"><i class="fa fa-check"></i><b>5.3</b> Quotient Groups</a></li>
 <li class="chapter" data-level="5.4" data-path="group-structure.html"><a href="group-structure.html#homomorphisms"><i class="fa fa-check"></i><b>5.4</b> Homomorphisms</a></li>
+<li class="chapter" data-level="5.5" data-path="group-structure.html"><a href="group-structure.html#group-actions"><i class="fa fa-check"></i><b>5.5</b> Group Actions</a></li>
 </ul></li>
 <li class="part"><span><b>III Group Examples</b></span></li>
 <li class="chapter" data-level="6" data-path="number-systems.html"><a href="number-systems.html"><i class="fa fa-check"></i><b>6</b> Number Systems</a><ul>
@@ -377,6 +378,34 @@ We see that <span class="math inline">\(\mathsf{D}_6/\mathsf{K}\cong \mathbb{Z}_
 \displaystyle{\frac{\mathsf{G}}{\mathsf{Ker}(\phi)}}  \cong \mathsf{Im}(\phi),
 \]</span>
 and the isomorphism is given by sending the coset <span class="math inline">\(a \mathsf{Ker}(\phi)\)</span> to <span class="math inline">\(\phi(a)\)</span>.</p>
+</div>
+<div id="group-actions" class="section level2">
+<h2><span class="header-section-number">5.5</span> Group Actions</h2>
+<p><strong>Def</strong>: If <span class="math inline">\(\mathsf{G}\)</span> is a group and <span class="math inline">\(X\)</span> is a set, then there is an <strong>action</strong> of <span class="math inline">\(\mathsf{G}\)</span> on <span class="math inline">\(X\)</span> if for every <span class="math inline">\(g \in \mathsf{G}\)</span> and <span class="math inline">\(x \in X\)</span> we can define <span class="math inline">\(g \cdot x \in X\)</span> so that</p>
+<ol style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(x \in X\)</span>, then <span class="math inline">\(e \cdot x = x\)</span>.</li>
+<li>If <span class="math inline">\(x \in X\)</span> and <span class="math inline">\(g, h \in \mathsf{G}\)</span>, then <span class="math inline">\((g h) \cdot x = g \cdot ( h \cdot x)\)</span>.</li>
+</ol>
+<p><strong>Examples</strong>. We’ve seen many of these:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>The symmetric group <span class="math inline">\(\mathsf{S}_n\)</span> acts on the set <span class="math inline">\(X = \{1,2,3, \ldots n\}\)</span> by permuting the elements of the set.</p></li>
+<li><p>The general linear group <span class="math inline">\(GL_n(\mathbb{R})\)</span> acts on the set ov vectors <span class="math inline">\(X = \mathbb{R}^n\)</span> by the matrix vector product <span class="math inline">\(A v.\)</span></p></li>
+<li><p>The dihedral group <span class="math inline">\(\mathsf{D}_n\)</span> of symmetries of an <span class="math inline">\(n\)</span>-gon acts on the sets of vertices <span class="math inline">\(V\)</span> and on the set of edges <span class="math inline">\(E\)</span> of the <span class="math inline">\(n\)</span>-gon.</p></li>
+<li><p>Any group <span class="math inline">\(\mathsf{G}\)</span> acts on itself <span class="math inline">\(X = \mathsf{G}\)</span> by left (or right) multiplication: <span class="math inline">\(g \cdot x = gx\)</span>.</p></li>
+<li><p>Any group <span class="math inline">\(\mathsf{G}\)</span> acts on itself <span class="math inline">\(X = \mathsf{G}\)</span> by conjugation: <span class="math inline">\(g \cdot x = gxg^{-1}\)</span>.</p></li>
+<li><p>Any subgroup <span class="math inline">\(\mathsf{H}\le \mathsf{G}\)</span> acts on <span class="math inline">\(X=\mathsf{G}\)</span> by left (or right) multiplication: <span class="math inline">\(h \cdot g = h g\)</span>.</p></li>
+<li><p>A group <span class="math inline">\(\mathsf{G}\)</span> acts on its subgroups <span class="math inline">\(\{ \mathsf{H}\mid \mathsf{H}\le \mathsf{G}\}\)</span> by conjugation: <span class="math inline">\(g \cdot \mathsf{H}= g \mathsf{H}g^{-1}\)</span> (see <a href="problem-set-2.html#conjugate-subgroups">Conjugate Subgroups</a>).</p></li>
+</ol>
+<p><strong>Def</strong>: The <strong>stabilizer</strong> and <strong>orbit</strong> of a group action are the sets
+<span class="math display">\[
+\mathsf{Stab}_\mathsf{G}(x) = \{ g \in G \mid g \cdot x = x \}  \le \mathsf{G}\hskip.3in \mathsf{G}x = \{ g \cdot x \mid g \in \mathsf{G}\}  \subseteq X.
+\]</span></p>
+<p><strong>Theorem</strong>: The stabilizer is a subgroup of <span class="math inline">\(\mathsf{G}\)</span>.</p>
+<p><strong>Theorem</strong> (Orbit-Stabilizer): If <span class="math inline">\(\mathsf{G}\)</span> acts on <span class="math inline">\(X\)</span> and <span class="math inline">\(x \in X\)</span>, and <span class="math inline">\(S = \mathsf{Stab}_\mathsf{G}(x)\)</span>, then</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(|\mathsf{G}| = |S| | \mathsf{G}x|\)</span>. In particular <span class="math inline">\([\mathsf{G}:S] = |\mathsf{G}x|\)</span>.</p></li>
+<li><p>If <span class="math inline">\(g \cdot x = y\)</span>, then $ g S = { h h x = y }$.</p></li>
+</ol>
 
 </div>
 </div>
