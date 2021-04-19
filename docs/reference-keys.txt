@@ -35,6 +35,12 @@ normal-subgroups
 quotient-groups
 homomorphisms
 group-actions
+rings
+definitions
+subrings-ideals-and-quotient-rings
+prime-and-maximal-ideals
+prime-ideals
+maximal-ideals
 number-systems
 integers-mathbbz
 rational-numbers-mathbbq

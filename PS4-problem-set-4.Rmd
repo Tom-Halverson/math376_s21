@@ -1,7 +1,7 @@
 # Problem Set 4
 
 
-**Due**: Sunday April 25, 2:00PM CST.  Same rules as previous assignments.
+**Due**: Sunday April 25, 2:00PM CST.  Same rules as previous assignments. Time will be provided *in class* this week to work on these and discuss them with your peers. 
 
 ## Boolean Rings
 

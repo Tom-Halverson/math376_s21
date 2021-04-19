@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 16 Permutations | MATH 376: Algebraic Structures</title>
+  <title>Section 7 Rings | MATH 376: Algebraic Structures</title>
   <meta name="description" content="This is the class activity manual for MATH 376 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 16 Permutations | MATH 376: Algebraic Structures" />
+  <meta property="og:title" content="Section 7 Rings | MATH 376: Algebraic Structures" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Tom-Halverson/math236_s21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 16 Permutations | MATH 376: Algebraic Structures" />
+  <meta name="twitter:title" content="Section 7 Rings | MATH 376: Algebraic Structures" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 376 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="complex-n-th-roots-of-unity.html"/>
-
+<link rel="prev" href="group-structure.html"/>
+<link rel="next" href="number-systems.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -250,81 +250,127 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="permutations" class="section level1">
-<h1><span class="header-section-number">Section 16</span> Permutations</h1>
-<p>There is an additional package you can add to work with permutations in R. The first time you use it, you will likely have to retrieve it. Got to the <code>Packages</code> tab in the lower right corner. Choose <code>Install</code> and search for <code>permutations</code> in the <code>Packages</code> window.</p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="permutations.html#cb83-1"></a><span class="kw">require</span>(permutations)</span></code></pre></div>
-<p>You can define permutations via their 1-line notation. Thus,</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="permutations.html#cb84-1"></a>f &lt;-<span class="st"> </span><span class="kw">as.word</span>(<span class="kw">c</span>(<span class="dv">9</span>,<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">8</span>))</span></code></pre></div>
-<p>And then give its disjoint cycle type as</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="permutations.html#cb85-1"></a><span class="kw">as.cycle</span>(f)</span></code></pre></div>
-<pre><code>## [1] (1987)(364)</code></pre>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="permutations.html#cb87-1"></a><span class="kw">inverse</span>(f)</span></code></pre></div>
-<pre><code>## [1] (1789)(346)</code></pre>
-<p>We can also input a permutation in cycle notation</p>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="permutations.html#cb89-1"></a>g &lt;-<span class="st"> </span><span class="kw">as.cycle</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">2</span>))</span></code></pre></div>
-<p>R multiplies permutations in the opposite order that we do in class. That is, it applies them from left to right. This is something that one needs to be used to in working with permutations. So in this package (f*g)(1) means g(f(1)) as upi cam see here.</p>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="permutations.html#cb90-1"></a>f</span></code></pre></div>
-<pre><code>## [1] (1987)(364)</code></pre>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="permutations.html#cb92-1"></a>g</span></code></pre></div>
-<pre><code>## [1] (142)</code></pre>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="permutations.html#cb94-1"></a>f <span class="op">*</span><span class="st"> </span>g</span></code></pre></div>
-<pre><code>## [1] (19874362)</code></pre>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="permutations.html#cb96-1"></a>g <span class="op">*</span><span class="st"> </span>f</span></code></pre></div>
-<pre><code>## [1] (13642987)</code></pre>
-<p>You can tell if a permutation is even or odd</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="permutations.html#cb98-1"></a><span class="kw">is.even</span>(f)</span></code></pre></div>
-<pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="permutations.html#cb100-1"></a><span class="kw">is.even</span>(g)</span></code></pre></div>
-<pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="permutations.html#cb102-1"></a>S4 &lt;-<span class="st"> </span><span class="kw">allperms</span>(<span class="dv">4</span>)</span>
-<span id="cb102-2"><a href="permutations.html#cb102-2"></a>S4</span></code></pre></div>
-<pre><code>##  [1] ()       (34)     (23)     (234)    (243)    (24)     (12)     (12)(34) (123)    (1234)  
-## [11] (1243)   (124)    (132)    (1342)   (13)     (134)    (13)(24) (1324)   (1432)   (142)   
-## [21] (143)    (14)     (1423)   (14)(23)</code></pre>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="permutations.html#cb104-1"></a><span class="kw">is.even</span>(S4)</span></code></pre></div>
-<pre><code>##  [1]  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE
-## [16]  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE  TRUE</code></pre>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="permutations.html#cb106-1"></a>A4 &lt;-<span class="st"> </span>S4[<span class="kw">is.even</span>(S4)]</span>
-<span id="cb106-2"><a href="permutations.html#cb106-2"></a>A4</span></code></pre></div>
-<pre><code>##  [1] ()       (234)    (243)    (12)(34) (123)    (124)    (132)    (134)    (13)(24) (142)   
-## [11] (143)    (14)(23)</code></pre>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="permutations.html#cb108-1"></a><span class="kw">cayley</span>(A4)</span></code></pre></div>
-<pre><code>##          ()       (234)    (243)    (12)(34) (123)    (124)    (132)    (134)    (13)(24)
-## ()       ()       (234)    (243)    (12)(34) (123)    (124)    (132)    (134)    (13)(24)
-## (234)    (234)    (243)    ()       (124)    (12)(34) (123)    (134)    (13)(24) (132)   
-## (243)    (243)    ()       (234)    (123)    (124)    (12)(34) (13)(24) (132)    (134)   
-## (12)(34) (12)(34) (132)    (142)    ()       (134)    (143)    (234)    (123)    (14)(23)
-## (123)    (123)    (13)(24) (143)    (243)    (132)    (14)(23) ()       (124)    (142)   
-## (124)    (124)    (134)    (14)(23) (234)    (13)(24) (142)    (243)    (12)(34) (143)   
-## (132)    (132)    (142)    (12)(34) (143)    ()       (134)    (123)    (14)(23) (234)   
-## (134)    (134)    (14)(23) (124)    (142)    (234)    (13)(24) (12)(34) (143)    (243)   
-## (13)(24) (13)(24) (143)    (123)    (14)(23) (243)    (132)    (124)    (142)    ()      
-## (142)    (142)    (12)(34) (132)    (134)    (143)    ()       (14)(23) (234)    (123)   
-## (143)    (143)    (123)    (13)(24) (132)    (14)(23) (243)    (142)    ()       (124)   
-## (14)(23) (14)(23) (124)    (134)    (13)(24) (142)    (234)    (143)    (243)    (12)(34)
-##          (142)    (143)    (14)(23)
-## ()       (142)    (143)    (14)(23)
-## (234)    (14)(23) (142)    (143)   
-## (243)    (143)    (14)(23) (142)   
-## (12)(34) (243)    (124)    (13)(24)
-## (123)    (234)    (12)(34) (134)   
-## (124)    ()       (123)    (132)   
-## (132)    (13)(24) (243)    (124)   
-## (134)    (132)    ()       (123)   
-## (13)(24) (134)    (234)    (12)(34)
-## (142)    (124)    (13)(24) (243)   
-## (143)    (12)(34) (134)    (234)   
-## (14)(23) (123)    (132)    ()</code></pre>
+<div id="rings" class="section level1">
+<h1><span class="header-section-number">Section 7</span> Rings</h1>
+<div id="definitions" class="section level2">
+<h2><span class="header-section-number">7.1</span> Definitions</h2>
+<p><strong>Def</strong>: A <strong>ring</strong> is a set <span class="math inline">\(R\)</span> with <em>two</em> binary operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\ast\)</span> such that:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(R\)</span> is an abelian group under addition. That is,</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>(Identity) There exists <span class="math inline">\(0 \in R\)</span> such that: if <span class="math inline">\(a \in R\)</span>, then <span class="math inline">\(a + 0 = 0 + a = a\)</span>.</p></li>
+<li><p>(Inverse) If <span class="math inline">\(a \in R\)</span>, then there exists <span class="math inline">\(-a \in R\)</span> so that <span class="math inline">\(a + (-a) = 0\)</span>.</p></li>
+<li><p>(Associativity) If <span class="math inline">\(a,b,c \in R\)</span>, then <span class="math inline">\((a+b)+c = a + (b+c)\)</span>.</p></li>
+<li><p>(Commutative) If <span class="math inline">\(a,b \in R\)</span>, then <span class="math inline">\(a+b = b+a\)</span>.</p></li>
+</ol></li>
+<li><p>(Associativity of product) If <span class="math inline">\(a,b,c \in R\)</span>, then <span class="math inline">\((ab)c = a (bc)\)</span>.</p></li>
+<li><p>(Distributivity) If <span class="math inline">\(a,b,c \in R\)</span>, then <span class="math inline">\(a(b+c) = ab + ac\)</span> and <span class="math inline">\((b+c)a = ba + ca\)</span>.</p></li>
+</ol>
+<p><strong>Further Definitions</strong>: Let <span class="math inline">\(R\)</span> be a ring.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(R\)</span> is <strong>commutative</strong> if <span class="math inline">\(ab = ba\)</span> for all <span class="math inline">\(a,b \in R\)</span></li>
+<li><span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are <strong>zero divisors</strong> if <span class="math inline">\(ab = 0\)</span> and <span class="math inline">\(a\not=0\)</span> and <span class="math inline">\(b \not=0\)</span>.</li>
+<li><span class="math inline">\(R\)</span> has <strong>unity</strong> if there exists an element <span class="math inline">\(1 \in R\)</span> with <span class="math inline">\(a 1 = 1 a = a\)</span>.</li>
+<li><span class="math inline">\(u \in R\)</span> is a <strong>unit</strong> if there exists <span class="math inline">\(u^{-1}\)</span> such that <span class="math inline">\(u u^{-1} = u^{-1} u = 1\)</span>.</li>
+<li>A commutative ring with unity and no zero divisors is an <strong>integral domain</strong>.</li>
+<li>A commutative ring with unity such that every nonzero element is a unit is a <strong>field</strong>.</li>
+</ol>
+<p>Here is our ring Venn diagram with many of the examples that we have considered.</p>
+<p><img src="images/RingVenn.png" style="width:70.0%" /></p>
+<p>The following basic properties follow by playing the above rules off one another.</p>
+<p><strong>Proposition</strong> If <span class="math inline">\(R\)</span> is a ring and <span class="math inline">\(a,b,c \in R\)</span>, then</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(a 0 = 0 a = 0.\)</span></li>
+<li><span class="math inline">\(a (-b) = (-a) b = -ab.\)</span></li>
+<li><span class="math inline">\((-a)(-b) = ab.\)</span></li>
+<li>If <span class="math inline">\(R\)</span> has unity, then <span class="math inline">\((-1) a = -a\)</span> and <span class="math inline">\((-1)(-1) =1\)</span>.</li>
+</ol>
+<p><strong>Proposition</strong>: If <span class="math inline">\(R\)</span> is a ring with unity, then the set <span class="math inline">\(U(R)\)</span> set of units in <span class="math inline">\(R\)</span> is a group under multiplication.</p>
+<p><strong>Examples</strong>:</p>
+<ol style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(R\)</span> is a commutative ring with unity, then <span class="math inline">\(R\)</span> is a field if and only if <span class="math inline">\(U(R) = R \setminus \{0\}\)</span>.</li>
+<li><span class="math inline">\(U(\mathbb{Z}_n) = U(n) = \{ 1 \le k &lt; n \mid \gcd(k,n) = 1 \}\)</span>.</li>
+<li><span class="math inline">\(U(\mathbb{Z}) = \{1,-1\}\)</span>.</li>
+<li><span class="math inline">\(U(\mathsf{M}_n(\mathbb{R})) = \mathsf{GL}_n(\mathbb{R})\)</span>.</li>
+</ol>
+<p><strong>Proposition</strong>: (Cancelation) If <span class="math inline">\(R\)</span> is an integral domain and <span class="math inline">\(a,b,c \in R\)</span> with <span class="math inline">\(a \not=0\)</span>, then
+<span class="math display">\[
+ab = a c \qquad \Longrightarrow \qquad b = c.
+\]</span></p>
+<p><strong>Proposition</strong>: (Finite Integral Domain) If <span class="math inline">\(R\)</span> is a finite integral domain, then <span class="math inline">\(R\)</span> is a field.</p>
+</div>
+<div id="subrings-ideals-and-quotient-rings" class="section level2">
+<h2><span class="header-section-number">7.2</span> Subrings, Ideals, and Quotient Rings</h2>
+<p><strong>Def</strong>: If <span class="math inline">\(R\)</span> is a ring, then a subset <span class="math inline">\(S\subseteq R\)</span> is a <strong>subring</strong> if it is also a ring under the same addition and multiplication as $ R$. To prove that something is a subring, it is enough to verify the following closure properties.</p>
+<ol style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(a,b \in S\)</span> then <span class="math inline">\(a + b \in S\)</span> (closed under addition).</li>
+<li>If <span class="math inline">\(a \in S\)</span>, then <span class="math inline">\(-a \in S\)</span> (closed under additive inverses).</li>
+<li>If <span class="math inline">\(a,b \in S\)</span>, then <span class="math inline">\(ab \in S\)</span> (closed under multiplication).</li>
+</ol>
+<p><strong>Def</strong>: If <span class="math inline">\(R\)</span> is a ring, then a subset <span class="math inline">\(A\subseteq R\)</span> is an <strong>ideal</strong> if it is a subring that absorbs products, as follos:</p>
+<ol style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(a,b \in A\)</span> then <span class="math inline">\(a + b \in A\)</span> (closed under addition).</li>
+<li>If <span class="math inline">\(a \in A\)</span>, then <span class="math inline">\(-a \in A\)</span> (closed under additive inverses).</li>
+<li>If <span class="math inline">\(a \in A\)</span> and <span class="math inline">\(r \in R\)</span> then <span class="math inline">\(ar \in A\)</span> and <span class="math inline">\(ra \in A\)</span> (absorbs products).</li>
+</ol>
+<p>Ideals are to Rings what normal subgroups are to groups as the following theorem illustrates.</p>
+<p><strong>Theorem</strong> If <span class="math inline">\(R\)</span> is a ring and <span class="math inline">\(A \subseteq R\)</span> is an ideal, then coset addition and multiplication, defined by
+<span class="math display">\[
+(r + A) + (s + A) = (r+s) + A \qquad\hbox{and}\qquad (r + A)  (s + A) = (rs) + A,
+\]</span>
+are well defined and they make <span class="math inline">\(R/A\)</span> into a quotient ring. The zero in the quotient ring is <span class="math inline">\(A\)</span>, and if <span class="math inline">\(R\)</span> is a ring with unity, then <span class="math inline">\(R/A\)</span> is a ring with unity equal to <span class="math inline">\(1 + A\)</span>.</p>
+<p><strong>Proposition</strong> If <span class="math inline">\(R\)</span> is a ring and <span class="math inline">\(A \subsetneq R\)</span> is a proper ideal, then</p>
+<ol style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(R\)</span> is commutative, then <span class="math inline">\(R/A\)</span> is commutative</li>
+<li>If <span class="math inline">\(1 \in R\)</span> is unity, then <span class="math inline">\(1 + A \in R/A\)</span> is unity.</li>
+<li>If <span class="math inline">\(u \in R\)</span> is a unit, then <span class="math inline">\(u + A \in R/A\)</span> is a unit.</li>
+</ol>
+<p><strong>Def</strong>: If <span class="math inline">\(R\)</span> is a commutative ring and <span class="math inline">\(a \in R\)</span>, then the <strong>principal ideal</strong> generated by <span class="math inline">\(a\)</span> is
+<span class="math display">\[
+\langle a \rangle = \{ r a \mid r \in R\}.
+\]</span>
+The principal ideal <span class="math inline">\(\langle a \rangle\)</span> is the smallest ideal of <span class="math inline">\(R\)</span> that contains <span class="math inline">\(a\)</span>.</p>
+<p><strong>Theorem</strong> A ring <span class="math inline">\(R\)</span> is a field if and only if the only ideals of <span class="math inline">\(R\)</span> are <span class="math inline">\(\{0\}\)</span> and <span class="math inline">\(R\)</span>. That is, a field <span class="math inline">\(R\)</span> is simple: it has no nonzero, proper ideals.</p>
+</div>
+<div id="prime-and-maximal-ideals" class="section level2">
+<h2><span class="header-section-number">7.3</span> Prime and Maximal Ideals</h2>
+<div id="prime-ideals" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> Prime Ideals</h3>
+<p><strong>Def</strong> An ideal <span class="math inline">\(A\)</span> is an commutative ring with unity is a <strong>prime</strong> ideal if it has the property:
+<span class="math display">\[
+\text{if}\quad r s \in A \quad \text{ then } \quad r \in A \quad \text{or} \quad s \in A.
+\]</span>
+The definition of prime ideal is constructed to make the following theorem work:</p>
+<p><strong>Theorem</strong> If <span class="math inline">\(A\)</span> is an ideal in a commutative ring <span class="math inline">\(R\)</span> with unity, then
+<span class="math display">\[
+R/A \quad\text{is an integral domain} \qquad\text{if and only if}\qquad A \quad\text{is a prime ideal}.
+\]</span></p>
+</div>
+<div id="maximal-ideals" class="section level3">
+<h3><span class="header-section-number">7.3.2</span> Maximal Ideals</h3>
+<p><strong>Def</strong> An ideal <span class="math inline">\(A\)</span> in a ring <span class="math inline">\(R\)</span> is a <strong>maximal</strong> ideal if it has the property that if <span class="math inline">\(B\)</span> is an ideal with
+<span class="math display">\[
+A \subsetneq B \subseteq R, \qquad\text{then}\qquad B = R.
+\]</span>
+That is, there are no ideals properly contained bew3een <span class="math inline">\(A\)</span> and <span class="math inline">\(R\)</span>.</p>
+<p><strong>Theorem</strong> If <span class="math inline">\(A\)</span> is an ideal in a commutative ring <span class="math inline">\(R\)</span> with unity, then
+<span class="math display">\[
+R/A \quad\text{is a field} \qquad\text{if and only if}\qquad A \quad\text{is a maximal ideal}.
+\]</span></p>
 
 </div>
+</div>
+</div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="complex-n-th-roots-of-unity.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="group-structure.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="number-systems.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
