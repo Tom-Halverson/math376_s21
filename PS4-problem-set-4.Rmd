@@ -1,0 +1,28 @@
+# Problem Set 4
+
+
+**Due**: Sunday April 25, 2:00PM CST.  Same rules as previous assignments.
+
+## Boolean Rings
+
+Let $R$ be a ring in which $a^2 = a$ for every $a \in R.$
+
+a. Prove that $R$ is commutative. (Hint: cleverly use the $a^2 = a$ property and don't forget that we have addition in $R$).
+
+b. Prove that if $R$ has unity and $a \not= 0,1$ then $a$ is a zero divisor.
+
+c. Give an example of a Boolean ring with unity having 4 elements.
+
+## Subsets, Subrings, and Ideals
+
+Each example below describes a subset $S \subseteq R$. Determine (with proof) whether $S$ is "just" a subset or is a subring or is an ideal. 
+
+a. $R = \ZZ[x]$ and $S$ is the set of polynomials with 0 constant term: $S = \{ p(x) = a_0 + a_1 x + \cdots + a_n x^n \in \ZZ[x] \mid a_0 = 0\}$.
+
+b. $R = \ZZ[x]$ and $S$ is the set of polynomials with an even constant term: $S = \{ p(x) = a_0 + a_1 x + \cdots + a_n x^n \in \ZZ[x] \mid a_0 \in 2 \ZZ \}$.
+
+c. $R = \ZZ[x]$ and $S$ is the set of polynomials with a zero quadratic term: $S = \{ p(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \cdots + a_n x^n \in \ZZ[x]\mid a_2 = 0 \}$.
+
+d. $R$ is a commutative ring, $a \in R$, and $S = \{ r \in R \mid r a = 0 \}$.
+
+e. $R$ is a ring and $S = \{ s \in R \mid s r = r s \text{ for all } r \in R\}$.

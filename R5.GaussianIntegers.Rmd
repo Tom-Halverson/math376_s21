@@ -1,0 +1,37 @@
+# Gaussian Integer
+
+
+The **Gaussian Integers** are the complex numbers with integer coordinates. That is,
+$$
+\mathbb{Z}[i] = \{ a + b i \mid a,b \in \mathbb{Z}\},
+$$
+as seen here:
+
+```{r,fig.width=6,fig.height=6,echo=FALSE}
+n = 10
+gauss=as.vector(outer(-n:n,(-n:n)*(0+1i),"+"))
+plot(Re(gauss),Im(gauss),pch=19,col='blue',xlab="Re(Z[i])",ylab="Im(Z[i])")
+for (i in -n:n) {
+  lines(c(i,i),c(-n,n),col='gray')
+  lines(c(-n,n),c(i,i),col='gray')
+}
+lines(c(-n,n),c(0,0),col='black')
+lines(c(0,0),c(-n,n),col='black')
+points(Re(gauss),Im(gauss),pch=19,col='blue')
+```
+
+We can multiply Gaussian integers easily in R:
+
+```{r,echo=TRUE}
+(3 + 5i) * (-1  + 4i)
+```
+
+
+We can work with Gaussian integers mod n. For example, here is the multiplication of Gaussian integers mod 2
+
+```{r}
+n = 2
+gauss=as.vector(outer(0:n-1,(0:n-1)*(0+1i),"+"))
+sort(mod(Re(gauss),n)+mod(Im(gauss),n)*(0+1i))
+```
+

@@ -21,6 +21,9 @@ index-of-the-center
 quaternion-quotient
 a-matrix-quotient
 extra-credit-1
+problem-set-4
+boolean-rings
+subsets-subrings-and-ideals
 group-basics
 groups
 subgroups

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 13 Matrix Groups | MATH 376: Algebraic Structures</title>
+  <title>Section 4 Problem Set 4 | MATH 376: Algebraic Structures</title>
   <meta name="description" content="This is the class activity manual for MATH 376 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 13 Matrix Groups | MATH 376: Algebraic Structures" />
+  <meta property="og:title" content="Section 4 Problem Set 4 | MATH 376: Algebraic Structures" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Tom-Halverson/math236_s21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 13 Matrix Groups | MATH 376: Algebraic Structures" />
+  <meta name="twitter:title" content="Section 4 Problem Set 4 | MATH 376: Algebraic Structures" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 376 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="modular-arithmetic.html"/>
-<link rel="next" href="complex-n-th-roots-of-unity.html"/>
+<link rel="prev" href="problem-set-3.html"/>
+<link rel="next" href="group-basics.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -242,75 +242,42 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="matrix-groups" class="section level1">
-<h1><span class="header-section-number">Section 13</span> Matrix Groups</h1>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="matrix-groups.html#cb59-1"></a><span class="kw">require</span>(pracma)</span></code></pre></div>
-<div id="the-general-linear-group-gl_nmathbbr" class="section level2">
-<h2><span class="header-section-number">13.1</span> The General Linear Group <span class="math inline">\(GL_n(\mathbb{R})\)</span></h2>
-<p>The <strong>general linear group</strong> <span class="math inline">\(GL_n(\mathbb{R})\)</span> is the group of all <em>invertible</em> <span class="math inline">\(n \times n\)</span> matrices with entries from the real numbers <span class="math inline">\(\mathbb{R}\)</span>. This is the world we lived in when we worked with square invertible matrices (and the invertible matrix theorem) in Math 236 Linear Algebra.</p>
-<p>Remember that R has a funny matrix multiplication symbol: <code>%*%</code>. For example,</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="matrix-groups.html#cb60-1"></a>A =<span class="st"> </span><span class="kw">cbind</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>),<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>))</span>
-<span id="cb60-2"><a href="matrix-groups.html#cb60-2"></a>B =<span class="st"> </span><span class="kw">cbind</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">1</span>),<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">3</span>),<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>))</span>
-<span id="cb60-3"><a href="matrix-groups.html#cb60-3"></a>A <span class="op">%*%</span><span class="st"> </span>B</span></code></pre></div>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]   -4    2    3
-## [2,]   -8    6    5
-## [3,]  -13    7    6</code></pre>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="matrix-groups.html#cb62-1"></a>B <span class="op">%*%</span><span class="st"> </span>A</span></code></pre></div>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    0   -3    2
-## [2,]    9    4    3
-## [3,]   10    5    4</code></pre>
-<p>illustrating that matrix multiplication is not-commutative and <span class="math inline">\(GL_n(\mathbb{R})\)</span> is a <strong>nonabelian</strong> group.</p>
-<p>The <strong>identity matrix</strong> is the identity element of the group, and it can be defined with <code>diag(n)</code>. If you have <code>pracma</code> loaded then you can invert the matrix A with <code>inv(A)</code> otherwise, in base R, you can use <code>solve(A)</code>.</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="matrix-groups.html#cb64-1"></a><span class="kw">inv</span>(A)</span></code></pre></div>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    0   -1    1
-## [2,]    1    1   -1
-## [3,]   -1    2   -1</code></pre>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="matrix-groups.html#cb66-1"></a><span class="kw">zapsmall</span>(A <span class="op">%*%</span><span class="st"> </span><span class="kw">inv</span>(A))</span></code></pre></div>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    0    0
-## [2,]    0    1    0
-## [3,]    0    0    1</code></pre>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="matrix-groups.html#cb68-1"></a><span class="kw">diag</span>(<span class="dv">3</span>) <span class="op">%*%</span><span class="st"> </span>A</span></code></pre></div>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    1    0
-## [2,]    2    1    1
-## [3,]    3    1    1</code></pre>
+<div id="problem-set-4" class="section level1">
+<h1><span class="header-section-number">Section 4</span> Problem Set 4</h1>
+<p><strong>Due</strong>: Sunday April 25, 2:00PM CST. Same rules as previous assignments.</p>
+<div id="boolean-rings" class="section level2">
+<h2><span class="header-section-number">4.1</span> Boolean Rings</h2>
+<p>Let <span class="math inline">\(R\)</span> be a ring in which <span class="math inline">\(a^2 = a\)</span> for every <span class="math inline">\(a \in R.\)</span></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Prove that <span class="math inline">\(R\)</span> is commutative. (Hint: cleverly use the <span class="math inline">\(a^2 = a\)</span> property and don’t forget that we have addition in <span class="math inline">\(R\)</span>).</p></li>
+<li><p>Prove that if <span class="math inline">\(R\)</span> has unity and <span class="math inline">\(a \not= 0,1\)</span> then <span class="math inline">\(a\)</span> is a zero divisor.</p></li>
+<li><p>Give an example of a Boolean ring with unity having 4 elements.</p></li>
+</ol>
 </div>
-<div id="matrix-multiplication-mod-m-gl_nmathbbz_m" class="section level2">
-<h2><span class="header-section-number">13.2</span> Matrix Multiplication Mod m: <span class="math inline">\(GL_n(\mathbb{Z}_m)\)</span></h2>
-<p>You can use the <code>mod</code> command from <code>pracma</code> to do matrix multiplication mod m.</p>
-<p>For example, notice how the product looks very different for different <span class="math inline">\(\mathbb{Z}_m\)</span>.</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="matrix-groups.html#cb70-1"></a>A =<span class="st"> </span><span class="kw">rbind</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">7</span>))</span>
-<span id="cb70-2"><a href="matrix-groups.html#cb70-2"></a>B =<span class="st"> </span><span class="kw">rbind</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">4</span>),<span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>,<span class="op">-</span><span class="dv">2</span>))</span>
-<span id="cb70-3"><a href="matrix-groups.html#cb70-3"></a>A <span class="op">%*%</span><span class="st"> </span>B</span></code></pre></div>
-<pre><code>##      [,1] [,2]
-## [1,]   -4   -2
-## [2,]  -11   -6</code></pre>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="matrix-groups.html#cb72-1"></a><span class="kw">mod</span>(A <span class="op">%*%</span><span class="st"> </span>B,<span class="dv">2</span>)</span></code></pre></div>
-<pre><code>##      [,1] [,2]
-## [1,]    0    0
-## [2,]    1    0</code></pre>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="matrix-groups.html#cb74-1"></a><span class="kw">mod</span>(A <span class="op">%*%</span><span class="st"> </span>B,<span class="dv">3</span>)</span></code></pre></div>
-<pre><code>##      [,1] [,2]
-## [1,]    2    1
-## [2,]    1    0</code></pre>
-<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="matrix-groups.html#cb76-1"></a><span class="kw">mod</span>(A <span class="op">%*%</span><span class="st"> </span>B,<span class="dv">4</span>)</span></code></pre></div>
-<pre><code>##      [,1] [,2]
-## [1,]    0    2
-## [2,]    1    2</code></pre>
+<div id="subsets-subrings-and-ideals" class="section level2">
+<h2><span class="header-section-number">4.2</span> Subsets, Subrings, and Ideals</h2>
+<p>Each example below describes a subset <span class="math inline">\(S \subseteq R\)</span>. Determine (with proof) whether <span class="math inline">\(S\)</span> is “just” a subset or is a subring or is an ideal.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(R = \mathbb{Z}[x]\)</span> and <span class="math inline">\(S\)</span> is the set of polynomials with 0 constant term: <span class="math inline">\(S = \{ p(x) = a_0 + a_1 x + \cdots + a_n x^n \in \mathbb{Z}[x] \mid a_0 = 0\}\)</span>.</p></li>
+<li><p><span class="math inline">\(R = \mathbb{Z}[x]\)</span> and <span class="math inline">\(S\)</span> is the set of polynomials with an even constant term: <span class="math inline">\(S = \{ p(x) = a_0 + a_1 x + \cdots + a_n x^n \in \mathbb{Z}[x] \mid a_0 \in 2 \mathbb{Z}\}\)</span>.</p></li>
+<li><p><span class="math inline">\(R = \mathbb{Z}[x]\)</span> and <span class="math inline">\(S\)</span> is the set of polynomials with a zero quadratic term: <span class="math inline">\(S = \{ p(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \cdots + a_n x^n \in \mathbb{Z}[x]\mid a_2 = 0 \}\)</span>.</p></li>
+<li><p><span class="math inline">\(R\)</span> is a commutative ring, <span class="math inline">\(a \in R\)</span>, and <span class="math inline">\(S = \{ r \in R \mid r a = 0 \}\)</span>.</p></li>
+<li><p><span class="math inline">\(R\)</span> is a ring and <span class="math inline">\(S = \{ s \in R \mid s r = r s \text{ for all } r \in R\}\)</span>.</p></li>
+</ol>
 
 </div>
+</div>
+
+
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="modular-arithmetic.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="complex-n-th-roots-of-unity.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="problem-set-3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="group-basics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
