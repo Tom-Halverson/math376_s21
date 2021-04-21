@@ -159,6 +159,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="4.1" data-path="problem-set-4.html"><a href="problem-set-4.html#boolean-rings"><i class="fa fa-check"></i><b>4.1</b> Boolean Rings</a></li>
 <li class="chapter" data-level="4.2" data-path="problem-set-4.html"><a href="problem-set-4.html#subsets-subrings-and-ideals"><i class="fa fa-check"></i><b>4.2</b> Subsets, Subrings, and Ideals</a></li>
 <li class="chapter" data-level="4.3" data-path="problem-set-4.html"><a href="problem-set-4.html#gaussian-quotient-ring"><i class="fa fa-check"></i><b>4.3</b> Gaussian Quotient Ring</a></li>
+<li class="chapter" data-level="4.4" data-path="problem-set-4.html"><a href="problem-set-4.html#radicals"><i class="fa fa-check"></i><b>4.4</b> Radicals</a></li>
+<li class="chapter" data-level="4.5" data-path="problem-set-4.html"><a href="problem-set-4.html#polynomial-quotient"><i class="fa fa-check"></i><b>4.5</b> Polynomial Quotient</a></li>
 </ul></li>
 <li class="part"><span><b>II Definitions and Theorems</b></span></li>
 <li class="chapter" data-level="5" data-path="group-basics.html"><a href="group-basics.html"><i class="fa fa-check"></i><b>5</b> Group Basics</a><ul>
@@ -261,7 +263,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li><p>Prove that <span class="math inline">\(a = -a\)</span> in this ring.</p></li>
 <li><p>Prove that <span class="math inline">\(R\)</span> is commutative. (Hint: cleverly use the <span class="math inline">\(a^2 = a\)</span> property and don’t forget that we have addition in <span class="math inline">\(R\)</span> but we don’t have cancellation).</p></li>
 <li><p>Prove that if <span class="math inline">\(R\)</span> has unity and <span class="math inline">\(a \not= 0,1\)</span> then <span class="math inline">\(a\)</span> is a zero divisor.</p></li>
-<li><p>Give an example of a Boolean ring with unity having 4 elements. For example <span class="math inline">\(\mathbb{Z}_2 =\{0,1\}\)</span> is a Boolean ring with 2 elements.</p></li>
+<li><p><span class="math inline">\(\mathbb{Z}_2 =\{0,1\}\)</span> is a Boolean ring with 2 elements. Give an example of a Boolean ring with unity having 4 elements.</p></li>
 </ol>
 </div>
 <div id="subsets-subrings-and-ideals" class="section level2">
@@ -285,6 +287,23 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li><p>Where in the Venn diagram of rings does <span class="math inline">\(\mathbb{Z}[i]/I\)</span> live?</p></li>
 <li><p>Is <span class="math inline">\(I\)</span> a prime ideal? Is <span class="math inline">\(I\)</span> a maximal ideal? In each case, say why or why not.</p></li>
 </ol>
+</div>
+<div id="radicals" class="section level2">
+<h2><span class="header-section-number">4.4</span> Radicals</h2>
+<p>Let <span class="math inline">\(R\)</span> be a commutative ring, let <span class="math inline">\(A\)</span> be any ideal of <span class="math inline">\(R\)</span>, define the radical of <span class="math inline">\(A\)</span> to be
+<span class="math display">\[
+N(A) = \{ r \in R \mid r^n \in A \text{ for some positive integer } n\}
+\]</span>
+(the integer <span class="math inline">\(n\)</span> can be different for different choices of <span class="math inline">\(r\)</span>).</p>
+<ol style="list-style-type: lower-alpha">
+<li>Prove that <span class="math inline">\(N(A)\)</span> is an ideal of <span class="math inline">\(R\)</span>.</li>
+<li>Give an example where <span class="math inline">\(N(A) = A\)</span> and an example where <span class="math inline">\(A \subsetneqq N(A)\)</span>.</li>
+<li>The nilradical of <span class="math inline">\(R\)</span> is <span class="math inline">\(N(\{0\})\)</span>. Find (with proof) the nilradical of <span class="math inline">\(R/N(A)\)</span> for any ideal <span class="math inline">\(A\)</span>. That is, state what it is and then prove your statement. Here is a movie (coming: mov|pdf) that might clarify things.</li>
+</ol>
+</div>
+<div id="polynomial-quotient" class="section level2">
+<h2><span class="header-section-number">4.5</span> Polynomial Quotient</h2>
+<p>Find a zero divisor in <span class="math inline">\(\mathbb{Z}_3[x]/&lt;\langle x^2+x+1 \rangle\)</span>. All you need to do for the answer is show that the product of two nonzero elements in this quotient ring is the zero in this quotient ring.</p>
 
 </div>
 </div>
