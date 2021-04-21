@@ -43,7 +43,7 @@ d. Where in the Venn diagram of rings does $\ZZ[i]/I$ live?
 
 e. Is $I$ a prime ideal? Is $I$ a maximal ideal? In each case, say why or why not.
 
-## Radicals
+## Ideal Radicals
 
 Let $R$ be a commutative ring, let $A$ be any ideal of $R$, define the radical of $A$ to be
 $$
@@ -53,5 +53,5 @@ $$
 
 a. Prove that $N(A)$ is an ideal of $R$.
 a. Give an example where $N(A) = A$ and an example where $A \subsetneqq N(A)$.
-a. The nilradical of $R$ is $N(\{0\})$. Find (with proof) the nilradical of $R/N(A)$ for any ideal $A$. That is, state what it is and then prove your statement. Here is a movie (coming: mov|pdf) that might clarify things.
+a. The nilradical of $R$ is $N(\{0\})$. Find (with proof) the nilradical of $R/N(A)$ for any ideal $A$. That is, state what it is and then prove your statement. Here is a movie (coming: [mov](https://drive.google.com/file/d/1Ekgp_xKZjI3CSv6EPXfjjAXawkjBY_bq/view?usp=sharing)|[pdf](https://drive.google.com/file/d/1D8--HIxqJFYapnHn_fHFGYahhVyc3gFn/view?usp=sharing)) that might clarify things.
 
