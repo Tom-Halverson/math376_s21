@@ -1,17 +1,19 @@
 # Problem Set 4
 
 
-**Due**: Sunday April 25, 2:00PM CST.  Same rules as previous assignments. Time will be provided *in class* this week to work on these and discuss them with your peers. 
+**Due**: Saturday May 1, noon CST.  Same rules as previous assignments. Time will be provided *in class* to work on these and discuss them with your peers. I will approximately assign one problem for each class day between now and April 29, so you can expect about 7 problems. 
 
 ## Boolean Rings
 
 Let $R$ be a ring in which $a^2 = a$ for every $a \in R.$
 
-a. Prove that $R$ is commutative. (Hint: cleverly use the $a^2 = a$ property and don't forget that we have addition in $R$).
+a. Prove that $a = -a$ in this ring.
 
-b. Prove that if $R$ has unity and $a \not= 0,1$ then $a$ is a zero divisor.
+b. Prove that $R$ is commutative. (Hint: cleverly use the $a^2 = a$ property and don't forget that we have addition in $R$ but we don't have cancellation).
 
-c. Give an example of a Boolean ring with unity having 4 elements.
+c. Prove that if $R$ has unity and $a \not= 0,1$ then $a$ is a zero divisor.
+
+d. Give an example of a Boolean ring with unity having 4 elements. For example $\ZZ_2 =\{0,1\}$ is a Boolean ring with 2 elements.
 
 ## Subsets, Subrings, and Ideals
 
@@ -26,3 +28,19 @@ c. $R = \ZZ[x]$ and $S$ is the set of polynomials with a zero quadratic term: $S
 d. $R$ is a commutative ring, $a \in R$, and $S = \{ r \in R \mid r a = 0 \}$.
 
 e. $R$ is a ring and $S = \{ s \in R \mid s r = r s \text{ for all } r \in R\}$.
+
+## Gaussian Quotient Ring
+
+Let $I = \langle 2 + 2 i \rangle \subseteq \ZZ[i]$. That is, $I$ is a principal ideal in the ring of Gaussian integers. 
+
+a. List the distinct cosets in $\ZZ[i]/I$. 
+
+b. Find the units in $\ZZ[i]/I$. Give each unit with its inverse.
+
+c. If $\ZZ[i]/I$ has zero divisors, give an example of one.
+
+d. Where in the Venn diagram of rings does $\ZZ[i]/I$ live?
+
+e. Is $I$ a prime ideal? Is $I$ a maximal ideal? In each case, say why or why not.
+
+

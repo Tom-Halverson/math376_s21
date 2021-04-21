@@ -158,6 +158,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="4" data-path="problem-set-4.html"><a href="problem-set-4.html"><i class="fa fa-check"></i><b>4</b> Problem Set 4</a><ul>
 <li class="chapter" data-level="4.1" data-path="problem-set-4.html"><a href="problem-set-4.html#boolean-rings"><i class="fa fa-check"></i><b>4.1</b> Boolean Rings</a></li>
 <li class="chapter" data-level="4.2" data-path="problem-set-4.html"><a href="problem-set-4.html#subsets-subrings-and-ideals"><i class="fa fa-check"></i><b>4.2</b> Subsets, Subrings, and Ideals</a></li>
+<li class="chapter" data-level="4.3" data-path="problem-set-4.html"><a href="problem-set-4.html#gaussian-quotient-ring"><i class="fa fa-check"></i><b>4.3</b> Gaussian Quotient Ring</a></li>
 </ul></li>
 <li class="part"><span><b>II Definitions and Theorems</b></span></li>
 <li class="chapter" data-level="5" data-path="group-basics.html"><a href="group-basics.html"><i class="fa fa-check"></i><b>5</b> Group Basics</a><ul>
@@ -252,14 +253,15 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
             <section class="normal" id="section-">
 <div id="problem-set-4" class="section level1">
 <h1><span class="header-section-number">Section 4</span> Problem Set 4</h1>
-<p><strong>Due</strong>: Sunday April 25, 2:00PM CST. Same rules as previous assignments. Time will be provided <em>in class</em> this week to work on these and discuss them with your peers.</p>
+<p><strong>Due</strong>: Saturday May 1, noon CST. Same rules as previous assignments. Time will be provided <em>in class</em> to work on these and discuss them with your peers. I will approximately assign one problem for each class day between now and April 29, so you can expect about 7 problems.</p>
 <div id="boolean-rings" class="section level2">
 <h2><span class="header-section-number">4.1</span> Boolean Rings</h2>
 <p>Let <span class="math inline">\(R\)</span> be a ring in which <span class="math inline">\(a^2 = a\)</span> for every <span class="math inline">\(a \in R.\)</span></p>
 <ol style="list-style-type: lower-alpha">
-<li><p>Prove that <span class="math inline">\(R\)</span> is commutative. (Hint: cleverly use the <span class="math inline">\(a^2 = a\)</span> property and don’t forget that we have addition in <span class="math inline">\(R\)</span>).</p></li>
+<li><p>Prove that <span class="math inline">\(a = -a\)</span> in this ring.</p></li>
+<li><p>Prove that <span class="math inline">\(R\)</span> is commutative. (Hint: cleverly use the <span class="math inline">\(a^2 = a\)</span> property and don’t forget that we have addition in <span class="math inline">\(R\)</span> but we don’t have cancellation).</p></li>
 <li><p>Prove that if <span class="math inline">\(R\)</span> has unity and <span class="math inline">\(a \not= 0,1\)</span> then <span class="math inline">\(a\)</span> is a zero divisor.</p></li>
-<li><p>Give an example of a Boolean ring with unity having 4 elements.</p></li>
+<li><p>Give an example of a Boolean ring with unity having 4 elements. For example <span class="math inline">\(\mathbb{Z}_2 =\{0,1\}\)</span> is a Boolean ring with 2 elements.</p></li>
 </ol>
 </div>
 <div id="subsets-subrings-and-ideals" class="section level2">
@@ -271,6 +273,17 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li><p><span class="math inline">\(R = \mathbb{Z}[x]\)</span> and <span class="math inline">\(S\)</span> is the set of polynomials with a zero quadratic term: <span class="math inline">\(S = \{ p(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \cdots + a_n x^n \in \mathbb{Z}[x]\mid a_2 = 0 \}\)</span>.</p></li>
 <li><p><span class="math inline">\(R\)</span> is a commutative ring, <span class="math inline">\(a \in R\)</span>, and <span class="math inline">\(S = \{ r \in R \mid r a = 0 \}\)</span>.</p></li>
 <li><p><span class="math inline">\(R\)</span> is a ring and <span class="math inline">\(S = \{ s \in R \mid s r = r s \text{ for all } r \in R\}\)</span>.</p></li>
+</ol>
+</div>
+<div id="gaussian-quotient-ring" class="section level2">
+<h2><span class="header-section-number">4.3</span> Gaussian Quotient Ring</h2>
+<p>Let <span class="math inline">\(I = \langle 2 + 2 i \rangle \subseteq \mathbb{Z}[i]\)</span>. That is, <span class="math inline">\(I\)</span> is a principal ideal in the ring of Gaussian integers.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>List the distinct cosets in <span class="math inline">\(\mathbb{Z}[i]/I\)</span>.</p></li>
+<li><p>Find the units in <span class="math inline">\(\mathbb{Z}[i]/I\)</span>. Give each unit with its inverse.</p></li>
+<li><p>If <span class="math inline">\(\mathbb{Z}[i]/I\)</span> has zero divisors, give an example of one.</p></li>
+<li><p>Where in the Venn diagram of rings does <span class="math inline">\(\mathbb{Z}[i]/I\)</span> live?</p></li>
+<li><p>Is <span class="math inline">\(I\)</span> a prime ideal? Is <span class="math inline">\(I\)</span> a maximal ideal? In each case, say why or why not.</p></li>
 </ol>
 
 </div>
