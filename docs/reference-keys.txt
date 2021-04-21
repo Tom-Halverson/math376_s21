@@ -26,7 +26,6 @@ boolean-rings
 subsets-subrings-and-ideals
 gaussian-quotient-ring
 radicals
-polynomial-quotient
 group-basics
 groups
 subgroups

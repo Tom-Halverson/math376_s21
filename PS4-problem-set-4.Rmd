@@ -1,7 +1,7 @@
 # Problem Set 4
 
 
-**Due**: Saturday May 1, noon CST.  Same rules as previous assignments. Time will be provided *in class* to work on these and discuss them with your peers. I will approximately assign one problem for each class day between now and April 29, so you can expect about 7 problems. 
+**Due**: Wednesday April 28, midnight CST. Time will be provided *in class* to work on these and discuss them with your peers. This problem set has 4 problems.
 
 ## Boolean Rings
 
@@ -55,6 +55,3 @@ a. Prove that $N(A)$ is an ideal of $R$.
 a. Give an example where $N(A) = A$ and an example where $A \subsetneqq N(A)$.
 a. The nilradical of $R$ is $N(\{0\})$. Find (with proof) the nilradical of $R/N(A)$ for any ideal $A$. That is, state what it is and then prove your statement. Here is a movie (coming: mov|pdf) that might clarify things.
 
-## Polynomial Quotient
-
-Find a zero divisor in $\ZZ_3[x]/<\langle x^2+x+1 \rangle$. All you need to do for the answer is show that the product of two nonzero elements in this quotient ring is the zero in this quotient ring.
