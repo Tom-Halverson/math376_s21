@@ -43,4 +43,14 @@ d. Where in the Venn diagram of rings does $\ZZ[i]/I$ live?
 
 e. Is $I$ a prime ideal? Is $I$ a maximal ideal? In each case, say why or why not.
 
+## Radicals
 
+Let $R$ be a commutative ring, let $A$ be any ideal of $R$, define the radical of $A$ to be
+$$
+N(A) = \{ r \in R \mid r^n \in A \text{ for some positive integer } n\}
+$$
+(the integer $n$ can be different for different choices of $r$).
+
+a. Prove that $N(A)$ is an ideal of $R$.
+a. Give an example where $N(A) = A$ and an example where $A \subsetneq N(A)$.
+a. The nilradical of $R$ is $N(\{0\})$. Find (with proof) the nilradical of $R/N(A)$ for any ideal $A$. That is, state what it is and then prove your statement. Here is a movie (coming: mov|pdf) that might clarify things.
