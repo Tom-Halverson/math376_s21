@@ -43,7 +43,7 @@ d. Where in the Venn diagram of rings does $\ZZ[i]/I$ live?
 
 e. Is $I$ a prime ideal? Is $I$ a maximal ideal? In each case, say why or why not.
 
-## Radicals
+## Ideal Radicals
 
 Let $R$ be a commutative ring, let $A$ be any ideal of $R$, define the radical of $A$ to be
 $$
