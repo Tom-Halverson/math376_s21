@@ -47,7 +47,7 @@ e. Is $I$ a prime ideal? Is $I$ a maximal ideal? In each case, say why or why no
 
 ## Ideal Radicals
 
-Let $R$ be a commutative ring, let $A$ be any ideal of $R$, define the radical of $A$ to be
+Let $R$ be a *commutative* ring, let $A$ be any ideal of $R$, define the radical of $A$ to be
 $$
 N(A) = \{ r \in R \mid r^n \in A \text{ for some positive integer } n\}
 $$

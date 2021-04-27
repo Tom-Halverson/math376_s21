@@ -1,0 +1,48 @@
+# Problem Set 5
+
+The last one!
+
+\newcommand{\EE}{{\mathbb{E}}}
+
+
+**Due**: Wednesday May 5, midnight CST. Time will be provided *in class* to work on these and discuss them with your peers. 
+
+We will work on problems like 5.1, 5.2, and 5.3 on Wednesday and Thursday, April 28-29. 
+
+##  Field of Order 25
+
+Construct a field of order 25. You should prove that it is a field, describe the set of elements, show how to add two generic elements, show how to multiply two generic elements, and find the inverse of one nontrivial element. 
+
+##  Rational Quotient Field
+
+Let $p(x) =  x^3 + 2 x^2 + 2 x + 2 \in \QQ[x]$.
+
+a. Show that $p(x)$ is irreducible in $\QQ[x]$ using one of the reducibility tests in Chapter 17 of the book (also discussed on Wednesday Apr 29 in the videos and/or class). Then use one of our theorems (be sure to say which one) to conclude that $\EE = \QQ[x]/\langle p(x) \rangle$ is a field.
+
+b. For shorthand, let $\alpha := x + \langle p(x) \rangle \in \EE$ (that is, we've named this coset $\alpha$). Describe all of the elements of $\EE$ in terms of $\alpha$. You can also identify constants with their coset: for example $5 = 5 + \langle p(x) \rangle$. Show how to add two generic elements in $\EE$ and how to multiply two generic elements in $\EE$.
+
+c. Use the polynomial extended GCD algorithm in [WolframAlpha](https://www.wolframalpha.com/input/?i=PolynomialExtendedGCD%5Bx%5E2%2B1%2Cx%5E3-4x%2B7%2Cx%5D) (or Mathematica) to find the inverse of $\alpha^2 + 1$ in $\EE$. Then multiply them out to show that they are inverses.
+
+
+## Fields of Order 8
+
+In class on Wednesday and Thursday Apr 28-29 we will construct two different fields of order 8: $\EE_\alpha$ and $\EE_\beta$. It is known (Theorem 22.1 in the book) that, up to isomorphism, there is a uniqe field of order $p^k$ for any prime number $p$ and any $k \in \ZZ_{k>0}$. Find the isomorphism between $\EE_\alpha$ and $\EE_\beta$ and justify your answer.
+
+## A Splitting Field
+
+We will work on examples like this on Monday and Tuesday, May 3-4.
+
+This problem will examine the polynomial $p(x) = x^4 -2 \in \QQ[x]$. Our aim is to understand the structure of its *splitting field*, which is the smallest subfield of $\CC$ in which $p(x)$ factors completely into linear terms.^[In this problem you can take as fact that $\sqrt[4]{2} \in \RR$ and $i \in \CC \setminus \RR$.]
+
+a. Draw a field lattice diagram (we will do examples of this in class) that contains the fields $\QQ, \QQ(\sqrt{2}), \QQ(\sqrt[4]{2}), \QQ(i), \QQ(\sqrt[4]{2},i)$. Label the edges with
+
+    i. the degree of the field extension
+    ii. the minimal polynomial of the extension
+    iii. a basis of the top field over the bottom field.
+    
+
+b. Justify each of your labels in part (a).
+
+c. Show how $p(x) = x^4 -2$ factors in each of these 5 fields. 
+
+d. (**Extra credit**) Show where $\QQ(\sqrt[4]{2} + i)$ fits into this picture and justify your assertions. 

@@ -26,6 +26,11 @@ boolean-rings
 subsets-subrings-and-ideals
 gaussian-quotient-ring
 ideal-radicals
+problem-set-5
+field-of-order-25
+rational-quotient-field
+fields-of-order-8
+a-splitting-field
 group-basics
 groups
 subgroups
@@ -43,6 +48,7 @@ subrings-ideals-and-quotient-rings
 prime-and-maximal-ideals
 prime-ideals
 maximal-ideals
+ring-homomorphisms
 number-systems
 integers-mathbbz
 rational-numbers-mathbbq
