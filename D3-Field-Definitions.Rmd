@@ -40,3 +40,48 @@ f(x)= g(x) q(x) + r(x), \qquad \hbox{with}\quad \deg(r(x)) < \deg(g(x)).
 $$
 
 The proof of this is to show that the algorithm for polynomial division that we learned in high school works, arrives at unique quotients and remainders, and ends with a remainder that is smaller than the degree of $g(x)$. The proof is by induction on the degree of $f(x)$.
+
+![](images/divisionalgo.png){width=40%}
+**Theorem** (Remainder Theorem) If $a \in \FF$ and $f(x) \in \FF[x]$ then $f(a)$ is the remainder after division of $f(x)$ by $(x-a)$.  That is,
+$$
+f(x) = (x-a)q(x) + f(a).
+$$
+
+**Theorem** (Factor Theorem) If $a \in \FF$ is a zero of $f(x)$; that is, if $f(a) = 0$, then $(x-a)$ is a factor of $f(x)$. Thus
+$$
+f(x) = (x-a)q(x) \qquad \Longleftrightarrow \qquad f(a) = 0.
+$$
+
+## Quotient Rings $\FF[x]/\langle p(x) \rangle$
+
+**Def**: An integral domain $R$ is a **principal ideal domain** (PID) if *every* ideal is principal, i.e, $I = \langle a \rangle$ for $a \in R$.
+
+The next theorem is a consequence of the division algorithm.
+
+**Theorem** If $\FF$ is a field then $\FF[x]$ is a principal ideal domain. Moreover, if $I \subseteq \FF[x]$ is a nonzero ideal, then $I = \langle p(x) \rangle$ where $p(x) \in I$ is any nonzero polynomial of smallest degree in $I$.
+
+**Theorem** (Remainders are Unique Coset Representatives) If 
+$$
+p(x) = b_0 + b_1 x + \cdots + b_n x^n \in \FF[x]
+$$
+then the following set is a set of distinct coset representatives for $\FF[x]/\langle p(x) \rangle$. That is, all of the cosets are represented exactly once in this set
+$$
+\frac{\FF[x]}{\langle p(x) \rangle} =
+\{a_0 + a_1 x + \cdots a_{n-1} x^{n-1} + \langle p(x) \rangle \mid a_i \in \FF \}
+$$
+Moreover, the following coset identity describes multiplication in this quotient ring,
+$$
+x^{n} + \langle p(x) \rangle 
+=
+\frac{-1}{b_n}(b_0 + b_1 x + b_2 x^2 + \cdots b_{n-1} x^{n-1}) + \langle p(x) \rangle.
+$$
+
+**Theorem** If $\FF$ is a field and $p(x) \in \FF[x]$, then the following are equivalent:"
+
+a. $p(x)$ is irreducible (i.e., it does not factor in $\FF[x]$ into a product of two polynomials each of lower degere).
+b. $\langle p(x) \rangle \subseteq \FF[x]$ is a maximal ideal.
+c. $\displaystyle{\FF[x]}{\angle p(x) \rangle}$ is a field.
+
+The following theorem can be used to find inverses in $\FF[x]/\langle p(x) \rangle$ in the case when $p(x)$ is irreducible.
+
+**Theorem** (Extended Polynomial Euclidean Algorithm) If $f(x), p(x) \in \FF[x]$ 

@@ -21,7 +21,7 @@ a. Show that $p(x)$ is irreducible in $\QQ[x]$ using one of the reducibility tes
 
 b. For shorthand, let $\alpha := x + \langle p(x) \rangle \in \EE$ (that is, we've named this coset $\alpha$). Describe all of the elements of $\EE$ in terms of $\alpha$. You can also identify constants with their coset: for example $5 = 5 + \langle p(x) \rangle$. Show how to add two generic elements in $\EE$ and how to multiply two generic elements in $\EE$.
 
-c. Use the polynomial extended GCD algorithm in [WolframAlpha](https://www.wolframalpha.com/input/?i=PolynomialExtendedGCD%5Bx%5E2%2B1%2Cx%5E3-4x%2B7%2Cx%5D) (or Mathematica) to find the inverse of $\alpha^2 + 1$ in $\EE$. Then multiply them out to show that they are inverses.
+c. Use the polynomial extended GCD algorithm in [WolframAlpha](https://www.wolframalpha.com/input/?i=PolynomialExtendedGCD%5Bx%5E2%2B1%2Cx%5E3-4x%2B7%2Cx%5D) (or Mathematica) to find the inverse of $\alpha^2 + 1$ in $\EE$. Then multiply them out to show that they are inverses. See also the voicethread [video](https://moodle.macalester.edu/mod/lti/view.php?id=57781) on how to do this and the final [pdf](https://drive.google.com/open?id=1_wIrK50pgPeH-657wKtMwngD63IP7rbm). 
 
 
 ## Fields of Order 8

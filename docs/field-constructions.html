@@ -193,6 +193,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ul></li>
 <li class="chapter" data-level="9" data-path="field-constructions.html"><a href="field-constructions.html"><i class="fa fa-check"></i><b>9</b> Field Constructions</a><ul>
 <li class="chapter" data-level="9.1" data-path="field-constructions.html"><a href="field-constructions.html#polynomial-rings"><i class="fa fa-check"></i><b>9.1</b> Polynomial Rings</a></li>
+<li class="chapter" data-level="9.2" data-path="field-constructions.html"><a href="field-constructions.html#quotient-rings-mathbbfxlangle-px-rangle"><i class="fa fa-check"></i><b>9.2</b> Quotient Rings <span class="math inline">\(\mathbb{F}[x]/\langle p(x) \rangle\)</span></a></li>
 </ul></li>
 <li class="part"><span><b>III Group Examples</b></span></li>
 <li class="chapter" data-level="10" data-path="number-systems.html"><a href="number-systems.html"><i class="fa fa-check"></i><b>10</b> Number Systems</a><ul>
@@ -297,6 +298,44 @@ As we can see, if <span class="math inline">\(R\)</span> is an integral domain, 
 f(x)= g(x) q(x) + r(x), \qquad \hbox{with}\quad \deg(r(x)) &lt; \deg(g(x)).
 \]</span></p>
 <p>The proof of this is to show that the algorithm for polynomial division that we learned in high school works, arrives at unique quotients and remainders, and ends with a remainder that is smaller than the degree of <span class="math inline">\(g(x)\)</span>. The proof is by induction on the degree of <span class="math inline">\(f(x)\)</span>.</p>
+<p><img src="images/divisionalgo.png" style="width:40.0%" />
+<strong>Theorem</strong> (Remainder Theorem) If <span class="math inline">\(a \in \mathbb{F}\)</span> and <span class="math inline">\(f(x) \in \mathbb{F}[x]\)</span> then <span class="math inline">\(f(a)\)</span> is the remainder after division of <span class="math inline">\(f(x)\)</span> by <span class="math inline">\((x-a)\)</span>. That is,
+<span class="math display">\[
+f(x) = (x-a)q(x) + f(a).
+\]</span></p>
+<p><strong>Theorem</strong> (Factor Theorem) If <span class="math inline">\(a \in \mathbb{F}\)</span> is a zero of <span class="math inline">\(f(x)\)</span>; that is, if <span class="math inline">\(f(a) = 0\)</span>, then <span class="math inline">\((x-a)\)</span> is a factor of <span class="math inline">\(f(x)\)</span>. Thus
+<span class="math display">\[
+f(x) = (x-a)q(x) \qquad \Longleftrightarrow \qquad f(a) = 0.
+\]</span></p>
+</div>
+<div id="quotient-rings-mathbbfxlangle-px-rangle" class="section level2">
+<h2><span class="header-section-number">9.2</span> Quotient Rings <span class="math inline">\(\mathbb{F}[x]/\langle p(x) \rangle\)</span></h2>
+<p><strong>Def</strong>: An integral domain <span class="math inline">\(R\)</span> is a <strong>principal ideal domain</strong> (PID) if <em>every</em> ideal is principal, i.e, <span class="math inline">\(I = \langle a \rangle\)</span> for <span class="math inline">\(a \in R\)</span>.</p>
+<p>The next theorem is a consequence of the division algorithm.</p>
+<p><strong>Theorem</strong> If <span class="math inline">\(\mathbb{F}\)</span> is a field then <span class="math inline">\(\mathbb{F}[x]\)</span> is a principal ideal domain. Moreover, if <span class="math inline">\(I \subseteq \mathbb{F}[x]\)</span> is a nonzero ideal, then <span class="math inline">\(I = \langle p(x) \rangle\)</span> where <span class="math inline">\(p(x) \in I\)</span> is any nonzero polynomial of smallest degree in <span class="math inline">\(I\)</span>.</p>
+<p><strong>Theorem</strong> (Remainders are Unique Coset Representatives) If
+<span class="math display">\[
+p(x) = b_0 + b_1 x + \cdots + b_n x^n \in \mathbb{F}[x]
+\]</span>
+then the following set is a set of distinct coset representatives for <span class="math inline">\(\mathbb{F}[x]/\langle p(x) \rangle\)</span>. That is, all of the cosets are represented exactly once in this set
+<span class="math display">\[
+\frac{\mathbb{F}[x]}{\langle p(x) \rangle} =
+\{a_0 + a_1 x + \cdots a_{n-1} x^{n-1} + \langle p(x) \rangle \mid a_i \in \mathbb{F}\}
+\]</span>
+Moreover, the following coset identity describes multiplication in this quotient ring,
+<span class="math display">\[
+x^{n} + \langle p(x) \rangle 
+=
+\frac{-1}{b_n}(b_0 + b_1 x + b_2 x^2 + \cdots b_{n-1} x^{n-1}) + \langle p(x) \rangle.
+\]</span></p>
+<p><strong>Theorem</strong> If <span class="math inline">\(\mathbb{F}\)</span> is a field and <span class="math inline">\(p(x) \in \mathbb{F}[x]\)</span>, then the following are equivalent:"</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(p(x)\)</span> is irreducible (i.e., it does not factor in <span class="math inline">\(\mathbb{F}[x]\)</span> into a product of two polynomials each of lower degere).</li>
+<li><span class="math inline">\(\langle p(x) \rangle \subseteq \mathbb{F}[x]\)</span> is a maximal ideal.</li>
+<li><span class="math inline">\(\displaystyle{\mathbb{F}[x]}{\angle p(x) \rangle}\)</span> is a field.</li>
+</ol>
+<p>The following theorem can be used to find inverses in <span class="math inline">\(\mathbb{F}[x]/\langle p(x) \rangle\)</span> in the case when <span class="math inline">\(p(x)\)</span> is irreducible.</p>
+<p><strong>Theorem</strong> (Extended Polynomial Euclidean Algorithm) If <span class="math inline">\(f(x), p(x) \in \mathbb{F}[x]\)</span></p>
 
 </div>
 </div>

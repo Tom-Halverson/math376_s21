@@ -52,6 +52,7 @@ maximal-ideals
 ring-homomorphisms
 field-constructions
 polynomial-rings
+quotient-rings-mathbbfxlangle-px-rangle
 number-systems
 integers-mathbbz
 rational-numbers-mathbbq
