@@ -1,0 +1,42 @@
+
+# Field Constructions
+
+
+##  Polynomial Rings
+
+Let $R$ be an integral domain, and consider the ring of polynomials in $R$ in one variable
+$$
+R[x] = \{ a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n \mid n \ge 0, a_i \in R\}
+$$
+The polynomial is a commutative ring with unity equal to the polynomial 1. There are no zero divisors, so $R[x]$ is an integral domain. We also have
+$$
+R \subseteq R[x]
+$$
+as the subring of scalar polynomials. The *units* in $R[x]$ are the units in $R$.
+
+The **degree** of a polynomial $p(x) \in R[x]$ is the highest power of $x$ with a nonzero coefficient. For example,
+
+* $\deg(3 x^5 + 2 x^3 - 11 x + 10) = 5$
+* $\deg(7x -4 ) = 1$
+* $\deg(13) = 0$
+* $\deg(0) = -\infty$ (or, sometimes, it is said to b undefined).
+
+Observe that
+$$
+(5 x^3 + 2 x - 11)(-2 x^4 + 3 x^3 -2x + 4) = -10 x^7 + 15 x^6  \cdots - 44.
+$$
+As we can see, if $R$ is an integral domain, then
+$$
+\deg(p(x)q(x)) = \deg(p(x))+\deg(q(x)).
+$$
+
+
+
+We are especially interested in the case where $R = \FF$ is a field. In that case we have a division algorithm, which is both an algorithm and a theorem:
+
+**Theorem** (Division Algorithm) If $f(x), g(x) \in \FF[x]$ with $g(x) \not = 0$, then there exist *unique* polynomials $q(x),r(x) \in \FF[x]$ such that
+$$
+f(x)= g(x) q(x) + r(x), \qquad \hbox{with}\quad \deg(r(x)) < \deg(g(x)).
+$$
+
+The proof of this is to show that the algorithm for polynomial division that we learned in high school works, arrives at unique quotients and remainders, and ends with a remainder that is smaller than the degree of $g(x)$. The proof is by induction on the degree of $f(x)$.

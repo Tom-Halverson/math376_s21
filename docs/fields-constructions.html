@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 10 Number Systems | MATH 376: Algebraic Structures</title>
+  <title>Section 9 Fields Constructions | MATH 376: Algebraic Structures</title>
   <meta name="description" content="This is the class activity manual for MATH 376 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 10 Number Systems | MATH 376: Algebraic Structures" />
+  <meta property="og:title" content="Section 9 Fields Constructions | MATH 376: Algebraic Structures" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Tom-Halverson/math236_s21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 10 Number Systems | MATH 376: Algebraic Structures" />
+  <meta name="twitter:title" content="Section 9 Fields Constructions | MATH 376: Algebraic Structures" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 376 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="field-constructions.html"/>
-<link rel="next" href="cyclic-groups-1.html"/>
+<link rel="prev" href="rings.html"/>
+<link rel="next" href="number-systems.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -166,7 +166,6 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="5.2" data-path="problem-set-5.html"><a href="problem-set-5.html#rational-quotient-field"><i class="fa fa-check"></i><b>5.2</b> Rational Quotient Field</a></li>
 <li class="chapter" data-level="5.3" data-path="problem-set-5.html"><a href="problem-set-5.html#fields-of-order-8"><i class="fa fa-check"></i><b>5.3</b> Fields of Order 8</a></li>
 <li class="chapter" data-level="5.4" data-path="problem-set-5.html"><a href="problem-set-5.html#a-splitting-field"><i class="fa fa-check"></i><b>5.4</b> A Splitting Field</a></li>
-<li class="chapter" data-level="5.5" data-path="problem-set-5.html"><a href="problem-set-5.html#optional-capstone-conference"><i class="fa fa-check"></i><b>5.5</b> Optional: Capstone Conference</a></li>
 </ul></li>
 <li class="part"><span><b>II Definitions and Theorems</b></span></li>
 <li class="chapter" data-level="6" data-path="group-basics.html"><a href="group-basics.html"><i class="fa fa-check"></i><b>6</b> Group Basics</a><ul>
@@ -191,8 +190,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ul></li>
 <li class="chapter" data-level="8.4" data-path="rings.html"><a href="rings.html#ring-homomorphisms"><i class="fa fa-check"></i><b>8.4</b> Ring Homomorphisms</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="field-constructions.html"><a href="field-constructions.html"><i class="fa fa-check"></i><b>9</b> Field Constructions</a><ul>
-<li class="chapter" data-level="9.1" data-path="field-constructions.html"><a href="field-constructions.html#polynomial-rings"><i class="fa fa-check"></i><b>9.1</b> Polynomial Rings</a></li>
+<li class="chapter" data-level="9" data-path="fields-constructions.html"><a href="fields-constructions.html"><i class="fa fa-check"></i><b>9</b> Fields Constructions</a><ul>
+<li class="chapter" data-level="9.1" data-path="fields-constructions.html"><a href="fields-constructions.html#polynomial-rings"><i class="fa fa-check"></i><b>9.1</b> Polynomial Rings</a></li>
 </ul></li>
 <li class="part"><span><b>III Group Examples</b></span></li>
 <li class="chapter" data-level="10" data-path="number-systems.html"><a href="number-systems.html"><i class="fa fa-check"></i><b>10</b> Number Systems</a><ul>
@@ -263,107 +262,33 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="number-systems" class="section level1">
-<h1><span class="header-section-number">Section 10</span> Number Systems</h1>
-<div id="integers-mathbbz" class="section level2">
-<h2><span class="header-section-number">10.1</span> Integers <span class="math inline">\(\mathbb{Z}\)</span></h2>
-<p>The integers
+<div id="fields-constructions" class="section level1">
+<h1><span class="header-section-number">Section 9</span> Fields Constructions</h1>
+<div id="polynomial-rings" class="section level2">
+<h2><span class="header-section-number">9.1</span> Polynomial Rings</h2>
+<p>Let <span class="math inline">\(R\)</span> be an integral domain, and consider the ring of polynomials in <span class="math inline">\(R\)</span> in one variable
 <span class="math display">\[
-\mathbb{Z}= \{ \ldots, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, \ldots\}
+R[x] = \{ a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n \mid n \ge 0, a_i \in R\}
 \]</span>
-form a cyclic group (and thus abelian group) under addition with identity 0. There are two generators <span class="math inline">\(\mathbb{Z}= \langle 1 \rangle = \langle -1 \rangle\)</span>.</p>
-<p>Under multiplication, the only invertible elements (<em>units</em>) are <span class="math inline">\(1\)</span> and <span class="math inline">\(-1\)</span>, and <span class="math inline">\(\mathbb{Z}^\ast = \{-1,1\}\)</span> is a group of order two under addition.</p>
-</div>
-<div id="rational-numbers-mathbbq" class="section level2">
-<h2><span class="header-section-number">10.2</span> Rational Numbers <span class="math inline">\(\mathbb{Q}\)</span></h2>
-<p>The rational numbers
+The polynomial is a commutative ring with unity equal to the polynomial 1. There are no zero divisors, so <span class="math inline">\(R[x]\)</span> is an integral domain. We also have
 <span class="math display">\[
-\mathbb{Q}= \left\{ \frac{p}{q} \mid p,q \in \mathbb{Z}, q \not=0 \right\}
+R \subseteq R[x]
 \]</span>
-also constitute an abelian group under addition with idenity 0. Every rational number except 0 has a multiplicative inverse, and thus
-<span class="math display">\[
-\mathbb{Q}^\ast = \mathbb{Q}\setminus \{0\}
-\]</span>
-is a group under multiplication with multiplicative identity 1. The positive rational numbers are also closed under multiplication and taking multiplicative inverses, so if <span class="math inline">\(\mathbb{Q}_{&gt;0} = \{ a \in \mathbb{Q}\mid a &gt; 0\}\)</span>, then
-<span class="math display">\[
-\mathbb{Q}_{&gt;0} \le \mathbb{Q}^\ast.
-\]</span></p>
-</div>
-<div id="real-numbers-mathbbr" class="section level2">
-<h2><span class="header-section-number">10.3</span> Real Numbers <span class="math inline">\(\mathbb{R}\)</span></h2>
-<p>We’ll leave it to Math 377 to define the real numbers <span class="math inline">\(\mathbb{R}\)</span>. The real numbers form a group under addition, and the only real number that does not have an inverse is 0, so
-<span class="math display">\[
-\mathbb{R}^\ast = \mathbb{R}\setminus \{0\}
-\]</span>
-is an abelian group under multiplication with identity 1. As with the rational numbers, the positive reals also form a multiplicative subgroup
-<span class="math display">\[
-\mathbb{R}_{&gt;0} \le \mathbb{R}^\ast.
-\]</span></p>
-</div>
-<div id="complex-numbers-mathbbc" class="section level2">
-<h2><span class="header-section-number">10.4</span> Complex numbers <span class="math inline">\(\mathbb{C}\)</span></h2>
-<p>The complex numbers consists of pairs of real numbers
-<span class="math display">\[
-\mathbb{C}= \left\{ a + b i \mid a, b \in\mathbb{R}\right\}
-\]</span>
-with <span class="math inline">\(i^2 = -1\)</span>. It is a group under addition,
-<span class="math display">\[
-(a + b i) + (c + d i) = (a+c) + (b+d) i.
-\]</span>
-with identity <span class="math inline">\(0 = 0 + 0 i\)</span>.</p>
-<p>Multiplication in <span class="math inline">\(\mathbb{C}\)</span> is best understood using polar coordinates. We write
-<span class="math display">\[
-a + b i = r (\cos(\theta) + i \sin(\theta)) = r e^{i \theta}
-\]</span>
-where
-<span class="math display">\[
-\begin{array}{lcl}
-r = \sqrt{a^2 + b^2} &amp; &amp; a = r \cos(theta)\\
-\theta = \arctan(b/a) &amp;&amp; b = r \sin(\theta).
-\end{array}
-\]</span>
-In polar notation
-<span class="math display">\[
-\text{ if } \quad z_1 = r_1 e^{i \theta_1} \quad \text{ and }\quad 
-z_2 = r_2 e^{i \theta_2}
-\]</span>
-then
-<span class="math display">\[
-z_1z_2 = (r_1 e^{i \theta_1})(r_2 e^{i \theta_2}) = 
-r_1 r_2 e^{i (\theta_1 + \theta_2)}
-\]</span>
-so that their angles add and their lengths multiply.</p>
-<p>Every complex number other than <span class="math inline">\(0 = 0 + 0i\)</span> has a multiplicative inverse, and
-<span class="math display">\[
-\mathbb{C}^\ast = \mathbb{C}\setminus \{0\}
-\]</span>
-is a multiplicative group with identity <span class="math inline">\(1 = 1 + 0i\)</span>.</p>
-<p>The <strong>circle group</strong> is the set of complex numbers on the unit circle,
-<span class="math display">\[
-C = \{ e^{i \theta} \mid 0 \le \theta &lt; 2 \pi\}.
-\]</span>
-Since lengths multiply and angles add when we multiply complex nubers, the circle group is a multiplicative subgroup
-<span class="math display">\[
-C \le \mathbb{C}^\ast
-\]</span></p>
-<p>As additive groups, we have the following containment of subgroups,
-<span class="math display">\[
-\mathbb{Z}&lt; \mathbb{Q}&lt; \mathbb{R}&lt; \mathbb{C}.
-\]</span>
-And as multiplicative groups, the units in each of these number systems give us containments of subgroups
-<span class="math display">\[
-\{1,-1\} &lt; \mathbb{Q}^\ast &lt; \mathbb{R}^\ast &lt; \mathbb{C}^\ast.
-\]</span></p>
+as the subring of scalar polynomials. The <em>units</em> in <span class="math inline">\(R[x]\)</span> are the units in <span class="math inline">\(R\)</span>.</p>
+<p>We are especially interested in the case where <span class="math inline">\(R = \FF\)</span> is a field.</p>
 
 </div>
 </div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="field-constructions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="cyclic-groups-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rings.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="number-systems.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

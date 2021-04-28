@@ -1,5 +1,6 @@
 # (PART) Problem Sets {-}
 
+\newcommand{\FF}{\mathbb{F}}
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\QQ}{\mathbb{Q}}

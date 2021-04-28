@@ -31,6 +31,7 @@ field-of-order-25
 rational-quotient-field
 fields-of-order-8
 a-splitting-field
+optional-capstone-conference
 group-basics
 groups
 subgroups
@@ -49,6 +50,8 @@ prime-and-maximal-ideals
 prime-ideals
 maximal-ideals
 ring-homomorphisms
+field-constructions
+polynomial-rings
 number-systems
 integers-mathbbz
 rational-numbers-mathbbq

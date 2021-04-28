@@ -46,3 +46,23 @@ b. Justify each of your labels in part (a).
 c. Show how $p(x) = x^4 -2$ factors in each of these 5 fields. 
 
 d. (**Extra credit**) Show where $\QQ(\sqrt[4]{2} + i)$ fits into this picture and justify your assertions. 
+
+
+## Optional: Capstone Conference
+
+You can replace any one of the above problems by going to one of the algebra-focused capstone presentations and providing a two-paragraph write up about what you learned.
+
+I will link to the schedule here soon.
+
+On Wednesday, May 6, the MSCS seniors will be giving their final capstone presentations. The capstone conference was canceled due to the pandemic, so throughout the day we are hosting an abbreviated capstone celebration. Students have created a digital artifact about their project. During the capstone presentation panels they will introduce their artifact and answer questions.
+
+Here are the rules:
+
+1. Go to the capstone panel presentation of one of the following students: Eric Fong (9:30-10:30), Jennifer DeJong (11:30-12:00), Yilin (Ellen) Chen (12:30-1:00),  Tate Munnich (4:30-5:00), or Logan Caraco (4:30-5:00).
+
+2. Also, explore their artifact. The links will be here on Friday. These might be web pages, videos, computer programs. 
+
+3. Provide a two-paragraph write up. 
+
+    (a) In one of the paragraphs, explain as best you can, what their project was about and what sort of algebra was involved. From  you write up I should be able to tell that you looked at the artifact. 
+    (b) In the second paragraph, write about some other aspect of the response you had to their presentation. For example: What did they do that was effective at communicating their ideas? What would you ask them about if you had time to sit down and talk about the project? What did you learn about presenting mathematics that can be useful in your capstone presentation or in a future presentation that you give?
