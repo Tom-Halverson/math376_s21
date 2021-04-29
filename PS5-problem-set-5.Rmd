@@ -28,6 +28,8 @@ c. Use the polynomial extended GCD algorithm in [WolframAlpha](https://www.wolfr
 
 In class on Wednesday and Thursday Apr 28-29 we will construct two different fields of order 8: $\EE_\alpha$ and $\EE_\beta$. It is known (Theorem 22.1 in the book) that, up to isomorphism, there is a uniqe field of order $p^k$ for any prime number $p$ and any $k \in \ZZ_{k>0}$. Find the isomorphism between $\EE_\alpha$ and $\EE_\beta$ and justify your answer.
 
+![](images/Alpha-Beta-Field.png){width=100%}
+
 ## A Splitting Field
 
 We will work on examples like this on Monday and Tuesday, May 3-4.
