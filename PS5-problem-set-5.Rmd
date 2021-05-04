@@ -54,7 +54,7 @@ d. (**Extra credit**) Show where $\QQ(\sqrt[4]{2} + i)$ fits into this picture a
 
 You can replace any one of the above problems by going to one of the algebra-focused capstone presentations and providing a two-paragraph write up about what you learned.
 
-I will link to the schedule here soon.
+Capstone Day: [Schedule](https://docs.google.com/spreadsheets/d/e/2PACX-1vQCybiTRKConMk2mEVXInVqovXPTnWSMrD7HDMtDohyPDm3Ox-tkjdKnDfUlUbBLEAH2mDxKWokfVe-/pubhtml?gid=1397682477&single=true) | [Showcase](https://www.macalester.edu/mscs-showcase/)
 
 On Wednesday, May 6, the MSCS seniors will be giving their final capstone presentations. The capstone conference was canceled due to the pandemic, so throughout the day we are hosting an abbreviated capstone celebration. Students have created a digital artifact about their project. During the capstone presentation panels they will introduce their artifact and answer questions.
 
